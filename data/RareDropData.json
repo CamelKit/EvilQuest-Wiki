@@ -1,7 +1,7 @@
 [
   {
     "id": "universal",
-    "name": "Universal rare drop table",
+    "name": "Shared rare rewards",
     "entries": [
       {
         "type": "item",
@@ -12,122 +12,174 @@
         "itemId": 10
       },
       {
-        "type": "item",
-        "itemId": 285
+        "type": "table",
+        "tableId": "rare_materials"
       },
       {
-        "type": "item",
-        "itemId": 286
+        "type": "table",
+        "tableId": "rare_gems"
       },
       {
-        "type": "item",
-        "itemId": 142
+        "type": "table",
+        "tableId": "mega_rare"
       },
       {
-        "type": "item",
-        "itemId": 48
-      },
-      {
-        "type": "item",
-        "itemId": 45
-      },
-      {
-        "type": "item",
-        "itemId": 49
-      },
-      {
-        "type": "item",
-        "itemId": 50
-      },
-      {
-        "type": "item",
-        "itemId": 91
-      },
-      {
-        "type": "item",
-        "itemId": 97
-      },
-      {
-        "type": "item",
-        "itemId": 92
-      },
-      {
-        "type": "item",
-        "itemId": 105
-      },
+        "type": "table",
+        "tableId": "huge_essence_vials"
+      }
+    ],
+    "legacyName": "Universal rare drop table"
+  },
+  {
+    "id": "mega_rare",
+    "name": "Rare equipment finds",
+    "entries": [
       {
         "type": "item",
         "itemId": 106
       },
       {
         "type": "item",
+        "itemId": 113
+      },
+      {
+        "type": "item",
         "itemId": 111
       },
       {
-        "type": "table",
-        "tableId": "mega_rare"
-      }
-    ]
-  },
-  {
-    "id": "mega_rare",
-    "name": "Mega-rare drop table",
-    "entries": [
-      {
         "type": "item",
-        "itemId": 10
+        "itemId": 283
       },
       {
         "type": "item",
-        "itemId": 575
-      },
-      {
-        "type": "item",
-        "itemId": 576
-      },
-      {
-        "type": "item",
-        "itemId": 577
-      },
-      {
-        "type": "item",
-        "itemId": 578
-      },
-      {
-        "type": "item",
-        "itemId": 579
-      },
-      {
-        "type": "item",
-        "itemId": 580
-      },
-      {
-        "type": "item",
-        "itemId": 581
-      },
-      {
-        "type": "item",
-        "itemId": 311
-      },
-      {
-        "type": "item",
-        "itemId": 329
-      },
-      {
-        "type": "item",
-        "itemId": 330
+        "itemId": 233
       },
       {
         "type": "item",
         "itemId": 412
+      }
+    ],
+    "legacyName": "Mega-rare drop table"
+  },
+  {
+    "id": "huge_essence_vials",
+    "name": "Filled huge essence vials",
+    "entries": [
+      {
+        "type": "item",
+        "itemId": 774
       },
       {
         "type": "item",
-        "itemId": 386
+        "itemId": 791
       },
       {
         "type": "item",
-        "itemId": 393
+        "itemId": 795
+      },
+      {
+        "type": "item",
+        "itemId": 799
+      },
+      {
+        "type": "item",
+        "itemId": 803
+      },
+      {
+        "type": "item",
+        "itemId": 807
+      },
+      {
+        "type": "item",
+        "itemId": 811
+      }
+    ]
+  },
+  {
+    "id": "rare_materials",
+    "name": "Rare crafting supplies",
+    "entries": [
+      {
+        "type": "item",
+        "itemId": 35
+      },
+      {
+        "type": "item",
+        "itemId": 20026
+      },
+      {
+        "type": "item",
+        "itemId": 20597
+      },
+      {
+        "type": "item",
+        "itemId": 20045
+      },
+      {
+        "type": "item",
+        "itemId": 20050
+      },
+      {
+        "type": "item",
+        "itemId": 20049
+      },
+      {
+        "type": "item",
+        "itemId": 20311
+      },
+      {
+        "type": "item",
+        "itemId": 20040
+      },
+      {
+        "type": "item",
+        "itemId": 20273
+      },
+      {
+        "type": "item",
+        "itemId": 267
+      },
+      {
+        "type": "item",
+        "itemId": 619
+      }
+    ]
+  },
+  {
+    "id": "rare_gems",
+    "name": "Rare uncut gems",
+    "entries": [
+      {
+        "type": "item",
+        "itemId": 258
+      },
+      {
+        "type": "item",
+        "itemId": 254
+      },
+      {
+        "type": "item",
+        "itemId": 259
+      },
+      {
+        "type": "item",
+        "itemId": 255
+      },
+      {
+        "type": "item",
+        "itemId": 260
+      },
+      {
+        "type": "item",
+        "itemId": 256
+      },
+      {
+        "type": "item",
+        "itemId": 261
+      },
+      {
+        "type": "item",
+        "itemId": 257
       }
     ]
   }
