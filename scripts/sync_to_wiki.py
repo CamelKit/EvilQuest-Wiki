@@ -28,9 +28,11 @@ ASSET_SYNC_MATRIX = [
     {"file": "modules/ItemData.lua", "title": "Module:ItemData", "model": "Scribunto"},
     {"file": "modules/NpcData.lua", "title": "Module:NPCData", "model": "Scribunto"},
     {"file": "modules/RareDropData.lua", "title": "Module:RareDropData", "model": "Scribunto"},
+    {"file": "modules/ObjectData.lua", "title": "Module:ObjectData", "model": "Scribunto"},
     {"file": "data/ItemData.json", "title": "Module:ItemData/json", "model": "json"},
     {"file": "data/NpcData.json", "title": "Module:NPCData/json", "model": "json"},
     {"file": "data/RareDropData.json", "title": "Module:RareDropData/json", "model": "json"},
+    {"file": "data/ObjectData.json", "title": "Module:ObjectData/json", "model": "json"},
     {"file": "styles/Common.css", "title": "MediaWiki:Common.css", "model": "css"}
 ]
 
