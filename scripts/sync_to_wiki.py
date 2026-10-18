@@ -60,6 +60,30 @@ for root, _, files in os.walk("templates"):
                 "model": "wikitext"
             })
 
+# Dynamically discover standard wiki articles/pages from pages/
+if os.path.exists("pages"):
+    for root, _, files in os.walk("pages"):
+        for file in files:
+            if file.endswith(".wikitext"):
+                local_path = os.path.join(root, file).replace("\\", "/")
+                base_name = file[:-9] # Remove .wikitext
+                title_name = base_name.replace("_", " ")
+                
+                ASSET_SYNC_MATRIX.append({
+                    "file": local_path,
+                    "title": title_name,
+                    "model": "wikitext"
+                })
+
+# Deduplicate asset matrix by target wiki title to prevent redundant API sync calls
+seen_titles = set()
+deduped_matrix = []
+for asset in ASSET_SYNC_MATRIX:
+    if asset["title"] not in seen_titles:
+        seen_titles.add(asset["title"])
+        deduped_matrix.append(asset)
+ASSET_SYNC_MATRIX = deduped_matrix
+
 def execute_wiki_sync():
     session = requests.Session()
     session.headers.update({"User-Agent": "EvilQuestWikiSyncBot/1.0 (CI/CD Deployment)"})

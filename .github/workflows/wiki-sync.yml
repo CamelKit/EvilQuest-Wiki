@@ -9,6 +9,7 @@ on:
       - 'modules/**'
       - 'data/**'
       - 'templates/**'
+      - 'pages/**'
       - 'styles/**'
       - 'scripts/sync_to_wiki.py'
   workflow_dispatch:
