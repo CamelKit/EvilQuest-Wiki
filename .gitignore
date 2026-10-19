@@ -2,7 +2,7 @@
 .env
 
 # Staging data
-staging/*.json
+staging/
 
 # Python cache
 __pycache__/

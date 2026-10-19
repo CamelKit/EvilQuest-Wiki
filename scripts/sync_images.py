@@ -78,7 +78,7 @@ def main():
         os.makedirs("temp_items")
 
     # Step 1: Securely pull down the live V2 asset manifest
-    manifest_url = "https://evilquest.net/items/3d/manifest.json"
+    manifest_url = "https://memoriesofmagic.com/items/3d/manifest.json"
     print("📡 Fetching asset list from manifest...")
     manifest_res = requests.get(manifest_url, headers=GAME_HEADERS, cookies=GAME_COOKIES)
     
@@ -103,7 +103,7 @@ def main():
 
     # Step 2: Iterate exclusively through the flat ID array
     for item_id in item_ids:
-        target_url = f"https://evilquest.net/items/3d/{item_id}.png"
+        target_url = f"https://memoriesofmagic.com/items/3d/{item_id}.png"
         wiki_filename = f"Item_{item_id}.png"
         local_path = f"temp_items/{wiki_filename}"
 
