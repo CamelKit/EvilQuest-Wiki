@@ -21,97 +21,97 @@ There are currently '''16 skills''' in the game, categorized into five core disc
 ! style="width: 10%; text-align: center;" | Max Lvl
 ! style="width: 50%;" | Primary Focus & Description
 |-
-| style="background: rgba(204, 68, 68, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#c44; border-radius:50%; margin-right:6px;"></span>'''[[Weaponry]]'''
+| style="background: rgba(204, 68, 68, 0.1);" | [[File:Weaponry.png|21x21px|middle|link=Weaponry|alt=Weaponry]] '''[[Weaponry]]'''
 | Combat
 | style="text-align: center;" | 1
 | style="text-align: center;" | 150
 | Melee accuracy and weapon equip requirements (Bronze through Vorass weaponry).
 |-
-| style="background: rgba(238, 136, 0, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#e80; border-radius:50%; margin-right:6px;"></span>'''[[Strength]]'''
+| style="background: rgba(238, 136, 0, 0.1);" | [[File:Strength.png|21x21px|middle|link=Strength|alt=Strength]] '''[[Strength]]'''
 | Combat
 | style="text-align: center;" | 1
 | style="text-align: center;" | 150
 | Melee damage output, maximum hit scaling, and physical power.
 |-
-| style="background: rgba(68, 136, 204, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#48c; border-radius:50%; margin-right:6px;"></span>'''[[Defence]]'''
+| style="background: rgba(68, 136, 204, 0.1);" | [[File:Defence.png|21x21px|middle|link=Defence|alt=Defence]] '''[[Defence]]'''
 | Combat
 | style="text-align: center;" | 1
 | style="text-align: center;" | 150
 | Damage mitigation, evasion chance, and armor equip requirements (Bronze through Vorass armors).
 |-
-| style="background: rgba(68, 170, 68, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#4a4; border-radius:50%; margin-right:6px;"></span>'''[[Ranging]]'''
+| style="background: rgba(68, 170, 68, 0.1);" | [[File:Ranging.png|21x21px|middle|link=Ranging|alt=Ranging]] '''[[Ranging]]'''
 | Combat
 | style="text-align: center;" | 1
 | style="text-align: center;" | 150
 | Accuracy and damage with bows and projectile weaponry; unlocks leather and dragonhide armors.
 |-
-| style="background: rgba(228, 68, 68, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#e44; border-radius:50%; margin-right:6px;"></span>'''[[Hitpoints]]'''
+| style="background: rgba(228, 68, 68, 0.1);" | [[File:Hitpoints.png|21x21px|middle|link=Hitpoints|alt=Hitpoints]] '''[[Hitpoints]]'''
 | Combat
 | style="text-align: center;" | '''10'''
 | style="text-align: center;" | 150
 | Total health pool and survivability. Starts at Level 10 (1,154 XP) by default on all accounts.
 |-
-| style="background: rgba(140, 204, 255, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#8cf; border-radius:50%; margin-right:6px;"></span>'''[[Light Magic]]'''
+| style="background: rgba(140, 204, 255, 0.1);" | [[File:Light_Magic.png|21x21px|middle|link=Light Magic|alt=Light Magic]] '''[[Light Magic]]'''
 | Magic
 | style="text-align: center;" | '''0'''
 | style="text-align: center;" | 150
 | Transmutation spells (converting ores, logs, feathers into higher tiers), Enchanting jewelry, utility, healing, and teleports.
 |-
-| style="background: rgba(170, 68, 238, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#a4e; border-radius:50%; margin-right:6px;"></span>'''[[Dark Magic]]'''
+| style="background: rgba(170, 68, 238, 0.1);" | [[File:Dark_Magic.png|21x21px|middle|link=Dark Magic|alt=Dark Magic]] '''[[Dark Magic]]'''
 | Magic
 | style="text-align: center;" | '''0'''
 | style="text-align: center;" | 150
 | Destructive spellcasting (Fire Bolt and higher elemental spells), dark hexes, and offensive combat curses.
 |-
-| style="background: rgba(34, 170, 102, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#2a6; border-radius:50%; margin-right:6px;"></span>'''[[Woodcutting]]'''
+| style="background: rgba(34, 170, 102, 0.1);" | [[File:Woodcutting.png|21x21px|middle|link=Woodcutting|alt=Woodcutting]] '''[[Woodcutting]]'''
 | Gathering
 | style="text-align: center;" | 1
 | style="text-align: center;" | 150
 | Felling timber across trees, Oak, Willow, Maple, Yew, Magic, and Elder trees for logs.
 |-
-| style="background: rgba(68, 170, 238, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#4ae; border-radius:50%; margin-right:6px;"></span>'''[[Fishing]]'''
+| style="background: rgba(68, 170, 238, 0.1);" | [[File:Fishing.png|21x21px|middle|link=Fishing|alt=Fishing]] '''[[Fishing]]'''
 | Gathering
 | style="text-align: center;" | 1
 | style="text-align: center;" | 150
 | Harvesting marine life from freshwater rivers and ocean coastal spots using rods, nets, and harpoons.
 |-
-| style="background: rgba(136, 136, 136, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#888; border-radius:50%; margin-right:6px;"></span>'''[[Mining]]'''
+| style="background: rgba(136, 136, 136, 0.1);" | [[File:Mining.png|21x21px|middle|link=Mining|alt=Mining]] '''[[Mining]]'''
 | Gathering
 | style="text-align: center;" | 1
 | style="text-align: center;" | 150
 | Extracting mineral ores (tin, copper, iron, coal, silver, gold, mithril, adamantite, runite, crimsonite) and gems from rock veins.
 |-
-| style="background: rgba(170, 170, 170, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#aaa; border-radius:50%; margin-right:6px;"></span>'''[[Smithing]]'''
+| style="background: rgba(170, 170, 170, 0.1);" | [[File:Smithing.png|21x21px|middle|link=Smithing|alt=Smithing]] '''[[Smithing]]'''
 | Artisan
 | style="text-align: center;" | 1
 | style="text-align: center;" | 150
 | Smelting raw ores into metal bars at furnaces and forging armor, weapons, and tools at anvils.
 |-
-| style="background: rgba(204, 136, 68, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#c84; border-radius:50%; margin-right:6px;"></span>'''[[Cooking]]'''
+| style="background: rgba(204, 136, 68, 0.1);" | [[File:Cooking.png|21x21px|middle|link=Cooking|alt=Cooking]] '''[[Cooking]]'''
 | Artisan
 | style="text-align: center;" | 1
 | style="text-align: center;" | 150
 | Preparing roasted meats and fish, cooking staple foods, and brewing 21 herbal tea varieties that grant health regen, max health boosts, and stat buffs.
 |-
-| style="background: rgba(204, 170, 68, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#ca4; border-radius:50%; margin-right:6px;"></span>'''[[Crafting]]'''
+| style="background: rgba(204, 170, 68, 0.1);" | [[File:Crafting.png|21x21px|middle|link=Crafting|alt=Crafting]] '''[[Crafting]]'''
 | Artisan
 | style="text-align: center;" | 1
 | style="text-align: center;" | 150
 | Tanning hides, assembling leather and dragonhide armor, gem cutting, fletching bows and arrows, crafting Vorass weapons, and stringing necklaces.
 |-
-| style="background: rgba(122, 42, 122, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#7a2a7a; border-radius:50%; margin-right:6px;"></span>'''[[Roguery]]'''
+| style="background: rgba(122, 42, 122, 0.1);" | [[File:Roguery.png|21x21px|middle|link=Roguery|alt=Roguery]] '''[[Roguery]]'''
 | Support
 | style="text-align: center;" | 1
 | style="text-align: center;" | 150
 | Lockpicking chests around the world for coins and relics, sleight of hand, stealth mechanics, and deception in quests.
 |-
-| style="background: rgba(111, 143, 58, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#6f8f3a; border-radius:50%; margin-right:6px;"></span>'''[[Survival]]'''
+| style="background: rgba(111, 143, 58, 0.1);" | [[File:Survival.png|21x21px|middle|link=Survival|alt=Survival]] '''[[Survival]]'''
 | Support
 | style="text-align: center;" | 1
 | style="text-align: center;" | 150
 | Firemaking with tinderboxes and logs, campfire utility, bush foraging, and outdoor wilderness resilience.
 |-
-| style="background: rgba(201, 165, 104, 0.1);" | <span style="display:inline-block; width:12px; height:12px; background:#c9a568; border-radius:50%; margin-right:6px;"></span>'''[[Agility]]'''
+| style="background: rgba(201, 165, 104, 0.1);" | [[File:Agility.png|21x21px|middle|link=Agility|alt=Agility]] '''[[Agility]]'''
 | Support
 | style="text-align: center;" | 1
 | style="text-align: center;" | 150
@@ -121,36 +121,36 @@ There are currently '''16 skills''' in the game, categorized into five core disc
 == [[Combat Skills]] ==
 Combat skills govern a character's offensive power, defensive resilience, and survivability in battle against both monsters and other players.
 
-* '''[[Weaponry]]''' (Color: <code>#c44</code>): Governs melee accuracy and sets level requirements for equipping weapons, ranging from basic Bronze daggers to end-game Vorass blades.
-* '''[[Strength]]''' (Color: <code>#e80</code>): Directly increases maximum damage roll (max hit) in melee combat. Higher Strength lets you deal devastating blows to opponents.
-* '''[[Defence]]''' (Color: <code>#48c</code>): Reduces enemy hit chance and mitigates incoming physical damage. Sets requirements for equipping tier armor from Bronze up to Crimsonite and Vorass.
-* '''[[Ranging]]''' (Color: <code>#4a4</code>): Governs accuracy and damage with ranged weapons (shortbows, longbows, arrows). Also determines equip requirements for Leather and Dragonhide armor sets.
-* '''[[Hitpoints]]''' (Color: <code>#e44</code>): Represents total life pool. Characters begin at '''Level 10''' (1,154 XP). As Hitpoints levels up, max health increases, allowing survival against heavy attacks.
+* [[File:Weaponry.png|21x21px|middle|link=Weaponry|alt=Weaponry]] '''[[Weaponry]]''': Governs melee accuracy and sets level requirements for equipping weapons, ranging from basic Bronze daggers to end-game Vorass blades.
+* [[File:Strength.png|21x21px|middle|link=Strength|alt=Strength]] '''[[Strength]]''': Directly increases maximum damage roll (max hit) in melee combat. Higher Strength lets you deal devastating blows to opponents.
+* [[File:Defence.png|21x21px|middle|link=Defence|alt=Defence]] '''[[Defence]]''': Reduces enemy hit chance and mitigates incoming physical damage. Sets requirements for equipping tier armor from Bronze up to Crimsonite and Vorass.
+* [[File:Ranging.png|21x21px|middle|link=Ranging|alt=Ranging]] '''[[Ranging]]''': Governs accuracy and damage with ranged weapons (shortbows, longbows, arrows). Also determines equip requirements for Leather and Dragonhide armor sets.
+* [[File:Hitpoints.png|21x21px|middle|link=Hitpoints|alt=Hitpoints]] '''[[Hitpoints]]''': Represents total life pool. Characters begin at '''Level 10''' (1,154 XP). As Hitpoints levels up, max health increases, allowing survival against heavy attacks.
 
 == Magic Skills ==
 Magic in EvilQuest is bifurcated into two distinct mystical arts:
 
-* '''[[Light Magic]]''' (Color: <code>#8cf</code>, Starts at Lvl 0):
+* [[File:Light_Magic.png|21x21px|middle|link=Light Magic|alt=Light Magic]] '''[[Light Magic]]''' (Starts at Lvl 0):
 ** '''Transmutation''': Transform raw materials into more valuable resources (e.g. transmuting Tin/Copper into Iron, Iron into Silver, Silver into Gold, Logs into Willow/Oak, and Feathers).
 ** '''Enchanting''': Channel enchantments (Tiers 1–5) to imbue cut gem jewelry into potent accessories: Amulet of Defence, Amulet of Strength, Amulet of Magic, Amulet of Health, and Amulet of Agility.
 ** '''Utility & Healing''': Restoration of health, cleanses, protective wards, and realm teleports.
-* '''[[Dark Magic]]''' (Color: <code>#a4e</code>, Starts at Lvl 0):
+* [[File:Dark_Magic.png|21x21px|middle|link=Dark Magic|alt=Dark Magic]] '''[[Dark Magic]]''' (Starts at Lvl 0):
 ** '''Destructive Spellcasting''': Cast offensive elemental spells like Fire Bolt, scaling in damage with spell tier and magic power.
 ** '''Curses & Hexes''': Debuff enemy stats, drain life, and inflict lingering damage over time.
 
 == Gathering Skills ==
 Gathering skills allow players to harvest raw, unrefined materials directly from the environment:
 
-* '''[[Woodcutting]]''' (Color: <code>#2a6</code>): Use axes to fell normal trees, Oak, Willow, Maple, Yew, Magic, and Elder trees. Harvested logs feed into [[Crafting]] (fletching bows/arrows), [[Survival]] (firemaking), and [[Light Magic]] (transmutation).
-* '''[[Mining]]''' (Color: <code>#888</code>): Use pickaxes to harvest ores from mineral rocks across mines and caves (Tin, Copper, Iron, Coal, Silver, Gold, Mithril, Adamantite, Runite, Crimsonite), as well as uncut gems (Sapphire, Emerald, Ruby, Diamond).
-* '''[[Fishing]]''' (Color: <code>#4ae</code>): Gather aquatic food supplies using fishing rods, bait, and harpoons along rivers, lakes, and oceans. Catches can be cooked to restore health.
+* [[File:Woodcutting.png|21x21px|middle|link=Woodcutting|alt=Woodcutting]] '''[[Woodcutting]]''': Use axes to fell normal trees, Oak, Willow, Maple, Yew, Magic, and Elder trees. Harvested logs feed into [[Crafting]] (fletching bows/arrows), [[Survival]] (firemaking), and [[Light Magic]] (transmutation).
+* [[File:Mining.png|21x21px|middle|link=Mining|alt=Mining]] '''[[Mining]]''': Use pickaxes to harvest ores from mineral rocks across mines and caves (Tin, Copper, Iron, Coal, Silver, Gold, Mithril, Adamantite, Runite, Crimsonite), as well as uncut gems (Sapphire, Emerald, Ruby, Diamond).
+* [[File:Fishing.png|21x21px|middle|link=Fishing|alt=Fishing]] '''[[Fishing]]''': Gather aquatic food supplies using fishing rods, bait, and harpoons along rivers, lakes, and oceans. Catches can be cooked to restore health.
 
 == Artisan Skills ==
 Artisan skills refine gathered raw resources into usable equipment, consumables, and gear:
 
-* '''[[Smithing]]''' (Color: <code>#aaa</code>): Use furnaces to smelt ores and coal into metal bars (Bronze, Iron, Steel, Mithril, Adamantite, Runite, Crimsonite) and anvils to forge metal armor, weaponry, and ammunition heads.
-* '''[[Cooking]]''' (Color: <code>#c84</code>): Prepare nourishing meals at ranges and campfires to restore Hitpoints. Cooking also encompasses '''Herbal Tea Brewing''' (21 unique tea recipes across 7 tea leaf types brewed with secondary ingredients), which grant lingering Health Regeneration over time (up to 300s), Maximum Health Boosts, and skill buffs.
-* '''[[Crafting]]''' (Color: <code>#ca4</code>): An expansive trade encompassing:
+* [[File:Smithing.png|21x21px|middle|link=Smithing|alt=Smithing]] '''[[Smithing]]''': Use furnaces to smelt ores and coal into metal bars (Bronze, Iron, Steel, Mithril, Adamantite, Runite, Crimsonite) and anvils to forge metal armor, weaponry, and ammunition heads.
+* [[File:Cooking.png|21x21px|middle|link=Cooking|alt=Cooking]] '''[[Cooking]]''': Prepare nourishing meals at ranges and campfires to restore Hitpoints. Cooking also encompasses '''Herbal Tea Brewing''' (21 unique tea recipes across 7 tea leaf types brewed with secondary ingredients), which grant lingering Health Regeneration over time (up to 300s), Maximum Health Boosts, and skill buffs.
+* [[File:Crafting.png|21x21px|middle|link=Crafting|alt=Crafting]] '''[[Crafting]]''': An expansive trade encompassing:
 ** ''Leatherworking & Tanning'': Tan raw hides into leather and dragonhide (Green, Blue, Red, Black), then craft armor pieces.
 ** ''Gem Cutting'': Cut raw gems with a chisel for jewelry crafting.
 ** ''Fletching'': Carve logs into unstrung bows and combine them with bowstrings; affix feathers and arrowheads onto headless arrows.
@@ -159,9 +159,9 @@ Artisan skills refine gathered raw resources into usable equipment, consumables,
 == Support Skills ==
 Support skills provide utility, mobility, stealth, and survival capabilities:
 
-* '''[[Roguery]]''' (Color: <code>#7a2a7a</code>): The art of thievery, lockpicking, and subterfuge. Used to open locked rogue chests found throughout dungeons and wilderness zones, yielding coins, rare gems, and magical relics.
-* '''[[Survival]]''' (Color: <code>#6f8f3a</code>): Wilderness survival and firemaking. Use tinderboxes with logs to create fires for cooking in the field and staying warm, as well as foraging wild flora.
-* '''[[Agility]]''' (Color: <code>#c9a568</code>): Enhances mobility and enables traversal of 15 obstacle courses and world shortcuts (e.g. crawl pipes, balancing logs, tightropes, rock climbs, and stepping stones), significantly reducing travel times between key locations.
+* [[File:Roguery.png|21x21px|middle|link=Roguery|alt=Roguery]] '''[[Roguery]]''': The art of thievery, lockpicking, and subterfuge. Used to open locked rogue chests found throughout dungeons and wilderness zones, yielding coins, rare gems, and magical relics.
+* [[File:Survival.png|21x21px|middle|link=Survival|alt=Survival]] '''[[Survival]]''': Wilderness survival and firemaking. Use tinderboxes with logs to create fires for cooking in the field and staying warm, as well as foraging wild flora.
+* [[File:Agility.png|21x21px|middle|link=Agility|alt=Agility]] '''[[Agility]]''': Enhances mobility and enables traversal of 15 obstacle courses and world shortcuts (e.g. crawl pipes, balancing logs, tightropes, rock climbs, and stepping stones), significantly reducing travel times between key locations.
 
 == See Also ==
 * [[Experience]] — Cumulative XP requirements, formulas, and full Level 1–150 table

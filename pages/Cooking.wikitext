@@ -1,0 +1,164 @@
+'''Cooking''' is an artisan [[Skills|skill]] in EvilQuest that allows adventurers to prepare raw meats, cook freshly caught fish, bake harvested farm vegetables, and steep 21 distinct varieties of [[Cooking#Herbal Teas|herbal teas]]. Food and teas provide essential sustenance during combat and exploration by restoring [[Hitpoints]], providing health regeneration over time, boosting maximum health pools, and granting temporary combat or gathering stat buffs.
+
+Like all skills in EvilQuest, Cooking can be trained up to a maximum level cap of '''150'''.
+
+== Overview & Mechanics ==
+Cooking is primarily trained by preparing raw ingredients gathered from combat drops (raw meats), the [[Fishing]] skill (raw fish and seafood), and harvesting crops (rice, potatoes). Cooking also includes herbal tea steeping, where leaves gathered from wild tea bushes are steeped in hot water to create powerful consumable brews.
+
+=== Cooking Apparatus ===
+Cooking requires heat to prepare raw ingredients:
+* '''[[Cooking Range]]''': Dedicated cooking stoves found inside buildings and kitchens across major settlements. The northwest farming town of [[Wibergis]] is one of the most popular early-game cooking destinations, featuring a Cooking Range situated conveniently close to [[Potato]] crop fields and [[Chicken|Chickens]].
+* '''[[Fire]]''': Portable campfires created anywhere in the wilderness using logs and a tinderbox via the [[Survival]] skill. Fires offer the exact same cooking recipes and functionality as indoor cooking ranges, enabling self-sufficient expeditions while hunting or fishing away from towns.
+
+=== Burn Rates & Success ===
+Currently, all cooking actions in EvilQuest succeed at a '''100% success rate'''. However, the game files contain fully modeled burnt items (such as [[Burnt Chicken]], [[Burnt Meat]], [[Burnt Potato]], and charred fish varieties) indicating potential future burn mechanics scaling with Cooking level.
+
+=== Water Essence Byproduct ===
+When cooking marine and freshwater fish, players have a rare chance to extract [[Water Essence]] (Item ID 662)—an elemental essence that can be gathered into an essence pouch or stored in vials for use in mid-to-high tier combat magic and transmutations. In-game item lore describes it as:
+:''"Elemental essence carried by fish and released through careful cooking."''
+
+== Meats & Poultry ==
+Raw meats are obtained as drops by defeating common creatures throughout the realm—such as [[Chicken|Chickens]], [[Giant Rat|Giant Rats]], and [[Cow|Cows]]. Cooking meat on a range or campfire prepares hearty provisions that provide immediate hitpoint restoration.
+
+Additionally, [[Raw Beef]] can also be processed into [[Low Quality Sinew]], an indispensable crafting material that is spun on a spinning wheel into a [[Bowstring]] for the [[Fletching]] branch of [[Crafting]].
+
+{{#invoke:CookingData|renderFoodTable|category=meat}}
+
+== Fish & Marine Seafood ==
+Fish and crustaceans harvested through the [[Fishing]] skill provide the primary mid-to-high level food source in EvilQuest. As players advance their Fishing and Cooking levels in tandem, they unlock progressively potent marine catches—ranging from shallow-water [[Raw Shrimp]] to deep-sea [[Raw Oarfish]].
+
+{{#invoke:CookingData|renderFoodTable|category=fish}}
+
+=== Prepared Seafood Meals ===
+* '''[[Fried Shrimp with Rice]]''': A prepared meal of seasoned fried shrimp served over cooked rice, restoring '''4 HP''' upon consumption.
+
+=== Extended Marine Species ===
+In addition to the catches currently catchable at active fishing spots, the EvilQuest engine registers extended marine species (including [[Trout]], [[Salmon]], [[Bass]], [[Snapper]], [[Sturgeon]], [[Swordfish]], and predatory sharks up to the [[Great White Shark]], which heals up to '''26 HP''') planned for future fishing and cooking expansions across deep-water ocean biomes.
+
+== Vegetables & Farm Crops ==
+Vegetables can be harvested directly from crop fields located throughout the countryside. Cooking raw crops at a range produces ready-to-eat rations.
+
+{{#invoke:CookingData|renderFoodTable|category=vegetable}}
+
+=== Other Farm Produce ===
+* '''[[Cauliflower]]''': Harvestable from farming patches alongside potatoes and rice. In current versions of the game, cauliflower is an uncookable vegetable crop that can be eaten raw.
+
+== Base Hot Water ==
+Before any tea can be brewed, adventurers must heat clean water:
+* '''[[Steaming Cup of Water]]''' (Level 1 Cooking): Created by heating a [[Cup of Water]] at a [[Cooking Range]] or campfire [[Fire]]. This steaming vessel serves as the universal steeping base for all 21 varieties of [[Cooking#Herbal Teas|Herbal Teas]].
+
+== Herbal Teas ==
+[[File:Item_673.png|32x32px|right|Kalo Tea]]
+Herbal teas represent the advanced artisan tier of Cooking. By steeping specialized [[Tea Leaves]] (harvested from wild tea bushes across EvilQuest) into a [[Steaming Cup of Water]]—often combined with secondary foraged herbs, fruits, spices, or mineral catalysts—players brew teas that grant potent temporary stat buffs, health regeneration over time, maximum health extensions, or defensive combat wards.
+
+=== Steeping & Doses ===
+* '''Two-Dose Cups''': Successfully steeping a tea recipe produces a 2-dose cup (e.g., [[Brute's Brew (2 doses)]]).
+* '''One-Dose Cups''': Drinking the first dose grants the buff and leaves behind a 1-dose cup (e.g., [[Brute's Brew (1 dose)]]), providing two full uses per brew.
+* '''Buff Durations''': Most skill boosts last for '''5 minutes''' (300 seconds), while combat boosts scale both flat stats and percentage modifiers (e.g. +3 and +10%). Specialized defensive teas, like [[Ashveil]] and [[Thaw Tea]], protect players from dragon breath attacks by capping incoming damage at a maximum of 4 hitpoints.
+
+{{#invoke:CookingData|renderTeaTable}}
+
+== Cooking Level Progression & Milestones ==
+{| class="wikitable" style="width: 100%; text-align: left;"
+! style="width: 12%; text-align: center;" | Level
+! style="width: 28%;" | Unlocked Food / Tea
+! style="width: 60%;" | Practical Significance & Training Notes
+|-
+| style="text-align: center;" | '''1'''
+| [[Cooked Chicken]], [[Cooked Rat Meat]], [[Cooked Beef]], [[Low Quality Sinew]], [[Cooked Rice]], [[Cooked Shrimp]], [[Steaming Cup of Water]], [[Kalo Tea]]
+| Foundation level. Prepare basic meats (3–4 HP) from early mob hunting, cook raw shrimp, heat steaming water, and brew introductory Kalo Tea (+2 Max HP and 5 HP regen).
+|-
+| style="text-align: center;" | '''7'''
+| [[Baked Potato]]
+| Harvest potatoes in [[Wibergis]] and bake them for easy 3 HP food right beside the village range.
+|-
+| style="text-align: center;" | '''8'''
+| [[Crayfish]], [[Quibo Tea]]
+| Cook caught crayfish (3 HP) and brew your first artisan gathering tea (+3 Woodcutting boost).
+|-
+| style="text-align: center;" | '''12'''
+| [[Sardine]], [[Dwarven Drink]]
+| Cook river sardines (4 HP) and brew Dwarven Drink (+3 Mining boost) using Kalo leaves and giantroot.
+|-
+| style="text-align: center;" | '''18'''
+| [[Gurba Tea]]
+| First martial combat brew, granting +2 (+5%) [[Weaponry]] for 5 minutes.
+|-
+| style="text-align: center;" | '''22'''
+| [[Brute's Brew]]
+| Melee strength enhancer (+2 and +5% [[Strength]] for 5 minutes) sweetened with black fig.
+|-
+| style="text-align: center;" | '''25'''
+| [[Kawaki Tea]]
+| Thievery and agility support (+3 [[Roguery]] boost for 5 minutes).
+|-
+| style="text-align: center;" | '''28'''
+| [[Zodoco Tea]]
+| Wilderness survival tea (+3 [[Survival]] boost for 5 minutes).
+|-
+| style="text-align: center;" | '''30'''
+| [[Tuna]], [[Pazar's Brew]]
+| Cook deep harpoon tuna (8 HP food) and brew Pazar's Brew (automatically magnets coin drops straight to your inventory for 15 minutes).
+|-
+| style="text-align: center;" | '''35'''
+| [[Humpleaf Tea]]
+| Archery combat brew (+2 and +5% [[Ranging]] boost for 5 minutes).
+|-
+| style="text-align: center;" | '''40'''
+| [[Lobster]], [[Lox Tea]]
+| Major combat food milestone: cook [[Lobster]] (11 HP healing per bite) and brew Lox Tea (restores 10 [[Light Magic]] points).
+|-
+| style="text-align: center;" | '''45'''
+| [[Nimble Tea]]
+| Agility skill enhancer (+3 [[Agility]] boost for 5 minutes) brewed with swiftmint.
+|-
+| style="text-align: center;" | '''50'''
+| [[Askaline Tea]]
+| Gathering support brew granting +3 [[Fishing]] for 5 minutes.
+|-
+| style="text-align: center;" | '''55'''
+| [[Catastrophea]]
+| Chaotic experimental tea brewed with glasswort; 25% chance of non-fatal scald or random tea buff.
+|-
+| style="text-align: center;" | '''58'''
+| [[Solfrost Tea]]
+| Artisan smithing tea granting +3 [[Smithing]] for 5 minutes.
+|-
+| style="text-align: center;" | '''60'''
+| [[Shielding Tea]]
+| Superior defensive tea brewed with ironbark quills (+3 and +10% [[Defence]] boost for 5 minutes).
+|-
+| style="text-align: center;" | '''62'''
+| [[Octopus]], [[Knight's Tea]]
+| High-tier coastal seafood (17 HP healing) and advanced knightly combat brew (+3 and +10% [[Weaponry]]).
+|-
+| style="text-align: center;" | '''65'''
+| [[Ashveil]]
+| Dragon warfare preparation: spicy dragon chilli brew capping dragon fire breath at a maximum of 4 damage.
+|-
+| style="text-align: center;" | '''68'''
+| [[Ogre's Mug]]
+| Heavyweight melee combat tea (+3 and +10% [[Strength]] boost for 5 minutes) steeped with giantroot.
+|-
+| style="text-align: center;" | '''70'''
+| [[Thaw Tea]]
+| Anti-frost protection: winter quince brew capping frost dragon ice breath at a maximum of 4 damage.
+|-
+| style="text-align: center;" | '''74'''
+| [[Hawkeye Brew]]
+| Master archery combat brew (+3 and +10% [[Ranging]] boost for 5 minutes) brewed with beaberry.
+|-
+| style="text-align: center;" | '''80'''
+| [[Oarfish]], [[Honey Pear Tea]]
+| Pinnacle culinary milestones: cook [[Oarfish]] (20 HP healing) and brew [[Honey Pear Tea]] (rapidly restores 15 HP over 10 seconds).
+|}
+
+== See Also ==
+* [[Skills]] — Overview of all 16 skills in EvilQuest.
+* [[Fishing]] — The primary gathering discipline providing raw seafood for Cooking.
+* [[Survival]] — Used to ignite campfires for cooking in the wilderness.
+* [[Combat Skills]] — The combat arts supported by cooked foods and tea buffs.
+
+[[Category:Skills]]
+[[Category:Artisan skills]]
+[[Category:Cooking]]

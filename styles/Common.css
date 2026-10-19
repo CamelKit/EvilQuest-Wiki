@@ -224,8 +224,8 @@ body,
     font-family: "Amarante", serif !important;
 }
 
-/* Ensure content inherits properly */
-.mw-body * {
+/* Ensure content inherits properly, excluding MathJax math elements */
+.mw-body *:not(mjx-container):not(mjx-container *):not(.smj-container):not(.smj-container *) {
     font-family: inherit !important;
 }
 
@@ -865,4 +865,30 @@ figcaption {
 
 .wikitable>*>tr>td[colspan="2"] {
     background-color: unset !important;
+}
+
+
+/* ===========================================
+   SIMPLEMATHJAX / MATHJAX FORMULA STYLING
+   =========================================== */
+
+/* Ensure MathJax uses its native TeX / math glyph fonts */
+.mw-body mjx-container,
+.mw-body mjx-container * {
+    font-family: MJX-NCM-ZERO, MJX-NCM-N, MathJax_Main, MathJax_Math, serif !important;
+}
+
+/* Provide proper line-height and vertical clearance for math expressions & fractions */
+.smj-container,
+mjx-container {
+    line-height: normal !important;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 4px 0;
+}
+
+/* Ensure indented formulas (<dd>) don't clip tall multi-line expressions */
+dd > .smj-container {
+    display: inline-block;
+    margin: 4px 0;
 }

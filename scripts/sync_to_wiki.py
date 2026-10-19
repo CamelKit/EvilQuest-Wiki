@@ -5,18 +5,47 @@ import json
 import requests
 
 if hasattr(sys.stdout, "reconfigure"):
-    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
 
-try:
-    from dotenv import load_dotenv
-    load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
-except ImportError:
-    pass
+env_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')
+if os.path.exists(env_file):
+    try:
+        from dotenv import load_dotenv
+        load_dotenv(env_file)
+    except ImportError:
+        with open(env_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    k, v = line.split('=', 1)
+                    if k.strip() not in os.environ:
+                        os.environ[k.strip()] = v.strip()
 
-# 1. Capture Environment Variables from GitHub Secrets
-WIKI_API_URL = os.environ.get("WIKI_API_URL")
-BOT_USERNAME = os.environ.get("WIKI_BOT_USERNAME")
-BOT_PASSWORD = os.environ.get("WIKI_BOT_PASSWORD")
+# 1. Capture Environment Variables
+use_prod = "--prod" in sys.argv
+if use_prod:
+    sys.argv.remove("--prod")
+    WIKI_API_URL = os.environ.get("PROD_WIKI_API_URL") or os.environ.get("WIKI_API_URL")
+    BOT_USERNAME = os.environ.get("PROD_WIKI_BOT_USERNAME") or os.environ.get("WIKI_BOT_USERNAME")
+    BOT_PASSWORD = os.environ.get("PROD_WIKI_BOT_PASSWORD") or os.environ.get("WIKI_BOT_PASSWORD")
+else:
+    WIKI_API_URL = os.environ.get("WIKI_API_URL")
+    BOT_USERNAME = os.environ.get("WIKI_BOT_USERNAME")
+    BOT_PASSWORD = os.environ.get("WIKI_BOT_PASSWORD")
+
+filter_term = None
+if "--only" in sys.argv:
+    idx = sys.argv.index("--only")
+    filter_term = sys.argv[idx + 1]
+    del sys.argv[idx:idx + 2]
+elif "--filter" in sys.argv:
+    idx = sys.argv.index("--filter")
+    filter_term = sys.argv[idx + 1]
+    del sys.argv[idx:idx + 2]
+
+skip_provision = "--no-provision" in sys.argv
+if skip_provision:
+    sys.argv.remove("--no-provision")
 
 if not all([WIKI_API_URL, BOT_USERNAME, BOT_PASSWORD]):
     print("❌ Critical configuration error: Missing required execution secrets.")
@@ -48,6 +77,8 @@ ASSET_SYNC_MATRIX = [
     {"file": "data/AgilityData.json", "title": "Module:AgilityData/json", "model": "json"},
     {"file": "data/WorldObjectMappingData.json", "title": "Module:WorldObjectMappingData/json", "model": "json"},
     {"file": "data/NetworkProtocolData.json", "title": "Module:NetworkProtocolData/json", "model": "json"},
+    {"file": "modules/FishingData.lua", "title": "Module:FishingData", "model": "Scribunto"},
+    {"file": "data/FishingData.json", "title": "Module:FishingData/json", "model": "json"},
     {"file": "styles/Common.css", "title": "MediaWiki:Common.css", "model": "css"}
 ]
 
@@ -135,6 +166,9 @@ def execute_wiki_sync():
         wiki_title = asset["title"]
         content_model = asset["model"]
 
+        if filter_term and filter_term.lower() not in local_path.lower() and filter_term.lower() not in wiki_title.lower():
+            continue
+
         if not os.path.exists(local_path):
             print(f"⚠️ Skipping tracking target: Local file '{local_path}' was not found.")
             continue
@@ -159,18 +193,22 @@ def execute_wiki_sync():
             edit_payload["contentmodel"] = "json"
 
         response = session.post(WIKI_API_URL, data=edit_payload)
-        response_data = response.json()
-
-        if "error" in response_data:
-            print(f"❌ Sync failed for [[{wiki_title}]]: {response_data['error'].get('info')}")
-        else:
-            print(f"✨ Successfully deployed [[{wiki_title}]]! Revision ID: {response_data['edit'].get('newrevid')}")
+        try:
+            response_data = response.json()
+            if "error" in response_data:
+                print(f"❌ Sync failed for [[{wiki_title}]]: {response_data['error'].get('info')}")
+            else:
+                revid = response_data.get('edit', {}).get('newrevid')
+                print(f"✨ Successfully deployed [[{wiki_title}]]! Revision ID: {revid}")
+        except Exception as e:
+            print(f"⚠️ Failed to parse API response for [[{wiki_title}]]: {e} (Status: {response.status_code})")
 
     # Provision Articles
-    print("\n📦 Provisioning Missing Item Articles...")
-    provision_item_articles(session, csrf_token)
-    print("\n📦 Provisioning Missing NPC Articles...")
-    provision_npc_articles(session, csrf_token)
+    if not skip_provision and not filter_term:
+        print("\n📦 Provisioning Missing Item Articles...")
+        provision_item_articles(session, csrf_token)
+        print("\n📦 Provisioning Missing NPC Articles...")
+        provision_npc_articles(session, csrf_token)
 
 def provision_item_articles(session, csrf_token):
     data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "ItemData.json")

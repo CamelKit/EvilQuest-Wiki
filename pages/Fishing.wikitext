@@ -1,0 +1,181 @@
+'''Fishing''' is a gathering [[Skills|skill]] in EvilQuest used to catch fish and crustaceans. Catches can be cooked with [[Cooking]] to restore [[Hitpoints]].
+
+Like all skills in EvilQuest, Fishing can be trained up to level '''150''', requiring 2,033,749,558 cumulative XP.
+
+<div style="background: rgba(68, 170, 238, 0.08); border-left: 4px solid #44aaee; padding: 12px 18px; margin: 18px 0; border-radius: 4px;">
+<div style="font-weight: bold; color: #44aaee; font-size: 1.05em; margin-bottom: 6px;">🐟 Catch XP Tracking</div>
+<p style="margin: 0 0 6px 0;">Gathering experience in EvilQuest is calculated server-side and is not contained in client data files.</p>
+<ul style="margin: 4px 0 6px 20px;">
+<li>'''Verified Values''': [[Tuna]] grants '''70 Catch XP''' and [[Lobster]] grants '''90 Catch XP'''.</li>
+<li>'''Unverified Values''': Shrimp, Crayfish, Sardine, Octopus, and Oarfish.</li>
+</ul>
+<p style="margin: 0;">If you know the XP value for any fish, please '''[{{fullurl:Fishing|action=edit}} click here to edit this guide]''' and enter the value in the table below, or update [[Module:FishingData/json]].</p>
+</div>
+
+== Overview & Mechanics ==
+Fishing is performed by clicking on fishing spots found in water.
+
+=== Equipment ===
+To fish, players must carry the required tool in their inventory:
+* '''[[Fishing Net]]''' (Level 1): Used to catch [[Raw Shrimp]].
+* '''[[Crab Pot]]''' (Level 10 & 50): Used to catch [[Raw Crayfish]] and [[Raw Lobster]].
+* '''[[Fishing Rod]]''' (Level 15 & 87): Used with [[Fishing Bait]] to catch [[Raw Sardine]] and [[Raw Oarfish]]. Consumes 1 bait per catch.
+* '''[[Harpoon]]''' (Level 35 & 70): Used to catch [[Raw Tuna]] and [[Raw Octopus]].
+
+=== Water Essence ===
+Catching fish has a rare chance to award [[Water Essence]] (Item ID 662), an elemental essence used in magic and transmutations. Game data also lists cooking fish as an intended source (''"Rare from Fishing & Cooking"'' and ''"released through careful cooking"'').
+
+== Fishing Equipment & Tools ==
+{{#invoke:FishingData|renderEquipmentTable}}
+
+== Fish & Marine Catches ==
+<!-- =======================================================================
+     COMMUNITY CONTRIBUTION - CATCH XP:
+     Gathering XP is determined server-side. To update or fill in the Catch
+     XP for any fish, edit the respective parameter below and save this page!
+     ======================================================================= -->
+{{#invoke:FishingData|renderFishingTable
+| shrimp_xp   = 
+| crayfish_xp = 
+| sardine_xp  = 
+| tuna_xp     = 70
+| lobster_xp  = 90
+| octopus_xp  = 
+| oarfish_xp  = 
+}}
+
+== Fishing Spots ==
+* '''[[Shallow Net Fishing Spot]]''' (Level 1): Requires a [[Fishing Net]] to catch [[Raw Shrimp]].
+* '''[[Crayfish Pot Fishing Spot]]''' (Level 10): Requires a [[Crab Pot]] to catch [[Raw Crayfish]].
+* '''[[River Bait Fishing Spot]]''' (Level 15): Requires a [[Fishing Rod]] and [[Fishing Bait]] to catch [[Raw Sardine]].
+* '''[[Tuna Harpoon Fishing Spot]]''' (Level 35): Requires a [[Harpoon]] to catch [[Raw Tuna]].
+* '''[[Lobster Pot Fishing Spot]]''' (Level 50): Requires a [[Crab Pot]] to catch [[Raw Lobster]].
+* '''[[Coastal Harpoon Fishing Spot]]''' (Level 70): Requires a [[Harpoon]] to catch [[Raw Octopus]].
+* '''[[Deep Bait Fishing Spot]]''' (Level 87): Requires a [[Fishing Rod]] and [[Fishing Bait]] to catch [[Raw Oarfish]].
+
+== Synergy with Cooking ==
+Raw fish can be cooked using [[Cooking]] to restore [[Hitpoints]].
+
+{| class="wikitable sortable" style="width: 100%; text-align: left;"
+|- style="background-color: #2e2e2e; color: white;"
+! style="width: 16%;" | Marine Catch
+! style="width: 12%; text-align: center;" | Fishing Lvl
+! style="width: 12%; text-align: center;" | Catch XP
+! style="width: 16%;" | Prepared Food
+! style="width: 12%; text-align: center;" | Cooking Lvl
+! style="width: 12%; text-align: center;" | Cooking XP
+! style="width: 12%; text-align: center;" | Heal Value
+|-
+| [[File:Item_27.png|21x21px|middle|link=Raw Shrimp]] [[Raw Shrimp]]
+| style="text-align: center;" | 1
+| style="text-align: center;" | ''Unknown''
+| [[File:Item_28.png|21x21px|middle|link=Cooked Shrimp]] [[Cooked Shrimp]]
+| style="text-align: center;" | 1
+| style="text-align: center;" | 30 XP
+| style="text-align: center; font-weight: bold; color: #4ade80;" | 2 HP
+|-
+| [[File:Item_501.png|21x21px|middle|link=Raw Crayfish]] [[Raw Crayfish]]
+| style="text-align: center;" | 10
+| style="text-align: center;" | ''Unknown''
+| [[File:Item_526.png|21x21px|middle|link=Crayfish]] [[Crayfish]]
+| style="text-align: center;" | 8
+| style="text-align: center;" | 38 XP
+| style="text-align: center; font-weight: bold; color: #4ade80;" | 3 HP
+|-
+| [[File:Item_560.png|21x21px|middle|link=Raw Sardine]] [[Raw Sardine]]
+| style="text-align: center;" | 15
+| style="text-align: center;" | ''Unknown''
+| [[File:Item_561.png|21x21px|middle|link=Sardine]] [[Sardine]]
+| style="text-align: center;" | 12
+| style="text-align: center;" | 40 XP
+| style="text-align: center; font-weight: bold; color: #4ade80;" | 4 HP
+|-
+| [[File:Item_510.png|21x21px|middle|link=Raw Tuna]] [[Raw Tuna]]
+| style="text-align: center;" | 35
+| style="text-align: center; font-weight: bold;" | 70 XP
+| [[File:Item_535.png|21x21px|middle|link=Tuna]] [[Tuna]]
+| style="text-align: center;" | 30
+| style="text-align: center;" | 80 XP
+| style="text-align: center; font-weight: bold; color: #4ade80;" | 8 HP
+|-
+| [[File:Item_558.png|21x21px|middle|link=Raw Lobster]] [[Raw Lobster]]
+| style="text-align: center;" | 50
+| style="text-align: center; font-weight: bold;" | 90 XP
+| [[File:Item_559.png|21x21px|middle|link=Lobster]] [[Lobster]]
+| style="text-align: center;" | 40
+| style="text-align: center;" | 120 XP
+| style="text-align: center; font-weight: bold; color: #4ade80;" | 11 HP
+|-
+| [[File:Item_562.png|21x21px|middle|link=Raw Octopus]] [[Raw Octopus]]
+| style="text-align: center;" | 70
+| style="text-align: center;" | ''Unknown''
+| [[File:Item_563.png|21x21px|middle|link=Octopus]] [[Octopus]]
+| style="text-align: center;" | 62
+| style="text-align: center;" | 170 XP
+| style="text-align: center; font-weight: bold; color: #4ade80;" | 17 HP
+|-
+| [[File:Item_523.png|21x21px|middle|link=Raw Oarfish]] [[Raw Oarfish]]
+| style="text-align: center;" | 87
+| style="text-align: center;" | ''Unknown''
+| [[File:Item_548.png|21x21px|middle|link=Oarfish]] [[Oarfish]]
+| style="text-align: center;" | 80
+| style="text-align: center;" | 220 XP
+| style="text-align: center; font-weight: bold; color: #4ade80;" | 20 HP
+|}
+
+=== Prepared Dishes ===
+* '''[[Fried Shrimp with Rice]]''' (Item ID 574): Heals 4 HP. Made with cooked shrimp and cooked rice.
+
+== Extended Marine Species (Unreleased) ==
+The following fish exist in the game files but do not currently have fishing spots:
+
+{{#invoke:FishingData|renderUnreleasedTable}}
+
+== Fishing Level Progression & Milestones ==
+{| class="wikitable" style="width: 100%; text-align: left;"
+! style="width: 12%; text-align: center;" | Level
+! style="width: 28%;" | Unlocks
+! style="width: 60%;" | Details
+|-
+| style="text-align: center;" | '''1'''
+| [[Fishing Net]], [[Raw Shrimp]]
+| Catch [[Raw Shrimp]] with a [[Fishing Net]]. Cooked for 2 HP food.
+|-
+| style="text-align: center;" | '''10'''
+| [[Crab Pot]], [[Raw Crayfish]]
+| Catch [[Raw Crayfish]] with a [[Crab Pot]]. Cooked for 3 HP food.
+|-
+| style="text-align: center;" | '''15'''
+| [[Fishing Rod]], [[Fishing Bait]], [[Raw Sardine]]
+| Catch [[Raw Sardine]] with a [[Fishing Rod]] and [[Fishing Bait]]. Cooked for 4 HP food.
+|-
+| style="text-align: center;" | '''35'''
+| [[Harpoon]], [[Raw Tuna]]
+| Catch [[Raw Tuna]] with a [[Harpoon]]. Grants 70 Catch XP. Cooked for 8 HP food.
+|-
+| style="text-align: center;" | '''50'''
+| [[Raw Lobster]]
+| Catch [[Raw Lobster]] with a [[Crab Pot]]. Grants 90 Catch XP. Cooked for 11 HP food.
+|-
+| style="text-align: center;" | '''70'''
+| [[Raw Octopus]]
+| Catch [[Raw Octopus]] with a [[Harpoon]]. Cooked for 17 HP food.
+|-
+| style="text-align: center;" | '''87'''
+| [[Raw Oarfish]]
+| Catch [[Raw Oarfish]] with a [[Fishing Rod]] and [[Fishing Bait]]. Cooked for 20 HP food.
+|-
+| style="text-align: center;" | '''150'''
+| Maximum Level Cap
+| Level cap for the skill (2,033,749,558 XP).
+|}
+
+== See Also ==
+* [[Skills]] — Overview of all 16 skills in EvilQuest.
+* [[Cooking]] — The artisan skill used to prepare raw catches and brew herbal teas.
+* [[Water Essence]] — Elemental resource awarded rarely while fishing and cooking.
+* [[Experience]] — Cumulative XP formulas and milestone tables.
+
+[[Category:Skills]]
+[[Category:Gathering skills]]
+[[Category:Fishing]]

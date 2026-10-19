@@ -248,6 +248,15 @@ def extract_skills_data(vc_text, gm_text):
         "crafting": "#ca4", "roguery": "#7a2a7a", "survival": "#6f8f3a", "agility": "#c9a568"
     }
 
+    # Extract skill icon paths from GameManager if present
+    skill_asset_paths = {}
+    if gm_text:
+        m_icons = re.search(r'[a-zA-Z0-9_$]+\s*=\s*\{([a-zA-Z0-9_$]+:\s*"\/ui\/skills\/[^"]+"(?:,\s*[a-zA-Z0-9_$]+:\s*"\/ui\/skills\/[^"]+")*)\}', gm_text)
+        if m_icons:
+            pairs = re.findall(r'([a-zA-Z0-9_$]+):\s*"(\/ui\/skills\/[^"]+)"', m_icons.group(1))
+            for k, v in pairs:
+                skill_asset_paths[k] = v
+
     skills_spec = []
     for sid in skill_ids:
         start_lvl = 10 if sid == "hitpoints" else (0 if "magic" in sid else 1)
@@ -259,9 +268,13 @@ def extract_skills_data(vc_text, gm_text):
                 )
             )
         )
+        display_name = display_names.get(sid, sid.capitalize())
+        icon_filename = f"{display_name.replace(' ', '_')}.png"
         skills_spec.append({
             "id": sid,
-            "name": display_names.get(sid, sid.capitalize()),
+            "name": display_name,
+            "icon": icon_filename,
+            "assetPath": skill_asset_paths.get(sid, f"/ui/skills/{sid}-v2.png"),
             "color": skill_colors.get(sid, "#888"),
             "category": category,
             "startLevel": start_lvl,
@@ -720,7 +733,19 @@ def extract_cooking_data(vc_text, var_map, node_header, item_lookup, items_by_id
     })
 
     log(f"Extracted {len(teas)} Herbal Tea recipes with effect profiles", "✅")
-    return {"herbalTeas": teas}
+    
+    # Load or provide cookable food definitions (meats, fish, vegetables, staples, steaming water)
+    existing_cooking_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "CookingData.json")
+    foods = []
+    if os.path.exists(existing_cooking_path):
+        try:
+            with open(existing_cooking_path, "r", encoding="utf-8") as f:
+                c_data = json.load(f)
+                foods = c_data.get("foods", [])
+        except Exception:
+            pass
+
+    return {"foods": foods, "herbalTeas": teas}
 
 
 

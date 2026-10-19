@@ -8,6 +8,8 @@
     {
       "id": "weaponry",
       "name": "Weaponry",
+      "icon": "Weaponry.png",
+      "assetPath": "/ui/skills/weaponry-v2.png",
       "color": "#c44",
       "category": "combat",
       "startLevel": 1,
@@ -16,6 +18,8 @@
     {
       "id": "strength",
       "name": "Strength",
+      "icon": "Strength.png",
+      "assetPath": "/ui/skills/strength-v2.png",
       "color": "#e80",
       "category": "combat",
       "startLevel": 1,
@@ -24,6 +28,8 @@
     {
       "id": "defence",
       "name": "Defence",
+      "icon": "Defence.png",
+      "assetPath": "/ui/skills/defence-v2.png",
       "color": "#48c",
       "category": "combat",
       "startLevel": 1,
@@ -32,6 +38,8 @@
     {
       "id": "goodmagic",
       "name": "Light Magic",
+      "icon": "Light_Magic.png",
+      "assetPath": "/ui/skills/goodmagic-v2.png",
       "color": "#8cf",
       "category": "magic",
       "startLevel": 0,
@@ -40,6 +48,8 @@
     {
       "id": "evilmagic",
       "name": "Dark Magic",
+      "icon": "Dark_Magic.png",
+      "assetPath": "/ui/skills/evilmagic-v2.png",
       "color": "#a4e",
       "category": "magic",
       "startLevel": 0,
@@ -48,6 +58,8 @@
     {
       "id": "archery",
       "name": "Ranging",
+      "icon": "Ranging.png",
+      "assetPath": "/ui/skills/archery-v2.png",
       "color": "#4a4",
       "category": "combat",
       "startLevel": 1,
@@ -56,6 +68,8 @@
     {
       "id": "hitpoints",
       "name": "Hitpoints",
+      "icon": "Hitpoints.png",
+      "assetPath": "/ui/skills/hitpoints-v2.png",
       "color": "#e44",
       "category": "combat",
       "startLevel": 10,
@@ -64,6 +78,8 @@
     {
       "id": "woodcutting",
       "name": "Woodcutting",
+      "icon": "Woodcutting.png",
+      "assetPath": "/ui/skills/woodcutting-v2.png",
       "color": "#2a6",
       "category": "gathering",
       "startLevel": 1,
@@ -72,6 +88,8 @@
     {
       "id": "fishing",
       "name": "Fishing",
+      "icon": "Fishing.png",
+      "assetPath": "/ui/skills/fishing-v2.png",
       "color": "#4ae",
       "category": "gathering",
       "startLevel": 1,
@@ -80,6 +98,8 @@
     {
       "id": "cooking",
       "name": "Cooking",
+      "icon": "Cooking.png",
+      "assetPath": "/ui/skills/cooking-v2.png",
       "color": "#c84",
       "category": "artisan",
       "startLevel": 1,
@@ -88,6 +108,8 @@
     {
       "id": "mining",
       "name": "Mining",
+      "icon": "Mining.png",
+      "assetPath": "/ui/skills/mining-v2.png",
       "color": "#888",
       "category": "gathering",
       "startLevel": 1,
@@ -96,6 +118,8 @@
     {
       "id": "smithing",
       "name": "Smithing",
+      "icon": "Smithing.png",
+      "assetPath": "/ui/skills/smithing-v2.png",
       "color": "#aaa",
       "category": "artisan",
       "startLevel": 1,
@@ -104,6 +128,8 @@
     {
       "id": "crafting",
       "name": "Crafting",
+      "icon": "Crafting.png",
+      "assetPath": "/ui/skills/crafting-v2.png",
       "color": "#ca4",
       "category": "artisan",
       "startLevel": 1,
@@ -112,6 +138,8 @@
     {
       "id": "roguery",
       "name": "Roguery",
+      "icon": "Roguery.png",
+      "assetPath": "/ui/skills/roguery-v2.png",
       "color": "#7a2a7a",
       "category": "support",
       "startLevel": 1,
@@ -120,6 +148,8 @@
     {
       "id": "survival",
       "name": "Survival",
+      "icon": "Survival.png",
+      "assetPath": "/ui/skills/survival-v7.png",
       "color": "#6f8f3a",
       "category": "support",
       "startLevel": 1,
@@ -128,6 +158,8 @@
     {
       "id": "agility",
       "name": "Agility",
+      "icon": "Agility.png",
+      "assetPath": "/ui/skills/agility-v3.png",
       "color": "#c9a568",
       "category": "support",
       "startLevel": 1,

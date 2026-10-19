@@ -1,0 +1,97 @@
+<includeonly><span class="skill-badge" style="display: inline-flex; align-items: center; gap: 4px; white-space: nowrap;">[[File:{{#switch: {{lc:{{{1|}}}}}
+| weaponry = Weaponry.png
+| strength = Strength.png
+| defence | defense = Defence.png
+| goodmagic | lightmagic | light magic | light = Light_Magic.png
+| evilmagic | darkmagic | dark magic | dark = Dark_Magic.png
+| archery | ranging | range = Ranging.png
+| hitpoints | hp | health = Hitpoints.png
+| woodcutting | wc = Woodcutting.png
+| fishing | fish = Fishing.png
+| cooking | cook = Cooking.png
+| mining | mine = Mining.png
+| smithing | smith = Smithing.png
+| crafting | craft = Crafting.png
+| roguery | rogue | thieving = Roguery.png
+| survival | firemaking = Survival.png
+| agility | agil = Agility.png
+| #default = {{{1|}}}.png
+}}|{{{size|21x21px}}}|middle|link={{#switch: {{lc:{{{1|}}}}}
+| weaponry = Weaponry
+| strength = Strength
+| defence | defense = Defence
+| goodmagic | lightmagic | light magic | light = Light Magic
+| evilmagic | darkmagic | dark magic | dark = Dark Magic
+| archery | ranging | range = Ranging
+| hitpoints | hp | health = Hitpoints
+| woodcutting | wc = Woodcutting
+| fishing | fish = Fishing
+| cooking | cook = Cooking
+| mining | mine = Mining
+| smithing | smith = Smithing
+| crafting | craft = Crafting
+| roguery | rogue | thieving = Roguery
+| survival | firemaking = Survival
+| agility | agil = Agility
+| #default = {{{1|}}}
+}}|alt={{#switch: {{lc:{{{1|}}}}}
+| weaponry = Weaponry
+| strength = Strength
+| defence | defense = Defence
+| goodmagic | lightmagic | light magic | light = Light Magic
+| evilmagic | darkmagic | dark magic | dark = Dark Magic
+| archery | ranging | range = Ranging
+| hitpoints | hp | health = Hitpoints
+| woodcutting | wc = Woodcutting
+| fishing | fish = Fishing
+| cooking | cook = Cooking
+| mining | mine = Mining
+| smithing | smith = Smithing
+| crafting | craft = Crafting
+| roguery | rogue | thieving = Roguery
+| survival | firemaking = Survival
+| agility | agil = Agility
+| #default = {{{1|}}}
+}}]] {{#if:{{{iconsonly|{{{icononly|}}}}}}||'''[[{{#switch: {{lc:{{{1|}}}}}
+| weaponry = Weaponry
+| strength = Strength
+| defence | defense = Defence
+| goodmagic | lightmagic | light magic | light = Light Magic
+| evilmagic | darkmagic | dark magic | dark = Dark Magic
+| archery | ranging | range = Ranging
+| hitpoints | hp | health = Hitpoints
+| woodcutting | wc = Woodcutting
+| fishing | fish = Fishing
+| cooking | cook = Cooking
+| mining | mine = Mining
+| smithing | smith = Smithing
+| crafting | craft = Crafting
+| roguery | rogue | thieving = Roguery
+| survival | firemaking = Survival
+| agility | agil = Agility
+| #default = {{{1|}}}
+}}|{{{label|{{#switch: {{lc:{{{1|}}}}}
+| weaponry = Weaponry
+| strength = Strength
+| defence | defense = Defence
+| goodmagic | lightmagic | light magic | light = Light Magic
+| evilmagic | darkmagic | dark magic | dark = Dark Magic
+| archery | ranging | range = Ranging
+| hitpoints | hp | health = Hitpoints
+| woodcutting | wc = Woodcutting
+| fishing | fish = Fishing
+| cooking | cook = Cooking
+| mining | mine = Mining
+| smithing | smith = Smithing
+| crafting | craft = Crafting
+| roguery | rogue | thieving = Roguery
+| survival | firemaking = Survival
+| agility | agil = Agility
+| #default = {{{1|}}}
+}}}}}]]'''}}</span></includeonly><noinclude>
+== Usage ==
+<code><nowiki>{{Skill|Weaponry}}</nowiki></code> renders the skill icon and linked skill name.
+<code><nowiki>{{Skill|Mining|icononly=yes}}</nowiki></code> renders only the icon.
+<code><nowiki>{{Skill|Hitpoints|size=25x25px}}</nowiki></code> renders custom dimensions.
+[[Category:Utility templates]]
+</noinclude>

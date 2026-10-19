@@ -1,6 +1,7 @@
 =Sources=
 {{ItemGathering}}
 {{ItemCrafting}}
+{{ItemCooking}}
 {{ItemBrewing}}
 {{ItemMagic}}
 {{ItemDrops}}
