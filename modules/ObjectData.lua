@@ -184,8 +184,8 @@ function p.renderGatheringSources(frame)
         return ""
     end
 
-    local out = '===Gathered from===\n'
-    out = out .. '{| class="wikitable sortable" style="width: 100%; border-collapse: collapse; margin-top: 0.5em;"\n'
+    local out = '==Gathered from==\n'
+    out = out .. '{| class="wikitable sortable" style="margin-top: 0.5em;"\n'
     out = out .. '|- style="background-color: #2e2e2e; color: white;"\n'
     out = out .. '! Source Object !! Skill !! Action !! Required Tool !! Required Items\n'
 
