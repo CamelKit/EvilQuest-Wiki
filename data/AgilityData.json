@@ -1,0 +1,109 @@
+{
+  "obstacles": [
+    {
+      "key": "quick-climb",
+      "label": "Climb-up",
+      "name": "Quick climb (grab and step)",
+      "canFail": false,
+      "exclusive": false
+    },
+    {
+      "key": "climb-up",
+      "label": "Climb-up",
+      "name": "Climb up (net, rope, wall)",
+      "canFail": false,
+      "exclusive": false
+    },
+    {
+      "key": "climb-down",
+      "label": "Climb-down",
+      "name": "Climb down",
+      "canFail": false,
+      "exclusive": false
+    },
+    {
+      "key": "rope-swing",
+      "label": "Swing-on",
+      "name": "Rope swing",
+      "canFail": true,
+      "exclusive": true
+    },
+    {
+      "key": "log-balance",
+      "label": "Walk-across",
+      "name": "Log balance",
+      "canFail": true,
+      "exclusive": false
+    },
+    {
+      "key": "tightrope",
+      "label": "Walk-on",
+      "name": "Balancing rope",
+      "canFail": true,
+      "exclusive": false
+    },
+    {
+      "key": "ledge",
+      "label": "Walk-across",
+      "name": "Balancing ledge",
+      "canFail": true,
+      "exclusive": false
+    },
+    {
+      "key": "pipe",
+      "label": "Squeeze-through",
+      "name": "Obstacle pipe",
+      "canFail": false,
+      "exclusive": true
+    },
+    {
+      "key": "low-wall",
+      "label": "Climb-over",
+      "name": "Low wall (hurdle)",
+      "canFail": false,
+      "exclusive": false
+    },
+    {
+      "key": "stepping-stones",
+      "label": "Cross",
+      "name": "Stepping stones",
+      "canFail": true,
+      "exclusive": false
+    },
+    {
+      "key": "monkey-bars",
+      "label": "Swing-across",
+      "name": "Monkey bars",
+      "canFail": true,
+      "exclusive": true
+    },
+    {
+      "key": "gap-jump",
+      "label": "Jump",
+      "name": "Jump a gap",
+      "canFail": true,
+      "exclusive": false
+    },
+    {
+      "key": "jump-up",
+      "label": "Jump-up",
+      "name": "Jump up",
+      "canFail": false,
+      "exclusive": false
+    },
+    {
+      "key": "jump-down",
+      "label": "Jump-down",
+      "name": "Jump down",
+      "canFail": false,
+      "exclusive": false
+    },
+    {
+      "key": "hay-jump",
+      "label": "Jump-into",
+      "name": "Leap into hay",
+      "canFail": false,
+      "exclusive": false
+    }
+  ]
+}

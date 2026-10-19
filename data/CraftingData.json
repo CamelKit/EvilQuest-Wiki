@@ -1,0 +1,697 @@
+{
+  "leatherworking": [
+    {
+      "label": "leather boots",
+      "slot": "boots",
+      "tannedHideItemId": 302,
+      "tannedHideItemName": "Tanned Cowhide",
+      "hideQuantity": 1,
+      "outputItemId": 8,
+      "outputItemName": "Leather Boots",
+      "levelRequired": 1,
+      "xpReward": 9.6
+    },
+    {
+      "label": "leather coif",
+      "slot": "coif",
+      "tannedHideItemId": 302,
+      "tannedHideItemName": "Tanned Cowhide",
+      "hideQuantity": 1,
+      "outputItemId": 203,
+      "outputItemName": "Leather Coif",
+      "levelRequired": 3,
+      "xpReward": 9.6
+    },
+    {
+      "label": "leather chaps",
+      "slot": "chaps",
+      "tannedHideItemId": 302,
+      "tannedHideItemName": "Tanned Cowhide",
+      "hideQuantity": 2,
+      "outputItemId": 9,
+      "outputItemName": "Leather Chaps",
+      "levelRequired": 18,
+      "xpReward": 25.9
+    },
+    {
+      "label": "leather body",
+      "slot": "body",
+      "tannedHideItemId": 302,
+      "tannedHideItemName": "Tanned Cowhide",
+      "hideQuantity": 3,
+      "outputItemId": 7,
+      "outputItemName": "Leather Body",
+      "levelRequired": 14,
+      "xpReward": 24
+    },
+    {
+      "label": "bear hide body",
+      "slot": "body",
+      "tannedHideItemId": 303,
+      "tannedHideItemName": "Tanned Bear Hide",
+      "hideQuantity": 3,
+      "outputItemId": 613,
+      "outputItemName": "Bear Hide Body",
+      "levelRequired": 28,
+      "xpReward": 92.4
+    },
+    {
+      "label": "wolf hide chaps",
+      "slot": "chaps",
+      "tannedHideItemId": 304,
+      "tannedHideItemName": "Tanned Wolf Hide",
+      "hideQuantity": 2,
+      "outputItemId": 616,
+      "outputItemName": "Wolf Hide Chaps",
+      "levelRequired": 49,
+      "xpReward": 96.8
+    },
+    {
+      "label": "wolf hide body",
+      "slot": "body",
+      "tannedHideItemId": 304,
+      "tannedHideItemName": "Tanned Wolf Hide",
+      "hideQuantity": 3,
+      "outputItemId": 614,
+      "outputItemName": "Wolf Hide Body",
+      "levelRequired": 52,
+      "xpReward": 145.2
+    },
+    {
+      "label": "leather gloves",
+      "slot": "gloves",
+      "tannedHideItemId": 302,
+      "tannedHideItemName": "Tanned Cowhide",
+      "hideQuantity": 1,
+      "outputItemId": 730,
+      "outputItemName": "Leather Gloves",
+      "levelRequired": 1,
+      "xpReward": 9.6
+    },
+    {
+      "label": "leather vambraces",
+      "slot": "vambraces",
+      "tannedHideItemId": 302,
+      "tannedHideItemName": "Tanned Cowhide",
+      "hideQuantity": 1,
+      "outputItemId": 680,
+      "outputItemName": "Leather Vambraces",
+      "levelRequired": 11,
+      "xpReward": 21.1
+    },
+    {
+      "label": "bear hide chaps",
+      "slot": "chaps",
+      "tannedHideItemId": 303,
+      "tannedHideItemName": "Tanned Bear Hide",
+      "hideQuantity": 2,
+      "outputItemId": 845,
+      "outputItemName": "Bear Hide Chaps",
+      "levelRequired": 25,
+      "xpReward": 61.6
+    },
+    {
+      "label": "bear hide vambraces",
+      "slot": "vambraces",
+      "tannedHideItemId": 303,
+      "tannedHideItemName": "Tanned Bear Hide",
+      "hideQuantity": 1,
+      "outputItemId": 846,
+      "outputItemName": "Bear Hide Vambraces",
+      "levelRequired": 23,
+      "xpReward": 30.8
+    },
+    {
+      "label": "camel hide body",
+      "slot": "body",
+      "tannedHideItemId": 306,
+      "tannedHideItemName": "Tanned Camel Hide",
+      "hideQuantity": 3,
+      "outputItemId": 847,
+      "outputItemName": "Camel Hide Body",
+      "levelRequired": 41,
+      "xpReward": 126.7
+    },
+    {
+      "label": "camel hide chaps",
+      "slot": "chaps",
+      "tannedHideItemId": 306,
+      "tannedHideItemName": "Tanned Camel Hide",
+      "hideQuantity": 2,
+      "outputItemId": 848,
+      "outputItemName": "Camel Hide Chaps",
+      "levelRequired": 44,
+      "xpReward": 84.5
+    },
+    {
+      "label": "camel hide vambraces",
+      "slot": "vambraces",
+      "tannedHideItemId": 306,
+      "tannedHideItemName": "Tanned Camel Hide",
+      "hideQuantity": 1,
+      "outputItemId": 849,
+      "outputItemName": "Camel Hide Vambraces",
+      "levelRequired": 38,
+      "xpReward": 42.2
+    },
+    {
+      "label": "wolf hide vambraces",
+      "slot": "vambraces",
+      "tannedHideItemId": 304,
+      "tannedHideItemName": "Tanned Wolf Hide",
+      "hideQuantity": 1,
+      "outputItemId": 850,
+      "outputItemName": "Wolf Hide Vambraces",
+      "levelRequired": 46,
+      "xpReward": 48.4
+    },
+    {
+      "label": "green dragonhide body",
+      "slot": "body",
+      "tannedHideItemId": 852,
+      "tannedHideItemName": "Tanned Green Dragon Hide",
+      "hideQuantity": 3,
+      "outputItemId": 853,
+      "outputItemName": "Green Dragonhide Body",
+      "levelRequired": 63,
+      "xpReward": 163.7
+    },
+    {
+      "label": "green dragonhide chaps",
+      "slot": "chaps",
+      "tannedHideItemId": 852,
+      "tannedHideItemName": "Tanned Green Dragon Hide",
+      "hideQuantity": 2,
+      "outputItemId": 854,
+      "outputItemName": "Green Dragonhide Chaps",
+      "levelRequired": 60,
+      "xpReward": 109.1
+    },
+    {
+      "label": "green dragonhide vambraces",
+      "slot": "vambraces",
+      "tannedHideItemId": 852,
+      "tannedHideItemName": "Tanned Green Dragon Hide",
+      "hideQuantity": 1,
+      "outputItemId": 855,
+      "outputItemName": "Green Dragonhide Vambraces",
+      "levelRequired": 57,
+      "xpReward": 54.6
+    },
+    {
+      "label": "fire dragonhide body",
+      "slot": "body",
+      "tannedHideItemId": 857,
+      "tannedHideItemName": "Tanned Fire Dragon Hide",
+      "hideQuantity": 3,
+      "outputItemId": 858,
+      "outputItemName": "Fire Dragonhide Body",
+      "levelRequired": 77,
+      "xpReward": 205.9
+    },
+    {
+      "label": "fire dragonhide chaps",
+      "slot": "chaps",
+      "tannedHideItemId": 857,
+      "tannedHideItemName": "Tanned Fire Dragon Hide",
+      "hideQuantity": 2,
+      "outputItemId": 859,
+      "outputItemName": "Fire Dragonhide Chaps",
+      "levelRequired": 75,
+      "xpReward": 137.3
+    },
+    {
+      "label": "fire dragonhide vambraces",
+      "slot": "vambraces",
+      "tannedHideItemId": 857,
+      "tannedHideItemName": "Tanned Fire Dragon Hide",
+      "hideQuantity": 1,
+      "outputItemId": 860,
+      "outputItemName": "Fire Dragonhide Vambraces",
+      "levelRequired": 73,
+      "xpReward": 68.6
+    },
+    {
+      "label": "frost dragonhide body",
+      "slot": "body",
+      "tannedHideItemId": 862,
+      "tannedHideItemName": "Tanned Frost Dragon Hide",
+      "hideQuantity": 3,
+      "outputItemId": 863,
+      "outputItemName": "Frost Dragonhide Body",
+      "levelRequired": 71,
+      "xpReward": 184.8
+    },
+    {
+      "label": "frost dragonhide chaps",
+      "slot": "chaps",
+      "tannedHideItemId": 862,
+      "tannedHideItemName": "Tanned Frost Dragon Hide",
+      "hideQuantity": 2,
+      "outputItemId": 864,
+      "outputItemName": "Frost Dragonhide Chaps",
+      "levelRequired": 68,
+      "xpReward": 123.2
+    },
+    {
+      "label": "frost dragonhide vambraces",
+      "slot": "vambraces",
+      "tannedHideItemId": 862,
+      "tannedHideItemName": "Tanned Frost Dragon Hide",
+      "hideQuantity": 1,
+      "outputItemId": 865,
+      "outputItemName": "Frost Dragonhide Vambraces",
+      "levelRequired": 66,
+      "xpReward": 61.6
+    }
+  ],
+  "tanning": [
+    {
+      "rawItemId": 296,
+      "rawItemName": "Cowhide",
+      "tannedItemId": 302,
+      "tannedItemName": "Tanned Cowhide",
+      "coinCost": 5
+    },
+    {
+      "rawItemId": 297,
+      "rawItemName": "Bear Hide",
+      "tannedItemId": 303,
+      "tannedItemName": "Tanned Bear Hide",
+      "coinCost": 10
+    },
+    {
+      "rawItemId": 300,
+      "rawItemName": "Camel Hide",
+      "tannedItemId": 306,
+      "tannedItemName": "Tanned Camel Hide",
+      "coinCost": 15
+    },
+    {
+      "rawItemId": 298,
+      "rawItemName": "Wolf Hide",
+      "tannedItemId": 304,
+      "tannedItemName": "Tanned Wolf Hide",
+      "coinCost": 20
+    },
+    {
+      "rawItemId": 851,
+      "rawItemName": "Green Dragon Hide",
+      "tannedItemId": 852,
+      "tannedItemName": "Tanned Green Dragon Hide",
+      "coinCost": 30
+    },
+    {
+      "rawItemId": 856,
+      "rawItemName": "Fire Dragon Hide",
+      "tannedItemId": 857,
+      "tannedItemName": "Tanned Fire Dragon Hide",
+      "coinCost": 30
+    },
+    {
+      "rawItemId": 861,
+      "rawItemName": "Frost Dragon Hide",
+      "tannedItemId": 862,
+      "tannedItemName": "Tanned Frost Dragon Hide",
+      "coinCost": 30
+    }
+  ],
+  "gemCutting": [
+    {
+      "gem": "sapphire",
+      "uncutItemId": 254,
+      "uncutItemName": "Uncut Sapphire",
+      "cutItemId": 635,
+      "cutItemName": "Cut Sapphire",
+      "levelRequired": 12,
+      "xpReward": 12.8
+    },
+    {
+      "gem": "emerald",
+      "uncutItemId": 255,
+      "uncutItemName": "Uncut Emerald",
+      "cutItemId": 636,
+      "cutItemName": "Cut Emerald",
+      "levelRequired": 21,
+      "xpReward": 22.4
+    },
+    {
+      "gem": "ruby",
+      "uncutItemId": 256,
+      "uncutItemName": "Uncut Ruby",
+      "cutItemId": 637,
+      "cutItemName": "Cut Ruby",
+      "levelRequired": 30,
+      "xpReward": 32
+    },
+    {
+      "gem": "diamond",
+      "uncutItemId": 257,
+      "uncutItemName": "Uncut Diamond",
+      "cutItemId": 638,
+      "cutItemName": "Cut Diamond",
+      "levelRequired": 37,
+      "xpReward": 44.8
+    },
+    {
+      "gem": "amethyst",
+      "uncutItemId": 258,
+      "uncutItemName": "Uncut Amethyst",
+      "cutItemId": 639,
+      "cutItemName": "Cut Amethyst",
+      "levelRequired": 8,
+      "xpReward": 9.6
+    },
+    {
+      "gem": "topaz",
+      "uncutItemId": 259,
+      "uncutItemName": "Uncut Topaz",
+      "cutItemId": 640,
+      "cutItemName": "Cut Topaz",
+      "levelRequired": 15,
+      "xpReward": 16
+    },
+    {
+      "gem": "opal",
+      "uncutItemId": 260,
+      "uncutItemName": "Uncut Opal",
+      "cutItemId": 641,
+      "cutItemName": "Cut Opal",
+      "levelRequired": 18,
+      "xpReward": 19.2
+    },
+    {
+      "gem": "onyx",
+      "uncutItemId": 261,
+      "uncutItemName": "Uncut Onyx",
+      "cutItemId": 642,
+      "cutItemName": "Cut Onyx",
+      "levelRequired": 45,
+      "xpReward": 57.6
+    },
+    {
+      "gem": "imperial stone",
+      "uncutItemId": 634,
+      "uncutItemName": "Uncut Imperial Stone",
+      "cutItemId": 643,
+      "cutItemName": "Cut Imperial Stone",
+      "levelRequired": 55,
+      "xpReward": 76.8
+    }
+  ],
+  "arrowShafts": [
+    {
+      "logItemId": 23,
+      "logItemName": "Log",
+      "logLabel": "log",
+      "shaftQuantity": 5,
+      "levelRequired": 1,
+      "xpReward": 4
+    },
+    {
+      "logItemId": 24,
+      "logItemName": "Oak Log",
+      "logLabel": "oak log",
+      "shaftQuantity": 10,
+      "levelRequired": 5,
+      "xpReward": 6.4
+    },
+    {
+      "logItemId": 235,
+      "logItemName": "Willow Log",
+      "logLabel": "willow log",
+      "shaftQuantity": 15,
+      "levelRequired": 18,
+      "xpReward": 12.8
+    },
+    {
+      "logItemId": 39,
+      "logItemName": "Maple Log",
+      "logLabel": "maple log",
+      "shaftQuantity": 20,
+      "levelRequired": 32,
+      "xpReward": 20
+    },
+    {
+      "logItemId": 40,
+      "logItemName": "Yew Log",
+      "logLabel": "yew log",
+      "shaftQuantity": 25,
+      "levelRequired": 46,
+      "xpReward": 27.2
+    },
+    {
+      "logItemId": 271,
+      "logItemName": "Mystic Log",
+      "logLabel": "mystic log",
+      "shaftQuantity": 40,
+      "levelRequired": 60,
+      "xpReward": 32.8
+    }
+  ],
+  "bowFletching": [
+    {
+      "bowLabel": "shortbow",
+      "logItemId": 23,
+      "logItemName": "Log",
+      "unstrungItemId": 262,
+      "unstrungItemName": "Unstrung Shortbow",
+      "strungItemId": 274,
+      "strungItemName": "Shortbow",
+      "hqStrungItemId": 453,
+      "hqStrungItemName": "Shortbow (HQ)",
+      "levelRequired": 1,
+      "carveXpReward": 4.8,
+      "stringXpReward": 5.6
+    },
+    {
+      "bowLabel": "oak shortbow",
+      "logItemId": 24,
+      "logItemName": "Oak Log",
+      "unstrungItemId": 275,
+      "unstrungItemName": "Unstrung Oak Shortbow",
+      "strungItemId": 280,
+      "strungItemName": "Oak Shortbow",
+      "hqStrungItemId": 454,
+      "hqStrungItemName": "Oak Shortbow (HQ)",
+      "levelRequired": 5,
+      "carveXpReward": 6.4,
+      "stringXpReward": 7.2
+    },
+    {
+      "bowLabel": "willow shortbow",
+      "logItemId": 235,
+      "logItemName": "Willow Log",
+      "unstrungItemId": 276,
+      "unstrungItemName": "Unstrung Willow Shortbow",
+      "strungItemId": 281,
+      "strungItemName": "Willow Shortbow",
+      "hqStrungItemId": 455,
+      "hqStrungItemName": "Willow Shortbow (HQ)",
+      "levelRequired": 18,
+      "carveXpReward": 12.8,
+      "stringXpReward": 13.6
+    },
+    {
+      "bowLabel": "maple shortbow",
+      "logItemId": 39,
+      "logItemName": "Maple Log",
+      "unstrungItemId": 277,
+      "unstrungItemName": "Unstrung Maple Shortbow",
+      "strungItemId": 282,
+      "strungItemName": "Maple Shortbow",
+      "hqStrungItemId": 456,
+      "hqStrungItemName": "Maple Shortbow (HQ)",
+      "levelRequired": 32,
+      "carveXpReward": 20,
+      "stringXpReward": 20
+    },
+    {
+      "bowLabel": "yew shortbow",
+      "logItemId": 40,
+      "logItemName": "Yew Log",
+      "unstrungItemId": 278,
+      "unstrungItemName": "Unstrung Yew Shortbow",
+      "strungItemId": 283,
+      "strungItemName": "Yew Shortbow",
+      "hqStrungItemId": 457,
+      "hqStrungItemName": "Yew Shortbow (HQ)",
+      "levelRequired": 46,
+      "carveXpReward": 27.2,
+      "stringXpReward": 27.2
+    },
+    {
+      "bowLabel": "mystic shortbow",
+      "logItemId": 271,
+      "logItemName": "Mystic Log",
+      "unstrungItemId": 279,
+      "unstrungItemName": "Unstrung Mystic Shortbow",
+      "strungItemId": 284,
+      "strungItemName": "Mystic Shortbow",
+      "hqStrungItemId": 458,
+      "hqStrungItemName": "Mystic Shortbow (HQ)",
+      "levelRequired": 60,
+      "carveXpReward": 32.8,
+      "stringXpReward": 33.6
+    }
+  ],
+  "arrowFletching": [
+    {
+      "arrowLabel": "bronze",
+      "arrowheadItemId": 264,
+      "arrowheadItemName": "Bronze Arrowheads",
+      "arrowItemId": 42,
+      "arrowItemName": "Bronze Arrows",
+      "levelRequired": 1,
+      "xpReward": 0.8
+    },
+    {
+      "arrowLabel": "iron",
+      "arrowheadItemId": 265,
+      "arrowheadItemName": "Iron Arrowheads",
+      "arrowItemId": 43,
+      "arrowItemName": "Iron Arrows",
+      "levelRequired": 15,
+      "xpReward": 1.6
+    },
+    {
+      "arrowLabel": "steel",
+      "arrowheadItemId": 266,
+      "arrowheadItemName": "Steel Arrowheads",
+      "arrowItemId": 285,
+      "arrowItemName": "Steel Arrows",
+      "levelRequired": 30,
+      "xpReward": 3.2
+    },
+    {
+      "arrowLabel": "black bronze",
+      "arrowheadItemId": 268,
+      "arrowheadItemName": "Black Bronze Arrowheads",
+      "arrowItemId": 287,
+      "arrowItemName": "Black Bronze Arrows",
+      "levelRequired": 45,
+      "xpReward": 6.4
+    },
+    {
+      "arrowLabel": "mithril",
+      "arrowheadItemId": 267,
+      "arrowheadItemName": "Mithril Arrowheads",
+      "arrowItemId": 286,
+      "arrowItemName": "Mithril Arrows",
+      "levelRequired": 60,
+      "xpReward": 12.8
+    }
+  ],
+  "firemaking": [
+    {
+      "logItemId": 23,
+      "logItemName": "Log",
+      "logLabel": "logs",
+      "levelRequired": 1,
+      "xpReward": 40
+    },
+    {
+      "logItemId": 24,
+      "logItemName": "Oak Log",
+      "logLabel": "oak logs",
+      "levelRequired": 15,
+      "xpReward": 60
+    },
+    {
+      "logItemId": 235,
+      "logItemName": "Willow Log",
+      "logLabel": "willow logs",
+      "levelRequired": 30,
+      "xpReward": 90
+    },
+    {
+      "logItemId": 39,
+      "logItemName": "Maple Log",
+      "logLabel": "maple logs",
+      "levelRequired": 45,
+      "xpReward": 135
+    },
+    {
+      "logItemId": 40,
+      "logItemName": "Yew Log",
+      "logLabel": "yew logs",
+      "levelRequired": 60,
+      "xpReward": 203
+    },
+    {
+      "logItemId": 271,
+      "logItemName": "Mystic Log",
+      "logLabel": "mystic logs",
+      "levelRequired": 75,
+      "xpReward": 304
+    }
+  ],
+  "vorassWeapons": [
+    {
+      "name": "Vorass Bow",
+      "outputItemId": 611,
+      "outputItemName": "Vorass Bow",
+      "skill": "crafting",
+      "levelRequired": 45,
+      "xpReward": 400,
+      "consume": [
+        {
+          "itemId": 812,
+          "itemName": "Spider Pedipalp",
+          "quantity": 2
+        }
+      ],
+      "firstCraftReward": {
+        "essence": "air",
+        "quantity": 100
+      },
+      "essenceRewardChance": {
+        "essence": "air",
+        "quantity": 1,
+        "chance": 0.2
+      }
+    },
+    {
+      "name": "Vorass Fangs",
+      "outputItemId": 612,
+      "outputItemName": "Vorass Fangs",
+      "skill": "crafting",
+      "levelRequired": 45,
+      "xpReward": 400,
+      "consume": [
+        {
+          "itemId": 812,
+          "itemName": "Spider Pedipalp",
+          "quantity": 2
+        }
+      ],
+      "firstCraftReward": {
+        "essence": "air",
+        "quantity": 100
+      },
+      "essenceRewardChance": {
+        "essence": "air",
+        "quantity": 1,
+        "chance": 0.2
+      }
+    }
+  ],
+  "bearToothNecklace": {
+    "name": "Bear Tooth Necklace",
+    "outputItemId": 813,
+    "outputItemName": "Bear Tooth Necklace",
+    "levelRequired": 30,
+    "consumed": [
+      {
+        "itemId": 582,
+        "itemName": "String",
+        "quantity": 1
+      },
+      {
+        "itemId": 814,
+        "itemName": "Bear Tooth",
+        "quantity": 5
+      }
+    ]
+  }
+}

@@ -44,7 +44,20 @@ pip install requests python-dotenv
 
 This repository features several powerful automation scripts:
 
+* **`extract_client_data.py`**: Dynamically extracts formulas, XP curves, combat level mathematics, and hardcoded crafting/cooking/magic/agility recipes from compiled client JavaScript bundles (`vorassCrafting*.js`, `GameManager*.js`, `ItemIcon*.js`). Automatically resolves hashed or unhashed Vite bundles and updates `data/SkillData.json`, `data/CraftingData.json`, `data/CookingData.json`, `data/MagicData.json`, `data/AgilityData.json`, `data/WorldObjectMappingData.json`, and `data/NetworkProtocolData.json`.
 * **`sync_to_wiki.py`**: The core deployment engine. It recursively scans the repository and syncs `modules/`, `data/`, `templates/`, `pages/`, and `styles/` straight to their appropriate MediaWiki namespaces.
 * **`merge_data.py`**: Seamlessly merges newly generated game data dropped in the `staging/` folder directly into the centralized `data/ItemData.json` and `data/NpcData.json` sources, preserving historical modifications and tracking legacy name changes.
 * **`create_items.py` & `create_npcs.py`**: Automatically spins up missing base article pages on the wiki for any newly discovered items or NPCs found in the `data/` payloads.
 * **`sync_images.py`**: Connects to the authenticated game server manifest to download missing 3D item images and seamlessly uploads them straight to the MediaWiki storage bucket.
+
+### 🎮 Client Data Extraction Workflow
+Whenever a new game update or client release occurs:
+1. Place the new client JS bundles into `staging/client/` (or run pointing to `Client/references/` or `Client/dist/assets/`).
+2. Run the extractor:
+   ```bash
+   python3 scripts/extract_client_data.py
+   # Or with explicit bundle path:
+   python3 scripts/extract_client_data.py --bundle-dir ../Client/references
+   ```
+3. Commit and push the updated `data/*.json` files to `main` (or run `python3 scripts/sync_to_wiki.py`) to automatically deploy the updated tables straight to the live wiki.
+

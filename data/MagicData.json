@@ -1,0 +1,193 @@
+{
+  "transmutations": [
+    {
+      "id": "transmute_water_to_fire",
+      "school": "good",
+      "from": "water",
+      "to": "fire",
+      "inputQuantity": 2,
+      "outputQuantity": 1,
+      "levelRequired": 20
+    },
+    {
+      "id": "transmute_fire_to_water",
+      "school": "good",
+      "from": "fire",
+      "to": "water",
+      "inputQuantity": 2,
+      "outputQuantity": 1,
+      "levelRequired": 20
+    },
+    {
+      "id": "transmute_earth_to_air",
+      "school": "good",
+      "from": "earth",
+      "to": "air",
+      "inputQuantity": 2,
+      "outputQuantity": 1,
+      "levelRequired": 35
+    },
+    {
+      "id": "transmute_air_to_earth",
+      "school": "good",
+      "from": "air",
+      "to": "earth",
+      "inputQuantity": 2,
+      "outputQuantity": 1,
+      "levelRequired": 35
+    },
+    {
+      "id": "transmute_chaos_to_death",
+      "school": "evil",
+      "from": "chaos",
+      "to": "death",
+      "inputQuantity": 10,
+      "outputQuantity": 1,
+      "levelRequired": 30
+    },
+    {
+      "id": "transmute_death_to_chaos",
+      "school": "evil",
+      "from": "death",
+      "to": "chaos",
+      "inputQuantity": 1,
+      "outputQuantity": 5,
+      "levelRequired": 30
+    },
+    {
+      "id": "transmute_death_to_blood",
+      "school": "evil",
+      "from": "death",
+      "to": "blood",
+      "inputQuantity": 10,
+      "outputQuantity": 1,
+      "levelRequired": 50
+    },
+    {
+      "id": "transmute_blood_to_death",
+      "school": "evil",
+      "from": "blood",
+      "to": "death",
+      "inputQuantity": 1,
+      "outputQuantity": 5,
+      "levelRequired": 50
+    }
+  ],
+  "enchantingTiers": [
+    {
+      "tier": 1,
+      "elementalEssenceEach": 2,
+      "goodMagicXp": 40,
+      "itemIds": [
+        224,
+        225,
+        226
+      ],
+      "items": [
+        {
+          "id": 224,
+          "name": "Boat (tier 1)"
+        },
+        {
+          "id": 225,
+          "name": "Old Game (tier 1)"
+        },
+        {
+          "id": 226,
+          "name": "Bird Statue (tier 1)"
+        }
+      ]
+    },
+    {
+      "tier": 2,
+      "elementalEssenceEach": 5,
+      "goodMagicXp": 80,
+      "itemIds": [
+        227,
+        228,
+        229,
+        288
+      ],
+      "items": [
+        {
+          "id": 227,
+          "name": "Skyglass Shard (tier 2)"
+        },
+        {
+          "id": 228,
+          "name": "Moontear Ring (tier 2)"
+        },
+        {
+          "id": 229,
+          "name": "Broken Drop (tier 2)"
+        },
+        {
+          "id": 288,
+          "name": "Omen Kite (tier 2)"
+        }
+      ]
+    },
+    {
+      "tier": 3,
+      "elementalEssenceEach": 10,
+      "goodMagicXp": 150,
+      "itemIds": [
+        289,
+        290,
+        291,
+        292
+      ],
+      "items": [
+        {
+          "id": 289,
+          "name": "Crescent Reliquary (tier 3)"
+        },
+        {
+          "id": 290,
+          "name": "Broken Halo Idol (tier 3)"
+        },
+        {
+          "id": 291,
+          "name": "Tri-Spire Reliquary (tier 3)"
+        },
+        {
+          "id": 292,
+          "name": "Bell Tower Casket (tier 3)"
+        }
+      ]
+    },
+    {
+      "tier": 4,
+      "elementalEssenceEach": 20,
+      "goodMagicXp": 300,
+      "itemIds": [
+        293,
+        294
+      ],
+      "items": [
+        {
+          "id": 293,
+          "name": "Twin-Spire Sigil (tier 4)"
+        },
+        {
+          "id": 294,
+          "name": "Celestial Astrolabe (tier 4)"
+        }
+      ]
+    },
+    {
+      "tier": 5,
+      "elementalEssenceEach": 40,
+      "goodMagicXp": 600,
+      "itemIds": [
+        295
+      ],
+      "items": [
+        {
+          "id": 295,
+          "name": "Black Sun Reliquary (tier 5)"
+        }
+      ]
+    }
+  ]
+}

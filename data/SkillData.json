@@ -1,0 +1,960 @@
+{
+  "metadata": {
+    "maxLevel": 150,
+    "xpCap": 2147483647,
+    "totalSkills": 16
+  },
+  "skills": [
+    {
+      "id": "weaponry",
+      "name": "Weaponry",
+      "color": "#c44",
+      "category": "combat",
+      "startLevel": 1,
+      "startExp": 0
+    },
+    {
+      "id": "strength",
+      "name": "Strength",
+      "color": "#e80",
+      "category": "combat",
+      "startLevel": 1,
+      "startExp": 0
+    },
+    {
+      "id": "defence",
+      "name": "Defence",
+      "color": "#48c",
+      "category": "combat",
+      "startLevel": 1,
+      "startExp": 0
+    },
+    {
+      "id": "goodmagic",
+      "name": "Light Magic",
+      "color": "#8cf",
+      "category": "magic",
+      "startLevel": 0,
+      "startExp": 0
+    },
+    {
+      "id": "evilmagic",
+      "name": "Dark Magic",
+      "color": "#a4e",
+      "category": "magic",
+      "startLevel": 0,
+      "startExp": 0
+    },
+    {
+      "id": "archery",
+      "name": "Ranging",
+      "color": "#4a4",
+      "category": "combat",
+      "startLevel": 1,
+      "startExp": 0
+    },
+    {
+      "id": "hitpoints",
+      "name": "Hitpoints",
+      "color": "#e44",
+      "category": "combat",
+      "startLevel": 10,
+      "startExp": 1154
+    },
+    {
+      "id": "woodcutting",
+      "name": "Woodcutting",
+      "color": "#2a6",
+      "category": "gathering",
+      "startLevel": 1,
+      "startExp": 0
+    },
+    {
+      "id": "fishing",
+      "name": "Fishing",
+      "color": "#4ae",
+      "category": "gathering",
+      "startLevel": 1,
+      "startExp": 0
+    },
+    {
+      "id": "cooking",
+      "name": "Cooking",
+      "color": "#c84",
+      "category": "artisan",
+      "startLevel": 1,
+      "startExp": 0
+    },
+    {
+      "id": "mining",
+      "name": "Mining",
+      "color": "#888",
+      "category": "gathering",
+      "startLevel": 1,
+      "startExp": 0
+    },
+    {
+      "id": "smithing",
+      "name": "Smithing",
+      "color": "#aaa",
+      "category": "artisan",
+      "startLevel": 1,
+      "startExp": 0
+    },
+    {
+      "id": "crafting",
+      "name": "Crafting",
+      "color": "#ca4",
+      "category": "artisan",
+      "startLevel": 1,
+      "startExp": 0
+    },
+    {
+      "id": "roguery",
+      "name": "Roguery",
+      "color": "#7a2a7a",
+      "category": "support",
+      "startLevel": 1,
+      "startExp": 0
+    },
+    {
+      "id": "survival",
+      "name": "Survival",
+      "color": "#6f8f3a",
+      "category": "support",
+      "startLevel": 1,
+      "startExp": 0
+    },
+    {
+      "id": "agility",
+      "name": "Agility",
+      "color": "#c9a568",
+      "category": "support",
+      "startLevel": 1,
+      "startExp": 0
+    }
+  ],
+  "combatFormulas": {
+    "playerFormula": {
+      "formula": "floor(base + max(melee, ranged, magic))",
+      "base": "0.25 * (defence + hitpoints)",
+      "melee": "0.325 * (weaponry + strength)",
+      "ranged": "0.325 * (floor(archery / 2) + archery)",
+      "magic": "0.325 * (floor(max(goodmagic, evilmagic) / 2) + max(goodmagic, evilmagic))"
+    },
+    "npcFormula": {
+      "formula": "max(1, floor(base + melee))",
+      "base": "0.25 * (defence + health)",
+      "melee": "0.325 * (attack + strength)"
+    },
+    "threatColors": [
+      {
+        "diffRange": "diff <= -10",
+        "color": "#ff0000",
+        "meaning": "Extremely Dangerous (10+ lvls higher)"
+      },
+      {
+        "diffRange": "-9 <= diff <= -7",
+        "color": "#ff3000",
+        "meaning": "Very Dangerous (7-9 lvls higher)"
+      },
+      {
+        "diffRange": "-6 <= diff <= -4",
+        "color": "#ff7000",
+        "meaning": "Dangerous (4-6 lvls higher)"
+      },
+      {
+        "diffRange": "-3 <= diff <= -1",
+        "color": "#ffb000",
+        "meaning": "Slightly Tougher (1-3 lvls higher)"
+      },
+      {
+        "diffRange": "diff == 0",
+        "color": "#ffff00",
+        "meaning": "Equal Level"
+      },
+      {
+        "diffRange": "1 <= diff <= 3",
+        "color": "#c0ff00",
+        "meaning": "Slightly Weaker (1-3 lvls lower)"
+      },
+      {
+        "diffRange": "4 <= diff <= 6",
+        "color": "#80ff00",
+        "meaning": "Weaker (4-6 lvls lower)"
+      },
+      {
+        "diffRange": "7 <= diff <= 9",
+        "color": "#40ff00",
+        "meaning": "Much Weaker (7-9 lvls lower)"
+      },
+      {
+        "diffRange": "diff >= 10",
+        "color": "#00ff00",
+        "meaning": "Trivial (10+ lvls lower)"
+      }
+    ],
+    "buildThresholds": {
+      "pureWeightThreshold": 230,
+      "purePercentage": 90.2,
+      "styles": [
+        "melee",
+        "ranged",
+        "light",
+        "dark"
+      ]
+    }
+  },
+  "xpTable": [
+    {
+      "level": 1,
+      "xp": 0,
+      "xpDifference": 0
+    },
+    {
+      "level": 2,
+      "xp": 83,
+      "xpDifference": 83
+    },
+    {
+      "level": 3,
+      "xp": 174,
+      "xpDifference": 91
+    },
+    {
+      "level": 4,
+      "xp": 276,
+      "xpDifference": 102
+    },
+    {
+      "level": 5,
+      "xp": 388,
+      "xpDifference": 112
+    },
+    {
+      "level": 6,
+      "xp": 512,
+      "xpDifference": 124
+    },
+    {
+      "level": 7,
+      "xp": 650,
+      "xpDifference": 138
+    },
+    {
+      "level": 8,
+      "xp": 801,
+      "xpDifference": 151
+    },
+    {
+      "level": 9,
+      "xp": 969,
+      "xpDifference": 168
+    },
+    {
+      "level": 10,
+      "xp": 1154,
+      "xpDifference": 185
+    },
+    {
+      "level": 11,
+      "xp": 1358,
+      "xpDifference": 204
+    },
+    {
+      "level": 12,
+      "xp": 1584,
+      "xpDifference": 226
+    },
+    {
+      "level": 13,
+      "xp": 1833,
+      "xpDifference": 249
+    },
+    {
+      "level": 14,
+      "xp": 2107,
+      "xpDifference": 274
+    },
+    {
+      "level": 15,
+      "xp": 2411,
+      "xpDifference": 304
+    },
+    {
+      "level": 16,
+      "xp": 2746,
+      "xpDifference": 335
+    },
+    {
+      "level": 17,
+      "xp": 3115,
+      "xpDifference": 369
+    },
+    {
+      "level": 18,
+      "xp": 3523,
+      "xpDifference": 408
+    },
+    {
+      "level": 19,
+      "xp": 3973,
+      "xpDifference": 450
+    },
+    {
+      "level": 20,
+      "xp": 4470,
+      "xpDifference": 497
+    },
+    {
+      "level": 21,
+      "xp": 5018,
+      "xpDifference": 548
+    },
+    {
+      "level": 22,
+      "xp": 5624,
+      "xpDifference": 606
+    },
+    {
+      "level": 23,
+      "xp": 6291,
+      "xpDifference": 667
+    },
+    {
+      "level": 24,
+      "xp": 7028,
+      "xpDifference": 737
+    },
+    {
+      "level": 25,
+      "xp": 7842,
+      "xpDifference": 814
+    },
+    {
+      "level": 26,
+      "xp": 8740,
+      "xpDifference": 898
+    },
+    {
+      "level": 27,
+      "xp": 9730,
+      "xpDifference": 990
+    },
+    {
+      "level": 28,
+      "xp": 10824,
+      "xpDifference": 1094
+    },
+    {
+      "level": 29,
+      "xp": 12031,
+      "xpDifference": 1207
+    },
+    {
+      "level": 30,
+      "xp": 13363,
+      "xpDifference": 1332
+    },
+    {
+      "level": 31,
+      "xp": 14833,
+      "xpDifference": 1470
+    },
+    {
+      "level": 32,
+      "xp": 16456,
+      "xpDifference": 1623
+    },
+    {
+      "level": 33,
+      "xp": 18247,
+      "xpDifference": 1791
+    },
+    {
+      "level": 34,
+      "xp": 20224,
+      "xpDifference": 1977
+    },
+    {
+      "level": 35,
+      "xp": 22406,
+      "xpDifference": 2182
+    },
+    {
+      "level": 36,
+      "xp": 24815,
+      "xpDifference": 2409
+    },
+    {
+      "level": 37,
+      "xp": 27473,
+      "xpDifference": 2658
+    },
+    {
+      "level": 38,
+      "xp": 30408,
+      "xpDifference": 2935
+    },
+    {
+      "level": 39,
+      "xp": 33648,
+      "xpDifference": 3240
+    },
+    {
+      "level": 40,
+      "xp": 37224,
+      "xpDifference": 3576
+    },
+    {
+      "level": 41,
+      "xp": 41171,
+      "xpDifference": 3947
+    },
+    {
+      "level": 42,
+      "xp": 45529,
+      "xpDifference": 4358
+    },
+    {
+      "level": 43,
+      "xp": 50339,
+      "xpDifference": 4810
+    },
+    {
+      "level": 44,
+      "xp": 55649,
+      "xpDifference": 5310
+    },
+    {
+      "level": 45,
+      "xp": 61512,
+      "xpDifference": 5863
+    },
+    {
+      "level": 46,
+      "xp": 67983,
+      "xpDifference": 6471
+    },
+    {
+      "level": 47,
+      "xp": 75127,
+      "xpDifference": 7144
+    },
+    {
+      "level": 48,
+      "xp": 83014,
+      "xpDifference": 7887
+    },
+    {
+      "level": 49,
+      "xp": 91721,
+      "xpDifference": 8707
+    },
+    {
+      "level": 50,
+      "xp": 101333,
+      "xpDifference": 9612
+    },
+    {
+      "level": 51,
+      "xp": 111945,
+      "xpDifference": 10612
+    },
+    {
+      "level": 52,
+      "xp": 123660,
+      "xpDifference": 11715
+    },
+    {
+      "level": 53,
+      "xp": 136594,
+      "xpDifference": 12934
+    },
+    {
+      "level": 54,
+      "xp": 150872,
+      "xpDifference": 14278
+    },
+    {
+      "level": 55,
+      "xp": 166636,
+      "xpDifference": 15764
+    },
+    {
+      "level": 56,
+      "xp": 184040,
+      "xpDifference": 17404
+    },
+    {
+      "level": 57,
+      "xp": 203254,
+      "xpDifference": 19214
+    },
+    {
+      "level": 58,
+      "xp": 224466,
+      "xpDifference": 21212
+    },
+    {
+      "level": 59,
+      "xp": 247886,
+      "xpDifference": 23420
+    },
+    {
+      "level": 60,
+      "xp": 273742,
+      "xpDifference": 25856
+    },
+    {
+      "level": 61,
+      "xp": 302288,
+      "xpDifference": 28546
+    },
+    {
+      "level": 62,
+      "xp": 333804,
+      "xpDifference": 31516
+    },
+    {
+      "level": 63,
+      "xp": 368599,
+      "xpDifference": 34795
+    },
+    {
+      "level": 64,
+      "xp": 407015,
+      "xpDifference": 38416
+    },
+    {
+      "level": 65,
+      "xp": 449428,
+      "xpDifference": 42413
+    },
+    {
+      "level": 66,
+      "xp": 496254,
+      "xpDifference": 46826
+    },
+    {
+      "level": 67,
+      "xp": 547953,
+      "xpDifference": 51699
+    },
+    {
+      "level": 68,
+      "xp": 605032,
+      "xpDifference": 57079
+    },
+    {
+      "level": 69,
+      "xp": 668051,
+      "xpDifference": 63019
+    },
+    {
+      "level": 70,
+      "xp": 737627,
+      "xpDifference": 69576
+    },
+    {
+      "level": 71,
+      "xp": 814445,
+      "xpDifference": 76818
+    },
+    {
+      "level": 72,
+      "xp": 899257,
+      "xpDifference": 84812
+    },
+    {
+      "level": 73,
+      "xp": 992895,
+      "xpDifference": 93638
+    },
+    {
+      "level": 74,
+      "xp": 1096278,
+      "xpDifference": 103383
+    },
+    {
+      "level": 75,
+      "xp": 1210421,
+      "xpDifference": 114143
+    },
+    {
+      "level": 76,
+      "xp": 1336443,
+      "xpDifference": 126022
+    },
+    {
+      "level": 77,
+      "xp": 1475581,
+      "xpDifference": 139138
+    },
+    {
+      "level": 78,
+      "xp": 1629200,
+      "xpDifference": 153619
+    },
+    {
+      "level": 79,
+      "xp": 1798808,
+      "xpDifference": 169608
+    },
+    {
+      "level": 80,
+      "xp": 1986068,
+      "xpDifference": 187260
+    },
+    {
+      "level": 81,
+      "xp": 2192818,
+      "xpDifference": 206750
+    },
+    {
+      "level": 82,
+      "xp": 2421087,
+      "xpDifference": 228269
+    },
+    {
+      "level": 83,
+      "xp": 2673114,
+      "xpDifference": 252027
+    },
+    {
+      "level": 84,
+      "xp": 2951373,
+      "xpDifference": 278259
+    },
+    {
+      "level": 85,
+      "xp": 3258594,
+      "xpDifference": 307221
+    },
+    {
+      "level": 86,
+      "xp": 3597792,
+      "xpDifference": 339198
+    },
+    {
+      "level": 87,
+      "xp": 3972294,
+      "xpDifference": 374502
+    },
+    {
+      "level": 88,
+      "xp": 4385776,
+      "xpDifference": 413482
+    },
+    {
+      "level": 89,
+      "xp": 4842295,
+      "xpDifference": 456519
+    },
+    {
+      "level": 90,
+      "xp": 5346332,
+      "xpDifference": 504037
+    },
+    {
+      "level": 91,
+      "xp": 5902831,
+      "xpDifference": 556499
+    },
+    {
+      "level": 92,
+      "xp": 6517253,
+      "xpDifference": 614422
+    },
+    {
+      "level": 93,
+      "xp": 7195629,
+      "xpDifference": 678376
+    },
+    {
+      "level": 94,
+      "xp": 7944614,
+      "xpDifference": 748985
+    },
+    {
+      "level": 95,
+      "xp": 8771558,
+      "xpDifference": 826944
+    },
+    {
+      "level": 96,
+      "xp": 9684577,
+      "xpDifference": 913019
+    },
+    {
+      "level": 97,
+      "xp": 10692629,
+      "xpDifference": 1008052
+    },
+    {
+      "level": 98,
+      "xp": 11805606,
+      "xpDifference": 1112977
+    },
+    {
+      "level": 99,
+      "xp": 13034431,
+      "xpDifference": 1228825
+    },
+    {
+      "level": 100,
+      "xp": 14391160,
+      "xpDifference": 1356729
+    },
+    {
+      "level": 101,
+      "xp": 15889109,
+      "xpDifference": 1497949
+    },
+    {
+      "level": 102,
+      "xp": 17542976,
+      "xpDifference": 1653867
+    },
+    {
+      "level": 103,
+      "xp": 19368992,
+      "xpDifference": 1826016
+    },
+    {
+      "level": 104,
+      "xp": 21385073,
+      "xpDifference": 2016081
+    },
+    {
+      "level": 105,
+      "xp": 23611006,
+      "xpDifference": 2225933
+    },
+    {
+      "level": 106,
+      "xp": 26068632,
+      "xpDifference": 2457626
+    },
+    {
+      "level": 107,
+      "xp": 28782069,
+      "xpDifference": 2713437
+    },
+    {
+      "level": 108,
+      "xp": 31777943,
+      "xpDifference": 2995874
+    },
+    {
+      "level": 109,
+      "xp": 35085654,
+      "xpDifference": 3307711
+    },
+    {
+      "level": 110,
+      "xp": 38737661,
+      "xpDifference": 3652007
+    },
+    {
+      "level": 111,
+      "xp": 42769801,
+      "xpDifference": 4032140
+    },
+    {
+      "level": 112,
+      "xp": 47221641,
+      "xpDifference": 4451840
+    },
+    {
+      "level": 113,
+      "xp": 52136869,
+      "xpDifference": 4915228
+    },
+    {
+      "level": 114,
+      "xp": 57563718,
+      "xpDifference": 5426849
+    },
+    {
+      "level": 115,
+      "xp": 63555443,
+      "xpDifference": 5991725
+    },
+    {
+      "level": 116,
+      "xp": 70170840,
+      "xpDifference": 6615397
+    },
+    {
+      "level": 117,
+      "xp": 77474828,
+      "xpDifference": 7303988
+    },
+    {
+      "level": 118,
+      "xp": 85539082,
+      "xpDifference": 8064254
+    },
+    {
+      "level": 119,
+      "xp": 94442737,
+      "xpDifference": 8903655
+    },
+    {
+      "level": 120,
+      "xp": 104273167,
+      "xpDifference": 9830430
+    },
+    {
+      "level": 121,
+      "xp": 115126838,
+      "xpDifference": 10853671
+    },
+    {
+      "level": 122,
+      "xp": 127110260,
+      "xpDifference": 11983422
+    },
+    {
+      "level": 123,
+      "xp": 140341028,
+      "xpDifference": 13230768
+    },
+    {
+      "level": 124,
+      "xp": 154948977,
+      "xpDifference": 14607949
+    },
+    {
+      "level": 125,
+      "xp": 171077457,
+      "xpDifference": 16128480
+    },
+    {
+      "level": 126,
+      "xp": 188884740,
+      "xpDifference": 17807283
+    },
+    {
+      "level": 127,
+      "xp": 208545572,
+      "xpDifference": 19660832
+    },
+    {
+      "level": 128,
+      "xp": 230252886,
+      "xpDifference": 21707314
+    },
+    {
+      "level": 129,
+      "xp": 254219702,
+      "xpDifference": 23966816
+    },
+    {
+      "level": 130,
+      "xp": 280681209,
+      "xpDifference": 26461507
+    },
+    {
+      "level": 131,
+      "xp": 309897078,
+      "xpDifference": 29215869
+    },
+    {
+      "level": 132,
+      "xp": 342154009,
+      "xpDifference": 32256931
+    },
+    {
+      "level": 133,
+      "xp": 377768545,
+      "xpDifference": 35614536
+    },
+    {
+      "level": 134,
+      "xp": 417090179,
+      "xpDifference": 39321634
+    },
+    {
+      "level": 135,
+      "xp": 460504778,
+      "xpDifference": 43414599
+    },
+    {
+      "level": 136,
+      "xp": 508438379,
+      "xpDifference": 47933601
+    },
+    {
+      "level": 137,
+      "xp": 561361362,
+      "xpDifference": 52922983
+    },
+    {
+      "level": 138,
+      "xp": 619793069,
+      "xpDifference": 58431707
+    },
+    {
+      "level": 139,
+      "xp": 684306901,
+      "xpDifference": 64513832
+    },
+    {
+      "level": 140,
+      "xp": 755535943,
+      "xpDifference": 71229042
+    },
+    {
+      "level": 141,
+      "xp": 834179178,
+      "xpDifference": 78643235
+    },
+    {
+      "level": 142,
+      "xp": 921008346,
+      "xpDifference": 86829168
+    },
+    {
+      "level": 143,
+      "xp": 1016875516,
+      "xpDifference": 95867170
+    },
+    {
+      "level": 144,
+      "xp": 1122721449,
+      "xpDifference": 105845933
+    },
+    {
+      "level": 145,
+      "xp": 1239584831,
+      "xpDifference": 116863382
+    },
+    {
+      "level": 146,
+      "xp": 1368612462,
+      "xpDifference": 129027631
+    },
+    {
+      "level": 147,
+      "xp": 1511070513,
+      "xpDifference": 142458051
+    },
+    {
+      "level": 148,
+      "xp": 1668356950,
+      "xpDifference": 157286437
+    },
+    {
+      "level": 149,
+      "xp": 1842015252,
+      "xpDifference": 173658302
+    },
+    {
+      "level": 150,
+      "xp": 2033749558,
+      "xpDifference": 191734306
+    }
+  ]
+}
