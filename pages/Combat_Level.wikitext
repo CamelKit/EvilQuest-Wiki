@@ -1,0 +1,185 @@
+'''Combat Level''' (commonly abbreviated as '''CB''') is a composite numeric rating that reflects a player's or non-player character's (NPC) overall martial power in EvilQuest. It is displayed above characters in the game world, on right-click target menus, and determines target threat color indicators as well as PvP wilderness combat brackets.
+
+A player's combat level ranges from a minimum of '''Level 3''' up to a maximum of '''Level 172'''.
+
+== Combat Level Formula ==
+In EvilQuest, combat level is calculated deterministically from seven combat-related [[Skills|skills]]:
+* [[Defence]]
+* [[Hitpoints]]
+* [[Weaponry]]
+* [[Strength]]
+* [[Ranging]]
+* [[Light Magic]]
+* [[Dark Magic]]
+
+The calculation consists of two primary components: a '''Base Level''' (defensive prowess) and a '''Style Factor''' (the highest offensive combat discipline among Melee, Ranged, and Magic).
+
+=== Mathematical Formula ===
+The client game engine computes player combat level using the exact function:
+
+:<math>\text{Base} = 0.25 \times (\text{Defence} + \text{Hitpoints})</math>
+
+:<math>\text{Melee} = 0.325 \times (\text{Weaponry} + \text{Strength})</math>
+
+:<math>\text{Ranged} = 0.325 \times \left(\left\lfloor \frac{\text{Ranging}}{2} \right\rfloor + \text{Ranging}\right)</math>
+
+:<math>\text{Magic} = 0.325 \times \left(\left\lfloor \frac{\max(\text{LightMagic}, \text{DarkMagic})}{2} \right\rfloor + \max(\text{LightMagic}, \text{DarkMagic})\right)</math>
+
+:<math>\text{Combat Level} = \left\lfloor \text{Base} + \max(\text{Melee}, \text{Ranged}, \text{Magic}) \right\rfloor</math>
+
+=== Formula Breakdown ===
+* '''Base Level''': Defence and Hitpoints contribute equally to every player's survivability. Each level of Defence or Hitpoints contributes exactly '''0.25''' (<math>1/4</math>) toward the combat level.
+* '''Offensive Style Maxima''': A player is only evaluated by their single highest offensive combat style (<math>\max(\text{Melee}, \text{Ranged}, \text{Magic})</math>). Training secondary or tertiary styles does ''not'' increase your combat level until that style exceeds your current primary style.
+* '''Melee Contribution''': Weaponry and Strength together contribute '''0.325''' per combined level (<math>0.325 \times (\text{Weaponry} + \text{Strength})</math>). At equal Weaponry and Strength, each melee level adds '''0.325''' combat factor.
+* '''Ranged Contribution''': Ranging uses the formula <math>0.325 \times (\lfloor \text{Ranging}/2 \rfloor + \text{Ranging})</math>. For even Ranging levels, this simplifies to <math>0.325 \times 1.5 \times \text{Ranging} = 0.4875 \times \text{Ranging}</math>.
+* '''Magic Contribution''': Magic takes the higher of either [[Light Magic]] or [[Dark Magic]] (<math>\max(\text{LightMagic}, \text{DarkMagic})</math>). It scales identically to Ranging at <math>0.325 \times (\lfloor \text{Magic}/2 \rfloor + \text{Magic})</math>.
+* '''Flooring''': The sum of the Base and the dominant offensive style is rounded down to the nearest integer with <math>\lfloor \dots \rfloor</math>.
+
+== NPC Combat Level Formula ==
+Monsters and hostile NPCs calculate their combat level using a streamlined formula:
+
+:<math>\text{NPC Combat Level} = \max\left(1, \left\lfloor 0.25 \times (\text{Defence} + \text{Health}) + 0.325 \times (\text{Attack} + \text{Strength}) \right\rfloor\right)</math>
+
+NPC combat levels are always at least '''Level 1'''.
+
+== Combat Level Extremes ==
+
+=== Minimum Combat Level (Level 3) ===
+A newly created character has the minimum starting combat stats:
+* Defence: 1
+* Hitpoints: 10
+* Weaponry: 1
+* Strength: 1
+* Ranging: 1
+* Light Magic: 0, Dark Magic: 0
+
+:<math>\text{Base} = 0.25 \times (1 + 10) = 0.25 \times 11 = 2.75</math>
+:<math>\text{Melee} = 0.325 \times (1 + 1) = 0.65</math>
+:<math>\text{Ranged} = 0.325 \times (0 + 1) = 0.325</math>
+:<math>\text{Magic} = 0.325 \times (0 + 0) = 0.0</math>
+:<math>\text{Combat Level} = \lfloor 2.75 + \max(0.65, 0.325, 0.0) \rfloor = \lfloor 2.75 + 0.65 \rfloor = \lfloor 3.40 \rfloor = '''3'''</math>
+
+=== Maximum Combat Level (Level 172) ===
+A character with all combat skills maxed at the level cap of '''150''':
+* Defence: 150
+* Hitpoints: 150
+* Weaponry: 150
+* Strength: 150
+* Ranging: 150
+* Light Magic: 150, Dark Magic: 150
+
+:<math>\text{Base} = 0.25 \times (150 + 150) = 0.25 \times 300 = 75.0</math>
+:<math>\text{Melee} = 0.325 \times (150 + 150) = 0.325 \times 300 = 97.5</math>
+:<math>\text{Ranged} = 0.325 \times (75 + 150) = 0.325 \times 225 = 73.125</math>
+:<math>\text{Magic} = 0.325 \times (75 + 150) = 0.325 \times 225 = 73.125</math>
+:<math>\text{Combat Level} = \lfloor 75.0 + \max(97.5, 73.125, 73.125) \rfloor = \lfloor 75.0 + 97.5 \rfloor = \lfloor 172.5 \rfloor = '''172'''</math>
+
+== Threat Level Color System ==
+When targeting an enemy, viewing an overhead nameplate, or right-clicking another entity, their combat level is color-coded based on the level difference relative to your character:
+
+:<math>\text{Difference} = \text{Your Combat Level} - \text{Target Combat Level}</math>
+
+{| class="wikitable" style="width: 100%; text-align: center;"
+! style="width: 15%;" | Level Difference
+! style="width: 15%;" | Hex Color
+! style="width: 20%;" | Color Sample
+! style="width: 25%;" | In-Game Meaning
+! style="width: 25%;" | Target Relative Level
+|-
+| style="font-weight: bold;" | Difference &le; -10
+| <code>#ff0000</code>
+| style="background: #ff0000; color: #fff; font-weight: bold;" | Red
+| Extremely Dangerous
+| 10+ levels higher than you
+|-
+| style="font-weight: bold;" | -9 &le; Difference &le; -7
+| <code>#ff3000</code>
+| style="background: #ff3000; color: #fff; font-weight: bold;" | Red-Orange
+| Very Dangerous
+| 7 to 9 levels higher than you
+|-
+| style="font-weight: bold;" | -6 &le; Difference &le; -4
+| <code>#ff7000</code>
+| style="background: #ff7000; color: #fff; font-weight: bold;" | Orange
+| Dangerous
+| 4 to 6 levels higher than you
+|-
+| style="font-weight: bold;" | -3 &le; Difference &le; -1
+| <code>#ffb000</code>
+| style="background: #ffb000; color: #000; font-weight: bold;" | Amber / Gold
+| Slightly Tougher
+| 1 to 3 levels higher than you
+|-
+| style="font-weight: bold;" | Difference = 0
+| <code>#ffff00</code>
+| style="background: #ffff00; color: #000; font-weight: bold;" | Yellow
+| Equal Level
+| Identical combat level
+|-
+| style="font-weight: bold;" | +1 &le; Difference &le; +3
+| <code>#c0ff00</code>
+| style="background: #c0ff00; color: #000; font-weight: bold;" | Lime-Yellow
+| Slightly Weaker
+| 1 to 3 levels lower than you
+|-
+| style="font-weight: bold;" | +4 &le; Difference &le; +6
+| <code>#80ff00</code>
+| style="background: #80ff00; color: #000; font-weight: bold;" | Light Green
+| Weaker
+| 4 to 6 levels lower than you
+|-
+| style="font-weight: bold;" | +7 &le; Difference &le; +9
+| <code>#40ff00</code>
+| style="background: #40ff00; color: #000; font-weight: bold;" | Bright Green
+| Much Weaker
+| 7 to 9 levels lower than you
+|-
+| style="font-weight: bold;" | Difference &ge; +10
+| <code>#00ff00</code>
+| style="background: #00ff00; color: #000; font-weight: bold;" | Pure Green
+| Trivial / Safe
+| 10+ levels lower than you
+|}
+
+== Build Archetypes & Specializations ==
+The game engine categorizes combat profiles into specialized combat archetypes:
+* '''Pure Builds''': A character that focuses almost exclusively on a single offensive combat style while keeping Defence minimal. In client logic, when a style represents at least '''90.2%''' of offensive combat weight (with style weight threshold &ge; 230), the character is classified as a Pure:
+** ''Melee Pure'': Focuses on Weaponry and Strength.
+** ''Ranged Pure'': Focuses on Ranging.
+** ''Light Mage Pure'': Focuses on Light Magic.
+** ''Dark Mage Pure'': Focuses on Dark Magic.
+* '''Hybrid Builds''': Characters who distribute combat progression across two or more disciplines (e.g., Melee-Ranged, Melee-Mage, or Ranged-Mage), offering tactical flexibility in PvP and dungeon encounters.
+
+== Calculation Examples ==
+
+=== Example 1: Mid-Level Melee Warrior ===
+* Defence: 50, Hitpoints: 55
+* Weaponry: 60, Strength: 65
+* Ranging: 30, Light Magic: 10, Dark Magic: 0
+
+'''Calculations''':
+# <math>\text{Base} = 0.25 \times (50 + 55) = 0.25 \times 105 = 26.25</math>
+# <math>\text{Melee} = 0.325 \times (60 + 65) = 0.325 \times 125 = 40.625</math>
+# <math>\text{Ranged} = 0.325 \times (15 + 30) = 0.325 \times 45 = 14.625</math>
+# <math>\text{Magic} = 0.325 \times (5 + 10) = 0.325 \times 15 = 4.875</math>
+# Dominant Style: <math>\max(40.625, 14.625, 4.875) = 40.625</math> (Melee)
+# Combat Level: <math>\lfloor 26.25 + 40.625 \rfloor = \lfloor 66.875 \rfloor = '''66'''</math>
+
+=== Example 2: Ranged Pure ===
+* Defence: 1, Hitpoints: 70
+* Weaponry: 1, Strength: 1
+* Ranging: 80
+* Magic: 0
+
+'''Calculations''':
+# <math>\text{Base} = 0.25 \times (1 + 70) = 0.25 \times 71 = 17.75</math>
+# <math>\text{Melee} = 0.325 \times (1 + 1) = 0.65</math>
+# <math>\text{Ranged} = 0.325 \times (40 + 80) = 0.325 \times 120 = 39.0</math>
+# <math>\text{Magic} = 0.0</math>
+# Dominant Style: <math>\max(0.65, 39.0, 0.0) = 39.0</math> (Ranged)
+# Combat Level: <math>\lfloor 17.75 + 39.0 \rfloor = \lfloor 56.75 \rfloor = '''56'''</math>
+
+== See Also ==
+* [[Skills]] — Complete overview of all 16 skills in EvilQuest
+* [[Experience]] — Cumulative XP requirements, formulas, and full Level 1–150 table
+* [[Combat Skills]] — Deep dive into combat mechanics, weapon equip tiers, and damage calculations
