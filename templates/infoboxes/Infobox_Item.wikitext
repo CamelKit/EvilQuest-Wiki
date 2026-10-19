@@ -45,14 +45,28 @@
     <td style="padding: 4px;">{{{value|{{#invoke:ItemData|fetchItemData|field=value}}}}} coins</td>
   </tr>
 
-  {{#if: {{{healAmount|{{#invoke:ItemData|fetchItemData|field=healAmount}}}}} |
+  {{#if: {{{healAmount|{{#invoke:ItemData|fetchItemData|field=healAmount}}}}} {{{healOverTime|{{#invoke:CookingData|renderHealOverTime}}}}} {{{maxHealthBoost|{{#invoke:CookingData|renderMaxHealthBoost}}}}} |
   <tr>
-    <th colspan="2" style="background: #2e2e2e; text-align: center; font-weight: bold; padding: 4px;">Consumable Properties</th>
+    <th colspan="2" style="background: #2e2e2e; color: white; text-align: center; font-weight: bold; padding: 4px;">Consumable Properties</th>
   </tr>
+  {{#if: {{{healAmount|{{#invoke:ItemData|fetchItemData|field=healAmount}}}}} |
   <tr>
     <th style="text-align: left; padding: 4px;">Heals HP</th>
     <td style="padding: 4px; color: #008000; font-weight: bold;">{{{healAmount|{{#invoke:ItemData|fetchItemData|field=healAmount}}}}} HP</td>
   </tr>
+  }}
+  {{#if: {{{healOverTime|{{#invoke:CookingData|renderHealOverTime}}}}} |
+  <tr>
+    <th style="text-align: left; padding: 4px;">Heal Over Time</th>
+    <td style="padding: 4px; color: #008000; font-weight: bold;">{{{healOverTime|{{#invoke:CookingData|renderHealOverTime}}}}}</td>
+  </tr>
+  }}
+  {{#if: {{{maxHealthBoost|{{#invoke:CookingData|renderMaxHealthBoost}}}}} |
+  <tr>
+    <th style="text-align: left; padding: 4px;">Max HP Boost</th>
+    <td style="padding: 4px; color: #e44; font-weight: bold;">{{{maxHealthBoost|{{#invoke:CookingData|renderMaxHealthBoost}}}}}</td>
+  </tr>
+  }}
   }}
 
   {{#invoke:ObjectData|renderGatheringInfoboxRows}}
