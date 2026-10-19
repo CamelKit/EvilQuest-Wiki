@@ -32,10 +32,22 @@ ASSET_SYNC_MATRIX = [
     {"file": "modules/NpcData.lua", "title": "Module:NPCData", "model": "Scribunto"},
     {"file": "modules/RareDropData.lua", "title": "Module:RareDropData", "model": "Scribunto"},
     {"file": "modules/ObjectData.lua", "title": "Module:ObjectData", "model": "Scribunto"},
+    {"file": "modules/CraftingData.lua", "title": "Module:CraftingData", "model": "Scribunto"},
+    {"file": "modules/CookingData.lua", "title": "Module:CookingData", "model": "Scribunto"},
+    {"file": "modules/MagicData.lua", "title": "Module:MagicData", "model": "Scribunto"},
+    {"file": "modules/AgilityData.lua", "title": "Module:AgilityData", "model": "Scribunto"},
+    {"file": "modules/SkillData.lua", "title": "Module:SkillData", "model": "Scribunto"},
     {"file": "data/ItemData.json", "title": "Module:ItemData/json", "model": "json"},
     {"file": "data/NpcData.json", "title": "Module:NPCData/json", "model": "json"},
     {"file": "data/RareDropData.json", "title": "Module:RareDropData/json", "model": "json"},
     {"file": "data/ObjectData.json", "title": "Module:ObjectData/json", "model": "json"},
+    {"file": "data/SkillData.json", "title": "Module:SkillData/json", "model": "json"},
+    {"file": "data/CraftingData.json", "title": "Module:CraftingData/json", "model": "json"},
+    {"file": "data/CookingData.json", "title": "Module:CookingData/json", "model": "json"},
+    {"file": "data/MagicData.json", "title": "Module:MagicData/json", "model": "json"},
+    {"file": "data/AgilityData.json", "title": "Module:AgilityData/json", "model": "json"},
+    {"file": "data/WorldObjectMappingData.json", "title": "Module:WorldObjectMappingData/json", "model": "json"},
+    {"file": "data/NetworkProtocolData.json", "title": "Module:NetworkProtocolData/json", "model": "json"},
     {"file": "styles/Common.css", "title": "MediaWiki:Common.css", "model": "css"}
 ]
 
