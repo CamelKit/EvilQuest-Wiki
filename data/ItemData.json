@@ -692,7 +692,7 @@
   {
     "id": 52,
     "name": "Hammer",
-    "description": "Used to smith items on an anvil.",
+    "description": "Used for smithing and crushing sandstone.",
     "stackable": false,
     "equippable": false,
     "toolType": "hammer",
@@ -7121,7 +7121,7 @@
   {
     "id": 601,
     "name": "Light Magic Robe",
-    "description": "A bright robe favoured by practitioners of light magic.",
+    "description": "A bright robe favoured by practitioners of light magic. Gently replenishes Light Magic.",
     "value": 35,
     "stackable": false,
     "equippable": true,
@@ -7142,7 +7142,7 @@
   {
     "id": 602,
     "name": "Light Magic Robe Bottom",
-    "description": "A bright robe bottom favoured by practitioners of light magic.",
+    "description": "A bright robe bottom that gently replenishes Light Magic.",
     "value": 30,
     "stackable": false,
     "equippable": true,
@@ -8684,7 +8684,7 @@
   {
     "id": 721,
     "name": "Wolf Bones",
-    "description": "Wolf bones. Offer one to Darkness for Chaos Essence and Dark Magic XP.",
+    "description": "You can almost still see the meat on it",
     "value": 1,
     "stackable": false,
     "equippable": false,
@@ -9392,7 +9392,7 @@
   {
     "id": 783,
     "name": "Molten Glass",
-    "description": "Glass made from sand and rich soda ash. Shape it into essence vials at a furnace.",
+    "description": "Glass for furnace-made vials or hex crystals shaped with a glassblowing pipe.",
     "value": 20,
     "stackable": false,
     "equippable": false,
@@ -10345,5 +10345,69 @@
     "bodyTypeModels": {
       "1": "/assets/equipment/feet/female/PurpleBootsWoman.glb"
     }
+  },
+  {
+    "id": 873,
+    "name": "Sandstone (1kg)",
+    "description": "A tiny chunk of orange sandstone. Crush it with a hammer to make fine sand.",
+    "value": 1,
+    "stackable": false,
+    "equippable": false,
+    "model": "/assets/models/sandstone/Sandstone1kg.glb"
+  },
+  {
+    "id": 874,
+    "name": "Sandstone (2kg)",
+    "description": "A small chunk of orange sandstone. Crush it with a hammer or split it with a chisel.",
+    "value": 1,
+    "stackable": false,
+    "equippable": false,
+    "model": "/assets/models/sandstone/Sandstone2kg.glb"
+  },
+  {
+    "id": 875,
+    "name": "Sandstone (5kg)",
+    "description": "An orange sandstone chunk. Crush it with a hammer or split it with a chisel.",
+    "value": 1,
+    "stackable": false,
+    "equippable": false,
+    "model": "/assets/models/sandstone/Sandstone5kg.glb"
+  },
+  {
+    "id": 876,
+    "name": "Sandstone (10kg)",
+    "description": "A large chunk of orange sandstone. Crush it with a hammer or split it with a chisel.",
+    "value": 1,
+    "stackable": false,
+    "equippable": false,
+    "model": "/assets/models/sandstone/Sandstone10kg.glb"
+  },
+  {
+    "id": 877,
+    "name": "Fine Sand",
+    "description": "Finely crushed sandstone. Use an empty bucket to collect a portion for glassmaking.",
+    "value": 1,
+    "stackable": false,
+    "equippable": false,
+    "model": "/assets/models/sandstone/FineSand.glb"
+  },
+  {
+    "id": 878,
+    "name": "Glassblowing Pipe",
+    "description": "An ornate iron pipe. Use it on molten glass to shape an unpowered hex crystal.",
+    "value": 20,
+    "stackable": false,
+    "equippable": false,
+    "toolType": "glassblowing_pipe",
+    "model": "/assets/models/GlassblowingPipe.glb"
+  },
+  {
+    "id": 879,
+    "name": "Hex Crystal (Unpowered)",
+    "description": "A pointed hexagonal crystal of pale glass, waiting to hold magic.",
+    "value": 100,
+    "stackable": false,
+    "equippable": false,
+    "model": "/assets/models/HexCrystal.glb"
   }
 ]
