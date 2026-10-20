@@ -1,3 +1,4 @@
 {{Infobox_Item}}
 {{ItemDescription}}
+{{ItemDoses}}
 {{ItemSources}}

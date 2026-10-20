@@ -45,7 +45,7 @@
     <td style="padding: 4px;">{{{value|{{#invoke:ItemData|fetchItemData|field=value}}}}} coins</td>
   </tr>
 
-  {{#if: {{{healAmount|{{#invoke:ItemData|fetchItemData|field=healAmount}}}}} {{{healOverTime|{{#invoke:CookingData|renderHealOverTime}}}}} {{{maxHealthBoost|{{#invoke:CookingData|renderMaxHealthBoost}}}}} |
+  {{#if: {{{healAmount|{{#invoke:ItemData|fetchItemData|field=healAmount}}}}} {{{healOverTime|{{#invoke:CookingData|renderHealOverTime}}}}} {{{maxHealthBoost|{{#invoke:CookingData|renderMaxHealthBoost}}}}} {{{teaEffect|{{#invoke:CookingData|renderTeaEffect}}}}} |
   <tr>
     <th colspan="2" style="background: #2e2e2e; color: white; text-align: center; font-weight: bold; padding: 4px;">Consumable Properties</th>
   </tr>
@@ -67,7 +67,15 @@
     <td style="padding: 4px; color: #e44; font-weight: bold;">{{{maxHealthBoost|{{#invoke:CookingData|renderMaxHealthBoost}}}}}</td>
   </tr>
   }}
+  {{#if: {{{teaEffect|{{#invoke:CookingData|renderTeaEffect}}}}} |
+  <tr>
+    <th style="text-align: left; padding: 4px;">Buff Effect</th>
+    <td style="padding: 4px; color: #4ade80; font-weight: bold;">{{{teaEffect|{{#invoke:CookingData|renderTeaEffect}}}}}</td>
+  </tr>
   }}
+  }}
+
+  {{#invoke:CookingData|renderTeaDosesInfoboxRows}}
 
   {{#invoke:ObjectData|renderGatheringInfoboxRows}}
 

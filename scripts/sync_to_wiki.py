@@ -217,22 +217,89 @@ def execute_wiki_sync():
 
     # Provision Articles
     if not skip_provision and not filter_term:
+        print("\n🍵 Provisioning Herbal Tea Articles & Redirects...")
+        provision_tea_articles(session, csrf_token)
         print("\n📦 Provisioning Missing Item Articles...")
         provision_item_articles(session, csrf_token)
         print("\n📦 Provisioning Missing NPC Articles...")
         provision_npc_articles(session, csrf_token)
 
+def provision_tea_articles(session, csrf_token):
+    cooking_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "CookingData.json")
+    if not os.path.exists(cooking_path):
+        return
+    with open(cooking_path, "r", encoding="utf-8") as f:
+        teas = json.load(f).get("herbalTeas", [])
+
+    created_base = 0
+    redirected = 0
+    for tea in teas:
+        base_name = tea.get("name")
+        if not base_name:
+            continue
+
+        # 1. Provision canonical base tea article with {{Item}}
+        base_params = {
+            "action": "edit", "title": base_name, "text": "{{Item}}",
+            "summary": "Automated pipeline provisioning: Initialized canonical herbal tea article.",
+            "token": csrf_token, "format": "json", "createonly": 1,
+        }
+        res = session.post(WIKI_API_URL, data=base_params).json()
+        if "edit" in res and res["edit"]["result"] == "Success":
+            print(f"[CREATED TEA] {base_name}")
+            created_base += 1
+        elif "error" in res and res["error"]["code"] == "articleexists":
+            pass
+        else:
+            print(f"[FAILED TEA] {base_name}: {res.get('error', res)}")
+        time.sleep(0.1)
+
+        # 2. Redirect 2-dose and 1-dose variant pages to base_name
+        for dose_key in ["twoDoseItemName", "oneDoseItemName"]:
+            dose_title = tea.get(dose_key)
+            if not dose_title:
+                continue
+
+            redirect_text = f"#REDIRECT [[{base_name}]]"
+            redirect_params = {
+                "action": "edit", "title": dose_title, "text": redirect_text,
+                "summary": f"Automated pipeline update: Redirected dose variant to canonical tea page [[{base_name}]].",
+                "token": csrf_token, "format": "json",
+            }
+            res = session.post(WIKI_API_URL, data=redirect_params).json()
+            if "edit" in res and res["edit"]["result"] == "Success":
+                print(f"[REDIRECTED] {dose_title} ──> [[{base_name}]]")
+                redirected += 1
+            elif "edit" in res and res["edit"].get("nochange") is not None:
+                pass
+            else:
+                print(f"[FAILED REDIRECT] {dose_title}: {res.get('error', res)}")
+            time.sleep(0.1)
+
+    print(f"Herbal Teas Provisioning Complete. Base Created: {created_base} | Doses Redirected: {redirected}")
+
 def provision_item_articles(session, csrf_token):
     data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "ItemData.json")
+    cooking_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "CookingData.json")
     if not os.path.exists(data_path):
         return
+
+    tea_doses = set()
+    if os.path.exists(cooking_path):
+        with open(cooking_path, "r", encoding="utf-8") as f:
+            for tea in json.load(f).get("herbalTeas", []):
+                if tea.get("twoDoseItemName"):
+                    tea_doses.add(tea["twoDoseItemName"])
+                if tea.get("oneDoseItemName"):
+                    tea_doses.add(tea["oneDoseItemName"])
+
     with open(data_path, "r", encoding="utf-8") as f:
         items = json.load(f)
     
     created, skipped = 0, 0
     for item in items:
         name = item.get("name")
-        if not name:
+        if not name or name in tea_doses:
             continue
         
         params = {

@@ -2,28 +2,47 @@ local p = {}
 
 local items = mw.loadJsonData('Module:ItemData/json')
 
+-- Helper to find an item definition, with fallback for tea base names
+local function findItemDef(targetName)
+    if not targetName then return nil end
+    local targetLower = targetName:lower()
+    for _, item in ipairs(items) do
+        if item.name and item.name:lower() == targetLower then
+            return item
+        end
+    end
+    -- Fallback for tea base names (e.g. "Kawaki Tea" -> "Kawaki Tea (2 doses)")
+    local twoDoseLower = targetLower .. " (2 doses)"
+    for _, item in ipairs(items) do
+        if item.name and item.name:lower() == twoDoseLower then
+            return item
+        end
+    end
+    return nil
+end
+
 function p.fetchItemData(frame)
     local targetName = frame.args[1] or frame:getParent().args['name'] or mw.title.getCurrentTitle().text
     local targetField = frame.args['field']
     if not targetField then return "Error: Missing 'field' parameter." end
-    for _, item in ipairs(items) do
-        if item.name == targetName then
-            if mw.ext and mw.ext.cargo then
-                mw.ext.cargo.store('Items', {
-                    id          = item.id,
-                    name        = item.name,
-                    equipSlot   = item.equipSlot,
-                    value       = item.value,
-                    stabAttack  = item.stabAttack,
-                    slashAttack = item.slashAttack,
-                    crushAttack = item.crushAttack
-                })
-            end
-            local value = item[targetField]
-            if value == nil then return ""
-            elseif type(value) == "boolean" then return value and "Yes" or "No"
-            else return tostring(value) end
+
+    local item = findItemDef(targetName)
+    if item then
+        if mw.ext and mw.ext.cargo then
+            mw.ext.cargo.store('Items', {
+                id          = item.id,
+                name        = targetName,
+                equipSlot   = item.equipSlot,
+                value       = item.value,
+                stabAttack  = item.stabAttack,
+                slashAttack = item.slashAttack,
+                crushAttack = item.crushAttack
+            })
         end
+        local value = item[targetField]
+        if value == nil then return ""
+        elseif type(value) == "boolean" then return value and "Yes" or "No"
+        else return tostring(value) end
     end
     return ""
 end
@@ -35,16 +54,44 @@ end
 function p.generateDescription(frame)
     local name = frame.args[1] or mw.title.getCurrentTitle().text
 
-    local itemsByName = {}
-    for _, item in ipairs(items) do
-        itemsByName[item.name] = item
-    end
-
-    local item = itemsByName[name]
+    local item = findItemDef(name)
     if not item then return "" end
 
     local parts = {}
     local function add(s) table.insert(parts, s) end
+
+    -- =====================
+    -- HERBAL TEAS
+    -- =====================
+    local cookingData = nil
+    pcall(function() cookingData = mw.loadJsonData('Module:CookingData/json') end)
+    if cookingData and cookingData.herbalTeas then
+        for _, tea in ipairs(cookingData.herbalTeas) do
+            if tea.name:lower() == name:lower() or (tea.twoDoseItemName and tea.twoDoseItemName:lower() == name:lower()) then
+                add("'''" .. tea.name .. "''' is an artisan herbal brew in EvilQuest crafted through the [[Cooking]] skill.")
+                if tea.cookingLevel then
+                    add("It requires level " .. tea.cookingLevel .. " Cooking to steep.")
+                end
+                if tea.leafItemName then
+                    if tea.ingredient and tea.ingredient.name then
+                        local qty = tea.ingredient.quantity or 1
+                        local qtyStr = qty > 1 and (qty .. "x ") or ""
+                        add("It is brewed by combining [[" .. tea.leafItemName .. "]] with " .. qtyStr .. "[[" .. tea.ingredient.name .. "]] in a [[Steaming Cup of Water]].")
+                    else
+                        add("It is brewed by steeping [[" .. tea.leafItemName .. "]] in a [[Steaming Cup of Water]].")
+                    end
+                elseif tea.special then
+                    add("It can be purchased from taverns or general stores.")
+                end
+
+                local effectDesc = tea.effectSummary or (tea.inGameDescription and ("''" .. tea.inGameDescription .. "''")) or "beneficial herbal properties"
+                add("\n\nWhen freshly steeped or obtained, it comes as a 2-dose cup. Drinking a dose grants " .. effectDesc .. ".")
+                add("Consuming the first dose leaves behind a 1-dose cup, and drinking the second dose finishes the brew, leaving an [[Empty Cup]] in the player's inventory.")
+
+                return table.concat(parts, " ")
+            end
+        end
+    end
 
     -- =====================
     -- HELPERS

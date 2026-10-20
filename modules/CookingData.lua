@@ -14,6 +14,13 @@ local function findItem(nameOrId)
             return it
         end
     end
+    -- Fallback for tea base names (e.g. "Kawaki Tea" -> "Kawaki Tea (2 doses)")
+    local twoDoseStr = tostring(nameOrId):lower() .. " (2 doses)"
+    for _, it in ipairs(items) do
+        if it.name and it.name:lower() == twoDoseStr then
+            return it
+        end
+    end
     return nil
 end
 
@@ -50,8 +57,10 @@ end
 local function findTeaMatch(nameOrId)
     local item = findItem(nameOrId)
     local targetId = item and item.id or tonumber(nameOrId)
-    local targetName = item and item.name or tostring(nameOrId)
+    local rawName = tostring(nameOrId)
+    local targetName = item and item.name or rawName
     local targetLower = targetName:lower()
+    local rawLower = rawName:lower()
 
     local matched = {}
     for _, tea in ipairs(cookingData.herbalTeas or {}) do
@@ -59,32 +68,32 @@ local function findTeaMatch(nameOrId)
         local role = "output"
 
         -- Match base tea name
-        if tea.name:lower() == targetLower then
+        if tea.name:lower() == rawLower or tea.name:lower() == targetLower then
             isMatch = true
             role = "output"
         -- Match 2-dose item
         elseif targetId and tea.twoDoseItemId == targetId then
             isMatch = true
             role = "dose"
-        elseif tea.twoDoseItemName and tea.twoDoseItemName:lower() == targetLower then
+        elseif tea.twoDoseItemName and (tea.twoDoseItemName:lower() == targetLower or tea.twoDoseItemName:lower() == rawLower) then
             isMatch = true
             role = "dose"
         -- Match 1-dose item
         elseif targetId and tea.oneDoseItemId == targetId then
             isMatch = true
             role = "dose"
-        elseif tea.oneDoseItemName and tea.oneDoseItemName:lower() == targetLower then
+        elseif tea.oneDoseItemName and (tea.oneDoseItemName:lower() == targetLower or tea.oneDoseItemName:lower() == rawLower) then
             isMatch = true
             role = "dose"
         -- Match leaf ingredient
         elseif targetId and tea.leafItemId == targetId then
             isMatch = true
             role = "leaf"
-        elseif tea.leafItemName and tea.leafItemName:lower() == targetLower then
+        elseif tea.leafItemName and (tea.leafItemName:lower() == targetLower or tea.leafItemName:lower() == rawLower) then
             isMatch = true
             role = "leaf"
         -- Match secondary ingredient
-        elseif tea.ingredient and ((targetId and tea.ingredient.itemId == targetId) or (tea.ingredient.name and tea.ingredient.name:lower() == targetLower)) then
+        elseif tea.ingredient and ((targetId and tea.ingredient.itemId == targetId) or (tea.ingredient.name and (tea.ingredient.name:lower() == targetLower or tea.ingredient.name:lower() == rawLower))) then
             isMatch = true
             role = "ingredient"
         end
@@ -163,19 +172,14 @@ function p.renderFoodTable(frame)
         end
 
         if matchCat then
-            local cookedIcon = food.cookedItemId and ("[[File:Item_" .. food.cookedItemId .. ".png|21x21px|middle|link=" .. food.cookedItemName .. "]] ") or ""
-            local cookedLink = cookedIcon .. "'''[[" .. food.cookedItemName .. "]]'''"
-
-            local rawIcon = food.rawItemId and ("[[File:Item_" .. food.rawItemId .. ".png|21x21px|middle|link=" .. food.rawItemName .. "]] ") or ""
-            local rawLink = rawIcon .. "[[" .. food.rawItemName .. "]]"
+            local cookedLink = "'''[[" .. food.cookedItemName .. "]]'''"
+            local rawLink = "[[" .. food.rawItemName .. "]]"
 
             local healStr = food.healAmount and (tostring(food.healAmount) .. " HP") or "—"
             local xpStr = food.xpReward and (tostring(food.xpReward) .. " XP") or "—"
 
             local burntStr = "—"
-            if food.burntItemName and food.burntItemId then
-                burntStr = "[[File:Item_" .. food.burntItemId .. ".png|21x21px|middle|link=" .. food.burntItemName .. "]] [[" .. food.burntItemName .. "]]"
-            elseif food.burntItemName then
+            if food.burntItemName then
                 burntStr = "[[" .. food.burntItemName .. "]]"
             end
 
@@ -203,33 +207,22 @@ function p.renderTeaTable(frame)
     out = out .. '! style="width: 18%;" | Tea Name !! style="width: 7%; text-align: center;" | Lvl !! style="width: 17%;" | Base Leaf !! style="width: 18%;" | Secondary Ingredient !! style="width: 16%;" | Resulting Doses !! style="width: 24%;" | In-Game Buff & Effects\n'
 
     for _, tea in ipairs(cookingData.herbalTeas or {}) do
-        local teaIcon = tea.twoDoseItemId and ("[[File:Item_" .. tea.twoDoseItemId .. ".png|21x21px|middle|link=" .. (tea.twoDoseItemName or tea.name) .. "]] ") or ""
-        local teaNameLink = teaIcon .. "'''[[" .. tea.name .. "]]'''"
+        local teaNameLink = "'''[[" .. tea.name .. "]]'''"
 
-        local leafLink = "Steaming Water"
-        if tea.leafItemId and tea.leafItemName then
-            leafLink = "[[File:Item_" .. tea.leafItemId .. ".png|21x21px|middle|link=" .. tea.leafItemName .. "]] [[" .. tea.leafItemName .. "]]"
-        elseif tea.leafItemName then
-            leafLink = "[[" .. tea.leafItemName .. "]]"
-        end
+        local leafLink = tea.leafItemName and ("[[" .. tea.leafItemName .. "]]") or "Steaming Water"
 
         local ingLink = "None"
         if tea.ingredient and tea.ingredient.name then
             local qty = tea.ingredient.quantity or 1
             local qtyStr = qty > 1 and (qty .. "x ") or ""
-            local ingIcon = tea.ingredient.itemId and ("[[File:Item_" .. tea.ingredient.itemId .. ".png|21x21px|middle|link=" .. tea.ingredient.name .. "]] ") or ""
-            ingLink = qtyStr .. ingIcon .. "[[" .. tea.ingredient.name .. "]]"
+            ingLink = qtyStr .. "[[" .. tea.ingredient.name .. "]]"
         end
 
         local doses = {}
-        if tea.twoDoseItemName and tea.twoDoseItemId then
-            table.insert(doses, "[[File:Item_" .. tea.twoDoseItemId .. ".png|21x21px|middle|link=" .. tea.twoDoseItemName .. "]] [[" .. tea.twoDoseItemName .. "]]")
-        elseif tea.twoDoseItemName then
+        if tea.twoDoseItemName then
             table.insert(doses, "[[" .. tea.twoDoseItemName .. "]]")
         end
-        if tea.oneDoseItemName and tea.oneDoseItemId then
-            table.insert(doses, "[[File:Item_" .. tea.oneDoseItemId .. ".png|21x21px|middle|link=" .. tea.oneDoseItemName .. "]] [[" .. tea.oneDoseItemName .. "]]")
-        elseif tea.oneDoseItemName then
+        if tea.oneDoseItemName then
             table.insert(doses, "[[" .. tea.oneDoseItemName .. "]]")
         end
         local doseStr = table.concat(doses, "<br/>")
@@ -265,21 +258,13 @@ function p.renderItemCooking(frame)
 
     for _, m in ipairs(matches) do
         local f = m.food
-        local rawIcon = f.rawItemId and ("[[File:Item_" .. f.rawItemId .. ".png|21x21px|middle|link=" .. f.rawItemName .. "]] ") or ""
-        local rawLink = rawIcon .. "[[" .. f.rawItemName .. "]]"
-
-        local outIcon = f.cookedItemId and ("[[File:Item_" .. f.cookedItemId .. ".png|21x21px|middle|link=" .. f.cookedItemName .. "]] ") or ""
-        local outLink = outIcon .. "'''[[" .. f.cookedItemName .. "]]'''"
+        local rawLink = "[[" .. f.rawItemName .. "]]"
+        local outLink = "'''[[" .. f.cookedItemName .. "]]'''"
 
         local healStr = f.healAmount and (tostring(f.healAmount) .. " HP") or "—"
         local xpStr = f.xpReward and (tostring(f.xpReward) .. " XP") or "—"
 
-        local burntStr = "—"
-        if f.burntItemName and f.burntItemId then
-            burntStr = "[[File:Item_" .. f.burntItemId .. ".png|21x21px|middle|link=" .. f.burntItemName .. "]] [[" .. f.burntItemName .. "]]"
-        elseif f.burntItemName then
-            burntStr = "[[" .. f.burntItemName .. "]]"
-        end
+        local burntStr = f.burntItemName and ("[[" .. f.burntItemName .. "]]") or "—"
 
         out = out .. '|-\n'
         out = out .. '| [[Cooking]]\n'
@@ -313,22 +298,15 @@ function p.renderItemTeaBrewing(frame)
     for _, m in ipairs(matches) do
         local tea = m.tea
         local leafLink = tea.leafItemName and ("[[" .. tea.leafItemName .. "]]") or "Steaming Water"
-        if tea.leafItemId and tea.leafItemName then
-            leafLink = "[[File:Item_" .. tea.leafItemId .. ".png|21x21px|middle|link=" .. tea.leafItemName .. "]] [[" .. tea.leafItemName .. "]]"
-        end
 
         local ingLink = "None"
         if tea.ingredient and tea.ingredient.name then
             local qty = tea.ingredient.quantity or 1
             local qtyStr = qty > 1 and (qty .. "x ") or ""
-            local ingIcon = tea.ingredient.itemId and ("[[File:Item_" .. tea.ingredient.itemId .. ".png|21x21px|middle|link=" .. tea.ingredient.name .. "]] ") or ""
-            ingLink = qtyStr .. ingIcon .. "[[" .. tea.ingredient.name .. "]]"
+            ingLink = qtyStr .. "[[" .. tea.ingredient.name .. "]]"
         end
 
-        local doseStr = "[[" .. (tea.twoDoseItemName or tea.name) .. "]]"
-        if tea.twoDoseItemId then
-            doseStr = "[[File:Item_" .. tea.twoDoseItemId .. ".png|21x21px|middle|link=" .. (tea.twoDoseItemName or tea.name) .. "]] " .. doseStr
-        end
+        local doseStr = "'''[[" .. tea.name .. "]]''' (2 doses)"
 
         local effectStr = formatTeaEffect(tea)
 
@@ -389,6 +367,79 @@ function p.fetchTeaField(frame)
         if val ~= nil then return tostring(val) end
     end
     return ""
+end
+
+-- Infobox helper: Render Tea Effect for Consumable Properties
+function p.renderTeaEffect(frame)
+    local targetName = frame.args[1] or (frame:getParent() and frame:getParent().args['name']) or mw.title.getCurrentTitle().text
+    local matches = findTeaMatch(targetName)
+    if matches and #matches > 0 then
+        local tea = matches[1].tea
+        -- If tea only has hitpoints healOverTime / maxHealthBoost, let those dedicated infobox rows display it
+        if tea.targetSkill and tea.targetSkill ~= "hitpoints" and tea.effectSummary and tea.effectSummary ~= "" then
+            return tea.effectSummary
+        elseif not tea.healOverTime and not tea.maxHealthBoost and tea.effectSummary and tea.effectSummary ~= "" then
+            return tea.effectSummary
+        elseif not tea.healOverTime and not tea.maxHealthBoost and tea.formattedEffect and tea.formattedEffect ~= "" then
+            return tea.formattedEffect
+        end
+    end
+    return ""
+end
+
+-- Infobox helper: Render Tea Doses & Values
+function p.renderTeaDosesInfoboxRows(frame)
+    local targetName = frame.args[1] or (frame:getParent() and frame:getParent().args['name']) or mw.title.getCurrentTitle().text
+    local matches = findTeaMatch(targetName)
+    if not matches or #matches == 0 then return "" end
+
+    local tea = matches[1].tea
+    if not tea.twoDoseItemId and not tea.oneDoseItemId then return "" end
+
+    local twoDoseItem = findItem(tea.twoDoseItemId)
+    local oneDoseItem = findItem(tea.oneDoseItemId)
+
+    local twoValStr = twoDoseItem and (twoDoseItem.value .. " coins") or "—"
+    local oneValStr = oneDoseItem and (oneDoseItem.value .. " coins") or "—"
+
+    local out = '<tr><th colspan="2" style="background: #2e2e2e; color: white; text-align: center; font-weight: bold; padding: 4px;">Dose Profiles</th></tr>\n'
+    if tea.twoDoseItemId then
+        out = out .. '<tr><th style="text-align: left; padding: 4px;">2 Doses (Default)</th><td style="padding: 4px;">ID: ' .. tea.twoDoseItemId .. ' &bull; ' .. twoValStr .. '</td></tr>\n'
+    end
+    if tea.oneDoseItemId then
+        out = out .. '<tr><th style="text-align: left; padding: 4px;">1 Dose</th><td style="padding: 4px;">ID: ' .. tea.oneDoseItemId .. ' &bull; ' .. oneValStr .. '</td></tr>\n'
+    end
+    out = out .. '<tr><th style="text-align: left; padding: 4px;">Empty Vessel</th><td style="padding: 4px;">[[Empty Cup]] (ID: 669)</td></tr>\n'
+    return out
+end
+
+-- Render Doses & Consumption Table on tea pages
+function p.renderItemDosesTable(frame)
+    local targetName = frame.args[1] or (frame:getParent() and frame:getParent().args['name']) or mw.title.getCurrentTitle().text
+    local matches = findTeaMatch(targetName)
+    if not matches or #matches == 0 then return "" end
+
+    local tea = matches[1].tea
+    if not tea.twoDoseItemId and not tea.oneDoseItemId then return "" end
+
+    local twoDoseItem = findItem(tea.twoDoseItemId)
+    local oneDoseItem = findItem(tea.oneDoseItemId)
+
+    local twoVal = twoDoseItem and (twoDoseItem.value .. " coins") or "—"
+    local oneVal = oneDoseItem and (oneDoseItem.value .. " coins") or "—"
+
+    local out = '==Doses & Consumption==\n'
+    out = out .. 'A brewed cup of \'\'\'' .. tea.name .. '\'\'\' holds \'\'\'2 doses\'\'\'. Drinking a dose consumes liquid, applies its effects, and reduces the cup to the next dose stage:\n'
+    out = out .. '{| class="wikitable sortable" style="margin-top: 0.5em; width: 100%; text-align: left;"\n'
+    out = out .. '|- style="background-color: #2e2e2e; color: white;"\n'
+    out = out .. '! State !! Item ID !! Shop Value !! Action !! Remaining Container\n'
+    out = out .. '|-\n'
+    out = out .. '| \'\'\'2 doses\'\'\' (Full Cup) || ' .. tostring(tea.twoDoseItemId) .. ' || ' .. twoVal .. ' || Drink (1 dose) || [[' .. (tea.oneDoseItemName or (tea.name .. " (1 dose)")) .. '|1 dose]] (ID: ' .. tostring(tea.oneDoseItemId) .. ')\n'
+    out = out .. '|-\n'
+    out = out .. '| \'\'\'1 dose\'\'\' (Half Cup) || ' .. tostring(tea.oneDoseItemId) .. ' || ' .. oneVal .. ' || Drink (1 dose) || [[Empty Cup]] (ID: 669)\n'
+    out = out .. '|}\n'
+
+    return out
 end
 
 return p
