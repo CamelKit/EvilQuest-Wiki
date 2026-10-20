@@ -5917,7 +5917,12 @@
     "equipSlot": "head",
     "headRenderMode": "hairFit",
     "value": 25,
-    "model": "/assets/equipment/head/FarmersHat.glb"
+    "model": "/assets/equipment/head/FarmersHat.glb",
+    "headOcclusion": {
+      "hair": {
+        "mode": "underHat"
+      }
+    }
   },
   {
     "id": 453,
@@ -10409,5 +10414,32 @@
     "stackable": false,
     "equippable": false,
     "model": "/assets/models/HexCrystal.glb"
+  },
+  {
+    "id": 880,
+    "name": "Ring mould",
+    "description": "A reusable ring mould for shaping molten metal.",
+    "value": 5,
+    "stackable": false,
+    "equippable": false,
+    "icon": "ring_mould_293.png"
+  },
+  {
+    "id": 881,
+    "name": "Necklace mould",
+    "description": "A reusable necklace mould for shaping molten metal.",
+    "value": 5,
+    "stackable": false,
+    "equippable": false,
+    "icon": "Necklace_mould_295.png"
+  },
+  {
+    "id": 882,
+    "name": "Amulet mould",
+    "description": "A reusable amulet mould for shaping molten metal.",
+    "value": 5,
+    "stackable": false,
+    "equippable": false,
+    "icon": "Amulet_mould_294.png"
   }
 ]

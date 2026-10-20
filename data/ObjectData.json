@@ -4021,5 +4021,23 @@
       145
     ],
     "harvestable": true
+  },
+  {
+    "id": 93,
+    "name": "Sandstone Rock",
+    "category": "rock",
+    "actions": [
+      "Mine",
+      "Examine"
+    ],
+    "blocking": true,
+    "width": 0.9,
+    "height": 0.95,
+    "color": [
+      158,
+      98,
+      45
+    ],
+    "harvestable": true
   }
 ]
