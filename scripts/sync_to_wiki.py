@@ -88,6 +88,10 @@ for root, _, files in os.walk("templates"):
     if os.path.normpath(root) == "templates":
         continue
     
+    # Community-managed templates are only seeded once (createonly: 1) to protect wiki edits
+    norm_parts = os.path.normpath(root).split(os.sep)
+    is_community = "community" in norm_parts
+
     for file in files:
         if file.endswith(".wikitext"):
             local_path = os.path.join(root, file).replace("\\", "/")
@@ -105,7 +109,8 @@ for root, _, files in os.walk("templates"):
             ASSET_SYNC_MATRIX.append({
                 "file": local_path,
                 "title": wiki_title,
-                "model": "wikitext"
+                "model": "wikitext",
+                "createonly": is_community
             })
 
 # Dynamically discover standard wiki articles/pages from pages/
@@ -188,6 +193,9 @@ def execute_wiki_sync():
             "format": "json"
         }
 
+        if asset.get("createonly"):
+            edit_payload["createonly"] = 1
+
         # Force structural assignment if updating raw data structures
         if content_model == "json":
             edit_payload["contentmodel"] = "json"
@@ -196,7 +204,11 @@ def execute_wiki_sync():
         try:
             response_data = response.json()
             if "error" in response_data:
-                print(f"❌ Sync failed for [[{wiki_title}]]: {response_data['error'].get('info')}")
+                err = response_data["error"]
+                if err.get("code") == "articleexists":
+                    print(f"⏩ Preserved [[{wiki_title}]]: Page already exists (community-managed data preserved).")
+                else:
+                    print(f"❌ Sync failed for [[{wiki_title}]]: {err.get('info')}")
             else:
                 revid = response_data.get('edit', {}).get('newrevid')
                 print(f"✨ Successfully deployed [[{wiki_title}]]! Revision ID: {revid}")

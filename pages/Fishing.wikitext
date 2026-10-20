@@ -9,7 +9,7 @@ Like all skills in EvilQuest, Fishing can be trained up to level '''150''', requ
 <li>'''Verified Values''': [[Tuna]] grants '''70 Catch XP''' and [[Lobster]] grants '''90 Catch XP'''.</li>
 <li>'''Unverified Values''': Shrimp, Crayfish, Sardine, Octopus, and Oarfish.</li>
 </ul>
-<p style="margin: 0;">If you know the XP value for any fish, please '''[{{fullurl:Fishing|action=edit}} click here to edit this guide]''' and enter the value in the table below, or update [[Module:FishingData/json]].</p>
+<p style="margin: 0;">If you know the XP value for any fish, please '''[{{fullurl:Template:FishingXP|action=edit}} click here to update Catch XP]''' directly in the community template without needing Git!</p>
 </div>
 
 == Overview & Mechanics ==
@@ -31,18 +31,10 @@ Catching fish has a rare chance to award [[Water Essence]] (Item ID 662), an ele
 == Fish & Marine Catches ==
 <!-- =======================================================================
      COMMUNITY CONTRIBUTION - CATCH XP:
-     Gathering XP is determined server-side. To update or fill in the Catch
-     XP for any fish, edit the respective parameter below and save this page!
+     Catch XP is managed through [[Template:FishingXP]]. Anyone can edit
+     that template directly on the wiki to update or fill in Catch XP values.
      ======================================================================= -->
-{{#invoke:FishingData|renderFishingTable
-| shrimp_xp   = 
-| crayfish_xp = 
-| sardine_xp  = 
-| tuna_xp     = 70
-| lobster_xp  = 90
-| octopus_xp  = 
-| oarfish_xp  = 
-}}
+{{#invoke:FishingData|renderFishingTable}}
 
 == Fishing Spots ==
 * '''[[Shallow Net Fishing Spot]]''' (Level 1): Requires a [[Fishing Net]] to catch [[Raw Shrimp]].
@@ -68,7 +60,7 @@ Raw fish can be cooked using [[Cooking]] to restore [[Hitpoints]].
 |-
 | [[File:Item_27.png|21x21px|middle|link=Raw Shrimp]] [[Raw Shrimp]]
 | style="text-align: center;" | 1
-| style="text-align: center;" | ''Unknown''
+| style="text-align: center;" | {{#invoke:FishingData|renderCatchXp|shrimp}}
 | [[File:Item_28.png|21x21px|middle|link=Cooked Shrimp]] [[Cooked Shrimp]]
 | style="text-align: center;" | 1
 | style="text-align: center;" | 30 XP
@@ -76,7 +68,7 @@ Raw fish can be cooked using [[Cooking]] to restore [[Hitpoints]].
 |-
 | [[File:Item_501.png|21x21px|middle|link=Raw Crayfish]] [[Raw Crayfish]]
 | style="text-align: center;" | 10
-| style="text-align: center;" | ''Unknown''
+| style="text-align: center;" | {{#invoke:FishingData|renderCatchXp|crayfish}}
 | [[File:Item_526.png|21x21px|middle|link=Crayfish]] [[Crayfish]]
 | style="text-align: center;" | 8
 | style="text-align: center;" | 38 XP
@@ -84,7 +76,7 @@ Raw fish can be cooked using [[Cooking]] to restore [[Hitpoints]].
 |-
 | [[File:Item_560.png|21x21px|middle|link=Raw Sardine]] [[Raw Sardine]]
 | style="text-align: center;" | 15
-| style="text-align: center;" | ''Unknown''
+| style="text-align: center;" | {{#invoke:FishingData|renderCatchXp|sardine}}
 | [[File:Item_561.png|21x21px|middle|link=Sardine]] [[Sardine]]
 | style="text-align: center;" | 12
 | style="text-align: center;" | 40 XP
@@ -92,7 +84,7 @@ Raw fish can be cooked using [[Cooking]] to restore [[Hitpoints]].
 |-
 | [[File:Item_510.png|21x21px|middle|link=Raw Tuna]] [[Raw Tuna]]
 | style="text-align: center;" | 35
-| style="text-align: center; font-weight: bold;" | 70 XP
+| style="text-align: center;" | {{#invoke:FishingData|renderCatchXp|tuna}}
 | [[File:Item_535.png|21x21px|middle|link=Tuna]] [[Tuna]]
 | style="text-align: center;" | 30
 | style="text-align: center;" | 80 XP
@@ -100,7 +92,7 @@ Raw fish can be cooked using [[Cooking]] to restore [[Hitpoints]].
 |-
 | [[File:Item_558.png|21x21px|middle|link=Raw Lobster]] [[Raw Lobster]]
 | style="text-align: center;" | 50
-| style="text-align: center; font-weight: bold;" | 90 XP
+| style="text-align: center;" | {{#invoke:FishingData|renderCatchXp|lobster}}
 | [[File:Item_559.png|21x21px|middle|link=Lobster]] [[Lobster]]
 | style="text-align: center;" | 40
 | style="text-align: center;" | 120 XP
@@ -108,7 +100,7 @@ Raw fish can be cooked using [[Cooking]] to restore [[Hitpoints]].
 |-
 | [[File:Item_562.png|21x21px|middle|link=Raw Octopus]] [[Raw Octopus]]
 | style="text-align: center;" | 70
-| style="text-align: center;" | ''Unknown''
+| style="text-align: center;" | {{#invoke:FishingData|renderCatchXp|octopus}}
 | [[File:Item_563.png|21x21px|middle|link=Octopus]] [[Octopus]]
 | style="text-align: center;" | 62
 | style="text-align: center;" | 170 XP
@@ -116,7 +108,7 @@ Raw fish can be cooked using [[Cooking]] to restore [[Hitpoints]].
 |-
 | [[File:Item_523.png|21x21px|middle|link=Raw Oarfish]] [[Raw Oarfish]]
 | style="text-align: center;" | 87
-| style="text-align: center;" | ''Unknown''
+| style="text-align: center;" | {{#invoke:FishingData|renderCatchXp|oarfish}}
 | [[File:Item_548.png|21x21px|middle|link=Oarfish]] [[Oarfish]]
 | style="text-align: center;" | 80
 | style="text-align: center;" | 220 XP

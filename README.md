@@ -18,7 +18,7 @@ This repository utilizes a multi-environment pipeline through GitHub Actions:
 * **`scripts/`**: Contains our robust suite of Python automation tools.
 * **`staging/`**: A local-only directory where you drop new game data updates (e.g., `items.json`, `npcs.json`) before merging them.
 * **`styles/`**: Contains global stylesheets like `Common.css`.
-* **`templates/`**: Themed subdirectories containing our `.wikitext` templates (infoboxes, drops, shops, smithing, utility).
+* **`templates/`**: Themed subdirectories containing our `.wikitext` templates (infoboxes, drops, shops, smithing, utility, and `community/` for crowdsourced data seeded once with `createonly: 1`).
 
 ## 🛠️ Local Development Setup
 

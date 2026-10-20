@@ -17,13 +17,9 @@ local function findItem(nameOrId)
     return nil
 end
 
--- Helper to get direct edit URL for the current or Fishing page
+-- Helper to get direct edit URL for the community Catch XP template
 local function getEditUrl()
-    local title = mw.title.getCurrentTitle()
-    if title and title.fullUrl then
-        return tostring(title:fullUrl({ action = 'edit' }))
-    end
-    return "https://evilquest.wiki/index.php?title=Fishing&action=edit"
+    return "https://evilquest.wiki/index.php?title=Template:FishingXP&action=edit"
 end
 
 -- Helper to clean and format an XP input value
@@ -57,6 +53,43 @@ local function formatCatchXp(rawInput, defaultXp)
     return unknownLink
 end
 
+-- Helper to look up Catch XP for a fish from:
+-- 1. Direct frame args (| shrimp_xp = ...)
+-- 2. Community Template:FishingXP (via frame:expandTemplate)
+-- 3. Static FishingData.json baseline
+local function getFishCatchXp(frame, fish)
+    if not fish then return nil end
+    local fishId = fish.id or fish.name:lower()
+
+    -- 1. Check direct frame/parent args if explicitly passed
+    local args = frame and frame.args or {}
+    local parentArgs = (frame and frame.getParent and frame:getParent()) and frame:getParent().args or {}
+    local userArg = args[fishId .. "_xp"] or args[fishId] or args[fish.name:lower() .. "_xp"] or
+                    parentArgs[fishId .. "_xp"] or parentArgs[fishId] or parentArgs[fish.name:lower() .. "_xp"]
+    if userArg and tostring(userArg):match("%S") then
+        local trimmed = tostring(userArg):gsub("^%s*(.-)%s*$", "%1")
+        if trimmed ~= "" then return trimmed end
+    end
+
+    -- 2. Check community Template:FishingXP
+    if frame and frame.expandTemplate then
+        local ok, val = pcall(function()
+            return frame:expandTemplate{ title = 'FishingXP', args = { fishId } }
+        end)
+        if ok and val and tostring(val):match("%S") then
+            local trimmed = tostring(val):gsub("^%s*(.-)%s*$", "%1")
+            if trimmed ~= "" then return trimmed end
+        end
+    end
+
+    -- 3. Fallback to datamined JSON baseline
+    if fish.catchXp ~= nil then
+        return tostring(fish.catchXp)
+    end
+
+    return nil
+end
+
 -- ============================================================
 -- Public Methods
 -- ============================================================
@@ -83,9 +116,8 @@ function p.renderFishingTable(frame)
     out = out .. '! style="width: 9%;" | Notes\n'
 
     for _, fish in ipairs(fishingData.fishes or {}) do
-        local fishId = fish.id or fish.name:lower()
-        local userXpArg = getArg(fishId .. "_xp") or getArg(fishId) or getArg(fish.name:lower() .. "_xp")
-        local catchXpStr = formatCatchXp(userXpArg, fish.catchXp)
+        local xpVal = getFishCatchXp(frame, fish)
+        local catchXpStr = formatCatchXp(xpVal, nil)
 
         local rawIcon = fish.rawItemId and ("[[File:Item_" .. fish.rawItemId .. ".png|21x21px|middle|link=" .. fish.rawItemName .. "]] ") or ""
         local rawLink = rawIcon .. "'''[[" .. fish.rawItemName .. "]]'''"
@@ -197,6 +229,28 @@ function p.renderUnreleasedTable(frame)
     return out
 end
 
+-- Render individual Catch XP value for a fish (used in tables and guides)
+function p.renderCatchXp(frame)
+    local target = frame.args[1] or (frame:getParent() and frame:getParent().args[1])
+    if not target then return '<span style="color: #e6a23c; font-style: italic;">Unknown</span>' end
+    local targetLower = target:lower()
+    local matchedFish = nil
+    for _, f in ipairs(fishingData.fishes or {}) do
+        if (f.id and f.id:lower() == targetLower) or
+           (f.name and f.name:lower() == targetLower) or
+           (f.rawItemName and f.rawItemName:lower() == targetLower) or
+           (f.cookedItemName and f.cookedItemName:lower() == targetLower) then
+            matchedFish = f
+            break
+        end
+    end
+    if not matchedFish then
+        return '<span style="color: #e6a23c; font-style: italic;">Unknown</span>'
+    end
+    local xpVal = getFishCatchXp(frame, matchedFish)
+    return formatCatchXp(xpVal, nil)
+end
+
 -- Render fishing information on individual item pages
 function p.renderItemFishing(frame)
     local targetName = frame.args[1] or (frame:getParent() and frame:getParent().args['name']) or mw.title.getCurrentTitle().text
@@ -225,7 +279,8 @@ function p.renderItemFishing(frame)
         local qty = matchedFish.requiredItemQuantity or 1
         out = out .. '|-\n| Required Bait || ' .. (qty > 1 and (qty .. "x ") or "") .. '[[' .. matchedFish.requiredItemName .. ']]\n'
     end
-    local xpDisplay = matchedFish.catchXp and ("'''" .. matchedFish.catchXp .. " XP'''") or "''Unknown (Server-side)''"
+    local xpVal = getFishCatchXp(frame, matchedFish)
+    local xpDisplay = formatCatchXp(xpVal, nil)
     out = out .. '|-\n| Catch Experience || ' .. xpDisplay .. '\n'
     out = out .. '|}\n'
     return out
