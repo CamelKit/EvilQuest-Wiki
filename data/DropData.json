@@ -1,0 +1,113 @@
+{
+  "lastUpdated": "2026-10-20T10:39:13.669964+00:00",
+  "totalMonsters": 2,
+  "totalKillsRecorded": 9,
+  "monsters": {
+    "Chicken": {
+      "npcDefId": 1,
+      "name": "Chicken",
+      "combatLevel": 1,
+      "totalKills": 8,
+      "drops": [
+        {
+          "itemId": 1,
+          "name": "Bones",
+          "totalDrops": 8,
+          "totalQuantity": 8,
+          "minQuantity": 1,
+          "maxQuantity": 1,
+          "quantityRange": "1",
+          "dropRate": 1,
+          "dropRatePct": 100,
+          "formattedRate": "1/1.0",
+          "rarity": "Always",
+          "uniqueReporters": 1,
+          "status": "unconfirmed"
+        },
+        {
+          "itemId": 11,
+          "name": "Raw Chicken",
+          "totalDrops": 8,
+          "totalQuantity": 8,
+          "minQuantity": 1,
+          "maxQuantity": 1,
+          "quantityRange": "1",
+          "dropRate": 1,
+          "dropRatePct": 100,
+          "formattedRate": "1/1.0",
+          "rarity": "Always",
+          "uniqueReporters": 1,
+          "status": "unconfirmed"
+        },
+        {
+          "itemId": 19,
+          "name": "Feather",
+          "totalDrops": 8,
+          "totalQuantity": 19,
+          "minQuantity": 1,
+          "maxQuantity": 3,
+          "quantityRange": "1\u20133",
+          "dropRate": 1,
+          "dropRatePct": 100,
+          "formattedRate": "1/1.0",
+          "rarity": "Always",
+          "uniqueReporters": 1,
+          "status": "unconfirmed"
+        }
+      ]
+    },
+    "Rooster": {
+      "npcDefId": 23,
+      "name": "Rooster",
+      "combatLevel": 3,
+      "totalKills": 1,
+      "drops": [
+        {
+          "itemId": 1,
+          "name": "Bones",
+          "totalDrops": 1,
+          "totalQuantity": 1,
+          "minQuantity": 1,
+          "maxQuantity": 1,
+          "quantityRange": "1",
+          "dropRate": 1,
+          "dropRatePct": 100,
+          "formattedRate": "1/1.0",
+          "rarity": "Always",
+          "uniqueReporters": 1,
+          "status": "unconfirmed"
+        },
+        {
+          "itemId": 11,
+          "name": "Raw Chicken",
+          "totalDrops": 1,
+          "totalQuantity": 1,
+          "minQuantity": 1,
+          "maxQuantity": 1,
+          "quantityRange": "1",
+          "dropRate": 1,
+          "dropRatePct": 100,
+          "formattedRate": "1/1.0",
+          "rarity": "Always",
+          "uniqueReporters": 1,
+          "status": "unconfirmed"
+        },
+        {
+          "itemId": 19,
+          "name": "Feather",
+          "totalDrops": 1,
+          "totalQuantity": 3,
+          "minQuantity": 3,
+          "maxQuantity": 3,
+          "quantityRange": "3",
+          "dropRate": 1,
+          "dropRatePct": 100,
+          "formattedRate": "1/1.0",
+          "rarity": "Always",
+          "uniqueReporters": 1,
+          "status": "unconfirmed"
+        }
+      ]
+    }
+  }
+}

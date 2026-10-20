@@ -1,0 +1,13 @@
+<includeonly>{{#invoke:DropData|renderDrops|{{{1|{{{name|}}}}}}}}</includeonly><noinclude>
+== Usage ==
+Displays the crowdsourced drop table for the current NPC page:
+<pre>
+{{MobDrops}}
+</pre>
+Or explicitly specify the NPC name:
+<pre>
+{{MobDrops|Giant Spider}}
+{{MobDrops|Skeleton Warrior (Lvl 28)}}
+</pre>
+[[Category:Drop templates]]
+</noinclude>

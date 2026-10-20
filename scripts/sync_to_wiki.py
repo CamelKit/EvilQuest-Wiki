@@ -79,7 +79,10 @@ ASSET_SYNC_MATRIX = [
     {"file": "data/NetworkProtocolData.json", "title": "Module:NetworkProtocolData/json", "model": "json"},
     {"file": "modules/FishingData.lua", "title": "Module:FishingData", "model": "Scribunto"},
     {"file": "data/FishingData.json", "title": "Module:FishingData/json", "model": "json"},
-    {"file": "styles/Common.css", "title": "MediaWiki:Common.css", "model": "css"}
+    {"file": "modules/DropData.lua", "title": "Module:DropData", "model": "Scribunto"},
+    {"file": "data/DropData.json", "title": "Module:DropData/json", "model": "json"},
+    {"file": "styles/Common.css", "title": "MediaWiki:Common.css", "model": "css"},
+    {"file": "styles/Common.js", "title": "MediaWiki:Common.js", "model": "javascript"}
 ]
 
 # Dynamically discover templates from subdirectories
