@@ -171,7 +171,7 @@
       "type": "tool",
       "levelRequired": 1,
       "description": "A small net for shallow fishing.",
-      "targets": ["Shrimp"]
+      "targets": ["Raw Shrimp"]
     },
     {
       "itemId": 557,
@@ -179,7 +179,7 @@
       "type": "tool",
       "levelRequired": 10,
       "description": "A weighted pot for trapping shellfish.",
-      "targets": ["Crayfish", "Lobster"]
+      "targets": ["Raw Crayfish", "Raw Lobster"]
     },
     {
       "itemId": 553,
@@ -190,7 +190,7 @@
       "requiresBait": true,
       "baitItemId": 564,
       "baitItemName": "Fishing Bait",
-      "targets": ["Sardine", "Oarfish"]
+      "targets": ["Raw Sardine", "Raw Oarfish"]
     },
     {
       "itemId": 554,
@@ -198,7 +198,7 @@
       "type": "tool",
       "levelRequired": 35,
       "description": "A pointed fishing tool for large fish.",
-      "targets": ["Tuna", "Octopus"]
+      "targets": ["Raw Tuna", "Raw Octopus"]
     },
     {
       "itemId": 564,
@@ -207,7 +207,7 @@
       "levelRequired": 15,
       "description": "Small bait for rod fishing.",
       "consumedOnCatch": true,
-      "targets": ["Sardine", "Oarfish"]
+      "targets": ["Raw Sardine", "Raw Oarfish"]
     }
   ],
   "unreleased": [

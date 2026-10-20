@@ -58,58 +58,58 @@ Raw fish can be cooked using [[Cooking]] to restore [[Hitpoints]].
 ! style="width: 12%; text-align: center;" | Cooking XP
 ! style="width: 12%; text-align: center;" | Heal Value
 |-
-| [[File:Item_27.png|21x21px|middle|link=Raw Shrimp]] [[Raw Shrimp]]
+| [[Raw Shrimp]]
 | style="text-align: center;" | 1
 | style="text-align: center;" | {{#invoke:FishingData|renderCatchXp|shrimp}}
-| [[File:Item_28.png|21x21px|middle|link=Cooked Shrimp]] [[Cooked Shrimp]]
+| [[Cooked Shrimp]]
 | style="text-align: center;" | 1
 | style="text-align: center;" | 30 XP
 | style="text-align: center; font-weight: bold; color: #4ade80;" | 2 HP
 |-
-| [[File:Item_501.png|21x21px|middle|link=Raw Crayfish]] [[Raw Crayfish]]
+| [[Raw Crayfish]]
 | style="text-align: center;" | 10
 | style="text-align: center;" | {{#invoke:FishingData|renderCatchXp|crayfish}}
-| [[File:Item_526.png|21x21px|middle|link=Crayfish]] [[Crayfish]]
+| [[Crayfish]]
 | style="text-align: center;" | 8
 | style="text-align: center;" | 38 XP
 | style="text-align: center; font-weight: bold; color: #4ade80;" | 3 HP
 |-
-| [[File:Item_560.png|21x21px|middle|link=Raw Sardine]] [[Raw Sardine]]
+| [[Raw Sardine]]
 | style="text-align: center;" | 15
 | style="text-align: center;" | {{#invoke:FishingData|renderCatchXp|sardine}}
-| [[File:Item_561.png|21x21px|middle|link=Sardine]] [[Sardine]]
+| [[Sardine]]
 | style="text-align: center;" | 12
 | style="text-align: center;" | 40 XP
 | style="text-align: center; font-weight: bold; color: #4ade80;" | 4 HP
 |-
-| [[File:Item_510.png|21x21px|middle|link=Raw Tuna]] [[Raw Tuna]]
+| [[Raw Tuna]]
 | style="text-align: center;" | 35
 | style="text-align: center;" | {{#invoke:FishingData|renderCatchXp|tuna}}
-| [[File:Item_535.png|21x21px|middle|link=Tuna]] [[Tuna]]
+| [[Tuna]]
 | style="text-align: center;" | 30
 | style="text-align: center;" | 80 XP
 | style="text-align: center; font-weight: bold; color: #4ade80;" | 8 HP
 |-
-| [[File:Item_558.png|21x21px|middle|link=Raw Lobster]] [[Raw Lobster]]
+| [[Raw Lobster]]
 | style="text-align: center;" | 50
 | style="text-align: center;" | {{#invoke:FishingData|renderCatchXp|lobster}}
-| [[File:Item_559.png|21x21px|middle|link=Lobster]] [[Lobster]]
+| [[Lobster]]
 | style="text-align: center;" | 40
 | style="text-align: center;" | 120 XP
 | style="text-align: center; font-weight: bold; color: #4ade80;" | 11 HP
 |-
-| [[File:Item_562.png|21x21px|middle|link=Raw Octopus]] [[Raw Octopus]]
+| [[Raw Octopus]]
 | style="text-align: center;" | 70
 | style="text-align: center;" | {{#invoke:FishingData|renderCatchXp|octopus}}
-| [[File:Item_563.png|21x21px|middle|link=Octopus]] [[Octopus]]
+| [[Octopus]]
 | style="text-align: center;" | 62
 | style="text-align: center;" | 170 XP
 | style="text-align: center; font-weight: bold; color: #4ade80;" | 17 HP
 |-
-| [[File:Item_523.png|21x21px|middle|link=Raw Oarfish]] [[Raw Oarfish]]
+| [[Raw Oarfish]]
 | style="text-align: center;" | 87
 | style="text-align: center;" | {{#invoke:FishingData|renderCatchXp|oarfish}}
-| [[File:Item_548.png|21x21px|middle|link=Oarfish]] [[Oarfish]]
+| [[Oarfish]]
 | style="text-align: center;" | 80
 | style="text-align: center;" | 220 XP
 | style="text-align: center; font-weight: bold; color: #4ade80;" | 20 HP

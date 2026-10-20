@@ -19,25 +19,25 @@
 |- style="background-color: #2e2e2e; color: white;"
 ! style="width: 60%;" | Fish / Marine Catch !! style="width: 40%; text-align: center;" | Catch XP
 |-
-| [[File:Item_27.png|21x21px|middle|link=Raw Shrimp]] [[Raw Shrimp]]
+| [[Raw Shrimp]]
 | style="text-align: center;" | {{#if: {{FishingXP|shrimp}} | '''{{FishingXP|shrimp}} XP''' | <span style="color: #e6a23c; font-style: italic;">Unknown</span> }}
 |-
-| [[File:Item_501.png|21x21px|middle|link=Raw Crayfish]] [[Raw Crayfish]]
+| [[Raw Crayfish]]
 | style="text-align: center;" | {{#if: {{FishingXP|crayfish}} | '''{{FishingXP|crayfish}} XP''' | <span style="color: #e6a23c; font-style: italic;">Unknown</span> }}
 |-
-| [[File:Item_560.png|21x21px|middle|link=Raw Sardine]] [[Raw Sardine]]
+| [[Raw Sardine]]
 | style="text-align: center;" | {{#if: {{FishingXP|sardine}} | '''{{FishingXP|sardine}} XP''' | <span style="color: #e6a23c; font-style: italic;">Unknown</span> }}
 |-
-| [[File:Item_510.png|21x21px|middle|link=Raw Tuna]] [[Raw Tuna]]
+| [[Raw Tuna]]
 | style="text-align: center;" | {{#if: {{FishingXP|tuna}} | '''{{FishingXP|tuna}} XP''' | <span style="color: #e6a23c; font-style: italic;">Unknown</span> }}
 |-
-| [[File:Item_558.png|21x21px|middle|link=Raw Lobster]] [[Raw Lobster]]
+| [[Raw Lobster]]
 | style="text-align: center;" | {{#if: {{FishingXP|lobster}} | '''{{FishingXP|lobster}} XP''' | <span style="color: #e6a23c; font-style: italic;">Unknown</span> }}
 |-
-| [[File:Item_562.png|21x21px|middle|link=Raw Octopus]] [[Raw Octopus]]
+| [[Raw Octopus]]
 | style="text-align: center;" | {{#if: {{FishingXP|octopus}} | '''{{FishingXP|octopus}} XP''' | <span style="color: #e6a23c; font-style: italic;">Unknown</span> }}
 |-
-| [[File:Item_523.png|21x21px|middle|link=Raw Oarfish]] [[Raw Oarfish]]
+| [[Raw Oarfish]]
 | style="text-align: center;" | {{#if: {{FishingXP|oarfish}} | '''{{FishingXP|oarfish}} XP''' | <span style="color: #e6a23c; font-style: italic;">Unknown</span> }}
 |}
 

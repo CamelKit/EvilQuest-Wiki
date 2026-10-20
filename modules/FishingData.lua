@@ -119,27 +119,21 @@ function p.renderFishingTable(frame)
         local xpVal = getFishCatchXp(frame, fish)
         local catchXpStr = formatCatchXp(xpVal, nil)
 
-        local rawIcon = fish.rawItemId and ("[[File:Item_" .. fish.rawItemId .. ".png|21x21px|middle|link=" .. fish.rawItemName .. "]] ") or ""
-        local rawLink = rawIcon .. "'''[[" .. fish.rawItemName .. "]]'''"
-
+        local rawLink = "'''[[" .. fish.rawItemName .. "]]'''"
         local spotLink = fish.spotName and ("[[" .. fish.spotName .. "]]") or "Unknown"
-
-        local toolIcon = fish.toolItemId and ("[[File:Item_" .. fish.toolItemId .. ".png|21x21px|middle|link=" .. fish.toolName .. "]] ") or ""
-        local toolLink = toolIcon .. "[[" .. fish.toolName .. "]]"
+        local toolLink = "[[" .. fish.toolName .. "]]"
 
         local baitLink = "None"
         if fish.requiredItemName then
-            local baitIcon = fish.requiredItemId and ("[[File:Item_" .. fish.requiredItemId .. ".png|21x21px|middle|link=" .. fish.requiredItemName .. "]] ") or ""
             local qtyPrefix = (fish.requiredItemQuantity and fish.requiredItemQuantity > 1) and (fish.requiredItemQuantity .. "x ") or ""
-            baitLink = baitIcon .. qtyPrefix .. "[[" .. fish.requiredItemName .. "]]"
+            baitLink = qtyPrefix .. "[[" .. fish.requiredItemName .. "]]"
         end
 
         local cookedCell = "—"
         if fish.cookedItemName then
-            local cookedIcon = fish.cookedItemId and ("[[File:Item_" .. fish.cookedItemId .. ".png|21x21px|middle|link=" .. fish.cookedItemName .. "]] ") or ""
             local healStr = fish.healAmount and (" (" .. fish.healAmount .. " HP)") or ""
             local cookLvlStr = fish.cookingLevel and ("<br /><small>Lvl " .. fish.cookingLevel .. " Cook</small>") or ""
-            cookedCell = cookedIcon .. "[[" .. fish.cookedItemName .. "]]" .. healStr .. cookLvlStr
+            cookedCell = "[[" .. fish.cookedItemName .. "]]" .. healStr .. cookLvlStr
         end
 
         local notes = fish.notes or ""
@@ -170,8 +164,7 @@ function p.renderEquipmentTable(frame)
     out = out .. '! style="width: 36%;" | Description & Utility\n'
 
     for _, eq in ipairs(fishingData.equipment or {}) do
-        local icon = eq.itemId and ("[[File:Item_" .. eq.itemId .. ".png|21x21px|middle|link=" .. eq.name .. "]] ") or ""
-        local itemLink = icon .. "'''[[" .. eq.name .. "]]'''"
+        local itemLink = "'''[[" .. eq.name .. "]]'''"
 
         local typeLabel = eq.type == "consumable" and '<span style="color: #e6a23c;">Consumable</span>' or '<span style="color: #64b5f6;">Gathering Tool</span>'
 
@@ -208,11 +201,8 @@ function p.renderUnreleasedTable(frame)
     out = out .. '! style="width: 35%;" | Development Status & Notes\n'
 
     for _, u in ipairs(fishingData.unreleased or {}) do
-        local rawIcon = u.rawItemId and ("[[File:Item_" .. u.rawItemId .. ".png|21x21px|middle|link=Raw " .. u.name .. "]] ") or ""
-        local rawLink = rawIcon .. "[[Raw " .. u.name .. "]]"
-
-        local cookedIcon = u.cookedItemId and ("[[File:Item_" .. u.cookedItemId .. ".png|21x21px|middle|link=" .. u.name .. "]] ") or ""
-        local cookedLink = cookedIcon .. "'''[[" .. u.name .. "]]'''"
+        local rawLink = "[[Raw " .. u.name .. "]]"
+        local cookedLink = "'''[[" .. u.name .. "]]'''"
 
         local healStr = u.healAmount and (tostring(u.healAmount) .. " HP") or "—"
 
