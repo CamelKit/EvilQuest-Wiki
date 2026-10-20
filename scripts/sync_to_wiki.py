@@ -137,6 +137,109 @@ for asset in ASSET_SYNC_MATRIX:
         deduped_matrix.append(asset)
 ASSET_SYNC_MATRIX = deduped_matrix
 
+def safe_api_post(session, payload, max_retries=4, backoff=1.5):
+    """
+    Executes an edit/action POST request to WIKI_API_URL with automatic retries for:
+    - Transient HTTP status codes (429, 500, 502, 503, 504, 520-524)
+    - Network timeouts / connection resets
+    - Empty (0-byte) or non-JSON responses from Cloudflare / reverse proxy
+    - MediaWiki 'ratelimited' or 'maxlag' errors
+    Guarantees 'bot': True and 'format': 'json'.
+    Returns the parsed JSON response dictionary, or a synthetic error dict.
+    """
+    if "format" not in payload:
+        payload["format"] = "json"
+    if "bot" not in payload:
+        payload["bot"] = True
+
+    for attempt in range(1, max_retries + 1):
+        try:
+            resp = session.post(WIKI_API_URL, data=payload, timeout=30)
+            
+            # Transient HTTP status codes
+            if resp.status_code in (429, 500, 502, 503, 504, 520, 521, 522, 523, 524):
+                if attempt < max_retries:
+                    sleep_time = backoff * (2 ** (attempt - 1))
+                    print(f"⚠️ HTTP {resp.status_code} received. Retrying in {sleep_time:.1f}s (attempt {attempt}/{max_retries})...")
+                    time.sleep(sleep_time)
+                    continue
+                return {"error": {"code": f"http_{resp.status_code}", "info": f"HTTP {resp.status_code}: {resp.text[:200]}"}}
+
+            # Empty response body check
+            body = resp.text.strip() if resp.text else ""
+            if not body:
+                if attempt < max_retries:
+                    sleep_time = backoff * (2 ** (attempt - 1))
+                    print(f"⚠️ Empty response received (HTTP {resp.status_code}). Retrying in {sleep_time:.1f}s (attempt {attempt}/{max_retries})...")
+                    time.sleep(sleep_time)
+                    continue
+                return {"error": {"code": "empty_response", "info": f"Server returned 0 bytes (HTTP {resp.status_code})"}}
+
+            # JSON decode
+            try:
+                data = resp.json()
+            except Exception as e:
+                if attempt < max_retries:
+                    sleep_time = backoff * (2 ** (attempt - 1))
+                    print(f"⚠️ Non-JSON response received. Retrying in {sleep_time:.1f}s (attempt {attempt}/{max_retries})...")
+                    time.sleep(sleep_time)
+                    continue
+                return {"error": {"code": "invalid_json", "info": f"Failed to parse response: {e} (Body snippet: {body[:150]})"}}
+
+            # MediaWiki application rate limit / maxlag
+            if "error" in data:
+                err_code = data["error"].get("code")
+                if err_code in ("ratelimited", "maxlag"):
+                    if attempt < max_retries:
+                        sleep_time = backoff * (2 ** attempt)
+                        print(f"⚠️ MediaWiki '{err_code}' encountered. Retrying in {sleep_time:.1f}s (attempt {attempt}/{max_retries})...")
+                        time.sleep(sleep_time)
+                        continue
+
+            return data
+
+        except requests.RequestException as e:
+            if attempt < max_retries:
+                sleep_time = backoff * (2 ** (attempt - 1))
+                print(f"⚠️ Network error ({type(e).__name__}): {e}. Retrying in {sleep_time:.1f}s (attempt {attempt}/{max_retries})...")
+                time.sleep(sleep_time)
+                continue
+            return {"error": {"code": "network_exception", "info": str(e)}}
+
+    return {"error": {"code": "max_retries_exceeded", "info": "Request exceeded max retries"}}
+
+def get_existing_pages(session, titles):
+    """
+    Batch queries the wiki in chunks of 50 to find existing articles.
+    Returns a set of normalized and raw titles that already exist on the wiki.
+    """
+    existing = set()
+    title_list = [t.strip() for t in titles if t and t.strip()]
+    chunk_size = 50
+
+    for i in range(0, len(title_list), chunk_size):
+        chunk = title_list[i:i + chunk_size]
+        params = {
+            "action": "query",
+            "titles": "|".join(chunk),
+            "format": "json"
+        }
+        for attempt in range(3):
+            try:
+                resp = session.get(WIKI_API_URL, params=params, timeout=20)
+                if resp.status_code == 200 and resp.text.strip():
+                    data = resp.json()
+                    pages = data.get("query", {}).get("pages", {})
+                    for p in pages.values():
+                        if "missing" not in p and "title" in p:
+                            existing.add(p["title"])
+                            existing.add(p["title"].lower())
+                    break
+            except Exception:
+                time.sleep(1)
+        time.sleep(0.05)
+    return existing
+
 def execute_wiki_sync():
     session = requests.Session()
     session.headers.update({"User-Agent": "EvilQuestWikiSyncBot/1.0 (CI/CD Deployment)"})
@@ -154,8 +257,9 @@ def execute_wiki_sync():
     login_auth = session.post(WIKI_API_URL, data={
         "action": "login", "lgname": BOT_USERNAME, "lgpassword": BOT_PASSWORD, "lgtoken": login_token, "format": "json"
     })
-    if login_auth.json()["login"]["result"] != "Success":
-        print(f"❌ Authentication denied: {login_auth.json()['login'].get('reason', 'Unknown failure')}")
+    auth_data = login_auth.json()
+    if auth_data.get("login", {}).get("result") != "Success":
+        print(f"❌ Authentication denied: {auth_data.get('login', {}).get('reason', 'Unknown failure')}")
         sys.exit(1)
 
     # Sequence C: Acquire the mandatory runtime CSRF token for page modification
@@ -200,20 +304,16 @@ def execute_wiki_sync():
         if content_model == "json":
             edit_payload["contentmodel"] = "json"
 
-        response = session.post(WIKI_API_URL, data=edit_payload)
-        try:
-            response_data = response.json()
-            if "error" in response_data:
-                err = response_data["error"]
-                if err.get("code") == "articleexists":
-                    print(f"⏩ Preserved [[{wiki_title}]]: Page already exists (community-managed data preserved).")
-                else:
-                    print(f"❌ Sync failed for [[{wiki_title}]]: {err.get('info')}")
+        response_data = safe_api_post(session, edit_payload)
+        if "error" in response_data:
+            err = response_data["error"]
+            if err.get("code") == "articleexists":
+                print(f"⏩ Preserved [[{wiki_title}]]: Page already exists (community-managed data preserved).")
             else:
-                revid = response_data.get('edit', {}).get('newrevid')
-                print(f"✨ Successfully deployed [[{wiki_title}]]! Revision ID: {revid}")
-        except Exception as e:
-            print(f"⚠️ Failed to parse API response for [[{wiki_title}]]: {e} (Status: {response.status_code})")
+                print(f"❌ Sync failed for [[{wiki_title}]]: {err.get('info')}")
+        else:
+            revid = response_data.get('edit', {}).get('newrevid')
+            print(f"✨ Successfully deployed [[{wiki_title}]]! Revision ID: {revid}")
 
     # Provision Articles
     if not skip_provision and not filter_term:
@@ -242,17 +342,17 @@ def provision_tea_articles(session, csrf_token):
         base_params = {
             "action": "edit", "title": base_name, "text": "{{Item}}",
             "summary": "Automated pipeline provisioning: Initialized canonical herbal tea article.",
-            "token": csrf_token, "format": "json", "createonly": 1,
+            "token": csrf_token, "createonly": 1,
         }
-        res = session.post(WIKI_API_URL, data=base_params).json()
-        if "edit" in res and res["edit"]["result"] == "Success":
+        res = safe_api_post(session, base_params)
+        if "edit" in res and res["edit"].get("result") == "Success":
             print(f"[CREATED TEA] {base_name}")
             created_base += 1
-        elif "error" in res and res["error"]["code"] == "articleexists":
+        elif "error" in res and res["error"].get("code") == "articleexists":
             pass
         else:
             print(f"[FAILED TEA] {base_name}: {res.get('error', res)}")
-        time.sleep(0.1)
+        time.sleep(0.15)
 
         # 2. Redirect 2-dose and 1-dose variant pages to base_name
         for dose_key in ["twoDoseItemName", "oneDoseItemName"]:
@@ -264,17 +364,17 @@ def provision_tea_articles(session, csrf_token):
             redirect_params = {
                 "action": "edit", "title": dose_title, "text": redirect_text,
                 "summary": f"Automated pipeline update: Redirected dose variant to canonical tea page [[{base_name}]].",
-                "token": csrf_token, "format": "json",
+                "token": csrf_token,
             }
-            res = session.post(WIKI_API_URL, data=redirect_params).json()
-            if "edit" in res and res["edit"]["result"] == "Success":
+            res = safe_api_post(session, redirect_params)
+            if "edit" in res and res["edit"].get("result") == "Success":
                 print(f"[REDIRECTED] {dose_title} ──> [[{base_name}]]")
                 redirected += 1
             elif "edit" in res and res["edit"].get("nochange") is not None:
                 pass
             else:
                 print(f"[FAILED REDIRECT] {dose_title}: {res.get('error', res)}")
-            time.sleep(0.1)
+            time.sleep(0.15)
 
     print(f"Herbal Teas Provisioning Complete. Base Created: {created_base} | Doses Redirected: {redirected}")
 
@@ -296,26 +396,34 @@ def provision_item_articles(session, csrf_token):
     with open(data_path, "r", encoding="utf-8") as f:
         items = json.load(f)
     
-    created, skipped = 0, 0
+    candidate_names = []
     for item in items:
         name = item.get("name")
-        if not name or name in tea_doses:
+        if name and name not in tea_doses:
+            candidate_names.append(name)
+
+    existing_pages = get_existing_pages(session, candidate_names)
+
+    created, skipped = 0, 0
+    for name in candidate_names:
+        if name in existing_pages or name.lower() in existing_pages:
+            skipped += 1
             continue
         
         params = {
             "action": "edit", "title": name, "text": "{{Item}}",
             "summary": "Automated pipeline provisioning: Initialized structural item placeholder.",
-            "token": csrf_token, "format": "json", "createonly": 1,
+            "token": csrf_token, "createonly": 1,
         }
-        res = session.post(WIKI_API_URL, data=params).json()
-        if "edit" in res and res["edit"]["result"] == "Success":
+        res = safe_api_post(session, params)
+        if "edit" in res and res["edit"].get("result") == "Success":
             print(f"[CREATED] {name}")
             created += 1
-        elif "error" in res and res["error"]["code"] == "articleexists":
+        elif "error" in res and res["error"].get("code") == "articleexists":
             skipped += 1
         else:
             print(f"[FAILED] {name}: {res.get('error', res)}")
-        time.sleep(0.1)
+        time.sleep(0.15)
     print(f"Items Provisioning Complete. Created: {created} | Skipped: {skipped}")
 
 def provision_npc_articles(session, csrf_token):
@@ -331,8 +439,8 @@ def provision_npc_articles(session, csrf_token):
         if name:
             name_counts[name] = name_counts.get(name, 0) + 1
 
-    created, skipped = 0, 0
-    unique_titles = set()
+    unique_titles = []
+    seen = set()
     for npc in npcs:
         name = npc.get("name")
         if not name:
@@ -343,24 +451,32 @@ def provision_npc_articles(session, csrf_token):
         else:
             title = name
         
-        if title in unique_titles:
+        if title not in seen:
+            seen.add(title)
+            unique_titles.append(title)
+
+    existing_pages = get_existing_pages(session, unique_titles)
+
+    created, skipped = 0, 0
+    for title in unique_titles:
+        if title in existing_pages or title.lower() in existing_pages:
+            skipped += 1
             continue
-        unique_titles.add(title)
         
         params = {
             "action": "edit", "title": title, "text": "{{Infobox NPC}}",
             "summary": "Provisioned disambiguated NPC placeholder.",
-            "token": csrf_token, "format": "json", "createonly": 1,
+            "token": csrf_token, "createonly": 1,
         }
-        res = session.post(WIKI_API_URL, data=params).json()
-        if "edit" in res and res["edit"]["result"] == "Success":
+        res = safe_api_post(session, params)
+        if "edit" in res and res["edit"].get("result") == "Success":
             print(f"[CREATED] {title}")
             created += 1
-        elif "error" in res and res["error"]["code"] == "articleexists":
+        elif "error" in res and res["error"].get("code") == "articleexists":
             skipped += 1
         else:
             print(f"[FAILED] {title}: {res.get('error', res)}")
-        time.sleep(0.1)
+        time.sleep(0.15)
     print(f"NPCs Provisioning Complete. Created: {created} | Skipped: {skipped}")
 
 if __name__ == "__main__":
