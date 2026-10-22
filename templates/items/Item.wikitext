@@ -1,4 +1,40 @@
-{{Infobox_Item}}
-{{ItemDescription}}
+{{Infobox_Item
+| id            = {{{id|}}}
+| name          = {{{name|}}}
+| description   = {{{description|}}}
+| stackable     = {{{stackable|}}}
+| value         = {{{value|}}}
+| healAmount    = {{{healAmount|}}}
+| levelRequired = {{{levelRequired|}}}
+| equipSkill    = {{{equipSkill|}}}
+| equipSlot     = {{{equipSlot|}}}
+| weaponStyle   = {{{weaponStyle|}}}
+| attackSpeed   = {{{attackSpeed|}}}
+| stabAttack    = {{{stabAttack|}}}
+| slashAttack   = {{{slashAttack|}}}
+| crushAttack   = {{{crushAttack|}}}
+| meleeStrength = {{{meleeStrength|}}}
+| magicAccuracy = {{{magicAccuracy|}}}
+| rangedAccuracy= {{{rangedAccuracy|}}}
+| rangedStrength= {{{rangedStrength|}}}
+| stabDefence   = {{{stabDefence|}}}
+| slashDefence  = {{{slashDefence|}}}
+| crushDefence  = {{{crushDefence|}}}
+| rangedDefence = {{{rangedDefence|}}}
+| magicDefence  = {{{magicDefence|}}}
+| toolType      = {{{toolType|}}}
+| toolLevel     = {{{toolLevel|}}}
+| toolBonus     = {{{toolBonus|}}}
+| examine       = {{{examine|}}}
+}}
+{{ItemDescription
+| overview          = {{{overview|}}}
+| customDescription = {{{customDescription|}}}
+| text              = {{{text|}}}
+| summary           = {{{summary|}}}
+| description       = {{{description|}}}
+| examine           = {{{examine|}}}
+| name              = {{{name|}}}
+}}
 {{ItemDoses}}
 {{ItemSources}}

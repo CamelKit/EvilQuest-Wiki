@@ -1,1 +1,2 @@
-{{#invoke:ItemData|generateDescription}}
+{{#invoke:ItemData|generateDescription|overview={{{overview|}}}|customDescription={{{customDescription|}}}|text={{{text|}}}|summary={{{summary|}}}|description={{{description|}}}|examine={{{examine|}}}|name={{{name|{{{1|}}}}}}}}
+

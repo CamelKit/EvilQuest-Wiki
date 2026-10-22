@@ -140,7 +140,7 @@ for asset in ASSET_SYNC_MATRIX:
         deduped_matrix.append(asset)
 ASSET_SYNC_MATRIX = deduped_matrix
 
-def safe_api_post(session, payload, max_retries=4, backoff=1.5):
+def safe_api_post(session, payload, api_url=None, max_retries=4, backoff=1.5):
     """
     Executes an edit/action POST request to WIKI_API_URL with automatic retries for:
     - Transient HTTP status codes (429, 500, 502, 503, 504, 520-524)
@@ -150,6 +150,7 @@ def safe_api_post(session, payload, max_retries=4, backoff=1.5):
     Guarantees 'bot': True and 'format': 'json'.
     Returns the parsed JSON response dictionary, or a synthetic error dict.
     """
+    target_url = api_url or WIKI_API_URL
     if "format" not in payload:
         payload["format"] = "json"
     if "bot" not in payload:
@@ -157,7 +158,7 @@ def safe_api_post(session, payload, max_retries=4, backoff=1.5):
 
     for attempt in range(1, max_retries + 1):
         try:
-            resp = session.post(WIKI_API_URL, data=payload, timeout=30)
+            resp = session.post(target_url, data=payload, timeout=30)
             
             # Transient HTTP status codes
             if resp.status_code in (429, 500, 502, 503, 504, 520, 521, 522, 523, 524):
@@ -327,12 +328,90 @@ def execute_wiki_sync():
         print("\n📦 Provisioning Missing NPC Articles...")
         provision_npc_articles(session, csrf_token)
 
+def generate_item_wikitext(item):
+    """
+    Generates human-readable, easily editable {{Item ...}} wikitext
+    with neatly aligned parameters.
+    """
+    lines = ["{{Item"]
+
+    # Basic Info
+    if "id" in item:
+        lines.append(f"| {'id'.ljust(14)} = {item['id']}")
+    if "name" in item:
+        lines.append(f"| {'name'.ljust(14)} = {item['name']}")
+    if item.get("description"):
+        lines.append(f"| {'description'.ljust(14)} = {item['description']}")
+    if "value" in item:
+        lines.append(f"| {'value'.ljust(14)} = {item['value']}")
+    if "stackable" in item:
+        lines.append(f"| {'stackable'.ljust(14)} = {'Yes' if item['stackable'] else 'No'}")
+    if item.get("healAmount") is not None:
+        lines.append(f"| {'healAmount'.ljust(14)} = {item['healAmount']}")
+
+    # Requirements
+    if item.get("levelRequired") is not None:
+        lines.append(f"| {'levelRequired'.ljust(14)} = {item['levelRequired']}")
+    if item.get("equipSkill"):
+        lines.append(f"| {'equipSkill'.ljust(14)} = {item['equipSkill']}")
+
+    # Equipment Properties
+    if item.get("equipSlot"):
+        lines.append(f"| {'equipSlot'.ljust(14)} = {item['equipSlot']}")
+    if item.get("weaponStyle"):
+        lines.append(f"| {'weaponStyle'.ljust(14)} = {item['weaponStyle']}")
+    if item.get("attackSpeed") is not None:
+        lines.append(f"| {'attackSpeed'.ljust(14)} = {item['attackSpeed']}")
+
+    # Offensive Combat Bonuses
+    off_stats = [
+        "stabAttack",
+        "slashAttack",
+        "crushAttack",
+        "meleeStrength",
+        "magicAccuracy",
+        "rangedAccuracy",
+        "rangedStrength"
+    ]
+    for key in off_stats:
+        if item.get(key) is not None:
+            lines.append(f"| {key.ljust(14)} = {item[key]}")
+
+    # Defensive Combat Bonuses
+    def_stats = [
+        "stabDefence",
+        "slashDefence",
+        "crushDefence",
+        "rangedDefence",
+        "magicDefence"
+    ]
+    for key in def_stats:
+        if item.get(key) is not None:
+            lines.append(f"| {key.ljust(14)} = {item[key]}")
+
+    # Tool Properties
+    if item.get("toolType"):
+        lines.append(f"| {'toolType'.ljust(14)} = {item['toolType']}")
+    if item.get("toolLevel") is not None:
+        lines.append(f"| {'toolLevel'.ljust(14)} = {item['toolLevel']}")
+    if item.get("toolBonus") is not None:
+        lines.append(f"| {'toolBonus'.ljust(14)} = {item['toolBonus']}")
+
+    lines.append("}}")
+    return "\n".join(lines)
+
 def provision_tea_articles(session, csrf_token):
     cooking_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "CookingData.json")
+    item_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "ItemData.json")
     if not os.path.exists(cooking_path):
         return
     with open(cooking_path, "r", encoding="utf-8") as f:
         teas = json.load(f).get("herbalTeas", [])
+
+    all_items = []
+    if os.path.exists(item_path):
+        with open(item_path, "r", encoding="utf-8") as f:
+            all_items = json.load(f)
 
     created_base = 0
     redirected = 0
@@ -341,9 +420,17 @@ def provision_tea_articles(session, csrf_token):
         if not base_name:
             continue
 
-        # 1. Provision canonical base tea article with {{Item}}
+        # 1. Provision canonical base tea article with structured {{Item}}
+        matched_item = None
+        for it in all_items:
+            if it.get("name") == tea.get("twoDoseItemName"):
+                matched_item = dict(it)
+                matched_item["name"] = base_name
+                break
+        tea_text = generate_item_wikitext(matched_item) if matched_item else "{{Item}}"
+
         base_params = {
-            "action": "edit", "title": base_name, "text": "{{Item}}",
+            "action": "edit", "title": base_name, "text": tea_text,
             "summary": "Automated pipeline provisioning: Initialized canonical herbal tea article.",
             "token": csrf_token, "createonly": 1,
         }
@@ -399,23 +486,26 @@ def provision_item_articles(session, csrf_token):
     with open(data_path, "r", encoding="utf-8") as f:
         items = json.load(f)
     
-    candidate_names = []
+    candidate_items = []
     for item in items:
         name = item.get("name")
         if name and name not in tea_doses:
-            candidate_names.append(name)
+            candidate_items.append(item)
 
+    candidate_names = [it["name"] for it in candidate_items]
     existing_pages = get_existing_pages(session, candidate_names)
 
     created, skipped = 0, 0
-    for name in candidate_names:
+    for item in candidate_items:
+        name = item["name"]
         if name in existing_pages or name.lower() in existing_pages:
             skipped += 1
             continue
         
+        item_text = generate_item_wikitext(item)
         params = {
-            "action": "edit", "title": name, "text": "{{Item}}",
-            "summary": "Automated pipeline provisioning: Initialized structural item placeholder.",
+            "action": "edit", "title": name, "text": item_text,
+            "summary": "Automated pipeline provisioning: Initialized structured editable item article.",
             "token": csrf_token, "createonly": 1,
         }
         res = safe_api_post(session, params)

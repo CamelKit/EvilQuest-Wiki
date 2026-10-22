@@ -2,8 +2,16 @@ local p = {}
 
 local items = mw.loadJsonData('Module:ItemData/json')
 
--- Helper to find an item definition, with fallback for tea base names
-local function findItemDef(targetName)
+-- Helper to find an item definition by Name or ID, with fallback for tea base names
+local function findItemDef(targetName, id)
+    local targetIdNum = tonumber(id)
+    if targetIdNum then
+        for _, item in ipairs(items) do
+            if item.id == targetIdNum then
+                return item
+            end
+        end
+    end
     if not targetName then return nil end
     local targetLower = targetName:lower()
     for _, item in ipairs(items) do
@@ -21,30 +29,88 @@ local function findItemDef(targetName)
     return nil
 end
 
+local cargoStored = {}
+
+local function cleanArg(val)
+    if val == nil then return nil end
+    local trimmed = mw.text.trim(tostring(val))
+    if trimmed == "" then return nil end
+    return trimmed
+end
+
+local function getEffectiveValue(targetField, item, parentArgs, frameArgs)
+    local override = cleanArg(frameArgs and frameArgs['override'])
+    if override then return override end
+
+    if targetField == "examine" then
+        local ex = cleanArg(frameArgs and frameArgs['examine']) or cleanArg(parentArgs and parentArgs['examine'])
+        if ex then return ex end
+        local desc = cleanArg(frameArgs and frameArgs['description']) or cleanArg(parentArgs and parentArgs['description'])
+        if desc then return desc end
+        if item then return item.examine or item.description end
+        return nil
+    end
+
+    if targetField == "description" then
+        local desc = cleanArg(frameArgs and frameArgs['description']) or cleanArg(parentArgs and parentArgs['description'])
+        if desc then return desc end
+        local ex = cleanArg(frameArgs and frameArgs['examine']) or cleanArg(parentArgs and parentArgs['examine'])
+        if ex then return ex end
+        if item then return item.description or item.examine end
+        return nil
+    end
+
+    local fVal = cleanArg(frameArgs and frameArgs[targetField])
+    if fVal then return fVal end
+
+    local pVal = cleanArg(parentArgs and parentArgs[targetField])
+    if pVal then return pVal end
+
+    if item and item[targetField] ~= nil then
+        return item[targetField]
+    end
+    return nil
+end
+
 function p.fetchItemData(frame)
-    local targetName = frame.args[1] or frame:getParent().args['name'] or mw.title.getCurrentTitle().text
-    local targetField = frame.args['field']
+    local parentArgs = (frame:getParent() and frame:getParent().args) or {}
+    local targetName = cleanArg(frame.args[1]) or cleanArg(parentArgs['name']) or mw.title.getCurrentTitle().text
+    local targetId = cleanArg(frame.args['id']) or cleanArg(parentArgs['id'])
+    local targetField = cleanArg(frame.args['field'])
     if not targetField then return "Error: Missing 'field' parameter." end
 
-    local item = findItemDef(targetName)
-    if item then
-        if mw.ext and mw.ext.cargo then
-            mw.ext.cargo.store('Items', {
-                id          = item.id,
-                name        = targetName,
-                equipSlot   = item.equipSlot,
-                value       = item.value,
-                stabAttack  = item.stabAttack,
-                slashAttack = item.slashAttack,
-                crushAttack = item.crushAttack
-            })
-        end
-        local value = item[targetField]
-        if value == nil then return ""
-        elseif type(value) == "boolean" then return value and "Yes" or "No"
-        else return tostring(value) end
+    local item = findItemDef(targetName, targetId)
+
+    -- Store effective values into Cargo table once per item per page render
+    local storeKey = targetName or (item and tostring(item.id)) or ""
+    if storeKey ~= "" and not cargoStored[storeKey] and mw.ext and mw.ext.cargo then
+        cargoStored[storeKey] = true
+        mw.ext.cargo.store('Items', {
+            id          = getEffectiveValue('id', item, parentArgs, frame.args),
+            name        = targetName,
+            equipSlot   = getEffectiveValue('equipSlot', item, parentArgs, frame.args),
+            value       = getEffectiveValue('value', item, parentArgs, frame.args),
+            stabAttack  = getEffectiveValue('stabAttack', item, parentArgs, frame.args),
+            slashAttack = getEffectiveValue('slashAttack', item, parentArgs, frame.args),
+            crushAttack = getEffectiveValue('crushAttack', item, parentArgs, frame.args)
+        })
     end
-    return ""
+
+    local value = getEffectiveValue(targetField, item, parentArgs, frame.args)
+    if value == nil then
+        return ""
+    elseif type(value) == "boolean" then
+        return value and "Yes" or "No"
+    else
+        local str = tostring(value)
+        local lower = str:lower()
+        if lower == "true" or lower == "yes" then
+            return "Yes"
+        elseif lower == "false" or lower == "no" then
+            return "No"
+        end
+        return str
+    end
 end
 
 -- ================================
@@ -52,7 +118,40 @@ end
 -- ================================
 
 function p.generateDescription(frame)
-    local name = frame.args[1] or mw.title.getCurrentTitle().text
+    local parentArgs = (frame:getParent() and frame:getParent().args) or {}
+
+    -- 1. Check for on-page description / overview overrides
+    local override = cleanArg(frame.args['overview'])
+        or cleanArg(frame.args['customDescription'])
+        or cleanArg(frame.args['text'])
+        or cleanArg(frame.args['summary'])
+        or cleanArg(parentArgs['overview'])
+        or cleanArg(parentArgs['customDescription'])
+        or cleanArg(parentArgs['text'])
+        or cleanArg(parentArgs['summary'])
+
+    -- 2. If both examine and description are provided on the page, description acts as article overview
+    if not override then
+        local examineArg = cleanArg(frame.args['examine']) or cleanArg(parentArgs['examine'])
+        local descArg = cleanArg(frame.args['description']) or cleanArg(parentArgs['description'])
+        if examineArg and descArg and descArg ~= examineArg then
+            override = descArg
+        end
+    end
+
+    -- 3. If override is set, handle suppression keywords or return custom text
+    if override then
+        local lower = override:lower()
+        if lower == "none" or lower == "hide" or lower == "off" or lower == "false" or lower == "no" then
+            return ""
+        end
+        return override
+    end
+
+    local name = cleanArg(frame.args['name'])
+        or cleanArg(parentArgs['name'])
+        or cleanArg(frame.args[1])
+        or mw.title.getCurrentTitle().text
 
     local item = findItemDef(name)
     if not item then return "" end
