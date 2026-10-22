@@ -2,16 +2,30 @@ import os
 import time
 import requests
 
-try:
-    from dotenv import load_dotenv
-    load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
-except ImportError:
-    pass
+import sys
+
+env_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')
+if os.path.exists(env_file):
+    try:
+        from dotenv import load_dotenv
+        load_dotenv(env_file)
+    except ImportError:
+        with open(env_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    k, v = line.split('=', 1)
+                    if k.strip() not in os.environ:
+                        os.environ[k.strip()] = v.strip()
 
 # --- CONFIGURATION ---
-WIKI_API_URL = os.environ.get("PROD_WIKI_API_URL")
-BOT_USERNAME = os.environ.get("PROD_WIKI_BOT_USERNAME")
-BOT_PASSWORD = os.environ.get("PROD_WIKI_BOT_PASSWORD")
+WIKI_API_URL = os.environ.get("PROD_WIKI_API_URL") or os.environ.get("WIKI_API_URL")
+BOT_USERNAME = os.environ.get("PROD_WIKI_BOT_USERNAME") or os.environ.get("WIKI_BOT_USERNAME")
+BOT_PASSWORD = os.environ.get("PROD_WIKI_BOT_PASSWORD") or os.environ.get("WIKI_BOT_PASSWORD")
+
+if not all([WIKI_API_URL, BOT_USERNAME, BOT_PASSWORD]):
+    print("❌ Critical configuration error: Missing required wiki credentials in .env or environment.")
+    sys.exit(1)
 
 START_ITEM_ID = 1
 
