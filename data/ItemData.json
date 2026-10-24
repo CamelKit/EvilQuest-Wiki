@@ -7,7 +7,8 @@
     "equippable": false,
     "value": 1,
     "model": "/assets/models/Bones_v2.glb",
-    "icon": "Bones_20.png"
+    "icon": "Bones_20.png",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 7,
@@ -25,7 +26,8 @@
     "model": "/assets/equipment/body/LeatherBody.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/LeatherBodyWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 8
   },
   {
     "id": 8,
@@ -42,7 +44,8 @@
     "model": "/assets/equipment/feet/LeatherBoots.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/feet/female/LeatherBootsWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 2
   },
   {
     "id": 459,
@@ -56,7 +59,8 @@
     "crushDefence": 1,
     "rangedDefence": 1,
     "value": 18,
-    "model": "/assets/equipment/feet/ColourfulBoots.glb"
+    "model": "/assets/equipment/feet/ColourfulBoots.glb",
+    "generalStoreSellPrice": 7
   },
   {
     "id": 10,
@@ -104,7 +108,8 @@
         "minQuantity": 1000,
         "model": "/assets/models/coins/Coin1000.glb"
       }
-    ]
+    ],
+    "generalStoreSellPrice": 0
   },
   {
     "id": 11,
@@ -114,7 +119,8 @@
     "equippable": false,
     "value": 2,
     "icon": "raw_chicken_133.png",
-    "model": "/assets/models/ChickenRaw.glb"
+    "model": "/assets/models/ChickenRaw.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 12,
@@ -125,7 +131,8 @@
     "healAmount": 3,
     "value": 8,
     "icon": "raw_chicken_133.png",
-    "model": "/assets/models/ChickenCooked.glb"
+    "model": "/assets/models/ChickenCooked.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 13,
@@ -135,7 +142,8 @@
     "equippable": false,
     "healAmount": 2,
     "value": 5,
-    "icon": "bread_138.png"
+    "icon": "bread_138.png",
+    "generalStoreSellPrice": 4
   },
   {
     "id": 14,
@@ -145,7 +153,8 @@
     "equippable": false,
     "value": 2,
     "model": "/assets/models/BeefRat.glb",
-    "icon": "cookedmeat_132.png"
+    "icon": "cookedmeat_132.png",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 15,
@@ -157,7 +166,8 @@
     "value": 10,
     "icon": "cookedmeat_132.png",
     "model": "/assets/models/BeefRatCooked.glb",
-    "legacyName": "Cooked Meat"
+    "legacyName": "Cooked Meat",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 17,
@@ -177,7 +187,8 @@
     "model": "/assets/equipment/body/ChainmailBody.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/ChainmailBodyWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 32
   },
   {
     "id": 19,
@@ -187,7 +198,8 @@
     "equippable": false,
     "value": 1,
     "model": "/assets/models/Feather.glb",
-    "icon": "Feather_381.png"
+    "icon": "Feather_381.png",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 20,
@@ -197,7 +209,8 @@
     "equippable": false,
     "value": 5,
     "model": "/assets/models/Bones_v2.glb",
-    "icon": "Big_Bones_413.png"
+    "icon": "Big_Bones_413.png",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 22,
@@ -222,7 +235,8 @@
     "stackable": false,
     "equippable": false,
     "value": 4,
-    "model": "/assets/models/logs/Log.glb"
+    "model": "/assets/models/logs/Log.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 24,
@@ -231,7 +245,8 @@
     "stackable": false,
     "equippable": false,
     "value": 10,
-    "model": "/assets/models/logs/OakLog.glb"
+    "model": "/assets/models/logs/OakLog.glb",
+    "generalStoreSellPrice": 8
   },
   {
     "id": 25,
@@ -242,7 +257,8 @@
     "value": 5,
     "icon": "copper_ore_150.png",
     "model": "/assets/models/item-thumbnails/ore/CopperOreRock.glb",
-    "thumbnailModel": "/assets/models/item-thumbnails/ore/CopperOreRock.glb"
+    "thumbnailModel": "/assets/models/item-thumbnails/ore/CopperOreRock.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 26,
@@ -253,7 +269,8 @@
     "value": 12,
     "icon": "iron_ore_151.png",
     "model": "/assets/models/item-thumbnails/ore/IronOreRock.glb",
-    "thumbnailModel": "/assets/models/item-thumbnails/ore/IronOreRock.glb"
+    "thumbnailModel": "/assets/models/item-thumbnails/ore/IronOreRock.glb",
+    "generalStoreSellPrice": 6
   },
   {
     "id": 27,
@@ -263,7 +280,8 @@
     "equippable": false,
     "value": 3,
     "icon": "Raw_Shrimp_349.png",
-    "model": "/assets/models/Food/ShrimpRaw.glb"
+    "model": "/assets/models/Food/ShrimpRaw.glb",
+    "generalStoreSellPrice": 2
   },
   {
     "id": 28,
@@ -274,7 +292,8 @@
     "healAmount": 2,
     "value": 8,
     "icon": "Shrimp_350.png",
-    "model": "/assets/models/Food/ShrimpCooked.glb"
+    "model": "/assets/models/Food/ShrimpCooked.glb",
+    "generalStoreSellPrice": 2
   },
   {
     "id": 29,
@@ -284,7 +303,8 @@
     "equippable": false,
     "value": 15,
     "icon": "bronze_bar_169.png",
-    "model": "/assets/models/bars/BronzeBar.glb"
+    "model": "/assets/models/bars/BronzeBar.glb",
+    "generalStoreSellPrice": 3
   },
   {
     "id": 30,
@@ -294,7 +314,8 @@
     "equippable": false,
     "value": 30,
     "icon": "iron_bar_170.png",
-    "model": "/assets/models/bars/IronBar.glb"
+    "model": "/assets/models/bars/IronBar.glb",
+    "generalStoreSellPrice": 11
   },
   {
     "id": 31,
@@ -312,7 +333,8 @@
     "toolLevel": 1,
     "toolBonus": 0,
     "sprite": "axe base.png",
-    "model": "/assets/equipment/Tools/Bronze axe.glb"
+    "model": "/assets/equipment/Tools/Bronze axe.glb",
+    "generalStoreSellPrice": 6
   },
   {
     "id": 32,
@@ -330,7 +352,8 @@
     "toolLevel": 6,
     "toolBonus": 1,
     "sprite": "axe base.png",
-    "model": "/assets/equipment/Tools/Iron axe.glb"
+    "model": "/assets/equipment/Tools/Iron axe.glb",
+    "generalStoreSellPrice": 22
   },
   {
     "id": 33,
@@ -349,7 +372,8 @@
     "toolBonus": 0,
     "sprite": "pickaxe base.png",
     "icon": "Bronze_Pickaxe_156.png",
-    "model": "/assets/equipment/Tools/BronzePickaxe.glb"
+    "model": "/assets/equipment/Tools/BronzePickaxe.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 34,
@@ -360,7 +384,8 @@
     "value": 2,
     "icon": "tin_ore_202.png",
     "model": "/assets/models/item-thumbnails/ore/TinOreRock.glb",
-    "thumbnailModel": "/assets/models/item-thumbnails/ore/TinOreRock.glb"
+    "thumbnailModel": "/assets/models/item-thumbnails/ore/TinOreRock.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 35,
@@ -371,7 +396,8 @@
     "value": 10,
     "icon": "coal_155.png",
     "model": "/assets/models/item-thumbnails/ore/CoalOreRock.glb",
-    "thumbnailModel": "/assets/models/item-thumbnails/ore/CoalOreRock.glb"
+    "thumbnailModel": "/assets/models/item-thumbnails/ore/CoalOreRock.glb",
+    "generalStoreSellPrice": 18
   },
   {
     "id": 36,
@@ -389,7 +415,8 @@
     "toolLevel": 15,
     "toolBonus": 2,
     "sprite": "axe base.png",
-    "model": "/assets/equipment/Tools/Steel axe.glb"
+    "model": "/assets/equipment/Tools/Steel axe.glb",
+    "generalStoreSellPrice": 80
   },
   {
     "id": 37,
@@ -407,7 +434,8 @@
     "toolLevel": 35,
     "toolBonus": 4,
     "sprite": "axe base.png",
-    "model": "/assets/equipment/Tools/Mithril axe.glb"
+    "model": "/assets/equipment/Tools/Mithril axe.glb",
+    "generalStoreSellPrice": 512
   },
   {
     "id": 38,
@@ -425,7 +453,8 @@
     "toolLevel": 25,
     "toolBonus": 3,
     "sprite": "axe base.png",
-    "model": "/assets/equipment/Tools/BlackBronze axe.glb"
+    "model": "/assets/equipment/Tools/BlackBronze axe.glb",
+    "generalStoreSellPrice": 153
   },
   {
     "id": 39,
@@ -434,7 +463,8 @@
     "stackable": false,
     "equippable": false,
     "value": 20,
-    "model": "/assets/models/logs/MapleLog.glb"
+    "model": "/assets/models/logs/MapleLog.glb",
+    "generalStoreSellPrice": 32
   },
   {
     "id": 40,
@@ -443,7 +473,8 @@
     "stackable": false,
     "equippable": false,
     "value": 30,
-    "model": "/assets/models/logs/YewLog.glb"
+    "model": "/assets/models/logs/YewLog.glb",
+    "generalStoreSellPrice": 64
   },
   {
     "id": 42,
@@ -482,7 +513,8 @@
         "minQuantity": 6,
         "model": "/assets/models/arrows/stacks/BronzeArrowStack6Plus.glb"
       }
-    ]
+    ],
+    "generalStoreSellPrice": 1
   },
   {
     "id": 43,
@@ -521,7 +553,8 @@
         "minQuantity": 6,
         "model": "/assets/models/arrows/stacks/IronArrowStack6Plus.glb"
       }
-    ]
+    ],
+    "generalStoreSellPrice": 1
   },
   {
     "id": 285,
@@ -560,7 +593,8 @@
         "minQuantity": 6,
         "model": "/assets/models/arrows/stacks/SteelArrowStack6Plus.glb"
       }
-    ]
+    ],
+    "generalStoreSellPrice": 4
   },
   {
     "id": 286,
@@ -599,7 +633,8 @@
         "minQuantity": 6,
         "model": "/assets/models/arrows/stacks/MithrilArrowStack6Plus.glb"
       }
-    ]
+    ],
+    "generalStoreSellPrice": 12
   },
   {
     "id": 287,
@@ -638,7 +673,8 @@
         "minQuantity": 6,
         "model": "/assets/models/arrows/stacks/BlackBronzeArrowStack6Plus.glb"
       }
-    ]
+    ],
+    "generalStoreSellPrice": 8
   },
   {
     "id": 44,
@@ -647,7 +683,8 @@
     "stackable": false,
     "equippable": false,
     "value": 24,
-    "icon": "coal_155.png"
+    "icon": "coal_155.png",
+    "generalStoreSellPrice": 9
   },
   {
     "id": 45,
@@ -658,7 +695,8 @@
     "value": 48,
     "icon": "mithril_ore_153.png",
     "model": "/assets/models/item-thumbnails/ore/MithrilOreRock.glb",
-    "thumbnailModel": "/assets/models/item-thumbnails/ore/MithrilOreRock.glb"
+    "thumbnailModel": "/assets/models/item-thumbnails/ore/MithrilOreRock.glb",
+    "generalStoreSellPrice": 64
   },
   {
     "id": 48,
@@ -668,7 +706,8 @@
     "equippable": false,
     "value": 60,
     "icon": "steel_bar_171.png",
-    "model": "/assets/models/bars/SteelBar.glb"
+    "model": "/assets/models/bars/SteelBar.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 49,
@@ -678,7 +717,8 @@
     "equippable": false,
     "value": 240,
     "icon": "mithril_bar_173.png",
-    "model": "/assets/models/bars/MithrilBar.glb"
+    "model": "/assets/models/bars/MithrilBar.glb",
+    "generalStoreSellPrice": 120
   },
   {
     "id": 50,
@@ -687,7 +727,8 @@
     "stackable": false,
     "equippable": false,
     "value": 120,
-    "model": "/assets/models/bars/BlackBronzeBar.glb"
+    "model": "/assets/models/bars/BlackBronzeBar.glb",
+    "generalStoreSellPrice": 48
   },
   {
     "id": 52,
@@ -697,7 +738,8 @@
     "equippable": false,
     "toolType": "hammer",
     "value": 5,
-    "model": "/assets/equipment/Tools/SmithingHammer_v2.glb"
+    "model": "/assets/equipment/Tools/SmithingHammer_v2.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 53,
@@ -715,7 +757,8 @@
     "toolLevel": 6,
     "toolBonus": 1,
     "icon": "Iron_Pickaxe_1258.png",
-    "model": "/assets/equipment/Tools/IronPickaxe.glb"
+    "model": "/assets/equipment/Tools/IronPickaxe.glb",
+    "generalStoreSellPrice": 56
   },
   {
     "id": 54,
@@ -733,7 +776,8 @@
     "toolLevel": 15,
     "toolBonus": 2,
     "icon": "Steel_Pickaxe_1259.png",
-    "model": "/assets/equipment/Tools/SteelPickaxe.glb"
+    "model": "/assets/equipment/Tools/SteelPickaxe.glb",
+    "generalStoreSellPrice": 200
   },
   {
     "id": 55,
@@ -751,7 +795,8 @@
     "toolLevel": 35,
     "toolBonus": 4,
     "icon": "Mithril_Pickaxe_1260.png",
-    "model": "/assets/equipment/Tools/MithrilPickaxe.glb"
+    "model": "/assets/equipment/Tools/MithrilPickaxe.glb",
+    "generalStoreSellPrice": 520
   },
   {
     "id": 56,
@@ -768,7 +813,8 @@
     "toolType": "pickaxe",
     "toolLevel": 25,
     "toolBonus": 3,
-    "model": "/assets/equipment/Tools/BlackBronzePickaxe.glb"
+    "model": "/assets/equipment/Tools/BlackBronzePickaxe.glb",
+    "generalStoreSellPrice": 260
   },
   {
     "id": 58,
@@ -786,7 +832,8 @@
     "slashAttack": 2,
     "meleeStrength": 3,
     "equipSkill": "weaponry",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 4
   },
   {
     "id": 59,
@@ -804,7 +851,8 @@
     "slashAttack": 7,
     "meleeStrength": 5,
     "equipSkill": "weaponry",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 10
   },
   {
     "id": 60,
@@ -821,7 +869,8 @@
     "crushAttack": 6,
     "meleeStrength": 5,
     "equipSkill": "weaponry",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 7
   },
   {
     "id": 61,
@@ -838,7 +887,8 @@
     "slashAttack": 9,
     "meleeStrength": 7,
     "equipSkill": "weaponry",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 12
   },
   {
     "id": 63,
@@ -856,7 +906,8 @@
     "crushAttack": 12,
     "meleeStrength": 14,
     "equipSkill": "weaponry",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 20
   },
   {
     "id": 64,
@@ -874,7 +925,8 @@
     "meleeStrength": 24,
     "model": "bronze_2h.glb",
     "equipSkill": "weaponry",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 32
   },
   {
     "id": 65,
@@ -898,7 +950,8 @@
       "hair": {
         "mode": "scalp"
       }
-    }
+    },
+    "generalStoreSellPrice": 9
   },
   {
     "id": 66,
@@ -922,7 +975,8 @@
       "hair": {
         "mode": "hide"
       }
-    }
+    },
+    "generalStoreSellPrice": 17
   },
   {
     "id": 67,
@@ -939,7 +993,8 @@
     "crushDefence": 4,
     "rangedDefence": 3,
     "equipSkill": "defence",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 19
   },
   {
     "id": 68,
@@ -960,7 +1015,8 @@
     "rangedDefence": 8,
     "bodyHideStyle": "shirtRecolor",
     "equipSkill": "defence",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 24
   },
   {
     "id": 69,
@@ -977,7 +1033,8 @@
     "crushDefence": 7,
     "rangedDefence": 5,
     "equipSkill": "defence",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 27
   },
   {
     "id": 70,
@@ -997,7 +1054,8 @@
     "crushDefence": 5,
     "rangedDefence": 5,
     "equipSkill": "defence",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 32
   },
   {
     "id": 71,
@@ -1018,7 +1076,8 @@
     "rangedDefence": 14,
     "equipSkill": "defence",
     "levelRequired": 1,
-    "bodyHideStyle": "plate"
+    "bodyHideStyle": "plate",
+    "generalStoreSellPrice": 64
   },
   {
     "id": 72,
@@ -1036,7 +1095,8 @@
     "slashAttack": 3,
     "meleeStrength": 5,
     "equipSkill": "weaponry",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 14
   },
   {
     "id": 73,
@@ -1054,7 +1114,8 @@
     "slashAttack": 11,
     "meleeStrength": 8,
     "equipSkill": "weaponry",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 36
   },
   {
     "id": 74,
@@ -1071,7 +1132,8 @@
     "crushAttack": 9,
     "meleeStrength": 8,
     "equipSkill": "weaponry",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 25
   },
   {
     "id": 75,
@@ -1088,7 +1150,8 @@
     "slashAttack": 14,
     "meleeStrength": 11,
     "equipSkill": "weaponry",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 44
   },
   {
     "id": 77,
@@ -1106,7 +1169,8 @@
     "crushAttack": 18,
     "meleeStrength": 21,
     "equipSkill": "weaponry",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 72
   },
   {
     "id": 78,
@@ -1124,7 +1188,8 @@
     "meleeStrength": 36,
     "model": "/assets/equipment/weapon/Iron2hSword.glb",
     "equipSkill": "weaponry",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 112
   },
   {
     "id": 79,
@@ -1148,7 +1213,8 @@
       "hair": {
         "mode": "scalp"
       }
-    }
+    },
+    "generalStoreSellPrice": 33
   },
   {
     "id": 80,
@@ -1172,7 +1238,8 @@
       "hair": {
         "mode": "hide"
       }
-    }
+    },
+    "generalStoreSellPrice": 61
   },
   {
     "id": 81,
@@ -1189,7 +1256,8 @@
     "crushDefence": 6,
     "rangedDefence": 5,
     "equipSkill": "defence",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 67
   },
   {
     "id": 82,
@@ -1210,7 +1278,8 @@
     "rangedDefence": 12,
     "bodyHideStyle": "shirtRecolor",
     "equipSkill": "defence",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 84
   },
   {
     "id": 83,
@@ -1227,7 +1296,8 @@
     "crushDefence": 11,
     "rangedDefence": 8,
     "equipSkill": "defence",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 95
   },
   {
     "id": 84,
@@ -1247,7 +1317,8 @@
     "crushDefence": 8,
     "rangedDefence": 8,
     "equipSkill": "defence",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 112
   },
   {
     "id": 85,
@@ -1268,7 +1339,8 @@
     "rangedDefence": 21,
     "equipSkill": "defence",
     "levelRequired": 6,
-    "bodyHideStyle": "plate"
+    "bodyHideStyle": "plate",
+    "generalStoreSellPrice": 224
   },
   {
     "id": 86,
@@ -1286,7 +1358,8 @@
     "slashAttack": 4,
     "meleeStrength": 6,
     "equipSkill": "weaponry",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 50
   },
   {
     "id": 87,
@@ -1304,7 +1377,8 @@
     "meleeStrength": 10,
     "model": "/assets/equipment/weapon/SteelSword.glb",
     "equipSkill": "weaponry",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 130
   },
   {
     "id": 88,
@@ -1321,7 +1395,8 @@
     "meleeStrength": 10,
     "model": "/assets/equipment/weapon/SteelMace.glb",
     "equipSkill": "weaponry",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 90
   },
   {
     "id": 89,
@@ -1338,7 +1413,8 @@
     "slashAttack": 18,
     "meleeStrength": 14,
     "equipSkill": "weaponry",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 160
   },
   {
     "id": 91,
@@ -1356,7 +1432,8 @@
     "crushAttack": 24,
     "meleeStrength": 28,
     "equipSkill": "weaponry",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 260
   },
   {
     "id": 92,
@@ -1374,7 +1451,8 @@
     "meleeStrength": 48,
     "model": "/assets/equipment/weapon/Steel2hsword.glb",
     "equipSkill": "weaponry",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 400
   },
   {
     "id": 93,
@@ -1398,7 +1476,8 @@
       "hair": {
         "mode": "scalp"
       }
-    }
+    },
+    "generalStoreSellPrice": 120
   },
   {
     "id": 94,
@@ -1422,7 +1501,8 @@
       "hair": {
         "mode": "hide"
       }
-    }
+    },
+    "generalStoreSellPrice": 220
   },
   {
     "id": 95,
@@ -1439,7 +1519,8 @@
     "rangedDefence": 6,
     "model": "/assets/equipment/shield/SteelSquareShield.glb",
     "equipSkill": "defence",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 240
   },
   {
     "id": 96,
@@ -1460,7 +1541,8 @@
       "1": "/assets/equipment/body/female/SteelCuirassWoman.glb"
     },
     "equipSkill": "defence",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 300
   },
   {
     "id": 97,
@@ -1477,7 +1559,8 @@
     "rangedDefence": 10,
     "model": "/assets/equipment/shield/SteelKiteshield.glb",
     "equipSkill": "defence",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 340
   },
   {
     "id": 98,
@@ -1497,7 +1580,8 @@
       "1": "/assets/equipment/legs/female/SteelPlatelegsWoman.glb"
     },
     "equipSkill": "defence",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 400
   },
   {
     "id": 99,
@@ -1518,7 +1602,8 @@
     },
     "equipSkill": "defence",
     "levelRequired": 15,
-    "bodyHideStyle": "plate"
+    "bodyHideStyle": "plate",
+    "generalStoreSellPrice": 800
   },
   {
     "id": 100,
@@ -1536,7 +1621,8 @@
     "slashAttack": 8,
     "meleeStrength": 12,
     "equipSkill": "weaponry",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 130
   },
   {
     "id": 101,
@@ -1554,7 +1640,8 @@
     "meleeStrength": 20,
     "model": "/assets/equipment/weapon/MithrilSword.glb",
     "equipSkill": "weaponry",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 338
   },
   {
     "id": 102,
@@ -1571,7 +1658,8 @@
     "meleeStrength": 20,
     "model": "/assets/equipment/weapon/MithrilMace.glb",
     "equipSkill": "weaponry",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 234
   },
   {
     "id": 103,
@@ -1588,7 +1676,8 @@
     "slashAttack": 36,
     "meleeStrength": 28,
     "equipSkill": "weaponry",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 416
   },
   {
     "id": 105,
@@ -1606,7 +1695,8 @@
     "crushAttack": 48,
     "meleeStrength": 56,
     "equipSkill": "weaponry",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 676
   },
   {
     "id": 106,
@@ -1624,7 +1714,8 @@
     "slashAttack": 56,
     "meleeStrength": 96,
     "equipSkill": "weaponry",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 1040
   },
   {
     "id": 107,
@@ -1648,7 +1739,8 @@
       "hair": {
         "mode": "scalp"
       }
-    }
+    },
+    "generalStoreSellPrice": 312
   },
   {
     "id": 108,
@@ -1672,7 +1764,8 @@
       "hair": {
         "mode": "hide"
       }
-    }
+    },
+    "generalStoreSellPrice": 572
   },
   {
     "id": 109,
@@ -1689,7 +1782,8 @@
     "rangedDefence": 12,
     "model": "/assets/equipment/shield/MithrilSquareShield.glb",
     "equipSkill": "defence",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 624
   },
   {
     "id": 110,
@@ -1710,7 +1804,8 @@
     "rangedDefence": 32,
     "bodyHideStyle": "shirtRecolor",
     "equipSkill": "defence",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 780
   },
   {
     "id": 111,
@@ -1727,7 +1822,8 @@
     "rangedDefence": 20,
     "model": "/assets/equipment/shield/MithrilKiteshield.glb",
     "equipSkill": "defence",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 884
   },
   {
     "id": 112,
@@ -1747,7 +1843,8 @@
     "crushDefence": 20,
     "rangedDefence": 20,
     "equipSkill": "defence",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 1040
   },
   {
     "id": 113,
@@ -1768,7 +1865,8 @@
     "rangedDefence": 56,
     "equipSkill": "defence",
     "levelRequired": 35,
-    "bodyHideStyle": "plate"
+    "bodyHideStyle": "plate",
+    "generalStoreSellPrice": 2080
   },
   {
     "id": 114,
@@ -1785,7 +1883,8 @@
     "slashAttack": 6,
     "meleeStrength": 9,
     "equipSkill": "weaponry",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 96
   },
   {
     "id": 115,
@@ -1802,7 +1901,8 @@
     "slashAttack": 21,
     "meleeStrength": 15,
     "equipSkill": "weaponry",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 249
   },
   {
     "id": 116,
@@ -1818,7 +1918,8 @@
     "crushAttack": 18,
     "meleeStrength": 15,
     "equipSkill": "weaponry",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 172
   },
   {
     "id": 117,
@@ -1834,7 +1935,8 @@
     "slashAttack": 27,
     "meleeStrength": 21,
     "equipSkill": "weaponry",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 307
   },
   {
     "id": 119,
@@ -1851,7 +1953,8 @@
     "crushAttack": 36,
     "meleeStrength": 42,
     "equipSkill": "weaponry",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 499
   },
   {
     "id": 120,
@@ -1868,7 +1971,8 @@
     "slashAttack": 42,
     "meleeStrength": 72,
     "equipSkill": "weaponry",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 768
   },
   {
     "id": 121,
@@ -1891,7 +1995,8 @@
       "hair": {
         "mode": "scalp"
       }
-    }
+    },
+    "generalStoreSellPrice": 230
   },
   {
     "id": 122,
@@ -1914,7 +2019,8 @@
       "hair": {
         "mode": "hide"
       }
-    }
+    },
+    "generalStoreSellPrice": 422
   },
   {
     "id": 123,
@@ -1930,7 +2036,8 @@
     "crushDefence": 12,
     "rangedDefence": 9,
     "equipSkill": "defence",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 460
   },
   {
     "id": 124,
@@ -1950,7 +2057,8 @@
     "rangedDefence": 24,
     "bodyHideStyle": "shirtRecolor",
     "equipSkill": "defence",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 576
   },
   {
     "id": 125,
@@ -1966,7 +2074,8 @@
     "crushDefence": 21,
     "rangedDefence": 15,
     "equipSkill": "defence",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 652
   },
   {
     "id": 126,
@@ -1985,7 +2094,8 @@
     "crushDefence": 15,
     "rangedDefence": 15,
     "equipSkill": "defence",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 768
   },
   {
     "id": 127,
@@ -2005,7 +2115,8 @@
     "rangedDefence": 42,
     "equipSkill": "defence",
     "levelRequired": 25,
-    "bodyHideStyle": "plate"
+    "bodyHideStyle": "plate",
+    "generalStoreSellPrice": 1536
   },
   {
     "id": 142,
@@ -2016,7 +2127,8 @@
     "value": 25,
     "icon": "Silver ore.png",
     "model": "/assets/models/item-thumbnails/ore/SilverOreRock.glb",
-    "thumbnailModel": "/assets/models/item-thumbnails/ore/SilverOreRock.glb"
+    "thumbnailModel": "/assets/models/item-thumbnails/ore/SilverOreRock.glb",
+    "generalStoreSellPrice": 30
   },
   {
     "id": 143,
@@ -2025,7 +2137,8 @@
     "stackable": false,
     "equippable": false,
     "value": 50,
-    "model": "/assets/models/bars/SilverBar.glb"
+    "model": "/assets/models/bars/SilverBar.glb",
+    "generalStoreSellPrice": 60
   },
   {
     "id": 200,
@@ -2039,7 +2152,8 @@
     "crushDefence": 7,
     "rangedDefence": 9,
     "magicDefence": -3,
-    "value": 140
+    "value": 140,
+    "generalStoreSellPrice": 56
   },
   {
     "id": 201,
@@ -2053,7 +2167,8 @@
     "crushDefence": 6,
     "rangedDefence": 8,
     "magicDefence": -3,
-    "value": 120
+    "value": 120,
+    "generalStoreSellPrice": 48
   },
   {
     "id": 202,
@@ -2068,7 +2183,8 @@
     "rangedDefence": 7,
     "magicDefence": -2,
     "value": 70,
-    "headRenderMode": "hairFit"
+    "headRenderMode": "hairFit",
+    "generalStoreSellPrice": 28
   },
   {
     "id": 203,
@@ -2091,7 +2207,8 @@
         "mode": "hide"
       }
     },
-    "model": "/assets/equipment/head/Coif.glb"
+    "model": "/assets/equipment/head/Coif.glb",
+    "generalStoreSellPrice": 9
   },
   {
     "id": 204,
@@ -2106,7 +2223,8 @@
     "rangedDefence": 5,
     "magicDefence": -1,
     "value": 50,
-    "headRenderMode": "hairTuck"
+    "headRenderMode": "hairTuck",
+    "generalStoreSellPrice": 20
   },
   {
     "id": 205,
@@ -2121,7 +2239,8 @@
     "rangedDefence": 2,
     "magicDefence": 1,
     "value": 20,
-    "headRenderMode": "hairTuck"
+    "headRenderMode": "hairTuck",
+    "generalStoreSellPrice": 8
   },
   {
     "id": 206,
@@ -2143,7 +2262,8 @@
       "hair": {
         "mode": "underHat"
       }
-    }
+    },
+    "generalStoreSellPrice": 36
   },
   {
     "id": 207,
@@ -2158,7 +2278,8 @@
     "rangedDefence": 0,
     "magicDefence": 6,
     "value": 90,
-    "headRenderMode": "hairFit"
+    "headRenderMode": "hairFit",
+    "generalStoreSellPrice": 36
   },
   {
     "id": 208,
@@ -2173,7 +2294,8 @@
     "rangedDefence": 0,
     "magicDefence": 7,
     "value": 110,
-    "headRenderMode": "hairFit"
+    "headRenderMode": "hairFit",
+    "generalStoreSellPrice": 44
   },
   {
     "id": 209,
@@ -2188,7 +2310,8 @@
     "rangedDefence": 0,
     "magicDefence": 5,
     "value": 80,
-    "headRenderMode": "hairFit"
+    "headRenderMode": "hairFit",
+    "generalStoreSellPrice": 32
   },
   {
     "id": 210,
@@ -2203,7 +2326,8 @@
     "rangedDefence": 3,
     "magicDefence": 0,
     "value": 40,
-    "headRenderMode": "hairFit"
+    "headRenderMode": "hairFit",
+    "generalStoreSellPrice": 16
   },
   {
     "id": 211,
@@ -2218,7 +2342,8 @@
     "rangedDefence": 1,
     "magicDefence": 0,
     "value": 15,
-    "headRenderMode": "hairFit"
+    "headRenderMode": "hairFit",
+    "generalStoreSellPrice": 6
   },
   {
     "id": 212,
@@ -2233,7 +2358,8 @@
     "rangedDefence": 1,
     "magicDefence": 0,
     "value": 15,
-    "headRenderMode": "hairFit"
+    "headRenderMode": "hairFit",
+    "generalStoreSellPrice": 6
   },
   {
     "id": 213,
@@ -2248,7 +2374,8 @@
     "rangedDefence": 0,
     "magicDefence": 1,
     "value": 10,
-    "headRenderMode": "hairFit"
+    "headRenderMode": "hairFit",
+    "generalStoreSellPrice": 4
   },
   {
     "id": 214,
@@ -2263,7 +2390,8 @@
     "rangedDefence": 0,
     "magicDefence": 0,
     "value": 5,
-    "headRenderMode": "hat"
+    "headRenderMode": "hat",
+    "generalStoreSellPrice": 16
   },
   {
     "id": 215,
@@ -2278,7 +2406,8 @@
     "rangedDefence": 0,
     "magicDefence": 3,
     "value": 200,
-    "headRenderMode": "hat"
+    "headRenderMode": "hat",
+    "generalStoreSellPrice": 80
   },
   {
     "id": 216,
@@ -2294,7 +2423,8 @@
     "magicDefence": 0,
     "value": 12,
     "headRenderMode": "hat",
-    "model": "BanditMask.glb"
+    "model": "BanditMask.glb",
+    "generalStoreSellPrice": 4
   },
   {
     "id": 217,
@@ -2309,7 +2439,8 @@
     "rangedDefence": 0,
     "magicDefence": 0,
     "value": 8,
-    "headRenderMode": "hat"
+    "headRenderMode": "hat",
+    "generalStoreSellPrice": 3
   },
   {
     "id": 218,
@@ -2324,7 +2455,8 @@
     "rangedDefence": 0,
     "magicDefence": 0,
     "value": 8,
-    "headRenderMode": "hat"
+    "headRenderMode": "hat",
+    "generalStoreSellPrice": 3
   },
   {
     "id": 219,
@@ -2338,7 +2470,8 @@
     "crushDefence": 7,
     "rangedDefence": 9,
     "magicDefence": -3,
-    "value": 140
+    "value": 140,
+    "generalStoreSellPrice": 56
   },
   {
     "id": 220,
@@ -2353,7 +2486,8 @@
     "rangedDefence": 7,
     "magicDefence": -2,
     "value": 70,
-    "headRenderMode": "hairFit"
+    "headRenderMode": "hairFit",
+    "generalStoreSellPrice": 28
   },
   {
     "id": 221,
@@ -2368,7 +2502,8 @@
     "rangedDefence": 4,
     "magicDefence": 0,
     "value": 25,
-    "headRenderMode": "hairTuck"
+    "headRenderMode": "hairTuck",
+    "generalStoreSellPrice": 9
   },
   {
     "id": 222,
@@ -2383,7 +2518,8 @@
     "rangedDefence": 0,
     "magicDefence": 3,
     "value": 200,
-    "headRenderMode": "hat"
+    "headRenderMode": "hat",
+    "generalStoreSellPrice": 80
   },
   {
     "id": 223,
@@ -2399,7 +2535,8 @@
     "magicDefence": 0,
     "value": 12,
     "headRenderMode": "hat",
-    "model": "BanditMask.glb"
+    "model": "BanditMask.glb",
+    "generalStoreSellPrice": 4
   },
   {
     "id": 224,
@@ -2409,7 +2546,8 @@
     "equippable": false,
     "value": 50,
     "icon": "Strange_Totem_224.png",
-    "model": "/assets/models/relics/Boat.glb"
+    "model": "/assets/models/relics/Boat.glb",
+    "generalStoreSellPrice": 20
   },
   {
     "id": 225,
@@ -2419,7 +2557,8 @@
     "equippable": false,
     "value": 50,
     "icon": "Old_Coin_225.png",
-    "model": "/assets/models/relics/OldGame.glb"
+    "model": "/assets/models/relics/OldGame.glb",
+    "generalStoreSellPrice": 20
   },
   {
     "id": 226,
@@ -2429,7 +2568,8 @@
     "equippable": false,
     "value": 50,
     "icon": "Old_Symbol_226.png",
-    "model": "/assets/models/relics/BirdStatue.glb"
+    "model": "/assets/models/relics/BirdStatue.glb",
+    "generalStoreSellPrice": 20
   },
   {
     "id": 227,
@@ -2439,7 +2579,8 @@
     "equippable": false,
     "value": 200,
     "icon": "Old_Jewelry_227.png",
-    "model": "/assets/models/relics/SkyglassShard.glb"
+    "model": "/assets/models/relics/SkyglassShard.glb",
+    "generalStoreSellPrice": 80
   },
   {
     "id": 228,
@@ -2449,7 +2590,8 @@
     "equippable": false,
     "value": 200,
     "icon": "Old_Bone_228.png",
-    "model": "/assets/models/relics/MoontearRing.glb"
+    "model": "/assets/models/relics/MoontearRing.glb",
+    "generalStoreSellPrice": 80
   },
   {
     "id": 229,
@@ -2459,7 +2601,8 @@
     "equippable": false,
     "value": 200,
     "icon": "Manuscript_229.png",
-    "model": "/assets/models/relics/BrokenDrop.glb"
+    "model": "/assets/models/relics/BrokenDrop.glb",
+    "generalStoreSellPrice": 80
   },
   {
     "id": 288,
@@ -2468,7 +2611,8 @@
     "stackable": false,
     "equippable": false,
     "value": 200,
-    "model": "/assets/models/relics/OmenKite.glb"
+    "model": "/assets/models/relics/OmenKite.glb",
+    "generalStoreSellPrice": 80
   },
   {
     "id": 289,
@@ -2477,7 +2621,8 @@
     "stackable": false,
     "equippable": false,
     "value": 800,
-    "model": "/assets/models/relics/CrescentReliquary.glb"
+    "model": "/assets/models/relics/CrescentReliquary.glb",
+    "generalStoreSellPrice": 320
   },
   {
     "id": 290,
@@ -2486,7 +2631,8 @@
     "stackable": false,
     "equippable": false,
     "value": 800,
-    "model": "/assets/models/relics/BrokenHaloIdol.glb"
+    "model": "/assets/models/relics/BrokenHaloIdol.glb",
+    "generalStoreSellPrice": 320
   },
   {
     "id": 291,
@@ -2495,7 +2641,8 @@
     "stackable": false,
     "equippable": false,
     "value": 800,
-    "model": "/assets/models/relics/TriSpireReliquary.glb"
+    "model": "/assets/models/relics/TriSpireReliquary.glb",
+    "generalStoreSellPrice": 320
   },
   {
     "id": 292,
@@ -2504,7 +2651,8 @@
     "stackable": false,
     "equippable": false,
     "value": 800,
-    "model": "/assets/models/relics/BellTowerCasket.glb"
+    "model": "/assets/models/relics/BellTowerCasket.glb",
+    "generalStoreSellPrice": 320
   },
   {
     "id": 293,
@@ -2513,7 +2661,8 @@
     "stackable": false,
     "equippable": false,
     "value": 2500,
-    "model": "/assets/models/relics/TwinSpireSigil.glb"
+    "model": "/assets/models/relics/TwinSpireSigil.glb",
+    "generalStoreSellPrice": 1000
   },
   {
     "id": 294,
@@ -2522,7 +2671,8 @@
     "stackable": false,
     "equippable": false,
     "value": 2500,
-    "model": "/assets/models/relics/CelestialAstrolabe.glb"
+    "model": "/assets/models/relics/CelestialAstrolabe.glb",
+    "generalStoreSellPrice": 1000
   },
   {
     "id": 295,
@@ -2531,7 +2681,8 @@
     "stackable": false,
     "equippable": false,
     "value": 7500,
-    "model": "/assets/models/relics/BlackSunReliquary.glb"
+    "model": "/assets/models/relics/BlackSunReliquary.glb",
+    "generalStoreSellPrice": 3000
   },
   {
     "id": 230,
@@ -2541,7 +2692,8 @@
     "equippable": false,
     "value": 3,
     "icon": "Rice_230.png",
-    "model": "/assets/models/RiceRaw.glb"
+    "model": "/assets/models/RiceRaw.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 231,
@@ -2552,7 +2704,8 @@
     "healAmount": 2,
     "value": 8,
     "icon": "Cooked_Rice_231.png",
-    "model": "/assets/models/RiceCooked.glb"
+    "model": "/assets/models/RiceCooked.glb",
+    "generalStoreSellPrice": 3
   },
   {
     "id": 232,
@@ -2568,7 +2721,8 @@
     "magicAccuracy": 10,
     "value": 50,
     "icon": "staff_100.png",
-    "model": "/assets/equipment/weapon/Staff.glb"
+    "model": "/assets/equipment/weapon/BasicStaff.glb",
+    "generalStoreSellPrice": 6
   },
   {
     "id": 233,
@@ -2584,7 +2738,8 @@
     "magicAccuracy": 15,
     "value": 7000,
     "icon": "staff_100.png",
-    "model": "/assets/equipment/weapon/CrystalStaff.glb"
+    "model": "/assets/equipment/weapon/CrystalStaff.glb",
+    "generalStoreSellPrice": 2800
   },
   {
     "id": 234,
@@ -2594,7 +2749,8 @@
     "equippable": false,
     "value": 3,
     "icon": "essence-chaos-v8.png",
-    "legacyName": "Evil token (tier 1)"
+    "legacyName": "Evil token (tier 1)",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 235,
@@ -2603,7 +2759,8 @@
     "stackable": false,
     "equippable": false,
     "value": 15,
-    "model": "/assets/models/logs/WillowLog.glb"
+    "model": "/assets/models/logs/WillowLog.glb",
+    "generalStoreSellPrice": 16
   },
   {
     "id": 236,
@@ -2613,7 +2770,8 @@
     "equippable": false,
     "value": 0,
     "icon": "sketch.png",
-    "questItem": true
+    "questItem": true,
+    "generalStoreSellPrice": 0
   },
   {
     "id": 237,
@@ -2623,7 +2781,8 @@
     "equippable": true,
     "equipSlot": "cape",
     "value": 100,
-    "model": "/assets/equipment/cape/CamelCape.glb"
+    "model": "/assets/equipment/cape/CamelCape.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 238,
@@ -2632,7 +2791,8 @@
     "stackable": false,
     "equippable": false,
     "value": 3,
-    "model": "/assets/models/Potato.glb"
+    "model": "/assets/models/Potato.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 239,
@@ -2641,7 +2801,8 @@
     "stackable": false,
     "equippable": false,
     "value": 3,
-    "model": "/assets/models/CauliflowerPlant.glb"
+    "model": "/assets/models/CauliflowerPlant.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 240,
@@ -2651,7 +2812,8 @@
     "equippable": false,
     "healAmount": 3,
     "value": 8,
-    "model": "/assets/models/BakedPotato.glb"
+    "model": "/assets/models/BakedPotato.glb",
+    "generalStoreSellPrice": 3
   },
   {
     "id": 241,
@@ -2660,7 +2822,8 @@
     "stackable": false,
     "equippable": false,
     "value": 3,
-    "model": "/assets/models/grain.glb"
+    "model": "/assets/models/grain.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 242,
@@ -2669,7 +2832,8 @@
     "stackable": false,
     "equippable": false,
     "value": 2,
-    "model": "/assets/models/Clay.glb"
+    "model": "/assets/models/Clay.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 243,
@@ -2678,7 +2842,8 @@
     "stackable": false,
     "equippable": false,
     "value": 3,
-    "model": "/assets/models/SoftClay.glb"
+    "model": "/assets/models/SoftClay.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 244,
@@ -2687,7 +2852,8 @@
     "stackable": false,
     "equippable": false,
     "value": 4,
-    "model": "/assets/models/Pot.glb"
+    "model": "/assets/models/Pot.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 245,
@@ -2696,7 +2862,8 @@
     "stackable": false,
     "equippable": false,
     "value": 3,
-    "model": "/assets/models/FiredPot.glb"
+    "model": "/assets/models/FiredPot.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 246,
@@ -2704,7 +2871,8 @@
     "description": "A clay pot filled with water.",
     "stackable": false,
     "equippable": false,
-    "value": 4
+    "value": 4,
+    "generalStoreSellPrice": 1
   },
   {
     "id": 247,
@@ -2713,7 +2881,8 @@
     "stackable": false,
     "equippable": false,
     "value": 3,
-    "model": "/assets/models/Bucket2.glb"
+    "model": "/assets/models/Bucket2.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 248,
@@ -2722,7 +2891,8 @@
     "stackable": false,
     "equippable": false,
     "value": 4,
-    "model": "/assets/models/BucketWater.glb"
+    "model": "/assets/models/BucketWater.glb",
+    "generalStoreSellPrice": 2
   },
   {
     "id": 249,
@@ -2731,7 +2901,8 @@
     "stackable": false,
     "equippable": false,
     "value": 4,
-    "model": "/assets/models/FiredBowl.glb"
+    "model": "/assets/models/FiredBowl.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 250,
@@ -2740,7 +2911,8 @@
     "stackable": true,
     "equippable": false,
     "value": 5,
-    "model": "/assets/models/FiredPlate.glb"
+    "model": "/assets/models/FiredPlate.glb",
+    "generalStoreSellPrice": 2
   },
   {
     "id": 251,
@@ -2749,7 +2921,8 @@
     "stackable": false,
     "equippable": false,
     "value": 8,
-    "model": "/assets/models/Knife.glb"
+    "model": "/assets/models/Knife.glb",
+    "generalStoreSellPrice": 2
   },
   {
     "id": 252,
@@ -2758,7 +2931,8 @@
     "stackable": false,
     "equippable": false,
     "value": 3,
-    "model": "/assets/models/Bowl.glb"
+    "model": "/assets/models/Bowl.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 253,
@@ -2767,7 +2941,8 @@
     "stackable": false,
     "equippable": false,
     "value": 4,
-    "model": "/assets/models/Plate.glb"
+    "model": "/assets/models/Plate.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 254,
@@ -2777,7 +2952,8 @@
     "equippable": false,
     "value": 160,
     "model": "/assets/models/gems/Sapphire.glb",
-    "legacyName": "Sapphire"
+    "legacyName": "Sapphire",
+    "generalStoreSellPrice": 20
   },
   {
     "id": 255,
@@ -2787,7 +2963,8 @@
     "equippable": false,
     "value": 240,
     "model": "/assets/models/gems/Emerald.glb",
-    "legacyName": "Emerald"
+    "legacyName": "Emerald",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 256,
@@ -2797,7 +2974,8 @@
     "equippable": false,
     "value": 320,
     "model": "/assets/models/gems/Ruby.glb",
-    "legacyName": "Ruby"
+    "legacyName": "Ruby",
+    "generalStoreSellPrice": 80
   },
   {
     "id": 257,
@@ -2807,7 +2985,8 @@
     "equippable": false,
     "value": 500,
     "model": "/assets/models/gems/Diamond.glb",
-    "legacyName": "Diamond"
+    "legacyName": "Diamond",
+    "generalStoreSellPrice": 160
   },
   {
     "id": 258,
@@ -2817,7 +2996,8 @@
     "equippable": false,
     "value": 120,
     "model": "/assets/models/gems/Amethyst.glb",
-    "legacyName": "Amethyst"
+    "legacyName": "Amethyst",
+    "generalStoreSellPrice": 192
   },
   {
     "id": 259,
@@ -2827,7 +3007,8 @@
     "equippable": false,
     "value": 180,
     "model": "/assets/models/gems/Topaz.glb",
-    "legacyName": "Topaz"
+    "legacyName": "Topaz",
+    "generalStoreSellPrice": 288
   },
   {
     "id": 260,
@@ -2837,7 +3018,8 @@
     "equippable": false,
     "value": 220,
     "model": "/assets/models/gems/Opal.glb",
-    "legacyName": "Opal"
+    "legacyName": "Opal",
+    "generalStoreSellPrice": 16
   },
   {
     "id": 261,
@@ -2847,7 +3029,8 @@
     "equippable": false,
     "value": 260,
     "model": "/assets/models/gems/Onyx.glb",
-    "legacyName": "Onyx"
+    "legacyName": "Onyx",
+    "generalStoreSellPrice": 416
   },
   {
     "id": 262,
@@ -2856,7 +3039,8 @@
     "stackable": false,
     "equippable": false,
     "value": 12,
-    "model": "/assets/models/UnstrungShortbow.glb"
+    "model": "/assets/models/UnstrungShortbow.glb",
+    "generalStoreSellPrice": 9
   },
   {
     "id": 263,
@@ -2865,7 +3049,8 @@
     "stackable": false,
     "equippable": false,
     "value": 3,
-    "model": "/assets/models/Beef.glb"
+    "model": "/assets/models/Beef.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 264,
@@ -2901,7 +3086,8 @@
         "minQuantity": 6,
         "model": "/assets/models/arrowheads/stacks/BronzeArrowheadStack6Plus.glb"
       }
-    ]
+    ],
+    "generalStoreSellPrice": 1
   },
   {
     "id": 265,
@@ -2937,7 +3123,8 @@
         "minQuantity": 6,
         "model": "/assets/models/arrowheads/stacks/IronArrowheadStack6Plus.glb"
       }
-    ]
+    ],
+    "generalStoreSellPrice": 1
   },
   {
     "id": 266,
@@ -2973,7 +3160,8 @@
         "minQuantity": 6,
         "model": "/assets/models/arrowheads/stacks/SteelArrowheadStack6Plus.glb"
       }
-    ]
+    ],
+    "generalStoreSellPrice": 2
   },
   {
     "id": 267,
@@ -3009,7 +3197,8 @@
         "minQuantity": 6,
         "model": "/assets/models/arrowheads/stacks/MithrilArrowheadStack6Plus.glb"
       }
-    ]
+    ],
+    "generalStoreSellPrice": 6
   },
   {
     "id": 268,
@@ -3045,7 +3234,8 @@
         "minQuantity": 6,
         "model": "/assets/models/arrowheads/stacks/BlackBronzeArrowheadStack6Plus.glb"
       }
-    ]
+    ],
+    "generalStoreSellPrice": 3
   },
   {
     "id": 269,
@@ -3055,7 +3245,8 @@
     "equippable": false,
     "value": 2,
     "icon": "bow_string_676.png",
-    "model": "/assets/models/Sinew.glb"
+    "model": "/assets/models/Sinew.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 270,
@@ -3090,7 +3281,8 @@
         "minQuantity": 6,
         "model": "/assets/models/arrow-shafts/stacks/ArrowShaftStack6Plus.glb"
       }
-    ]
+    ],
+    "generalStoreSellPrice": 1
   },
   {
     "id": 271,
@@ -3099,7 +3291,8 @@
     "stackable": false,
     "equippable": false,
     "value": 50,
-    "model": "/assets/models/logs/MysticLog.glb"
+    "model": "/assets/models/logs/MysticLog.glb",
+    "generalStoreSellPrice": 20
   },
   {
     "id": 272,
@@ -3134,7 +3327,8 @@
         "minQuantity": 6,
         "model": "/assets/models/headless-arrows/stacks/HeadlessArrowStack6Plus.glb"
       }
-    ]
+    ],
+    "generalStoreSellPrice": 1
   },
   {
     "id": 273,
@@ -3144,7 +3338,8 @@
     "equippable": false,
     "value": 4,
     "icon": "bow_string_676.png",
-    "model": "/assets/models/Bowstring.glb"
+    "model": "/assets/models/Bowstring.glb",
+    "generalStoreSellPrice": 4
   },
   {
     "id": 296,
@@ -3153,7 +3348,8 @@
     "stackable": false,
     "equippable": false,
     "value": 6,
-    "model": "/assets/models/HideCow.glb"
+    "model": "/assets/models/HideCow.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 297,
@@ -3162,7 +3358,8 @@
     "stackable": false,
     "equippable": false,
     "value": 18,
-    "model": "/assets/models/HideBear.glb"
+    "model": "/assets/models/HideBear.glb",
+    "generalStoreSellPrice": 2
   },
   {
     "id": 298,
@@ -3171,7 +3368,8 @@
     "stackable": false,
     "equippable": false,
     "value": 12,
-    "model": "/assets/models/HideWolf.glb"
+    "model": "/assets/models/HideWolf.glb",
+    "generalStoreSellPrice": 6
   },
   {
     "id": 299,
@@ -3180,7 +3378,8 @@
     "stackable": false,
     "equippable": false,
     "value": 10,
-    "model": "/assets/models/HideDeer.glb"
+    "model": "/assets/models/HideDeer.glb",
+    "generalStoreSellPrice": 4
   },
   {
     "id": 300,
@@ -3189,7 +3388,8 @@
     "stackable": false,
     "equippable": false,
     "value": 14,
-    "model": "/assets/models/HideCamel.glb"
+    "model": "/assets/models/HideCamel.glb",
+    "generalStoreSellPrice": 4
   },
   {
     "id": 301,
@@ -3198,7 +3398,8 @@
     "stackable": false,
     "equippable": false,
     "value": 16,
-    "model": "/assets/models/hides/HumanHide.glb"
+    "model": "/assets/models/hides/HumanHide.glb",
+    "generalStoreSellPrice": 6
   },
   {
     "id": 302,
@@ -3207,7 +3408,8 @@
     "stackable": false,
     "equippable": false,
     "value": 12,
-    "model": "/assets/models/hides/TannedCowHide.glb"
+    "model": "/assets/models/hides/TannedCowHide.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 303,
@@ -3216,7 +3418,8 @@
     "stackable": false,
     "equippable": false,
     "value": 36,
-    "model": "/assets/models/hides/TannedBearHide.glb"
+    "model": "/assets/models/hides/TannedBearHide.glb",
+    "generalStoreSellPrice": 5
   },
   {
     "id": 304,
@@ -3225,7 +3428,8 @@
     "stackable": false,
     "equippable": false,
     "value": 24,
-    "model": "/assets/models/hides/TannedWolfHide.glb"
+    "model": "/assets/models/hides/TannedWolfHide.glb",
+    "generalStoreSellPrice": 15
   },
   {
     "id": 305,
@@ -3244,7 +3448,8 @@
     "stackable": false,
     "equippable": false,
     "value": 28,
-    "model": "/assets/models/hides/TannedCamelHide.glb"
+    "model": "/assets/models/hides/TannedCamelHide.glb",
+    "generalStoreSellPrice": 10
   },
   {
     "id": 307,
@@ -3273,7 +3478,8 @@
     "equipSkill": "archery",
     "levelRequired": 1,
     "value": 20,
-    "model": "/assets/models/Shortbow.glb"
+    "model": "/assets/models/Shortbow.glb",
+    "generalStoreSellPrice": 20
   },
   {
     "id": 275,
@@ -3282,7 +3488,8 @@
     "stackable": false,
     "equippable": false,
     "value": 22,
-    "model": "/assets/models/UnstrungOakShortbow.glb"
+    "model": "/assets/models/UnstrungOakShortbow.glb",
+    "generalStoreSellPrice": 20
   },
   {
     "id": 276,
@@ -3291,7 +3498,8 @@
     "stackable": false,
     "equippable": false,
     "value": 34,
-    "model": "/assets/models/UnstrungWillowShortbow.glb"
+    "model": "/assets/models/UnstrungWillowShortbow.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 277,
@@ -3300,7 +3508,8 @@
     "stackable": false,
     "equippable": false,
     "value": 48,
-    "model": "/assets/models/UnstrungMapleShortbow.glb"
+    "model": "/assets/models/UnstrungMapleShortbow.glb",
+    "generalStoreSellPrice": 80
   },
   {
     "id": 278,
@@ -3309,7 +3518,8 @@
     "stackable": false,
     "equippable": false,
     "value": 70,
-    "model": "/assets/models/UnstrungYewShortbow.glb"
+    "model": "/assets/models/UnstrungYewShortbow.glb",
+    "generalStoreSellPrice": 160
   },
   {
     "id": 279,
@@ -3318,7 +3528,8 @@
     "stackable": false,
     "equippable": false,
     "value": 100,
-    "model": "/assets/models/UnstrungMysticShortbow.glb"
+    "model": "/assets/models/UnstrungMysticShortbow.glb",
+    "generalStoreSellPrice": 320
   },
   {
     "id": 280,
@@ -3337,7 +3548,8 @@
     "equipSkill": "archery",
     "levelRequired": 5,
     "value": 40,
-    "model": "/assets/models/OakShortbow.glb"
+    "model": "/assets/models/OakShortbow.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 281,
@@ -3356,7 +3568,8 @@
     "equipSkill": "archery",
     "levelRequired": 18,
     "value": 65,
-    "model": "/assets/models/WillowShortbow.glb"
+    "model": "/assets/models/WillowShortbow.glb",
+    "generalStoreSellPrice": 80
   },
   {
     "id": 282,
@@ -3375,7 +3588,8 @@
     "equipSkill": "archery",
     "levelRequired": 32,
     "value": 100,
-    "model": "/assets/models/MapleShortbow.glb"
+    "model": "/assets/models/MapleShortbow.glb",
+    "generalStoreSellPrice": 160
   },
   {
     "id": 283,
@@ -3394,7 +3608,8 @@
     "equipSkill": "archery",
     "levelRequired": 46,
     "value": 150,
-    "model": "/assets/models/YewShortbow.glb"
+    "model": "/assets/models/YewShortbow.glb",
+    "generalStoreSellPrice": 320
   },
   {
     "id": 284,
@@ -3413,7 +3628,8 @@
     "equipSkill": "archery",
     "levelRequired": 60,
     "value": 220,
-    "model": "/assets/models/MysticShortbow.glb"
+    "model": "/assets/models/MysticShortbow.glb",
+    "generalStoreSellPrice": 640
   },
   {
     "id": 308,
@@ -3422,7 +3638,8 @@
     "stackable": false,
     "equippable": false,
     "value": 60,
-    "icon": "Emerald_Amulet_of_protection_315.png"
+    "icon": "Emerald_Amulet_of_protection_315.png",
+    "generalStoreSellPrice": 24
   },
   {
     "id": 309,
@@ -3433,7 +3650,8 @@
     "value": 1,
     "icon": "Blood-Rune_619.png",
     "model": "/assets/models/HumanHeart.glb",
-    "questItem": true
+    "questItem": true,
+    "generalStoreSellPrice": 0
   },
   {
     "id": 310,
@@ -3442,7 +3660,8 @@
     "stackable": false,
     "equippable": false,
     "value": 480,
-    "model": "/assets/models/bars/CrimsonBar.glb"
+    "model": "/assets/models/bars/CrimsonBar.glb",
+    "generalStoreSellPrice": 192
   },
   {
     "id": 311,
@@ -3451,7 +3670,8 @@
     "stackable": false,
     "equippable": false,
     "value": 960,
-    "model": "/assets/models/bars/MalachorBar.glb"
+    "model": "/assets/models/bars/MalachorBar.glb",
+    "generalStoreSellPrice": 384
   },
   {
     "id": 312,
@@ -3468,7 +3688,8 @@
     "toolType": "axe",
     "toolLevel": 45,
     "toolBonus": 5,
-    "model": "/assets/equipment/Tools/Crimson axe.glb"
+    "model": "/assets/equipment/Tools/Crimson axe.glb",
+    "generalStoreSellPrice": 392
   },
   {
     "id": 313,
@@ -3485,7 +3706,8 @@
     "toolType": "pickaxe",
     "toolLevel": 45,
     "toolBonus": 5,
-    "model": "/assets/equipment/Tools/CrimsonPickaxe.glb"
+    "model": "/assets/equipment/Tools/CrimsonPickaxe.glb",
+    "generalStoreSellPrice": 1280
   },
   {
     "id": 314,
@@ -3502,7 +3724,8 @@
     "levelRequired": 45,
     "stabAttack": 25,
     "slashAttack": 10,
-    "meleeStrength": 15
+    "meleeStrength": 15,
+    "generalStoreSellPrice": 353
   },
   {
     "id": 315,
@@ -3519,7 +3742,8 @@
     "levelRequired": 45,
     "stabAttack": 10,
     "slashAttack": 35,
-    "meleeStrength": 25
+    "meleeStrength": 25,
+    "generalStoreSellPrice": 457
   },
   {
     "id": 316,
@@ -3535,7 +3759,8 @@
     "equipSkill": "weaponry",
     "levelRequired": 45,
     "crushAttack": 30,
-    "meleeStrength": 25
+    "meleeStrength": 25,
+    "generalStoreSellPrice": 405
   },
   {
     "id": 317,
@@ -3551,7 +3776,8 @@
     "equipSkill": "weaponry",
     "levelRequired": 45,
     "slashAttack": 45,
-    "meleeStrength": 35
+    "meleeStrength": 35,
+    "generalStoreSellPrice": 784
   },
   {
     "id": 318,
@@ -3571,7 +3797,8 @@
     "stabDefence": 40,
     "slashDefence": 50,
     "crushDefence": 30,
-    "rangedDefence": 40
+    "rangedDefence": 40,
+    "generalStoreSellPrice": 1254
   },
   {
     "id": 319,
@@ -3588,7 +3815,8 @@
     "levelRequired": 45,
     "slashAttack": 30,
     "crushAttack": 60,
-    "meleeStrength": 70
+    "meleeStrength": 70,
+    "generalStoreSellPrice": 1202
   },
   {
     "id": 320,
@@ -3605,7 +3833,8 @@
     "equipSkill": "weaponry",
     "levelRequired": 45,
     "slashAttack": 70,
-    "meleeStrength": 120
+    "meleeStrength": 120,
+    "generalStoreSellPrice": 1384
   },
   {
     "id": 321,
@@ -3628,7 +3857,8 @@
       "hair": {
         "mode": "scalp"
       }
-    }
+    },
+    "generalStoreSellPrice": 444
   },
   {
     "id": 322,
@@ -3651,7 +3881,8 @@
       "hair": {
         "mode": "hide"
       }
-    }
+    },
+    "generalStoreSellPrice": 862
   },
   {
     "id": 323,
@@ -3667,7 +3898,8 @@
     "stabDefence": 20,
     "slashDefence": 25,
     "crushDefence": 20,
-    "rangedDefence": 15
+    "rangedDefence": 15,
+    "generalStoreSellPrice": 888
   },
   {
     "id": 324,
@@ -3683,7 +3915,8 @@
     "stabDefence": 35,
     "slashDefence": 40,
     "crushDefence": 35,
-    "rangedDefence": 25
+    "rangedDefence": 25,
+    "generalStoreSellPrice": 1306
   },
   {
     "id": 325,
@@ -3702,7 +3935,8 @@
     "stabDefence": 30,
     "slashDefence": 35,
     "crushDefence": 25,
-    "rangedDefence": 25
+    "rangedDefence": 25,
+    "generalStoreSellPrice": 1384
   },
   {
     "id": 326,
@@ -3722,7 +3956,8 @@
     "slashDefence": 80,
     "crushDefence": 60,
     "rangedDefence": 70,
-    "bodyHideStyle": "plate"
+    "bodyHideStyle": "plate",
+    "generalStoreSellPrice": 2480
   },
   {
     "id": 327,
@@ -3739,7 +3974,8 @@
     "toolType": "axe",
     "toolLevel": 55,
     "toolBonus": 6,
-    "model": "/assets/equipment/Tools/Malachor axe.glb"
+    "model": "/assets/equipment/Tools/Malachor axe.glb",
+    "generalStoreSellPrice": 3840
   },
   {
     "id": 328,
@@ -3756,7 +3992,8 @@
     "toolType": "pickaxe",
     "toolLevel": 55,
     "toolBonus": 6,
-    "model": "/assets/equipment/Tools/MalachorPickaxe.glb"
+    "model": "/assets/equipment/Tools/MalachorPickaxe.glb",
+    "generalStoreSellPrice": 3120
   },
   {
     "id": 329,
@@ -3773,7 +4010,8 @@
     "levelRequired": 55,
     "stabAttack": 30,
     "slashAttack": 12,
-    "meleeStrength": 18
+    "meleeStrength": 18,
+    "generalStoreSellPrice": 576
   },
   {
     "id": 330,
@@ -3790,7 +4028,8 @@
     "levelRequired": 55,
     "stabAttack": 12,
     "slashAttack": 42,
-    "meleeStrength": 30
+    "meleeStrength": 30,
+    "generalStoreSellPrice": 576
   },
   {
     "id": 331,
@@ -3806,7 +4045,8 @@
     "equipSkill": "weaponry",
     "levelRequired": 55,
     "crushAttack": 36,
-    "meleeStrength": 30
+    "meleeStrength": 30,
+    "generalStoreSellPrice": 576
   },
   {
     "id": 332,
@@ -3822,7 +4062,8 @@
     "equipSkill": "weaponry",
     "levelRequired": 55,
     "slashAttack": 54,
-    "meleeStrength": 42
+    "meleeStrength": 42,
+    "generalStoreSellPrice": 1152
   },
   {
     "id": 333,
@@ -3842,7 +4083,8 @@
     "stabDefence": 48,
     "slashDefence": 60,
     "crushDefence": 36,
-    "rangedDefence": 48
+    "rangedDefence": 48,
+    "generalStoreSellPrice": 1728
   },
   {
     "id": 334,
@@ -3859,7 +4101,8 @@
     "levelRequired": 55,
     "slashAttack": 36,
     "crushAttack": 72,
-    "meleeStrength": 84
+    "meleeStrength": 84,
+    "generalStoreSellPrice": 1728
   },
   {
     "id": 335,
@@ -3876,7 +4119,8 @@
     "equipSkill": "weaponry",
     "levelRequired": 55,
     "slashAttack": 84,
-    "meleeStrength": 144
+    "meleeStrength": 144,
+    "generalStoreSellPrice": 1728
   },
   {
     "id": 336,
@@ -3899,7 +4143,8 @@
       "hair": {
         "mode": "scalp"
       }
-    }
+    },
+    "generalStoreSellPrice": 576
   },
   {
     "id": 337,
@@ -3922,7 +4167,8 @@
       "hair": {
         "mode": "hide"
       }
-    }
+    },
+    "generalStoreSellPrice": 1152
   },
   {
     "id": 338,
@@ -3938,7 +4184,8 @@
     "stabDefence": 24,
     "slashDefence": 30,
     "crushDefence": 24,
-    "rangedDefence": 18
+    "rangedDefence": 18,
+    "generalStoreSellPrice": 1152
   },
   {
     "id": 339,
@@ -3954,7 +4201,8 @@
     "stabDefence": 42,
     "slashDefence": 48,
     "crushDefence": 42,
-    "rangedDefence": 30
+    "rangedDefence": 30,
+    "generalStoreSellPrice": 1728
   },
   {
     "id": 340,
@@ -3973,7 +4221,8 @@
     "stabDefence": 36,
     "slashDefence": 42,
     "crushDefence": 30,
-    "rangedDefence": 30
+    "rangedDefence": 30,
+    "generalStoreSellPrice": 1728
   },
   {
     "id": 341,
@@ -3993,7 +4242,8 @@
     "slashDefence": 96,
     "crushDefence": 72,
     "rangedDefence": 84,
-    "bodyHideStyle": "plate"
+    "bodyHideStyle": "plate",
+    "generalStoreSellPrice": 2880
   },
   {
     "id": 342,
@@ -4011,7 +4261,8 @@
     "slashAttack": 5,
     "meleeStrength": 5,
     "equipSkill": "weaponry",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 9
   },
   {
     "id": 343,
@@ -4029,7 +4280,8 @@
     "slashAttack": 10,
     "meleeStrength": 7,
     "equipSkill": "weaponry",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 9
   },
   {
     "id": 344,
@@ -4046,7 +4298,8 @@
     "crushAttack": 9,
     "meleeStrength": 7,
     "equipSkill": "weaponry",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 9
   },
   {
     "id": 345,
@@ -4063,7 +4316,8 @@
     "slashAttack": 12,
     "meleeStrength": 9,
     "equipSkill": "weaponry",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 18
   },
   {
     "id": 346,
@@ -4081,7 +4335,8 @@
     "crushAttack": 15,
     "meleeStrength": 16,
     "equipSkill": "weaponry",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 27
   },
   {
     "id": 347,
@@ -4099,7 +4354,8 @@
     "meleeStrength": 26,
     "model": "bronze_2h.glb",
     "equipSkill": "weaponry",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 27
   },
   {
     "id": 348,
@@ -4123,7 +4379,8 @@
       "hair": {
         "mode": "scalp"
       }
-    }
+    },
+    "generalStoreSellPrice": 9
   },
   {
     "id": 349,
@@ -4147,7 +4404,8 @@
       "hair": {
         "mode": "hide"
       }
-    }
+    },
+    "generalStoreSellPrice": 18
   },
   {
     "id": 350,
@@ -4164,7 +4422,8 @@
     "crushDefence": 7,
     "rangedDefence": 6,
     "equipSkill": "defence",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 18
   },
   {
     "id": 351,
@@ -4185,7 +4444,8 @@
     "rangedDefence": 11,
     "bodyHideStyle": "shirtRecolor",
     "equipSkill": "defence",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 27
   },
   {
     "id": 352,
@@ -4202,7 +4462,8 @@
     "crushDefence": 10,
     "rangedDefence": 8,
     "equipSkill": "defence",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 27
   },
   {
     "id": 353,
@@ -4222,7 +4483,8 @@
     "crushDefence": 8,
     "rangedDefence": 8,
     "equipSkill": "defence",
-    "levelRequired": 1
+    "levelRequired": 1,
+    "generalStoreSellPrice": 27
   },
   {
     "id": 354,
@@ -4243,7 +4505,8 @@
     "rangedDefence": 17,
     "equipSkill": "defence",
     "levelRequired": 1,
-    "bodyHideStyle": "plate"
+    "bodyHideStyle": "plate",
+    "generalStoreSellPrice": 45
   },
   {
     "id": 355,
@@ -4261,7 +4524,8 @@
     "slashAttack": 6,
     "meleeStrength": 7,
     "equipSkill": "weaponry",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 18
   },
   {
     "id": 356,
@@ -4279,7 +4543,8 @@
     "slashAttack": 14,
     "meleeStrength": 10,
     "equipSkill": "weaponry",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 18
   },
   {
     "id": 357,
@@ -4296,7 +4561,8 @@
     "crushAttack": 12,
     "meleeStrength": 10,
     "equipSkill": "weaponry",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 18
   },
   {
     "id": 358,
@@ -4313,7 +4579,8 @@
     "slashAttack": 17,
     "meleeStrength": 13,
     "equipSkill": "weaponry",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 36
   },
   {
     "id": 359,
@@ -4331,7 +4598,8 @@
     "crushAttack": 21,
     "meleeStrength": 23,
     "equipSkill": "weaponry",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 54
   },
   {
     "id": 360,
@@ -4349,7 +4617,8 @@
     "meleeStrength": 38,
     "model": "/assets/equipment/weapon/Iron2hSword.glb",
     "equipSkill": "weaponry",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 54
   },
   {
     "id": 361,
@@ -4373,7 +4642,8 @@
       "hair": {
         "mode": "scalp"
       }
-    }
+    },
+    "generalStoreSellPrice": 18
   },
   {
     "id": 362,
@@ -4397,7 +4667,8 @@
       "hair": {
         "mode": "hide"
       }
-    }
+    },
+    "generalStoreSellPrice": 36
   },
   {
     "id": 363,
@@ -4414,7 +4685,8 @@
     "crushDefence": 9,
     "rangedDefence": 8,
     "equipSkill": "defence",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 36
   },
   {
     "id": 364,
@@ -4435,7 +4707,8 @@
     "rangedDefence": 15,
     "bodyHideStyle": "shirtRecolor",
     "equipSkill": "defence",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 54
   },
   {
     "id": 365,
@@ -4452,7 +4725,8 @@
     "crushDefence": 14,
     "rangedDefence": 11,
     "equipSkill": "defence",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 54
   },
   {
     "id": 366,
@@ -4472,7 +4746,8 @@
     "crushDefence": 11,
     "rangedDefence": 11,
     "equipSkill": "defence",
-    "levelRequired": 6
+    "levelRequired": 6,
+    "generalStoreSellPrice": 54
   },
   {
     "id": 367,
@@ -4493,7 +4768,8 @@
     "rangedDefence": 24,
     "equipSkill": "defence",
     "levelRequired": 6,
-    "bodyHideStyle": "plate"
+    "bodyHideStyle": "plate",
+    "generalStoreSellPrice": 90
   },
   {
     "id": 368,
@@ -4511,7 +4787,8 @@
     "slashAttack": 7,
     "meleeStrength": 8,
     "equipSkill": "weaponry",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 36
   },
   {
     "id": 369,
@@ -4529,7 +4806,8 @@
     "meleeStrength": 12,
     "model": "/assets/equipment/weapon/SteelSword.glb",
     "equipSkill": "weaponry",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 36
   },
   {
     "id": 370,
@@ -4546,7 +4824,8 @@
     "meleeStrength": 12,
     "model": "/assets/equipment/weapon/SteelMace.glb",
     "equipSkill": "weaponry",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 36
   },
   {
     "id": 371,
@@ -4563,7 +4842,8 @@
     "slashAttack": 21,
     "meleeStrength": 16,
     "equipSkill": "weaponry",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 72
   },
   {
     "id": 372,
@@ -4581,7 +4861,8 @@
     "crushAttack": 27,
     "meleeStrength": 30,
     "equipSkill": "weaponry",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 108
   },
   {
     "id": 373,
@@ -4599,7 +4880,8 @@
     "meleeStrength": 50,
     "model": "/assets/equipment/weapon/Steel2hsword.glb",
     "equipSkill": "weaponry",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 108
   },
   {
     "id": 374,
@@ -4623,7 +4905,8 @@
       "hair": {
         "mode": "scalp"
       }
-    }
+    },
+    "generalStoreSellPrice": 36
   },
   {
     "id": 375,
@@ -4647,7 +4930,8 @@
       "hair": {
         "mode": "hide"
       }
-    }
+    },
+    "generalStoreSellPrice": 72
   },
   {
     "id": 376,
@@ -4664,7 +4948,8 @@
     "rangedDefence": 9,
     "model": "/assets/equipment/shield/SteelSquareShield.glb",
     "equipSkill": "defence",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 72
   },
   {
     "id": 377,
@@ -4685,7 +4970,8 @@
       "1": "/assets/equipment/body/female/SteelCuirassWoman.glb"
     },
     "equipSkill": "defence",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 108
   },
   {
     "id": 378,
@@ -4702,7 +4988,8 @@
     "rangedDefence": 13,
     "model": "/assets/equipment/shield/SteelKiteshield.glb",
     "equipSkill": "defence",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 108
   },
   {
     "id": 379,
@@ -4722,7 +5009,8 @@
       "1": "/assets/equipment/legs/female/SteelPlatelegsWoman.glb"
     },
     "equipSkill": "defence",
-    "levelRequired": 15
+    "levelRequired": 15,
+    "generalStoreSellPrice": 108
   },
   {
     "id": 380,
@@ -4743,7 +5031,8 @@
     },
     "equipSkill": "defence",
     "levelRequired": 15,
-    "bodyHideStyle": "plate"
+    "bodyHideStyle": "plate",
+    "generalStoreSellPrice": 180
   },
   {
     "id": 381,
@@ -4761,7 +5050,8 @@
     "slashAttack": 11,
     "meleeStrength": 14,
     "equipSkill": "weaponry",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 144
   },
   {
     "id": 382,
@@ -4779,7 +5069,8 @@
     "meleeStrength": 22,
     "model": "/assets/equipment/weapon/MithrilSword.glb",
     "equipSkill": "weaponry",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 144
   },
   {
     "id": 383,
@@ -4796,7 +5087,8 @@
     "meleeStrength": 22,
     "model": "/assets/equipment/weapon/MithrilMace.glb",
     "equipSkill": "weaponry",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 144
   },
   {
     "id": 384,
@@ -4813,7 +5105,8 @@
     "slashAttack": 39,
     "meleeStrength": 30,
     "equipSkill": "weaponry",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 288
   },
   {
     "id": 385,
@@ -4831,7 +5124,8 @@
     "crushAttack": 51,
     "meleeStrength": 58,
     "equipSkill": "weaponry",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 432
   },
   {
     "id": 386,
@@ -4849,7 +5143,8 @@
     "slashAttack": 59,
     "meleeStrength": 98,
     "equipSkill": "weaponry",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 432
   },
   {
     "id": 387,
@@ -4873,7 +5168,8 @@
       "hair": {
         "mode": "scalp"
       }
-    }
+    },
+    "generalStoreSellPrice": 144
   },
   {
     "id": 388,
@@ -4897,7 +5193,8 @@
       "hair": {
         "mode": "hide"
       }
-    }
+    },
+    "generalStoreSellPrice": 288
   },
   {
     "id": 389,
@@ -4914,7 +5211,8 @@
     "rangedDefence": 15,
     "model": "/assets/equipment/shield/MithrilSquareShield.glb",
     "equipSkill": "defence",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 288
   },
   {
     "id": 390,
@@ -4935,7 +5233,8 @@
     "rangedDefence": 35,
     "bodyHideStyle": "shirtRecolor",
     "equipSkill": "defence",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 432
   },
   {
     "id": 391,
@@ -4952,7 +5251,8 @@
     "rangedDefence": 23,
     "model": "/assets/equipment/shield/MithrilKiteshield.glb",
     "equipSkill": "defence",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 432
   },
   {
     "id": 392,
@@ -4972,7 +5272,8 @@
     "crushDefence": 23,
     "rangedDefence": 23,
     "equipSkill": "defence",
-    "levelRequired": 35
+    "levelRequired": 35,
+    "generalStoreSellPrice": 432
   },
   {
     "id": 393,
@@ -4993,7 +5294,8 @@
     "rangedDefence": 59,
     "equipSkill": "defence",
     "levelRequired": 35,
-    "bodyHideStyle": "plate"
+    "bodyHideStyle": "plate",
+    "generalStoreSellPrice": 720
   },
   {
     "id": 394,
@@ -5010,7 +5312,8 @@
     "slashAttack": 9,
     "meleeStrength": 11,
     "equipSkill": "weaponry",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 72
   },
   {
     "id": 395,
@@ -5027,7 +5330,8 @@
     "slashAttack": 24,
     "meleeStrength": 17,
     "equipSkill": "weaponry",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 72
   },
   {
     "id": 396,
@@ -5043,7 +5347,8 @@
     "crushAttack": 21,
     "meleeStrength": 17,
     "equipSkill": "weaponry",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 72
   },
   {
     "id": 397,
@@ -5059,7 +5364,8 @@
     "slashAttack": 30,
     "meleeStrength": 23,
     "equipSkill": "weaponry",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 144
   },
   {
     "id": 398,
@@ -5076,7 +5382,8 @@
     "crushAttack": 39,
     "meleeStrength": 44,
     "equipSkill": "weaponry",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 216
   },
   {
     "id": 399,
@@ -5093,7 +5400,8 @@
     "slashAttack": 45,
     "meleeStrength": 74,
     "equipSkill": "weaponry",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 216
   },
   {
     "id": 400,
@@ -5116,7 +5424,8 @@
       "hair": {
         "mode": "scalp"
       }
-    }
+    },
+    "generalStoreSellPrice": 72
   },
   {
     "id": 401,
@@ -5139,7 +5448,8 @@
       "hair": {
         "mode": "hide"
       }
-    }
+    },
+    "generalStoreSellPrice": 144
   },
   {
     "id": 402,
@@ -5155,7 +5465,8 @@
     "crushDefence": 15,
     "rangedDefence": 12,
     "equipSkill": "defence",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 144
   },
   {
     "id": 403,
@@ -5175,7 +5486,8 @@
     "rangedDefence": 27,
     "bodyHideStyle": "shirtRecolor",
     "equipSkill": "defence",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 216
   },
   {
     "id": 404,
@@ -5191,7 +5503,8 @@
     "crushDefence": 24,
     "rangedDefence": 18,
     "equipSkill": "defence",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 216
   },
   {
     "id": 405,
@@ -5210,7 +5523,8 @@
     "crushDefence": 18,
     "rangedDefence": 18,
     "equipSkill": "defence",
-    "levelRequired": 25
+    "levelRequired": 25,
+    "generalStoreSellPrice": 216
   },
   {
     "id": 406,
@@ -5230,7 +5544,8 @@
     "rangedDefence": 45,
     "equipSkill": "defence",
     "levelRequired": 25,
-    "bodyHideStyle": "plate"
+    "bodyHideStyle": "plate",
+    "generalStoreSellPrice": 360
   },
   {
     "id": 407,
@@ -5240,7 +5555,8 @@
     "equippable": false,
     "value": 192,
     "model": "/assets/models/item-thumbnails/ore/CrimsoniteOreRock.glb",
-    "thumbnailModel": "/assets/models/item-thumbnails/ore/CrimsoniteOreRock.glb"
+    "thumbnailModel": "/assets/models/item-thumbnails/ore/CrimsoniteOreRock.glb",
+    "generalStoreSellPrice": 76
   },
   {
     "id": 408,
@@ -5250,7 +5566,8 @@
     "equippable": false,
     "value": 384,
     "model": "/assets/models/item-thumbnails/ore/MalachiteOreRock.glb",
-    "thumbnailModel": "/assets/models/item-thumbnails/ore/MalachiteOreRock.glb"
+    "thumbnailModel": "/assets/models/item-thumbnails/ore/MalachiteOreRock.glb",
+    "generalStoreSellPrice": 153
   },
   {
     "id": 409,
@@ -5260,7 +5577,8 @@
     "equippable": true,
     "equipSlot": "cape",
     "value": 100,
-    "model": "/assets/equipment/cape/PurpleCape.glb"
+    "model": "/assets/equipment/cape/PurpleCape.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 410,
@@ -5270,7 +5588,8 @@
     "equippable": true,
     "equipSlot": "cape",
     "value": 100,
-    "model": "/assets/equipment/cape/BlackCape.glb"
+    "model": "/assets/equipment/cape/BlackCape.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 411,
@@ -5280,7 +5599,8 @@
     "equippable": true,
     "equipSlot": "cape",
     "value": 100,
-    "model": "/assets/equipment/cape/GreenCape.glb"
+    "model": "/assets/equipment/cape/GreenCape.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 412,
@@ -5295,7 +5615,8 @@
     "crushDefence": 3,
     "rangedDefence": 1,
     "meleeStrength": 1,
-    "model": "/assets/equipment/cape/BlueWhiteCape.glb"
+    "model": "/assets/equipment/cape/BlueWhiteCape.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 413,
@@ -5312,7 +5633,8 @@
     "levelRequired": 45,
     "stabAttack": 28,
     "slashAttack": 13,
-    "meleeStrength": 17
+    "meleeStrength": 17,
+    "generalStoreSellPrice": 353
   },
   {
     "id": 414,
@@ -5329,7 +5651,8 @@
     "levelRequired": 45,
     "stabAttack": 13,
     "slashAttack": 38,
-    "meleeStrength": 27
+    "meleeStrength": 27,
+    "generalStoreSellPrice": 457
   },
   {
     "id": 415,
@@ -5345,7 +5668,8 @@
     "equipSkill": "weaponry",
     "levelRequired": 45,
     "crushAttack": 33,
-    "meleeStrength": 27
+    "meleeStrength": 27,
+    "generalStoreSellPrice": 405
   },
   {
     "id": 416,
@@ -5361,7 +5685,8 @@
     "equipSkill": "weaponry",
     "levelRequired": 45,
     "slashAttack": 48,
-    "meleeStrength": 37
+    "meleeStrength": 37,
+    "generalStoreSellPrice": 784
   },
   {
     "id": 417,
@@ -5381,7 +5706,8 @@
     "stabDefence": 43,
     "slashDefence": 53,
     "crushDefence": 33,
-    "rangedDefence": 43
+    "rangedDefence": 43,
+    "generalStoreSellPrice": 1254
   },
   {
     "id": 418,
@@ -5398,7 +5724,8 @@
     "levelRequired": 45,
     "slashAttack": 33,
     "crushAttack": 63,
-    "meleeStrength": 72
+    "meleeStrength": 72,
+    "generalStoreSellPrice": 1202
   },
   {
     "id": 419,
@@ -5415,7 +5742,8 @@
     "equipSkill": "weaponry",
     "levelRequired": 45,
     "slashAttack": 73,
-    "meleeStrength": 122
+    "meleeStrength": 122,
+    "generalStoreSellPrice": 1384
   },
   {
     "id": 420,
@@ -5438,7 +5766,8 @@
       "hair": {
         "mode": "scalp"
       }
-    }
+    },
+    "generalStoreSellPrice": 444
   },
   {
     "id": 421,
@@ -5461,7 +5790,8 @@
       "hair": {
         "mode": "hide"
       }
-    }
+    },
+    "generalStoreSellPrice": 862
   },
   {
     "id": 422,
@@ -5477,7 +5807,8 @@
     "stabDefence": 23,
     "slashDefence": 28,
     "crushDefence": 23,
-    "rangedDefence": 18
+    "rangedDefence": 18,
+    "generalStoreSellPrice": 888
   },
   {
     "id": 423,
@@ -5493,7 +5824,8 @@
     "stabDefence": 38,
     "slashDefence": 43,
     "crushDefence": 38,
-    "rangedDefence": 28
+    "rangedDefence": 28,
+    "generalStoreSellPrice": 1306
   },
   {
     "id": 424,
@@ -5512,7 +5844,8 @@
     "stabDefence": 33,
     "slashDefence": 38,
     "crushDefence": 28,
-    "rangedDefence": 28
+    "rangedDefence": 28,
+    "generalStoreSellPrice": 1384
   },
   {
     "id": 425,
@@ -5532,7 +5865,8 @@
     "slashDefence": 83,
     "crushDefence": 63,
     "rangedDefence": 73,
-    "bodyHideStyle": "plate"
+    "bodyHideStyle": "plate",
+    "generalStoreSellPrice": 2480
   },
   {
     "id": 426,
@@ -5549,7 +5883,8 @@
     "levelRequired": 55,
     "stabAttack": 33,
     "slashAttack": 15,
-    "meleeStrength": 20
+    "meleeStrength": 20,
+    "generalStoreSellPrice": 576
   },
   {
     "id": 427,
@@ -5566,7 +5901,8 @@
     "levelRequired": 55,
     "stabAttack": 15,
     "slashAttack": 45,
-    "meleeStrength": 32
+    "meleeStrength": 32,
+    "generalStoreSellPrice": 576
   },
   {
     "id": 428,
@@ -5582,7 +5918,8 @@
     "equipSkill": "weaponry",
     "levelRequired": 55,
     "crushAttack": 39,
-    "meleeStrength": 32
+    "meleeStrength": 32,
+    "generalStoreSellPrice": 576
   },
   {
     "id": 429,
@@ -5598,7 +5935,8 @@
     "equipSkill": "weaponry",
     "levelRequired": 55,
     "slashAttack": 57,
-    "meleeStrength": 44
+    "meleeStrength": 44,
+    "generalStoreSellPrice": 1152
   },
   {
     "id": 430,
@@ -5618,7 +5956,8 @@
     "stabDefence": 51,
     "slashDefence": 63,
     "crushDefence": 39,
-    "rangedDefence": 51
+    "rangedDefence": 51,
+    "generalStoreSellPrice": 1728
   },
   {
     "id": 431,
@@ -5635,7 +5974,8 @@
     "levelRequired": 55,
     "slashAttack": 39,
     "crushAttack": 75,
-    "meleeStrength": 86
+    "meleeStrength": 86,
+    "generalStoreSellPrice": 1728
   },
   {
     "id": 432,
@@ -5652,7 +5992,8 @@
     "equipSkill": "weaponry",
     "levelRequired": 55,
     "slashAttack": 87,
-    "meleeStrength": 146
+    "meleeStrength": 146,
+    "generalStoreSellPrice": 1728
   },
   {
     "id": 433,
@@ -5675,7 +6016,8 @@
       "hair": {
         "mode": "scalp"
       }
-    }
+    },
+    "generalStoreSellPrice": 576
   },
   {
     "id": 434,
@@ -5698,7 +6040,8 @@
       "hair": {
         "mode": "hide"
       }
-    }
+    },
+    "generalStoreSellPrice": 1152
   },
   {
     "id": 435,
@@ -5714,7 +6057,8 @@
     "stabDefence": 27,
     "slashDefence": 33,
     "crushDefence": 27,
-    "rangedDefence": 21
+    "rangedDefence": 21,
+    "generalStoreSellPrice": 1152
   },
   {
     "id": 436,
@@ -5730,7 +6074,8 @@
     "stabDefence": 45,
     "slashDefence": 51,
     "crushDefence": 45,
-    "rangedDefence": 33
+    "rangedDefence": 33,
+    "generalStoreSellPrice": 1728
   },
   {
     "id": 437,
@@ -5749,7 +6094,8 @@
     "stabDefence": 39,
     "slashDefence": 45,
     "crushDefence": 33,
-    "rangedDefence": 33
+    "rangedDefence": 33,
+    "generalStoreSellPrice": 1728
   },
   {
     "id": 438,
@@ -5769,7 +6115,8 @@
     "slashDefence": 99,
     "crushDefence": 75,
     "rangedDefence": 87,
-    "bodyHideStyle": "plate"
+    "bodyHideStyle": "plate",
+    "generalStoreSellPrice": 2880
   },
   {
     "id": 439,
@@ -5780,7 +6127,8 @@
     "equipSlot": "cape",
     "stabAttack": 2,
     "value": 100,
-    "model": "/assets/equipment/cape/RippedBlackCape.glb"
+    "model": "/assets/equipment/cape/RippedBlackCape.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 440,
@@ -5789,7 +6137,8 @@
     "stackable": true,
     "equippable": false,
     "value": 1,
-    "model": "/assets/models/BankNote.glb"
+    "model": "/assets/models/BankNote.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 441,
@@ -5798,7 +6147,8 @@
     "stackable": false,
     "equippable": false,
     "value": 4,
-    "model": "/assets/models/Charcoal.glb"
+    "model": "/assets/models/Charcoal.glb",
+    "generalStoreSellPrice": 18
   },
   {
     "id": 442,
@@ -5807,7 +6157,8 @@
     "stackable": false,
     "equippable": false,
     "value": 8,
-    "model": "/assets/models/Sulphur.glb"
+    "model": "/assets/models/Sulphur.glb",
+    "generalStoreSellPrice": 3
   },
   {
     "id": 443,
@@ -5818,7 +6169,8 @@
     "equipSlot": "head",
     "headRenderMode": "hairFit",
     "value": 100,
-    "model": "/assets/equipment/head/PartyHatBlack.glb"
+    "model": "/assets/equipment/head/PartyHatBlack.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 444,
@@ -5829,7 +6181,8 @@
     "equipSlot": "head",
     "headRenderMode": "hairFit",
     "value": 100,
-    "model": "/assets/equipment/head/PartyHatBlue.glb"
+    "model": "/assets/equipment/head/PartyHatBlue.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 445,
@@ -5840,7 +6193,8 @@
     "equipSlot": "head",
     "headRenderMode": "hairFit",
     "value": 100,
-    "model": "/assets/equipment/head/PartyHatGold.glb"
+    "model": "/assets/equipment/head/PartyHatGold.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 446,
@@ -5851,7 +6205,8 @@
     "equipSlot": "head",
     "headRenderMode": "hairFit",
     "value": 100,
-    "model": "/assets/equipment/head/PartyHatGreen.glb"
+    "model": "/assets/equipment/head/PartyHatGreen.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 447,
@@ -5862,7 +6217,8 @@
     "equipSlot": "head",
     "headRenderMode": "hairFit",
     "value": 100,
-    "model": "/assets/equipment/head/PartyHatOrange.glb"
+    "model": "/assets/equipment/head/PartyHatOrange.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 448,
@@ -5873,7 +6229,8 @@
     "equipSlot": "head",
     "headRenderMode": "hairFit",
     "value": 100,
-    "model": "/assets/equipment/head/PartyHatPink.glb"
+    "model": "/assets/equipment/head/PartyHatPink.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 449,
@@ -5884,7 +6241,8 @@
     "equipSlot": "head",
     "headRenderMode": "hairFit",
     "value": 100,
-    "model": "/assets/equipment/head/PartyHatRed.glb"
+    "model": "/assets/equipment/head/PartyHatRed.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 450,
@@ -5895,7 +6253,8 @@
     "equipSlot": "head",
     "headRenderMode": "hairFit",
     "value": 100,
-    "model": "/assets/equipment/head/PartyHatWhite.glb"
+    "model": "/assets/equipment/head/PartyHatWhite.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 451,
@@ -5906,7 +6265,8 @@
     "equipSlot": "head",
     "headRenderMode": "hairFit",
     "value": 100,
-    "model": "/assets/equipment/head/PartyHatYellow.glb"
+    "model": "/assets/equipment/head/PartyHatYellow.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 452,
@@ -5922,7 +6282,8 @@
       "hair": {
         "mode": "underHat"
       }
-    }
+    },
+    "generalStoreSellPrice": 10
   },
   {
     "id": 453,
@@ -5941,7 +6302,8 @@
     "equipSkill": "archery",
     "levelRequired": 1,
     "value": 20,
-    "model": "/assets/models/Shortbow.glb"
+    "model": "/assets/models/Shortbow.glb",
+    "generalStoreSellPrice": 20
   },
   {
     "id": 454,
@@ -5960,7 +6322,8 @@
     "equipSkill": "archery",
     "levelRequired": 5,
     "value": 40,
-    "model": "/assets/models/OakShortbow.glb"
+    "model": "/assets/models/OakShortbow.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 455,
@@ -5979,7 +6342,8 @@
     "equipSkill": "archery",
     "levelRequired": 18,
     "value": 65,
-    "model": "/assets/models/WillowShortbow.glb"
+    "model": "/assets/models/WillowShortbow.glb",
+    "generalStoreSellPrice": 80
   },
   {
     "id": 456,
@@ -5998,7 +6362,8 @@
     "equipSkill": "archery",
     "levelRequired": 32,
     "value": 100,
-    "model": "/assets/models/MapleShortbow.glb"
+    "model": "/assets/models/MapleShortbow.glb",
+    "generalStoreSellPrice": 160
   },
   {
     "id": 457,
@@ -6017,7 +6382,8 @@
     "equipSkill": "archery",
     "levelRequired": 46,
     "value": 150,
-    "model": "/assets/models/YewShortbow.glb"
+    "model": "/assets/models/YewShortbow.glb",
+    "generalStoreSellPrice": 320
   },
   {
     "id": 458,
@@ -6036,7 +6402,8 @@
     "equipSkill": "archery",
     "levelRequired": 60,
     "value": 220,
-    "model": "/assets/models/MysticShortbow.glb"
+    "model": "/assets/models/MysticShortbow.glb",
+    "generalStoreSellPrice": 640
   },
   {
     "id": 460,
@@ -6053,7 +6420,8 @@
     "levelRequired": 30,
     "stabAttack": 22,
     "slashAttack": 12,
-    "meleeStrength": 13
+    "meleeStrength": 13,
+    "generalStoreSellPrice": 240
   },
   {
     "id": 500,
@@ -6071,7 +6439,8 @@
     "stackable": false,
     "equippable": false,
     "value": 5,
-    "model": "/assets/models/Food/CrayfishRaw.glb"
+    "model": "/assets/models/Food/CrayfishRaw.glb",
+    "generalStoreSellPrice": 2
   },
   {
     "id": 502,
@@ -6152,7 +6521,8 @@
     "stackable": false,
     "equippable": false,
     "value": 33,
-    "model": "/assets/models/Food/TunaRaw.glb"
+    "model": "/assets/models/Food/TunaRaw.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 511,
@@ -6269,7 +6639,8 @@
     "stackable": false,
     "equippable": false,
     "value": 108,
-    "model": "/assets/models/Food/OarfishRaw.glb"
+    "model": "/assets/models/Food/OarfishRaw.glb",
+    "generalStoreSellPrice": 43
   },
   {
     "id": 524,
@@ -6298,7 +6669,8 @@
     "equippable": false,
     "healAmount": 3,
     "value": 9,
-    "model": "/assets/models/Food/CrayfishCooked.glb"
+    "model": "/assets/models/Food/CrayfishCooked.glb",
+    "generalStoreSellPrice": 3
   },
   {
     "id": 527,
@@ -6388,7 +6760,8 @@
     "equippable": false,
     "healAmount": 8,
     "value": 49,
-    "model": "/assets/models/Food/TunaCooked.glb"
+    "model": "/assets/models/Food/TunaCooked.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 536,
@@ -6518,7 +6891,8 @@
     "equippable": false,
     "healAmount": 20,
     "value": 162,
-    "model": "/assets/models/Food/OarfishCooked.glb"
+    "model": "/assets/models/Food/OarfishCooked.glb",
+    "generalStoreSellPrice": 64
   },
   {
     "id": 549,
@@ -6539,7 +6913,8 @@
     "value": 1,
     "icon": "tinderbox_166.png",
     "model": "/assets/models/Matchbox.glb",
-    "legacyName": "Tinderbox"
+    "legacyName": "Tinderbox",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 16,
@@ -6549,7 +6924,8 @@
     "stackable": false,
     "equippable": false,
     "healAmount": 4,
-    "model": "/assets/models/BeefCooked.glb"
+    "model": "/assets/models/BeefCooked.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 551,
@@ -6558,7 +6934,8 @@
     "value": 2,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Ashes.glb"
+    "model": "/assets/models/Ashes.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 552,
@@ -6570,7 +6947,8 @@
     "equipSlot": "weapon",
     "toolType": "fishing_net",
     "icon": "Net_376.png",
-    "model": "/assets/models/FishingNet.glb"
+    "model": "/assets/models/FishingNet.glb",
+    "generalStoreSellPrice": 2
   },
   {
     "id": 553,
@@ -6582,7 +6960,8 @@
     "equipSlot": "weapon",
     "toolType": "fishing_rod",
     "icon": "Fishing_Rod_377.png",
-    "model": "/assets/models/FishingRod.glb"
+    "model": "/assets/models/FishingRod.glb",
+    "generalStoreSellPrice": 2
   },
   {
     "id": 554,
@@ -6594,7 +6973,8 @@
     "equipSlot": "weapon",
     "toolType": "harpoon",
     "icon": "Harpoon_379.png",
-    "model": "/assets/models/Harpoon.glb"
+    "model": "/assets/models/Harpoon.glb",
+    "generalStoreSellPrice": 2
   },
   {
     "id": 555,
@@ -6605,7 +6985,8 @@
     "equippable": false,
     "questItem": true,
     "icon": "Chest_key_382.png",
-    "model": "/assets/models/keys/IronKey.glb"
+    "model": "/assets/models/keys/IronKey.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 556,
@@ -6615,7 +6996,8 @@
     "stackable": false,
     "equippable": false,
     "questItem": true,
-    "model": "/assets/models/hides/BearHide.glb"
+    "model": "/assets/models/hides/BearHide.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 557,
@@ -6626,7 +7008,8 @@
     "equippable": false,
     "equipSlot": "weapon",
     "toolType": "fishing_pot",
-    "model": "/assets/models/CrabPot.glb"
+    "model": "/assets/models/CrabPot.glb",
+    "generalStoreSellPrice": 8
   },
   {
     "id": 564,
@@ -6662,7 +7045,8 @@
         "model": "/assets/models/bait/maggot/MaggotBaitStack5Plus.glb",
         "scale": 1.08
       }
-    ]
+    ],
+    "generalStoreSellPrice": 1
   },
   {
     "id": 558,
@@ -6671,7 +7055,8 @@
     "value": 34,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Food/LobsterRaw.glb"
+    "model": "/assets/models/Food/LobsterRaw.glb",
+    "generalStoreSellPrice": 60
   },
   {
     "id": 559,
@@ -6681,7 +7066,8 @@
     "stackable": false,
     "equippable": false,
     "healAmount": 11,
-    "model": "/assets/models/Food/LobsterCooked.glb"
+    "model": "/assets/models/Food/LobsterCooked.glb",
+    "generalStoreSellPrice": 60
   },
   {
     "id": 560,
@@ -6690,7 +7076,8 @@
     "value": 6,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Food/SardineRaw.glb"
+    "model": "/assets/models/Food/SardineRaw.glb",
+    "generalStoreSellPrice": 4
   },
   {
     "id": 561,
@@ -6700,7 +7087,8 @@
     "stackable": false,
     "equippable": false,
     "healAmount": 4,
-    "model": "/assets/models/Food/SardineCooked.glb"
+    "model": "/assets/models/Food/SardineCooked.glb",
+    "generalStoreSellPrice": 4
   },
   {
     "id": 562,
@@ -6709,7 +7097,8 @@
     "value": 31,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Food/OctopusRaw.glb"
+    "model": "/assets/models/Food/OctopusRaw.glb",
+    "generalStoreSellPrice": 12
   },
   {
     "id": 563,
@@ -6719,7 +7108,8 @@
     "stackable": false,
     "equippable": false,
     "healAmount": 17,
-    "model": "/assets/models/Food/OctopusCooked.glb"
+    "model": "/assets/models/Food/OctopusCooked.glb",
+    "generalStoreSellPrice": 19
   },
   {
     "id": 565,
@@ -6728,7 +7118,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Food/ShrimpBurnt.glb"
+    "model": "/assets/models/Food/ShrimpBurnt.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 566,
@@ -6737,7 +7128,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Food/CrayfishBurnt.glb"
+    "model": "/assets/models/Food/CrayfishBurnt.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 567,
@@ -6746,7 +7138,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Food/SardineBurnt.glb"
+    "model": "/assets/models/Food/SardineBurnt.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 568,
@@ -6755,7 +7148,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Food/TunaBurnt.glb"
+    "model": "/assets/models/Food/TunaBurnt.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 569,
@@ -6764,7 +7158,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Food/LobsterBurnt.glb"
+    "model": "/assets/models/Food/LobsterBurnt.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 570,
@@ -6773,7 +7168,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Food/OctopusBurnt.glb"
+    "model": "/assets/models/Food/OctopusBurnt.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 571,
@@ -6782,7 +7178,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Food/OarfishBurnt.glb"
+    "model": "/assets/models/Food/OarfishBurnt.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 572,
@@ -6795,7 +7192,8 @@
     "model": "/assets/equipment/legs/EQ2004TestFlares.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/EQ2004TestFlaresWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 1
   },
   {
     "id": 573,
@@ -6806,7 +7204,8 @@
     "equippable": true,
     "equipSlot": "head",
     "headRenderMode": "hat",
-    "model": "/assets/equipment/head/Sunglasses.glb"
+    "model": "/assets/equipment/head/Sunglasses.glb",
+    "generalStoreSellPrice": 10
   },
   {
     "id": 574,
@@ -6816,7 +7215,8 @@
     "stackable": false,
     "equippable": false,
     "healAmount": 4,
-    "model": "/assets/models/Food/Fried shrimp with rice.glb"
+    "model": "/assets/models/Food/Fried shrimp with rice.glb",
+    "generalStoreSellPrice": 7
   },
   {
     "id": 575,
@@ -6827,7 +7227,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/SapphireAmulet.glb"
+    "model": "/assets/equipment/neck/SapphireAmulet.glb",
+    "generalStoreSellPrice": 360
   },
   {
     "id": 576,
@@ -6838,7 +7239,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/BlackGemAmulet.glb"
+    "model": "/assets/equipment/neck/BlackGemAmulet.glb",
+    "generalStoreSellPrice": 1110
   },
   {
     "id": 577,
@@ -6849,7 +7251,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/RedGemAmulet.glb"
+    "model": "/assets/equipment/neck/RedGemAmulet.glb",
+    "generalStoreSellPrice": 810
   },
   {
     "id": 578,
@@ -6860,7 +7263,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/GreenGemAmulet.glb"
+    "model": "/assets/equipment/neck/GreenGemAmulet.glb",
+    "generalStoreSellPrice": 120
   },
   {
     "id": 579,
@@ -6871,7 +7275,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/PurpleGemAmulet.glb"
+    "model": "/assets/equipment/neck/PurpleGemAmulet.glb",
+    "generalStoreSellPrice": 208
   },
   {
     "id": 580,
@@ -6882,7 +7287,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/WhiteGemAmulet.glb"
+    "model": "/assets/equipment/neck/WhiteGemAmulet.glb",
+    "generalStoreSellPrice": 224
   },
   {
     "id": 581,
@@ -6893,7 +7299,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/YellowGemAmulet.glb"
+    "model": "/assets/equipment/neck/YellowGemAmulet.glb",
+    "generalStoreSellPrice": 72
   },
   {
     "id": 582,
@@ -6902,7 +7309,8 @@
     "value": 2,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Bowstring.glb"
+    "model": "/assets/models/Bowstring.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 583,
@@ -6911,7 +7319,8 @@
     "value": 120,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/bars/GoldBar.glb"
+    "model": "/assets/models/bars/GoldBar.glb",
+    "generalStoreSellPrice": 120
   },
   {
     "id": 597,
@@ -6921,7 +7330,8 @@
     "stackable": false,
     "equippable": false,
     "model": "/assets/models/item-thumbnails/ore/GoldOreRock.glb",
-    "thumbnailModel": "/assets/models/item-thumbnails/ore/GoldOreRock.glb"
+    "thumbnailModel": "/assets/models/item-thumbnails/ore/GoldOreRock.glb",
+    "generalStoreSellPrice": 60
   },
   {
     "id": 598,
@@ -6931,7 +7341,8 @@
     "stackable": false,
     "equippable": false,
     "model": "/assets/models/Flax.glb",
-    "thumbnailModel": "/assets/models/Flax.glb"
+    "thumbnailModel": "/assets/models/Flax.glb",
+    "generalStoreSellPrice": 2
   },
   {
     "id": 584,
@@ -6941,7 +7352,8 @@
     "stackable": false,
     "equippable": false,
     "noteable": false,
-    "model": "/assets/equipment/neck/YellowGemAmulet.glb"
+    "model": "/assets/equipment/neck/YellowGemAmulet.glb",
+    "generalStoreSellPrice": 60
   },
   {
     "id": 585,
@@ -6952,7 +7364,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/YellowGemAmulet.glb"
+    "model": "/assets/equipment/neck/YellowGemAmulet.glb",
+    "generalStoreSellPrice": 140
   },
   {
     "id": 586,
@@ -6962,7 +7375,8 @@
     "stackable": false,
     "equippable": false,
     "noteable": false,
-    "model": "/assets/equipment/neck/SapphireAmulet.glb"
+    "model": "/assets/equipment/neck/SapphireAmulet.glb",
+    "generalStoreSellPrice": 84
   },
   {
     "id": 587,
@@ -6972,7 +7386,8 @@
     "stackable": false,
     "equippable": false,
     "noteable": false,
-    "model": "/assets/equipment/neck/GreenGemAmulet.glb"
+    "model": "/assets/equipment/neck/GreenGemAmulet.glb",
+    "generalStoreSellPrice": 116
   },
   {
     "id": 588,
@@ -6983,7 +7398,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/GreenGemAmulet.glb"
+    "model": "/assets/equipment/neck/GreenGemAmulet.glb",
+    "generalStoreSellPrice": 510
   },
   {
     "id": 589,
@@ -6993,7 +7409,8 @@
     "stackable": false,
     "equippable": false,
     "noteable": false,
-    "model": "/assets/equipment/neck/RedGemAmulet.glb"
+    "model": "/assets/equipment/neck/RedGemAmulet.glb",
+    "generalStoreSellPrice": 148
   },
   {
     "id": 590,
@@ -7004,7 +7421,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/RedGemAmulet.glb"
+    "model": "/assets/equipment/neck/RedGemAmulet.glb",
+    "generalStoreSellPrice": 810
   },
   {
     "id": 591,
@@ -7014,7 +7432,8 @@
     "stackable": false,
     "equippable": false,
     "noteable": false,
-    "model": "/assets/equipment/neck/WhiteGemAmulet.glb"
+    "model": "/assets/equipment/neck/WhiteGemAmulet.glb",
+    "generalStoreSellPrice": 220
   },
   {
     "id": 592,
@@ -7025,7 +7444,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/WhiteGemAmulet.glb"
+    "model": "/assets/equipment/neck/WhiteGemAmulet.glb",
+    "generalStoreSellPrice": 1410
   },
   {
     "id": 593,
@@ -7035,7 +7455,8 @@
     "stackable": false,
     "equippable": false,
     "noteable": false,
-    "model": "/assets/equipment/neck/BlackGemAmulet.glb"
+    "model": "/assets/equipment/neck/BlackGemAmulet.glb",
+    "generalStoreSellPrice": 1110
   },
   {
     "id": 594,
@@ -7046,7 +7467,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/BlackGemAmulet.glb"
+    "model": "/assets/equipment/neck/BlackGemAmulet.glb",
+    "generalStoreSellPrice": 1110
   },
   {
     "id": 595,
@@ -7056,7 +7478,8 @@
     "stackable": false,
     "equippable": false,
     "noteable": false,
-    "model": "/assets/equipment/neck/PurpleGemAmulet.glb"
+    "model": "/assets/equipment/neck/PurpleGemAmulet.glb",
+    "generalStoreSellPrice": 204
   },
   {
     "id": 596,
@@ -7067,7 +7490,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/PurpleGemAmulet.glb"
+    "model": "/assets/equipment/neck/PurpleGemAmulet.glb",
+    "generalStoreSellPrice": 208
   },
   {
     "id": 9,
@@ -7080,7 +7504,8 @@
     "model": "/assets/equipment/legs/LeatherChaps.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/LeatherChapsWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 8
   },
   {
     "id": 599,
@@ -7101,7 +7526,8 @@
     "neckGearFitMode": "robeTop",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/MonkRobeWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 10
   },
   {
     "id": 600,
@@ -7121,7 +7547,8 @@
     "model": "/assets/equipment/legs/MonkRobeBottom.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/MonkRobeBottomWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 8
   },
   {
     "id": 601,
@@ -7142,7 +7569,8 @@
     "model": "/assets/equipment/body/MonkRobe.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/MonkRobeWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 14
   },
   {
     "id": 602,
@@ -7162,7 +7590,8 @@
     "model": "/assets/equipment/legs/MonkRobeBottom.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/MonkRobeBottomWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 12
   },
   {
     "id": 603,
@@ -7183,7 +7612,8 @@
     "model": "/assets/equipment/body/MonkRobe.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/MonkRobeWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 14
   },
   {
     "id": 604,
@@ -7203,7 +7633,8 @@
     "model": "/assets/equipment/legs/MonkRobeBottom.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/MonkRobeBottomWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 12
   },
   {
     "id": 605,
@@ -7224,7 +7655,8 @@
     "model": "/assets/equipment/body/MonkRobe.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/MonkRobeWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 10
   },
   {
     "id": 606,
@@ -7244,7 +7676,8 @@
     "model": "/assets/equipment/legs/MonkRobeBottom.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/MonkRobeBottomWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 8
   },
   {
     "id": 607,
@@ -7265,7 +7698,8 @@
     "model": "/assets/equipment/body/MonkRobe.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/MonkRobeWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 10
   },
   {
     "id": 608,
@@ -7285,7 +7719,8 @@
     "model": "/assets/equipment/legs/MonkRobeBottom.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/MonkRobeBottomWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 8
   },
   {
     "id": 609,
@@ -7307,7 +7742,8 @@
       "hair": {
         "mode": "underHat"
       }
-    }
+    },
+    "generalStoreSellPrice": 36
   },
   {
     "id": 610,
@@ -7329,7 +7765,8 @@
       "hair": {
         "mode": "underHat"
       }
-    }
+    },
+    "generalStoreSellPrice": 36
   },
   {
     "id": 611,
@@ -7343,7 +7780,8 @@
     "weaponStyle": "bow",
     "twoHanded": true,
     "model": "/assets/equipment/weapon/SpiderBow.glb",
-    "attackSpeed": 4
+    "attackSpeed": 4,
+    "generalStoreSellPrice": 20000
   },
   {
     "id": 612,
@@ -7356,7 +7794,8 @@
     "weaponStyle": "slash",
     "twoHanded": true,
     "model": "/assets/equipment/weapon/SpiderClaws.glb",
-    "attackSpeed": 5
+    "attackSpeed": 5,
+    "generalStoreSellPrice": 20000
   },
   {
     "id": 613,
@@ -7371,7 +7810,8 @@
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/BearHideBodyWoman.glb"
     },
-    "legacyName": "Bear Ranged Body"
+    "legacyName": "Bear Ranged Body",
+    "generalStoreSellPrice": 68
   },
   {
     "id": 614,
@@ -7386,7 +7826,8 @@
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/WolfHideBodyWoman.glb"
     },
-    "legacyName": "Fur Ranged Top"
+    "legacyName": "Fur Ranged Top",
+    "generalStoreSellPrice": 1730
   },
   {
     "id": 615,
@@ -7397,7 +7838,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/SapphireAmulet.glb"
+    "model": "/assets/equipment/neck/SapphireAmulet.glb",
+    "generalStoreSellPrice": 96
   },
   {
     "id": 616,
@@ -7411,7 +7853,8 @@
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/WolfHideChapsWoman.glb"
     },
-    "legacyName": "Fur Ranged Bottom"
+    "legacyName": "Fur Ranged Bottom",
+    "generalStoreSellPrice": 930
   },
   {
     "id": 617,
@@ -7422,7 +7865,8 @@
     "equippable": false,
     "healAmount": 1,
     "consumeVerb": "Drink",
-    "icon": "Beer_193.png"
+    "icon": "Beer_193.png",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 618,
@@ -7431,7 +7875,8 @@
     "value": 1,
     "stackable": true,
     "equippable": false,
-    "model": "/assets/models/NeedleAndThread.glb"
+    "model": "/assets/models/NeedleAndThread.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 619,
@@ -7440,7 +7885,8 @@
     "value": 1,
     "stackable": true,
     "equippable": false,
-    "model": "/assets/models/Thread.glb"
+    "model": "/assets/models/Thread.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 620,
@@ -7461,7 +7907,8 @@
     "model": "/assets/equipment/body/MonkRobe.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/MonkRobeWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 10
   },
   {
     "id": 621,
@@ -7481,7 +7928,8 @@
     "model": "/assets/equipment/legs/MonkRobeBottom.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/MonkRobeBottomWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 8
   },
   {
     "id": 622,
@@ -7502,7 +7950,8 @@
     "model": "/assets/equipment/body/MonkRobe.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/MonkRobeWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 10
   },
   {
     "id": 623,
@@ -7522,7 +7971,8 @@
     "model": "/assets/equipment/legs/MonkRobeBottom.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/MonkRobeBottomWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 8
   },
   {
     "id": 624,
@@ -7543,7 +7993,8 @@
     "model": "/assets/equipment/body/MonkRobe.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/MonkRobeWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 10
   },
   {
     "id": 625,
@@ -7563,7 +8014,8 @@
     "model": "/assets/equipment/legs/MonkRobeBottom.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/MonkRobeBottomWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 8
   },
   {
     "id": 626,
@@ -7584,7 +8036,8 @@
     "model": "/assets/equipment/body/MonkRobe.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/MonkRobeWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 10
   },
   {
     "id": 627,
@@ -7604,7 +8057,8 @@
     "model": "/assets/equipment/legs/MonkRobeBottom.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/MonkRobeBottomWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 8
   },
   {
     "id": 628,
@@ -7625,7 +8079,8 @@
     "model": "/assets/equipment/body/MonkRobe.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/MonkRobeWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 10
   },
   {
     "id": 629,
@@ -7645,7 +8100,8 @@
     "model": "/assets/equipment/legs/MonkRobeBottom.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/MonkRobeBottomWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 8
   },
   {
     "id": 630,
@@ -7666,7 +8122,8 @@
     "model": "/assets/equipment/body/MonkRobe.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/MonkRobeWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 10
   },
   {
     "id": 631,
@@ -7686,7 +8143,8 @@
     "model": "/assets/equipment/legs/MonkRobeBottom.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/MonkRobeBottomWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 8
   },
   {
     "id": 632,
@@ -7704,7 +8162,8 @@
         "mode": "scalp"
       }
     },
-    "model": "/assets/equipment/head/BerserkerHelm.glb"
+    "model": "/assets/equipment/head/BerserkerHelm.glb",
+    "generalStoreSellPrice": 48
   },
   {
     "id": 633,
@@ -7718,7 +8177,8 @@
     "model": "/assets/equipment/body/BerserkerPlatebody.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/BerserkerPlatebodyWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 240
   },
   {
     "id": 634,
@@ -7727,7 +8187,8 @@
     "value": 720,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/gems/ImperialStone.glb"
+    "model": "/assets/models/gems/ImperialStone.glb",
+    "generalStoreSellPrice": 288
   },
   {
     "id": 635,
@@ -7736,7 +8197,8 @@
     "value": 200,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/gems/CutSapphire.glb"
+    "model": "/assets/models/gems/CutSapphire.glb",
+    "generalStoreSellPrice": 32
   },
   {
     "id": 636,
@@ -7745,7 +8207,8 @@
     "value": 300,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/gems/CutEmerald.glb"
+    "model": "/assets/models/gems/CutEmerald.glb",
+    "generalStoreSellPrice": 64
   },
   {
     "id": 637,
@@ -7754,7 +8217,8 @@
     "value": 400,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/gems/CutRuby.glb"
+    "model": "/assets/models/gems/CutRuby.glb",
+    "generalStoreSellPrice": 128
   },
   {
     "id": 638,
@@ -7763,7 +8227,8 @@
     "value": 625,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/gems/CutDiamond.glb"
+    "model": "/assets/models/gems/CutDiamond.glb",
+    "generalStoreSellPrice": 256
   },
   {
     "id": 639,
@@ -7772,7 +8237,8 @@
     "value": 150,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/gems/CutAmethyst.glb"
+    "model": "/assets/models/gems/CutAmethyst.glb",
+    "generalStoreSellPrice": 307
   },
   {
     "id": 640,
@@ -7781,7 +8247,8 @@
     "value": 225,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/gems/CutTopaz.glb"
+    "model": "/assets/models/gems/CutTopaz.glb",
+    "generalStoreSellPrice": 460
   },
   {
     "id": 641,
@@ -7790,7 +8257,8 @@
     "value": 275,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/gems/CutOpal.glb"
+    "model": "/assets/models/gems/CutOpal.glb",
+    "generalStoreSellPrice": 25
   },
   {
     "id": 642,
@@ -7799,7 +8267,8 @@
     "value": 325,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/gems/CutOnyx.glb"
+    "model": "/assets/models/gems/CutOnyx.glb",
+    "generalStoreSellPrice": 665
   },
   {
     "id": 643,
@@ -7808,7 +8277,8 @@
     "value": 900,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/gems/CutImperialStone.glb"
+    "model": "/assets/models/gems/CutImperialStone.glb",
+    "generalStoreSellPrice": 360
   },
   {
     "id": 644,
@@ -7818,7 +8288,8 @@
     "stackable": false,
     "equippable": false,
     "toolType": "chisel",
-    "model": "/assets/models/Chisel.glb"
+    "model": "/assets/models/Chisel.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 645,
@@ -7829,7 +8300,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/GoldRing.glb"
+    "model": "/assets/equipment/ring/GoldRing.glb",
+    "generalStoreSellPrice": 140
   },
   {
     "id": 646,
@@ -7840,7 +8312,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/SapphireRing.glb"
+    "model": "/assets/equipment/ring/SapphireRing.glb",
+    "generalStoreSellPrice": 360
   },
   {
     "id": 647,
@@ -7851,7 +8324,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/EmeraldRing.glb"
+    "model": "/assets/equipment/ring/EmeraldRing.glb",
+    "generalStoreSellPrice": 510
   },
   {
     "id": 648,
@@ -7862,7 +8336,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/RubyRing.glb"
+    "model": "/assets/equipment/ring/RubyRing.glb",
+    "generalStoreSellPrice": 810
   },
   {
     "id": 649,
@@ -7873,7 +8348,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/DiamondRing.glb"
+    "model": "/assets/equipment/ring/DiamondRing.glb",
+    "generalStoreSellPrice": 1410
   },
   {
     "id": 650,
@@ -7884,7 +8360,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/AmethystRing.glb"
+    "model": "/assets/equipment/ring/AmethystRing.glb",
+    "generalStoreSellPrice": 112
   },
   {
     "id": 651,
@@ -7895,7 +8372,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/TopazRing.glb"
+    "model": "/assets/equipment/ring/TopazRing.glb",
+    "generalStoreSellPrice": 142
   },
   {
     "id": 652,
@@ -7906,7 +8384,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/OpalRing.glb"
+    "model": "/assets/equipment/ring/OpalRing.glb",
+    "generalStoreSellPrice": 162
   },
   {
     "id": 653,
@@ -7917,7 +8396,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/OnyxRing.glb"
+    "model": "/assets/equipment/ring/OnyxRing.glb",
+    "generalStoreSellPrice": 1110
   },
   {
     "id": 654,
@@ -7928,7 +8408,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/ImperialStoneRing.glb"
+    "model": "/assets/equipment/ring/ImperialStoneRing.glb",
+    "generalStoreSellPrice": 412
   },
   {
     "id": 655,
@@ -7939,7 +8420,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/GoldRing.glb"
+    "model": "/assets/equipment/ring/GoldRing.glb",
+    "generalStoreSellPrice": 70
   },
   {
     "id": 656,
@@ -7950,7 +8432,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/SapphireRing.glb"
+    "model": "/assets/equipment/ring/SapphireRing.glb",
+    "generalStoreSellPrice": 140
   },
   {
     "id": 657,
@@ -7961,7 +8444,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/EmeraldRing.glb"
+    "model": "/assets/equipment/ring/EmeraldRing.glb",
+    "generalStoreSellPrice": 180
   },
   {
     "id": 658,
@@ -7972,7 +8456,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/RubyRing.glb"
+    "model": "/assets/equipment/ring/RubyRing.glb",
+    "generalStoreSellPrice": 220
   },
   {
     "id": 659,
@@ -7983,7 +8468,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/DiamondRing.glb"
+    "model": "/assets/equipment/ring/DiamondRing.glb",
+    "generalStoreSellPrice": 312
   },
   {
     "id": 660,
@@ -7994,7 +8480,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/OnyxRing.glb"
+    "model": "/assets/equipment/ring/OnyxRing.glb",
+    "generalStoreSellPrice": 1110
   },
   {
     "id": 661,
@@ -8005,7 +8492,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "ring",
-    "model": "/assets/equipment/ring/ImperialStoneRing.glb"
+    "model": "/assets/equipment/ring/ImperialStoneRing.glb",
+    "generalStoreSellPrice": 432
   },
   {
     "id": 662,
@@ -8014,7 +8502,8 @@
     "value": 3,
     "stackable": true,
     "equippable": false,
-    "icon": "essence-water-v8.png"
+    "icon": "essence-water-v8.png",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 663,
@@ -8023,7 +8512,8 @@
     "value": 3,
     "stackable": true,
     "equippable": false,
-    "icon": "essence-fire-v8.png"
+    "icon": "essence-fire-v8.png",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 664,
@@ -8032,7 +8522,8 @@
     "value": 3,
     "stackable": true,
     "equippable": false,
-    "icon": "essence-earth-v8.png"
+    "icon": "essence-earth-v8.png",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 665,
@@ -8041,7 +8532,8 @@
     "value": 3,
     "stackable": true,
     "equippable": false,
-    "icon": "essence-air-v8.png"
+    "icon": "essence-air-v8.png",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 666,
@@ -8050,7 +8542,8 @@
     "value": 15,
     "stackable": true,
     "equippable": false,
-    "icon": "essence-death-v8.png"
+    "icon": "essence-death-v8.png",
+    "generalStoreSellPrice": 6
   },
   {
     "id": 667,
@@ -8059,7 +8552,8 @@
     "value": 75,
     "stackable": true,
     "equippable": false,
-    "icon": "essence-blood-v8.png"
+    "icon": "essence-blood-v8.png",
+    "generalStoreSellPrice": 30
   },
   {
     "id": 668,
@@ -8069,7 +8563,8 @@
     "stackable": false,
     "equippable": false,
     "icon": "Dragon_Bones_814.png",
-    "model": "/assets/models/Bones_v2.glb"
+    "model": "/assets/models/Bones_v2.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 669,
@@ -8078,7 +8573,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/EmptyTeaCup.glb"
+    "model": "/assets/models/EmptyTeaCup.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 670,
@@ -8087,16 +8583,18 @@
     "value": 2,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/WaterTeaCup.glb"
+    "model": "/assets/models/WaterTeaCup.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 671,
     "name": "Kalo Tea Leaves",
     "description": "Fragrant Kalo leaves, ready to be steeped in hot water.",
-    "value": 2,
+    "value": 8,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/KaloTeaLeaves.glb"
+    "model": "/assets/models/KaloTeaLeaves.glb",
+    "generalStoreSellPrice": 3
   },
   {
     "id": 672,
@@ -8106,13 +8604,14 @@
     "stackable": false,
     "equippable": false,
     "model": "/assets/models/BoilingWaterTeaCup.glb",
-    "thumbnailModel": "/assets/models/WaterTeaCup.glb"
+    "thumbnailModel": "/assets/models/WaterTeaCup.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 673,
     "name": "Kalo Tea (2 doses)",
     "description": "A full cup of freshly steeped Kalo tea.",
-    "value": 5,
+    "value": 18,
     "stackable": false,
     "equippable": false,
     "healOverTime": {
@@ -8126,13 +8625,14 @@
     },
     "consumeVerb": "Drink",
     "consumeResultItemId": 674,
-    "model": "/assets/models/KaloTeaCup(2).glb"
+    "model": "/assets/models/KaloTeaCup(2).glb",
+    "generalStoreSellPrice": 7
   },
   {
     "id": 674,
     "name": "Kalo Tea (1 dose)",
     "description": "A partly drunk cup of Kalo tea.",
-    "value": 3,
+    "value": 9,
     "stackable": false,
     "equippable": false,
     "healOverTime": {
@@ -8146,7 +8646,8 @@
     },
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/KaloTeaCup(1).glb"
+    "model": "/assets/models/KaloTeaCup(1).glb",
+    "generalStoreSellPrice": 3
   },
   {
     "id": 675,
@@ -8155,27 +8656,30 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/UnfiredTeaCup.glb"
+    "model": "/assets/models/UnfiredTeaCup.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 676,
     "name": "Kawaki Tea Leaves",
     "description": "Cool blue-green leaves with a clean, bracing aroma.",
-    "value": 6,
+    "value": 40,
     "stackable": false,
     "equippable": false,
     "model": "/assets/models/MistleafTeaLeaves.glb",
-    "legacyName": "Mistleaf Tea Leaves"
+    "legacyName": "Mistleaf Tea Leaves",
+    "generalStoreSellPrice": 16
   },
   {
     "id": 677,
     "name": "Lox Tea Leaves",
     "description": "Pale, dusky leaves that shimmer softly in the light.",
-    "value": 12,
+    "value": 56,
     "stackable": false,
     "equippable": false,
     "model": "/assets/models/MoonleafTeaLeaves.glb",
-    "legacyName": "Moonleaf Tea Leaves"
+    "legacyName": "Moonleaf Tea Leaves",
+    "generalStoreSellPrice": 22
   },
   {
     "id": 678,
@@ -8190,7 +8694,8 @@
     "model": "/assets/equipment/body/TatteredRobe.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/TatteredRobeWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 1
   },
   {
     "id": 679,
@@ -8205,7 +8710,8 @@
     "model": "/assets/equipment/legs/TatteredRobeBottom.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/TatteredRobeBottomWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 1
   },
   {
     "id": 680,
@@ -8218,7 +8724,8 @@
     "model": "/assets/equipment/hands/LeatherGloves.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/hands/female/LeatherGlovesWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 7
   },
   {
     "id": 681,
@@ -8236,7 +8743,8 @@
         "mode": "hide"
       }
     },
-    "model": "/assets/equipment/head/HardLeatherCoif.glb"
+    "model": "/assets/equipment/head/HardLeatherCoif.glb",
+    "generalStoreSellPrice": 14
   },
   {
     "id": 682,
@@ -8248,7 +8756,8 @@
     "equipSlot": "head",
     "headRenderMode": "helmet",
     "icon": "Large_Iron_Helmet_6.png",
-    "model": "/assets/equipment/head/TestIronFullHelmV18.glb"
+    "model": "/assets/equipment/head/TestIronFullHelmV18.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 683,
@@ -8259,7 +8768,8 @@
     "equippable": false,
     "noteable": false,
     "questItem": true,
-    "icon": "ID_Paper_573.png"
+    "icon": "ID_Paper_573.png",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 684,
@@ -8270,7 +8780,8 @@
     "equippable": false,
     "noteable": false,
     "questItem": true,
-    "model": "/assets/models/bars/GoldBar.glb"
+    "model": "/assets/models/bars/GoldBar.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 685,
@@ -8281,7 +8792,8 @@
     "equippable": false,
     "noteable": false,
     "questItem": true,
-    "model": "/assets/models/gems/CutRuby.glb"
+    "model": "/assets/models/gems/CutRuby.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 686,
@@ -8292,7 +8804,8 @@
     "equippable": false,
     "noteable": false,
     "questItem": true,
-    "icon": "ring_mould_293.png"
+    "icon": "ring_mould_293.png",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 687,
@@ -8303,7 +8816,8 @@
     "equippable": false,
     "noteable": false,
     "questItem": true,
-    "model": "/assets/equipment/ring/RubyRing.glb"
+    "model": "/assets/equipment/ring/RubyRing.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 688,
@@ -8314,7 +8828,8 @@
     "equippable": false,
     "noteable": false,
     "questItem": true,
-    "icon": "ID_Paper_573.png"
+    "icon": "ID_Paper_573.png",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 689,
@@ -8325,7 +8840,8 @@
     "equippable": false,
     "noteable": false,
     "questItem": true,
-    "model": "/assets/models/Sack2.glb"
+    "model": "/assets/models/Sack2.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 690,
@@ -8336,79 +8852,88 @@
     "equippable": false,
     "noteable": false,
     "questItem": true,
-    "icon": "ID_Paper_573.png"
+    "icon": "ID_Paper_573.png",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 691,
     "name": "Mireleaf Tea Leaves",
     "description": "Soft green tea leaves with a damp, earthy scent.",
-    "value": 2,
+    "value": 8,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/MireleafTeaLeaves.glb"
+    "model": "/assets/models/MireleafTeaLeaves.glb",
+    "generalStoreSellPrice": 3
   },
   {
     "id": 692,
     "name": "Humpleaf Tea Leaves",
     "description": "Small, tough tea leaves with a dry, resinous scent.",
-    "value": 2,
+    "value": 48,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/DunethornTeaLeaves.glb"
+    "model": "/assets/models/DunethornTeaLeaves.glb",
+    "generalStoreSellPrice": 19
   },
   {
     "id": 693,
     "name": "Askaline Tea Leaves",
     "description": "Russet tea leaves with a faint smoky scent.",
-    "value": 2,
+    "value": 32,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/CinderleafTeaLeaves.glb"
+    "model": "/assets/models/CinderleafTeaLeaves.glb",
+    "generalStoreSellPrice": 12
   },
   {
     "id": 694,
     "name": "Solfrost Tea Leaves",
     "description": "Cool green tea leaves with a fresh, wintry scent.",
-    "value": 2,
+    "value": 80,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/SnowbudTeaLeaves.glb"
+    "model": "/assets/models/SnowbudTeaLeaves.glb",
+    "generalStoreSellPrice": 32
   },
   {
     "id": 695,
     "name": "Isvaldine Tea Leaves",
     "description": "Pale blue tea leaves, cool and crisp to the touch.",
-    "value": 2,
+    "value": 72,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/RimeheartTeaLeaves.glb"
+    "model": "/assets/models/RimeheartTeaLeaves.glb",
+    "generalStoreSellPrice": 28
   },
   {
     "id": 696,
     "name": "Gurba Tea Leaves",
     "description": "Golden tea leaves with a warm, woody scent.",
-    "value": 2,
+    "value": 24,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/CopperleafTeaLeaves.glb"
+    "model": "/assets/models/CopperleafTeaLeaves.glb",
+    "generalStoreSellPrice": 9
   },
   {
     "id": 697,
     "name": "Quibo Tea Leaves",
     "description": "Dusky green tea leaves with a sweet, floral scent.",
-    "value": 2,
+    "value": 16,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/LanternleafTeaLeaves.glb"
+    "model": "/assets/models/LanternleafTeaLeaves.glb",
+    "generalStoreSellPrice": 6
   },
   {
     "id": 698,
     "name": "Zodoco Tea Leaves",
     "description": "Light green tea leaves with a delicate floral scent.",
-    "value": 2,
+    "value": 64,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/StarbloomTeaLeaves.glb"
+    "model": "/assets/models/StarbloomTeaLeaves.glb",
+    "generalStoreSellPrice": 25
   },
   {
     "id": 699,
@@ -8417,7 +8942,8 @@
     "value": 8,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Glasswort.glb"
+    "model": "/assets/models/Glasswort.glb",
+    "generalStoreSellPrice": 3
   },
   {
     "id": 700,
@@ -8426,7 +8952,8 @@
     "value": 12,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/RichSodaAsh.glb"
+    "model": "/assets/models/RichSodaAsh.glb",
+    "generalStoreSellPrice": 4
   },
   {
     "id": 701,
@@ -8442,7 +8969,8 @@
     "model": "/assets/equipment/body/EclipseBody.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/EclipseBodyWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 14
   },
   {
     "id": 702,
@@ -8457,7 +8985,8 @@
     "model": "/assets/equipment/legs/EclipseSkirt.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/EclipseSkirtWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 12
   },
   {
     "id": 703,
@@ -8473,7 +9002,8 @@
     "model": "/assets/equipment/body/DawnweaveBody.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/DawnweaveBodyWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 300
   },
   {
     "id": 704,
@@ -8488,7 +9018,8 @@
     "model": "/assets/equipment/legs/DawnweaveSkirt.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/DawnweaveSkirtWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 240
   },
   {
     "id": 705,
@@ -8504,7 +9035,8 @@
     "model": "/assets/equipment/body/SunwardBody.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/SunwardBodyWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 1200
   },
   {
     "id": 706,
@@ -8519,7 +9051,8 @@
     "model": "/assets/equipment/legs/SunwardSkirt.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/SunwardSkirtWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 960
   },
   {
     "id": 707,
@@ -8535,7 +9068,8 @@
     "model": "/assets/equipment/body/RadiantBody.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/RadiantBodyWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 14
   },
   {
     "id": 708,
@@ -8550,7 +9084,8 @@
     "model": "/assets/equipment/legs/RadiantSkirt.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/RadiantSkirtWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 12
   },
   {
     "id": 709,
@@ -8559,7 +9094,8 @@
     "value": 4,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/tea/WildGinger.glb"
+    "model": "/assets/models/tea/WildGinger.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 710,
@@ -8568,7 +9104,8 @@
     "value": 4,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/tea/BlackFig.glb"
+    "model": "/assets/models/tea/BlackFig.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 711,
@@ -8577,7 +9114,8 @@
     "value": 4,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/tea/HoneyPear.glb"
+    "model": "/assets/models/tea/HoneyPear.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 712,
@@ -8586,29 +9124,32 @@
     "value": 4,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/tea/WinterQuince.glb"
+    "model": "/assets/models/tea/WinterQuince.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 713,
     "name": "Gurba Tea (2 doses)",
     "description": "Amber tea with a warm, woody flavour.",
-    "value": 22,
+    "value": 34,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 714,
-    "model": "/assets/models/tea/SpicedCopperleafTeaCup(2).glb"
+    "model": "/assets/models/tea/SpicedCopperleafTeaCup(2).glb",
+    "generalStoreSellPrice": 13
   },
   {
     "id": 714,
     "name": "Gurba Tea (1 dose)",
     "description": "Amber tea with a warm, woody flavour.",
-    "value": 11,
+    "value": 17,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/SpicedCopperleafTeaCup(1).glb"
+    "model": "/assets/models/tea/SpicedCopperleafTeaCup(1).glb",
+    "generalStoreSellPrice": 6
   },
   {
     "id": 715,
@@ -8619,7 +9160,8 @@
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 716,
-    "model": "/assets/models/tea/SmokedFigTeaCup(2).glb"
+    "model": "/assets/models/tea/SmokedFigTeaCup(2).glb",
+    "generalStoreSellPrice": 10
   },
   {
     "id": 716,
@@ -8630,13 +9172,14 @@
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/SmokedFigTeaCup(1).glb"
+    "model": "/assets/models/tea/SmokedFigTeaCup(1).glb",
+    "generalStoreSellPrice": 5
   },
   {
     "id": 717,
     "name": "Honey Pear Tea (2 doses)",
     "description": "A golden floral tea with the gentle sweetness of honey pear.",
-    "value": 96,
+    "value": 26,
     "stackable": false,
     "equippable": false,
     "healOverTime": {
@@ -8646,13 +9189,14 @@
     },
     "consumeVerb": "Drink",
     "consumeResultItemId": 718,
-    "model": "/assets/models/tea/HoneyPearTeaCup(2).glb"
+    "model": "/assets/models/tea/HoneyPearTeaCup(2).glb",
+    "generalStoreSellPrice": 10
   },
   {
     "id": 718,
     "name": "Honey Pear Tea (1 dose)",
     "description": "A golden floral tea with the gentle sweetness of honey pear.",
-    "value": 48,
+    "value": 13,
     "stackable": false,
     "equippable": false,
     "healOverTime": {
@@ -8662,29 +9206,32 @@
     },
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/HoneyPearTeaCup(1).glb"
+    "model": "/assets/models/tea/HoneyPearTeaCup(1).glb",
+    "generalStoreSellPrice": 5
   },
   {
     "id": 719,
     "name": "Thaw Tea (2 doses)",
     "description": "A pale, fragrant tea with a crisp quince finish.",
-    "value": 84,
+    "value": 90,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 720,
-    "model": "/assets/models/tea/WinterQuinceTeaCup(2).glb"
+    "model": "/assets/models/tea/WinterQuinceTeaCup(2).glb",
+    "generalStoreSellPrice": 36
   },
   {
     "id": 720,
     "name": "Thaw Tea (1 dose)",
     "description": "A pale, fragrant tea with a crisp quince finish.",
-    "value": 42,
+    "value": 45,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/WinterQuinceTeaCup(1).glb"
+    "model": "/assets/models/tea/WinterQuinceTeaCup(1).glb",
+    "generalStoreSellPrice": 18
   },
   {
     "id": 721,
@@ -8693,7 +9240,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/WolfBones.glb"
+    "model": "/assets/models/WolfBones.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 722,
@@ -8702,7 +9250,8 @@
     "value": 5,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/DragonBones.glb"
+    "model": "/assets/models/DragonBones.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 723,
@@ -8711,7 +9260,8 @@
     "value": 4,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/BucketSand.glb"
+    "model": "/assets/models/BucketSand.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 724,
@@ -8729,7 +9279,8 @@
         "mode": "hide"
       }
     },
-    "model": "/assets/equipment/head/VerdantSentinelHelm.glb"
+    "model": "/assets/equipment/head/VerdantSentinelHelm.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 725,
@@ -8747,7 +9298,8 @@
         "mode": "hide"
       }
     },
-    "model": "/assets/equipment/head/AshenOathHelm.glb"
+    "model": "/assets/equipment/head/AshenOathHelm.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 726,
@@ -8765,7 +9317,8 @@
         "mode": "hide"
       }
     },
-    "model": "/assets/equipment/head/FrostwatchHelm.glb"
+    "model": "/assets/equipment/head/FrostwatchHelm.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 727,
@@ -8783,7 +9336,8 @@
         "mode": "hide"
       }
     },
-    "model": "/assets/equipment/head/CrimsonSentinelHelm.glb"
+    "model": "/assets/equipment/head/CrimsonSentinelHelm.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 728,
@@ -8797,7 +9351,8 @@
     "model": "/assets/equipment/legs/CrimsonSentinelPlateskirt.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/CrimsonSentinelPlateskirtWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 729,
@@ -8811,7 +9366,8 @@
     "model": "/assets/equipment/body/CrimsonSentinelPlatebody.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/CrimsonSentinelPlatebodyWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 730,
@@ -8825,7 +9381,8 @@
     "model": "/assets/equipment/hands/PlainGlovesBrown.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/hands/female/PlainGlovesBrownWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 2
   },
   {
     "id": 731,
@@ -8839,7 +9396,8 @@
     "model": "/assets/equipment/hands/PlainGlovesBlue.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/hands/female/PlainGlovesBlueWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 732,
@@ -8853,7 +9411,8 @@
     "model": "/assets/equipment/hands/PlainGlovesCream.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/hands/female/PlainGlovesCreamWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 733,
@@ -8867,7 +9426,8 @@
     "model": "/assets/equipment/hands/PlainGlovesBlack.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/hands/female/PlainGlovesBlackWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 734,
@@ -8881,7 +9441,8 @@
     "model": "/assets/equipment/hands/PlainGlovesRed.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/hands/female/PlainGlovesRedWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 735,
@@ -8895,7 +9456,8 @@
     "model": "/assets/equipment/hands/PlainGlovesGreen.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/hands/female/PlainGlovesGreenWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 736,
@@ -8909,7 +9471,8 @@
     "model": "/assets/equipment/hands/PlainGlovesPurple.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/hands/female/PlainGlovesPurpleWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 737,
@@ -8918,7 +9481,8 @@
     "value": 6,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/tea/Swiftmint.glb"
+    "model": "/assets/models/tea/Swiftmint.glb",
+    "generalStoreSellPrice": 2
   },
   {
     "id": 738,
@@ -8927,7 +9491,8 @@
     "value": 8,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/tea/IronbarkQuills.glb"
+    "model": "/assets/models/tea/IronbarkQuills.glb",
+    "generalStoreSellPrice": 3
   },
   {
     "id": 739,
@@ -8936,7 +9501,8 @@
     "value": 10,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/tea/DragonChilli.glb"
+    "model": "/assets/models/tea/DragonChilli.glb",
+    "generalStoreSellPrice": 4
   },
   {
     "id": 740,
@@ -8945,7 +9511,8 @@
     "value": 10,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/tea/Giantroot.glb"
+    "model": "/assets/models/tea/Giantroot.glb",
+    "generalStoreSellPrice": 4
   },
   {
     "id": 741,
@@ -8954,117 +9521,128 @@
     "value": 10,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/tea/Bilberry.glb"
+    "model": "/assets/models/tea/Bilberry.glb",
+    "generalStoreSellPrice": 4
   },
   {
     "id": 742,
     "name": "Quibo Tea (2 doses)",
     "description": "A pale golden tea. Woodcutters swear by it at dawn.",
-    "value": 10,
+    "value": 26,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 743,
-    "model": "/assets/models/tea/LanternleafTeaCup(2).glb"
+    "model": "/assets/models/tea/LanternleafTeaCup(2).glb",
+    "generalStoreSellPrice": 10
   },
   {
     "id": 743,
     "name": "Quibo Tea (1 dose)",
     "description": "A pale golden tea. Woodcutters swear by it at dawn.",
-    "value": 5,
+    "value": 13,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/LanternleafTeaCup(1).glb"
+    "model": "/assets/models/tea/LanternleafTeaCup(1).glb",
+    "generalStoreSellPrice": 5
   },
   {
     "id": 744,
     "name": "Dwarven Drink (2 doses)",
     "description": "Kalo leaves steeped with giantroot. Dwarves drink it by the pint before a shift.",
-    "value": 14,
+    "value": 18,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 745,
-    "model": "/assets/models/tea/ProspectorsCopperleafTeaCup(2).glb"
+    "model": "/assets/models/tea/ProspectorsCopperleafTeaCup(2).glb",
+    "generalStoreSellPrice": 7
   },
   {
     "id": 745,
     "name": "Dwarven Drink (1 dose)",
     "description": "Kalo leaves steeped with giantroot. Dwarves drink it by the pint before a shift.",
-    "value": 7,
+    "value": 9,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/ProspectorsCopperleafTeaCup(1).glb"
+    "model": "/assets/models/tea/ProspectorsCopperleafTeaCup(1).glb",
+    "generalStoreSellPrice": 3
   },
   {
     "id": 746,
     "name": "Kawaki Tea (2 doses)",
     "description": "Smells faintly of oiled hinges. Loksy says he drinks it for the taste.",
-    "value": 30,
+    "value": 50,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 747,
-    "model": "/assets/models/tea/LoksmithsBrewTeaCup(2).glb"
+    "model": "/assets/models/tea/LoksmithsBrewTeaCup(2).glb",
+    "generalStoreSellPrice": 20
   },
   {
     "id": 747,
     "name": "Kawaki Tea (1 dose)",
     "description": "Smells faintly of oiled hinges. Loksy says he drinks it for the taste.",
-    "value": 15,
+    "value": 25,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/LoksmithsBrewTeaCup(1).glb"
+    "model": "/assets/models/tea/LoksmithsBrewTeaCup(1).glb",
+    "generalStoreSellPrice": 10
   },
   {
     "id": 748,
     "name": "Pazar's Brew (2 doses)",
     "description": "The leaves were obtained entirely legitimately. Please stop asking.",
-    "value": 36,
+    "value": 34,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 749,
-    "model": "/assets/models/tea/PazarsBrewTeaCup(2).glb"
+    "model": "/assets/models/tea/PazarsBrewTeaCup(2).glb",
+    "generalStoreSellPrice": 13
   },
   {
     "id": 749,
     "name": "Pazar's Brew (1 dose)",
     "description": "The leaves were obtained entirely legitimately. Please stop asking.",
-    "value": 18,
+    "value": 17,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/PazarsBrewTeaCup(1).glb"
+    "model": "/assets/models/tea/PazarsBrewTeaCup(1).glb",
+    "generalStoreSellPrice": 6
   },
   {
     "id": 750,
     "name": "Humpleaf Tea (2 doses)",
     "description": "A dry, resinous desert tea that steadies the eye.",
-    "value": 42,
+    "value": 58,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 751,
-    "model": "/assets/models/tea/DunethornTeaCup(2).glb"
+    "model": "/assets/models/tea/DunethornTeaCup(2).glb",
+    "generalStoreSellPrice": 23
   },
   {
     "id": 751,
     "name": "Humpleaf Tea (1 dose)",
     "description": "A dry, resinous desert tea that steadies the eye.",
-    "value": 21,
+    "value": 29,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/DunethornTeaCup(1).glb"
+    "model": "/assets/models/tea/DunethornTeaCup(1).glb",
+    "generalStoreSellPrice": 11
   },
   {
     "id": 752,
@@ -9075,7 +9653,8 @@
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 753,
-    "model": "/assets/models/tea/CatastropheaTeaCup(2).glb"
+    "model": "/assets/models/tea/CatastropheaTeaCup(2).glb",
+    "generalStoreSellPrice": 26
   },
   {
     "id": 753,
@@ -9086,161 +9665,176 @@
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/CatastropheaTeaCup(1).glb"
+    "model": "/assets/models/tea/CatastropheaTeaCup(1).glb",
+    "generalStoreSellPrice": 13
   },
   {
     "id": 754,
     "name": "Nimble Tea (2 doses)",
     "description": "A light, minty tea. Your feet feel lighter just smelling it.",
-    "value": 54,
+    "value": 74,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 755,
-    "model": "/assets/models/tea/FeatherstepTeaCup(2).glb"
+    "model": "/assets/models/tea/FeatherstepTeaCup(2).glb",
+    "generalStoreSellPrice": 29
   },
   {
     "id": 755,
     "name": "Nimble Tea (1 dose)",
     "description": "A light, minty tea. Your feet feel lighter just smelling it.",
-    "value": 27,
-    "stackable": false,
-    "equippable": false,
-    "consumeVerb": "Drink",
-    "consumeResultItemId": 669,
-    "model": "/assets/models/tea/FeatherstepTeaCup(1).glb"
-  },
-  {
-    "id": 756,
-    "name": "Lox Tea (2 doses)",
-    "description": "A pale silver tea that shimmers like moonlight.",
-    "value": 48,
-    "stackable": false,
-    "equippable": false,
-    "consumeVerb": "Drink",
-    "consumeResultItemId": 757,
-    "model": "/assets/models/tea/MoonlitBrewTeaCup(2).glb"
-  },
-  {
-    "id": 757,
-    "name": "Lox Tea (1 dose)",
-    "description": "A pale silver tea that shimmers like moonlight.",
-    "value": 24,
-    "stackable": false,
-    "equippable": false,
-    "consumeVerb": "Drink",
-    "consumeResultItemId": 669,
-    "model": "/assets/models/tea/MoonlitBrewTeaCup(1).glb"
-  },
-  {
-    "id": 758,
-    "name": "Shielding Tea (2 doses)",
-    "description": "Dark, woody and bracing. Drink it and feel like a fortress.",
-    "value": 72,
-    "stackable": false,
-    "equippable": false,
-    "consumeVerb": "Drink",
-    "consumeResultItemId": 759,
-    "model": "/assets/models/tea/IronbarkTeaCup(2).glb"
-  },
-  {
-    "id": 759,
-    "name": "Shielding Tea (1 dose)",
-    "description": "Dark, woody and bracing. Drink it and feel like a fortress.",
-    "value": 36,
-    "stackable": false,
-    "equippable": false,
-    "consumeVerb": "Drink",
-    "consumeResultItemId": 669,
-    "model": "/assets/models/tea/IronbarkTeaCup(1).glb"
-  },
-  {
-    "id": 760,
-    "name": "Knight's Tea (2 doses)",
-    "description": "Kawaki leaves sharpened with ginger. Clears the head and steadies the hand.",
-    "value": 74,
-    "stackable": false,
-    "equippable": false,
-    "consumeVerb": "Drink",
-    "consumeResultItemId": 761,
-    "model": "/assets/models/tea/KeenEdgeBrewTeaCup(2).glb"
-  },
-  {
-    "id": 761,
-    "name": "Knight's Tea (1 dose)",
-    "description": "Kawaki leaves sharpened with ginger. Clears the head and steadies the hand.",
     "value": 37,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/KeenEdgeBrewTeaCup(1).glb"
+    "model": "/assets/models/tea/FeatherstepTeaCup(1).glb",
+    "generalStoreSellPrice": 14
   },
   {
-    "id": 762,
-    "name": "Ashveil (2 doses)",
-    "description": "A smoky, chilli-hot brew. Dragons hate the taste.",
-    "value": 78,
+    "id": 756,
+    "name": "Lox Tea (2 doses)",
+    "description": "A pale silver tea that shimmers like moonlight.",
+    "value": 66,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
-    "consumeResultItemId": 763,
-    "model": "/assets/models/tea/EmberguardSouchongTeaCup(2).glb"
+    "consumeResultItemId": 757,
+    "model": "/assets/models/tea/MoonlitBrewTeaCup(2).glb",
+    "generalStoreSellPrice": 26
   },
   {
-    "id": 763,
-    "name": "Ashveil (1 dose)",
-    "description": "A smoky, chilli-hot brew. Dragons hate the taste.",
-    "value": 39,
+    "id": 757,
+    "name": "Lox Tea (1 dose)",
+    "description": "A pale silver tea that shimmers like moonlight.",
+    "value": 33,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/EmberguardSouchongTeaCup(1).glb"
+    "model": "/assets/models/tea/MoonlitBrewTeaCup(1).glb",
+    "generalStoreSellPrice": 13
   },
   {
-    "id": 764,
-    "name": "Ogre's Mug (2 doses)",
-    "description": "Earthy and thick. Giants allegedly drink it by the barrel.",
+    "id": 758,
+    "name": "Shielding Tea (2 doses)",
+    "description": "Dark, woody and bracing. Drink it and feel like a fortress.",
     "value": 82,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
-    "consumeResultItemId": 765,
-    "model": "/assets/models/tea/GiantsBrewTeaCup(2).glb"
+    "consumeResultItemId": 759,
+    "model": "/assets/models/tea/IronbarkTeaCup(2).glb",
+    "generalStoreSellPrice": 32
   },
   {
-    "id": 765,
-    "name": "Ogre's Mug (1 dose)",
-    "description": "Earthy and thick. Giants allegedly drink it by the barrel.",
+    "id": 759,
+    "name": "Shielding Tea (1 dose)",
+    "description": "Dark, woody and bracing. Drink it and feel like a fortress.",
     "value": 41,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/GiantsBrewTeaCup(1).glb"
+    "model": "/assets/models/tea/IronbarkTeaCup(1).glb",
+    "generalStoreSellPrice": 16
+  },
+  {
+    "id": 760,
+    "name": "Knight's Tea (2 doses)",
+    "description": "Kawaki leaves sharpened with ginger. Clears the head and steadies the hand.",
+    "value": 50,
+    "stackable": false,
+    "equippable": false,
+    "consumeVerb": "Drink",
+    "consumeResultItemId": 761,
+    "model": "/assets/models/tea/KeenEdgeBrewTeaCup(2).glb",
+    "generalStoreSellPrice": 20
+  },
+  {
+    "id": 761,
+    "name": "Knight's Tea (1 dose)",
+    "description": "Kawaki leaves sharpened with ginger. Clears the head and steadies the hand.",
+    "value": 25,
+    "stackable": false,
+    "equippable": false,
+    "consumeVerb": "Drink",
+    "consumeResultItemId": 669,
+    "model": "/assets/models/tea/KeenEdgeBrewTeaCup(1).glb",
+    "generalStoreSellPrice": 10
+  },
+  {
+    "id": 762,
+    "name": "Ashveil (2 doses)",
+    "description": "A smoky, chilli-hot brew. Dragons hate the taste.",
+    "value": 42,
+    "stackable": false,
+    "equippable": false,
+    "consumeVerb": "Drink",
+    "consumeResultItemId": 763,
+    "model": "/assets/models/tea/EmberguardSouchongTeaCup(2).glb",
+    "generalStoreSellPrice": 16
+  },
+  {
+    "id": 763,
+    "name": "Ashveil (1 dose)",
+    "description": "A smoky, chilli-hot brew. Dragons hate the taste.",
+    "value": 21,
+    "stackable": false,
+    "equippable": false,
+    "consumeVerb": "Drink",
+    "consumeResultItemId": 669,
+    "model": "/assets/models/tea/EmberguardSouchongTeaCup(1).glb",
+    "generalStoreSellPrice": 8
+  },
+  {
+    "id": 764,
+    "name": "Ogre's Mug (2 doses)",
+    "description": "Earthy and thick. Giants allegedly drink it by the barrel.",
+    "value": 42,
+    "stackable": false,
+    "equippable": false,
+    "consumeVerb": "Drink",
+    "consumeResultItemId": 765,
+    "model": "/assets/models/tea/GiantsBrewTeaCup(2).glb",
+    "generalStoreSellPrice": 16
+  },
+  {
+    "id": 765,
+    "name": "Ogre's Mug (1 dose)",
+    "description": "Earthy and thick. Giants allegedly drink it by the barrel.",
+    "value": 21,
+    "stackable": false,
+    "equippable": false,
+    "consumeVerb": "Drink",
+    "consumeResultItemId": 669,
+    "model": "/assets/models/tea/GiantsBrewTeaCup(1).glb",
+    "generalStoreSellPrice": 8
   },
   {
     "id": 766,
     "name": "Hawkeye Brew (2 doses)",
     "description": "A deep indigo tea of beaberries that brings distant targets into focus.",
-    "value": 89,
+    "value": 58,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 767,
-    "model": "/assets/models/tea/HawkeyeBrewTeaCup(2).glb"
+    "model": "/assets/models/tea/HawkeyeBrewTeaCup(2).glb",
+    "generalStoreSellPrice": 23
   },
   {
     "id": 767,
     "name": "Hawkeye Brew (1 dose)",
     "description": "A deep indigo tea of beaberries that brings distant targets into focus.",
-    "value": 45,
+    "value": 29,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/HawkeyeBrewTeaCup(1).glb"
+    "model": "/assets/models/tea/HawkeyeBrewTeaCup(1).glb",
+    "generalStoreSellPrice": 11
   },
   {
     "id": 768,
@@ -9249,7 +9843,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Food/ChickenBurnt.glb"
+    "model": "/assets/models/Food/ChickenBurnt.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 769,
@@ -9258,7 +9853,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Food/MeatBurnt.glb"
+    "model": "/assets/models/Food/MeatBurnt.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 770,
@@ -9267,7 +9863,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Food/PotatoBurnt.glb"
+    "model": "/assets/models/Food/PotatoBurnt.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 771,
@@ -9277,7 +9874,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialSmallFilled.glb"
+    "model": "/assets/models/EssenceVialSmallFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 772,
@@ -9287,7 +9885,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialMediumFilled.glb"
+    "model": "/assets/models/EssenceVialMediumFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 773,
@@ -9297,7 +9896,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialLargeFilled.glb"
+    "model": "/assets/models/EssenceVialLargeFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 774,
@@ -9307,7 +9907,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialHugeFilled.glb"
+    "model": "/assets/models/EssenceVialHugeFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 775,
@@ -9317,7 +9918,8 @@
     "stackable": false,
     "equippable": false,
     "toolType": "spade",
-    "model": "/assets/models/Spade.glb"
+    "model": "/assets/models/Spade.glb",
+    "generalStoreSellPrice": 1
   },
   {
     "id": 776,
@@ -9326,82 +9928,90 @@
     "value": 0,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Scroll1.glb"
+    "model": "/assets/models/Scroll1.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 777,
     "name": "Zodoco Tea (2 doses)",
     "description": "A bright, grassy tea. Trappers drink it before a long night outdoors.",
-    "value": 34,
+    "value": 74,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 778,
-    "model": "/assets/models/tea/ZodocoTeaCup(2).glb"
+    "model": "/assets/models/tea/ZodocoTeaCup(2).glb",
+    "generalStoreSellPrice": 29
   },
   {
     "id": 778,
     "name": "Zodoco Tea (1 dose)",
     "description": "A bright, grassy tea. Trappers drink it before a long night outdoors.",
-    "value": 17,
+    "value": 37,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/ZodocoTeaCup(1).glb"
+    "model": "/assets/models/tea/ZodocoTeaCup(1).glb",
+    "generalStoreSellPrice": 14
   },
   {
     "id": 779,
     "name": "Askaline Tea (2 doses)",
     "description": "A brisk, bitter tea. Anglers swear by it at dusk.",
-    "value": 60,
+    "value": 42,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 780,
-    "model": "/assets/models/tea/AskalineTeaCup(2).glb"
+    "model": "/assets/models/tea/AskalineTeaCup(2).glb",
+    "generalStoreSellPrice": 16
   },
   {
     "id": 780,
     "name": "Askaline Tea (1 dose)",
     "description": "A brisk, bitter tea. Anglers swear by it at dusk.",
-    "value": 30,
+    "value": 21,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/AskalineTeaCup(1).glb"
+    "model": "/assets/models/tea/AskalineTeaCup(1).glb",
+    "generalStoreSellPrice": 8
   },
   {
     "id": 781,
     "name": "Solfrost Tea (2 doses)",
     "description": "A cold blue tea that bites like frost. Smiths say it steadies the hammer.",
-    "value": 70,
+    "value": 90,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 782,
-    "model": "/assets/models/tea/SolfrostTeaCup(2).glb"
+    "model": "/assets/models/tea/SolfrostTeaCup(2).glb",
+    "generalStoreSellPrice": 36
   },
   {
     "id": 782,
     "name": "Solfrost Tea (1 dose)",
     "description": "A cold blue tea that bites like frost. Smiths say it steadies the hammer.",
-    "value": 35,
+    "value": 45,
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Drink",
     "consumeResultItemId": 669,
-    "model": "/assets/models/tea/SolfrostTeaCup(1).glb"
+    "model": "/assets/models/tea/SolfrostTeaCup(1).glb",
+    "generalStoreSellPrice": 18
   },
   {
     "id": 783,
     "name": "Molten Glass",
-    "description": "Glass for furnace-made vials or hex crystals shaped with a glassblowing pipe.",
+    "description": "Glass for furnace-made vials or glass crystals shaped with a glassblowing pipe.",
     "value": 20,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/MoltenGlass.glb"
+    "model": "/assets/models/MoltenGlass.glb",
+    "generalStoreSellPrice": 8
   },
   {
     "id": 784,
@@ -9410,7 +10020,8 @@
     "value": 25,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/EssenceVialSmallEmpty.glb"
+    "model": "/assets/models/EssenceVialSmallEmpty.glb",
+    "generalStoreSellPrice": 10
   },
   {
     "id": 785,
@@ -9419,7 +10030,8 @@
     "value": 50,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/EssenceVialMediumEmpty.glb"
+    "model": "/assets/models/EssenceVialMediumEmpty.glb",
+    "generalStoreSellPrice": 20
   },
   {
     "id": 786,
@@ -9428,7 +10040,8 @@
     "value": 75,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/EssenceVialLargeEmpty.glb"
+    "model": "/assets/models/EssenceVialLargeEmpty.glb",
+    "generalStoreSellPrice": 30
   },
   {
     "id": 787,
@@ -9437,7 +10050,8 @@
     "value": 100,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/EssenceVialHugeEmpty.glb"
+    "model": "/assets/models/EssenceVialHugeEmpty.glb",
+    "generalStoreSellPrice": 40
   },
   {
     "id": 788,
@@ -9447,7 +10061,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialSmallFireFilled.glb"
+    "model": "/assets/models/EssenceVialSmallFireFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 789,
@@ -9457,7 +10072,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialMediumFireFilled.glb"
+    "model": "/assets/models/EssenceVialMediumFireFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 790,
@@ -9467,7 +10083,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialLargeFireFilled.glb"
+    "model": "/assets/models/EssenceVialLargeFireFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 791,
@@ -9477,7 +10094,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialHugeFireFilled.glb"
+    "model": "/assets/models/EssenceVialHugeFireFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 792,
@@ -9487,7 +10105,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialSmallEarthFilled.glb"
+    "model": "/assets/models/EssenceVialSmallEarthFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 793,
@@ -9497,7 +10116,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialMediumEarthFilled.glb"
+    "model": "/assets/models/EssenceVialMediumEarthFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 794,
@@ -9507,7 +10127,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialLargeEarthFilled.glb"
+    "model": "/assets/models/EssenceVialLargeEarthFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 795,
@@ -9517,7 +10138,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialHugeEarthFilled.glb"
+    "model": "/assets/models/EssenceVialHugeEarthFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 796,
@@ -9527,7 +10149,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialSmallAirFilled.glb"
+    "model": "/assets/models/EssenceVialSmallAirFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 797,
@@ -9537,7 +10160,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialMediumAirFilled.glb"
+    "model": "/assets/models/EssenceVialMediumAirFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 798,
@@ -9547,7 +10171,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialLargeAirFilled.glb"
+    "model": "/assets/models/EssenceVialLargeAirFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 799,
@@ -9557,7 +10182,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialHugeAirFilled.glb"
+    "model": "/assets/models/EssenceVialHugeAirFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 800,
@@ -9567,7 +10193,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialSmallChaosFilled.glb"
+    "model": "/assets/models/EssenceVialSmallChaosFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 801,
@@ -9577,7 +10204,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialMediumChaosFilled.glb"
+    "model": "/assets/models/EssenceVialMediumChaosFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 802,
@@ -9587,7 +10215,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialLargeChaosFilled.glb"
+    "model": "/assets/models/EssenceVialLargeChaosFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 803,
@@ -9597,7 +10226,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialHugeChaosFilled.glb"
+    "model": "/assets/models/EssenceVialHugeChaosFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 804,
@@ -9607,7 +10237,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialSmallDeathFilled.glb"
+    "model": "/assets/models/EssenceVialSmallDeathFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 805,
@@ -9617,7 +10248,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialMediumDeathFilled.glb"
+    "model": "/assets/models/EssenceVialMediumDeathFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 806,
@@ -9627,7 +10259,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialLargeDeathFilled.glb"
+    "model": "/assets/models/EssenceVialLargeDeathFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 807,
@@ -9637,7 +10270,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialHugeDeathFilled.glb"
+    "model": "/assets/models/EssenceVialHugeDeathFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 808,
@@ -9647,7 +10281,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialSmallBloodFilled.glb"
+    "model": "/assets/models/EssenceVialSmallBloodFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 809,
@@ -9657,7 +10292,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialMediumBloodFilled.glb"
+    "model": "/assets/models/EssenceVialMediumBloodFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 810,
@@ -9667,7 +10303,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialLargeBloodFilled.glb"
+    "model": "/assets/models/EssenceVialLargeBloodFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 811,
@@ -9677,7 +10314,8 @@
     "stackable": false,
     "equippable": false,
     "consumeVerb": "Smash",
-    "model": "/assets/models/EssenceVialHugeBloodFilled.glb"
+    "model": "/assets/models/EssenceVialHugeBloodFilled.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 812,
@@ -9686,7 +10324,8 @@
     "value": 0,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/SpiderPedipalp.glb"
+    "model": "/assets/models/SpiderPedipalp.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 813,
@@ -9697,7 +10336,8 @@
     "equippable": true,
     "noteable": false,
     "equipSlot": "neck",
-    "model": "/assets/equipment/neck/BearToothNecklace.glb"
+    "model": "/assets/equipment/neck/BearToothNecklace.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 814,
@@ -9706,7 +10346,8 @@
     "value": 0,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/BearTooth.glb"
+    "model": "/assets/models/BearTooth.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 815,
@@ -9716,7 +10357,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "bless_holy_lightning",
-    "model": "/assets/models/spell-scrolls/bless_holy_lightning-e084cedc75aa.glb"
+    "model": "/assets/models/spell-scrolls/bless_holy_lightning-e084cedc75aa.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 816,
@@ -9726,7 +10368,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "earth_wave",
-    "model": "/assets/models/spell-scrolls/earth_wave-bb91816533e5.glb"
+    "model": "/assets/models/spell-scrolls/earth_wave-bb91816533e5.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 817,
@@ -9736,7 +10379,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "enchant_diamond_amulet",
-    "model": "/assets/models/spell-scrolls/enchant_diamond_amulet-8ab630acfbcd.glb"
+    "model": "/assets/models/spell-scrolls/enchant_diamond_amulet-8ab630acfbcd.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 818,
@@ -9746,7 +10390,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "enchant_emerald_amulet",
-    "model": "/assets/models/spell-scrolls/enchant_emerald_amulet-eb1aadc9c3c1.glb"
+    "model": "/assets/models/spell-scrolls/enchant_emerald_amulet-eb1aadc9c3c1.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 819,
@@ -9756,7 +10401,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "enchant_gold_amulet",
-    "model": "/assets/models/spell-scrolls/enchant_gold_amulet-90740eb7cc4c.glb"
+    "model": "/assets/models/spell-scrolls/enchant_gold_amulet-90740eb7cc4c.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 820,
@@ -9766,7 +10412,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "enchant_imperial_amulet",
-    "model": "/assets/models/spell-scrolls/enchant_imperial_amulet-b6e67893a33f.glb"
+    "model": "/assets/models/spell-scrolls/enchant_imperial_amulet-b6e67893a33f.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 821,
@@ -9776,7 +10423,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "enchant_onyx_amulet",
-    "model": "/assets/models/spell-scrolls/enchant_onyx_amulet-a2e06a1dde76.glb"
+    "model": "/assets/models/spell-scrolls/enchant_onyx_amulet-a2e06a1dde76.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 822,
@@ -9786,7 +10434,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "enchant_ruby_amulet",
-    "model": "/assets/models/spell-scrolls/enchant_ruby_amulet-f30cfb9c2f70.glb"
+    "model": "/assets/models/spell-scrolls/enchant_ruby_amulet-f30cfb9c2f70.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 823,
@@ -9796,7 +10445,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "enchant_sapphire_amulet",
-    "model": "/assets/models/spell-scrolls/enchant_sapphire_amulet-9b832e32210b.glb"
+    "model": "/assets/models/spell-scrolls/enchant_sapphire_amulet-9b832e32210b.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 824,
@@ -9806,7 +10456,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "fire_blast",
-    "model": "/assets/models/spell-scrolls/fire_blast-43a9ef295ebb.glb"
+    "model": "/assets/models/spell-scrolls/fire_blast-43a9ef295ebb.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 825,
@@ -9816,7 +10467,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "grand_rejuvenation",
-    "model": "/assets/models/spell-scrolls/grand_rejuvenation-1efe141596f6.glb"
+    "model": "/assets/models/spell-scrolls/grand_rejuvenation-1efe141596f6.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 826,
@@ -9826,7 +10478,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "grave_rot",
-    "model": "/assets/models/spell-scrolls/grave_rot-c6f5faa9e77e.glb"
+    "model": "/assets/models/spell-scrolls/grave_rot-c6f5faa9e77e.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 827,
@@ -9836,7 +10489,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "greater_rejuvenation",
-    "model": "/assets/models/spell-scrolls/greater_rejuvenation-63320129c73e.glb"
+    "model": "/assets/models/spell-scrolls/greater_rejuvenation-63320129c73e.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 828,
@@ -9846,7 +10500,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "homeward_light",
-    "model": "/assets/models/spell-scrolls/homeward_light-253e51c43461.glb"
+    "model": "/assets/models/spell-scrolls/homeward_light-253e51c43461.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 829,
@@ -9856,7 +10511,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "ice_barrage",
-    "model": "/assets/models/spell-scrolls/ice_barrage-94bc73730bd6.glb"
+    "model": "/assets/models/spell-scrolls/ice_barrage-94bc73730bd6.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 830,
@@ -9865,7 +10521,8 @@
     "value": 0,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/Scroll1.glb"
+    "model": "/assets/models/Scroll1.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 831,
@@ -9875,7 +10532,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "ice_spikes",
-    "model": "/assets/models/spell-scrolls/ice_spikes-99fc47b84a01.glb"
+    "model": "/assets/models/spell-scrolls/ice_spikes-99fc47b84a01.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 832,
@@ -9885,7 +10543,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "major_rejuvenation",
-    "model": "/assets/models/spell-scrolls/major_rejuvenation-4e9262cda169.glb"
+    "model": "/assets/models/spell-scrolls/major_rejuvenation-4e9262cda169.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 833,
@@ -9895,7 +10554,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "purifying_light",
-    "model": "/assets/models/spell-scrolls/purifying_light-a09ca25b72c4.glb"
+    "model": "/assets/models/spell-scrolls/purifying_light-a09ca25b72c4.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 834,
@@ -9905,7 +10565,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "radiant_aegis",
-    "model": "/assets/models/spell-scrolls/radiant_aegis-41cba6834e97.glb"
+    "model": "/assets/models/spell-scrolls/radiant_aegis-41cba6834e97.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 835,
@@ -9915,7 +10576,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "rejuvenation",
-    "model": "/assets/models/spell-scrolls/rejuvenation-8cd8e6940f82.glb"
+    "model": "/assets/models/spell-scrolls/rejuvenation-8cd8e6940f82.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 836,
@@ -9925,7 +10587,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "sand_tornado",
-    "model": "/assets/models/spell-scrolls/sand_tornado-866cad075cac.glb"
+    "model": "/assets/models/spell-scrolls/sand_tornado-866cad075cac.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 837,
@@ -9935,7 +10598,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "shadow_dart",
-    "model": "/assets/models/spell-scrolls/shadow_dart-eae665168419.glb"
+    "model": "/assets/models/spell-scrolls/shadow_dart-eae665168419.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 838,
@@ -9945,7 +10609,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "small_eruption",
-    "model": "/assets/models/spell-scrolls/small_eruption-68199001a92b.glb"
+    "model": "/assets/models/spell-scrolls/small_eruption-68199001a92b.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 839,
@@ -9955,7 +10620,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "soul_spear",
-    "model": "/assets/models/spell-scrolls/soul_spear-63333af3f5dd.glb"
+    "model": "/assets/models/spell-scrolls/soul_spear-63333af3f5dd.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 840,
@@ -9965,7 +10631,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "vampire_slurp",
-    "model": "/assets/models/spell-scrolls/vampire_slurp-d348f5bf5583.glb"
+    "model": "/assets/models/spell-scrolls/vampire_slurp-d348f5bf5583.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 841,
@@ -9975,7 +10642,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "venomous_hex",
-    "model": "/assets/models/spell-scrolls/venomous_hex-c455129d7bd9.glb"
+    "model": "/assets/models/spell-scrolls/venomous_hex-c455129d7bd9.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 842,
@@ -9985,7 +10653,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "water_strike",
-    "model": "/assets/models/spell-scrolls/water_strike-966dc607b9d9.glb"
+    "model": "/assets/models/spell-scrolls/water_strike-966dc607b9d9.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 843,
@@ -9995,7 +10664,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "wind_bolt",
-    "model": "/assets/models/spell-scrolls/wind_bolt-6016548c5ff6.glb"
+    "model": "/assets/models/spell-scrolls/wind_bolt-6016548c5ff6.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 844,
@@ -10005,7 +10675,8 @@
     "stackable": false,
     "equippable": false,
     "learnSpellId": "withering_curse",
-    "model": "/assets/models/spell-scrolls/withering_curse-da8e6ad353ae.glb"
+    "model": "/assets/models/spell-scrolls/withering_curse-da8e6ad353ae.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 845,
@@ -10018,7 +10689,8 @@
     "model": "/assets/equipment/legs/BearHideChaps.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/BearHideChapsWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 46
   },
   {
     "id": 846,
@@ -10031,7 +10703,8 @@
     "model": "/assets/equipment/hands/BearHideVambraces.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/hands/female/BearHideVambracesWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 22
   },
   {
     "id": 847,
@@ -10045,7 +10718,8 @@
     "model": "/assets/equipment/body/CamelHideBody.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/CamelHideBodyWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 340
   },
   {
     "id": 848,
@@ -10058,7 +10732,8 @@
     "model": "/assets/equipment/legs/CamelHideChaps.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/CamelHideChapsWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 300
   },
   {
     "id": 849,
@@ -10071,7 +10746,8 @@
     "model": "/assets/equipment/hands/CamelHideVambraces.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/hands/female/CamelHideVambracesWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 114
   },
   {
     "id": 850,
@@ -10084,7 +10760,8 @@
     "model": "/assets/equipment/hands/WolfHideVambraces.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/hands/female/WolfHideVambracesWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 558
   },
   {
     "id": 851,
@@ -10093,7 +10770,8 @@
     "value": 60,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/hides/GreenDragonHide.glb"
+    "model": "/assets/models/hides/GreenDragonHide.glb",
+    "generalStoreSellPrice": 8
   },
   {
     "id": 852,
@@ -10102,7 +10780,8 @@
     "value": 90,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/hides/TannedGreenDragonHide.glb"
+    "model": "/assets/models/hides/TannedGreenDragonHide.glb",
+    "generalStoreSellPrice": 20
   },
   {
     "id": 853,
@@ -10112,11 +10791,12 @@
     "stackable": false,
     "equippable": true,
     "equipSlot": "body",
-    "bodyHideStyle": "shirtRecolor",
+    "bodyHideStyle": "shirtHidden",
     "model": "/assets/equipment/body/GreenDragonHideBody.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/GreenDragonHideBodyWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 3120
   },
   {
     "id": 854,
@@ -10129,7 +10809,8 @@
     "model": "/assets/equipment/legs/GreenDragonHideChaps.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/GreenDragonHideChapsWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 1560
   },
   {
     "id": 855,
@@ -10142,7 +10823,8 @@
     "model": "/assets/equipment/hands/GreenDragonHideVambraces.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/hands/female/GreenDragonHideVambracesWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 1000
   },
   {
     "id": 856,
@@ -10151,7 +10833,8 @@
     "value": 100,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/hides/FireDragonHide.glb"
+    "model": "/assets/models/hides/FireDragonHide.glb",
+    "generalStoreSellPrice": 24
   },
   {
     "id": 857,
@@ -10160,7 +10843,8 @@
     "value": 130,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/hides/TannedFireDragonHide.glb"
+    "model": "/assets/models/hides/TannedFireDragonHide.glb",
+    "generalStoreSellPrice": 36
   },
   {
     "id": 858,
@@ -10170,11 +10854,12 @@
     "stackable": false,
     "equippable": true,
     "equipSlot": "body",
-    "bodyHideStyle": "shirtRecolor",
+    "bodyHideStyle": "shirtHidden",
     "model": "/assets/equipment/body/FireDragonHideBody.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/FireDragonHideBodyWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 4492
   },
   {
     "id": 859,
@@ -10187,7 +10872,8 @@
     "model": "/assets/equipment/legs/FireDragonHideChaps.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/FireDragonHideChapsWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 2072
   },
   {
     "id": 860,
@@ -10200,7 +10886,8 @@
     "model": "/assets/equipment/hands/FireDragonHideVambraces.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/hands/female/FireDragonHideVambracesWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 1440
   },
   {
     "id": 861,
@@ -10209,7 +10896,8 @@
     "value": 80,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/hides/FrostDragonHide.glb"
+    "model": "/assets/models/hides/FrostDragonHide.glb",
+    "generalStoreSellPrice": 16
   },
   {
     "id": 862,
@@ -10218,7 +10906,8 @@
     "value": 110,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/hides/TannedFrostDragonHide.glb"
+    "model": "/assets/models/hides/TannedFrostDragonHide.glb",
+    "generalStoreSellPrice": 28
   },
   {
     "id": 863,
@@ -10228,11 +10917,12 @@
     "stackable": false,
     "equippable": true,
     "equipSlot": "body",
-    "bodyHideStyle": "shirtRecolor",
+    "bodyHideStyle": "shirtHidden",
     "model": "/assets/equipment/body/FrostDragonHideBody.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/body/female/FrostDragonHideBodyWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 3744
   },
   {
     "id": 864,
@@ -10245,7 +10935,8 @@
     "model": "/assets/equipment/legs/FrostDragonHideChaps.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/legs/female/FrostDragonHideChapsWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 1728
   },
   {
     "id": 865,
@@ -10258,7 +10949,8 @@
     "model": "/assets/equipment/hands/FrostDragonHideVambraces.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/hands/female/FrostDragonHideVambracesWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 1200
   },
   {
     "id": 866,
@@ -10271,7 +10963,8 @@
     "model": "/assets/equipment/feet/RangingBoots.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/feet/female/RangingBootsWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 867,
@@ -10284,7 +10977,8 @@
     "model": "/assets/equipment/feet/BerserkerBoots.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/feet/female/BerserkerBootsWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 868,
@@ -10297,7 +10991,8 @@
     "model": "/assets/equipment/feet/MageBoots.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/feet/female/MageBootsWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 869,
@@ -10310,7 +11005,8 @@
     "model": "/assets/equipment/feet/FadirsBoots.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/feet/female/FadirsBootsWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 870,
@@ -10323,7 +11019,8 @@
     "model": "/assets/equipment/feet/BlackBoots.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/feet/female/BlackBootsWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 871,
@@ -10336,7 +11033,8 @@
     "model": "/assets/equipment/feet/CreamBoots.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/feet/female/CreamBootsWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 872,
@@ -10349,16 +11047,19 @@
     "model": "/assets/equipment/feet/PurpleBoots.glb",
     "bodyTypeModels": {
       "1": "/assets/equipment/feet/female/PurpleBootsWoman.glb"
-    }
+    },
+    "generalStoreSellPrice": 0
   },
   {
     "id": 873,
-    "name": "Sandstone (1kg)",
-    "description": "A tiny chunk of orange sandstone. Crush it with a hammer to make fine sand.",
+    "name": "Sandstone",
+    "description": "A chunk of orange sandstone. Crush it with a hammer to make fine sand.",
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/sandstone/Sandstone1kg.glb"
+    "model": "/assets/models/sandstone/Sandstone1kg.glb",
+    "generalStoreSellPrice": 0,
+    "legacyName": "Sandstone (1kg)"
   },
   {
     "id": 874,
@@ -10367,7 +11068,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/sandstone/Sandstone2kg.glb"
+    "model": "/assets/models/sandstone/Sandstone2kg.glb",
+    "discontinued": true
   },
   {
     "id": 875,
@@ -10376,7 +11078,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/sandstone/Sandstone5kg.glb"
+    "model": "/assets/models/sandstone/Sandstone5kg.glb",
+    "discontinued": true
   },
   {
     "id": 876,
@@ -10385,7 +11088,8 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/sandstone/Sandstone10kg.glb"
+    "model": "/assets/models/sandstone/Sandstone10kg.glb",
+    "discontinued": true
   },
   {
     "id": 877,
@@ -10394,26 +11098,30 @@
     "value": 1,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/sandstone/FineSand.glb"
+    "model": "/assets/models/sandstone/FineSand.glb",
+    "generalStoreSellPrice": 0
   },
   {
     "id": 878,
     "name": "Glassblowing Pipe",
-    "description": "An ornate iron pipe. Use it on molten glass to shape an unpowered hex crystal.",
+    "description": "An ornate iron pipe. Use it on molten glass to shape an unpowered glass crystal.",
     "value": 20,
     "stackable": false,
     "equippable": false,
     "toolType": "glassblowing_pipe",
-    "model": "/assets/models/GlassblowingPipe.glb"
+    "model": "/assets/models/GlassblowingPipe.glb",
+    "generalStoreSellPrice": 8
   },
   {
     "id": 879,
-    "name": "Hex Crystal (Unpowered)",
+    "name": "Glass Crystal (Unpowered)",
     "description": "A pointed hexagonal crystal of pale glass, waiting to hold magic.",
     "value": 100,
     "stackable": false,
     "equippable": false,
-    "model": "/assets/models/HexCrystal.glb"
+    "model": "/assets/models/HexCrystal.glb",
+    "generalStoreSellPrice": 40,
+    "legacyName": "Hex Crystal (Unpowered)"
   },
   {
     "id": 880,
@@ -10422,7 +11130,8 @@
     "value": 5,
     "stackable": false,
     "equippable": false,
-    "icon": "ring_mould_293.png"
+    "icon": "ring_mould_293.png",
+    "generalStoreSellPrice": 2
   },
   {
     "id": 881,
@@ -10431,7 +11140,8 @@
     "value": 5,
     "stackable": false,
     "equippable": false,
-    "icon": "Necklace_mould_295.png"
+    "icon": "Necklace_mould_295.png",
+    "generalStoreSellPrice": 2
   },
   {
     "id": 882,
@@ -10440,6 +11150,247 @@
     "value": 5,
     "stackable": false,
     "equippable": false,
-    "icon": "Amulet_mould_294.png"
+    "icon": "Amulet_mould_294.png",
+    "generalStoreSellPrice": 2
+  },
+  {
+    "id": 883,
+    "name": "Sapphire Dust",
+    "description": "Finely crushed sapphire. Use it on an unpowered glass crystal to enchant an orb.",
+    "value": 200,
+    "stackable": true,
+    "equippable": false,
+    "model": "/assets/models/staff-orbs/SapphireDust.glb",
+    "generalStoreSellPrice": 32
+  },
+  {
+    "id": 884,
+    "name": "Ruby Dust",
+    "description": "Finely crushed ruby. Use it on an unpowered glass crystal to enchant an orb.",
+    "value": 400,
+    "stackable": true,
+    "equippable": false,
+    "model": "/assets/models/staff-orbs/RubyDust.glb",
+    "generalStoreSellPrice": 128
+  },
+  {
+    "id": 885,
+    "name": "Onyx Dust",
+    "description": "Finely crushed onyx. Use it on an unpowered glass crystal to enchant an orb.",
+    "value": 325,
+    "stackable": true,
+    "equippable": false,
+    "model": "/assets/models/staff-orbs/OnyxDust.glb",
+    "generalStoreSellPrice": 665
+  },
+  {
+    "id": 886,
+    "name": "Sapphire Orb",
+    "description": "A glass crystal enchanted with sapphire dust. Fit it into an oak staff.",
+    "value": 300,
+    "stackable": false,
+    "equippable": false,
+    "model": "/assets/models/staff-orbs/SapphireOrb.glb",
+    "generalStoreSellPrice": 32
+  },
+  {
+    "id": 887,
+    "name": "Ruby Orb",
+    "description": "A glass crystal enchanted with ruby dust. Fit it into a maple staff.",
+    "value": 500,
+    "stackable": false,
+    "equippable": false,
+    "model": "/assets/models/staff-orbs/RubyOrb.glb",
+    "generalStoreSellPrice": 128
+  },
+  {
+    "id": 888,
+    "name": "Onyx Orb",
+    "description": "A glass crystal enchanted with onyx dust. Fit it into a yew staff.",
+    "value": 425,
+    "stackable": false,
+    "equippable": false,
+    "model": "/assets/models/staff-orbs/OnyxOrb.glb",
+    "generalStoreSellPrice": 665
+  },
+  {
+    "id": 889,
+    "name": "Sapphire Staff",
+    "description": "An oak staff cradling an enchanted sapphire orb. Suits Light and Dark Magic.",
+    "value": 1000,
+    "stackable": false,
+    "equippable": true,
+    "equipSlot": "weapon",
+    "attackSpeed": 5,
+    "weaponStyle": "crush",
+    "icon": "staff_100.png",
+    "model": "/assets/equipment/weapon/SapphireStaff.glb",
+    "generalStoreSellPrice": 32
+  },
+  {
+    "id": 890,
+    "name": "Ruby Staff",
+    "description": "A maple staff cradling an enchanted ruby orb. Suits Light and Dark Magic.",
+    "value": 3000,
+    "stackable": false,
+    "equippable": true,
+    "equipSlot": "weapon",
+    "attackSpeed": 5,
+    "weaponStyle": "crush",
+    "icon": "staff_100.png",
+    "model": "/assets/equipment/weapon/RubyStaff.glb",
+    "generalStoreSellPrice": 128
+  },
+  {
+    "id": 891,
+    "name": "Onyx Staff",
+    "description": "A yew staff cradling an enchanted onyx orb. Suits Light and Dark Magic.",
+    "value": 7500,
+    "stackable": false,
+    "equippable": true,
+    "equipSlot": "weapon",
+    "attackSpeed": 5,
+    "weaponStyle": "crush",
+    "icon": "staff_100.png",
+    "model": "/assets/equipment/weapon/OnyxStaff.glb",
+    "generalStoreSellPrice": 665
+  },
+  {
+    "id": 892,
+    "name": "Oak Staff",
+    "description": "A staff carved from two oak logs.",
+    "value": 50,
+    "stackable": false,
+    "equippable": true,
+    "equipSlot": "weapon",
+    "attackSpeed": 5,
+    "weaponStyle": "crush",
+    "icon": "staff_100.png",
+    "model": "/assets/equipment/weapon/OakStaff.glb",
+    "generalStoreSellPrice": 6
+  },
+  {
+    "id": 893,
+    "name": "Willow Staff",
+    "description": "A staff carved from two willow logs.",
+    "value": 50,
+    "stackable": false,
+    "equippable": true,
+    "equipSlot": "weapon",
+    "attackSpeed": 5,
+    "weaponStyle": "crush",
+    "icon": "staff_100.png",
+    "model": "/assets/equipment/weapon/WillowStaff.glb",
+    "generalStoreSellPrice": 6
+  },
+  {
+    "id": 894,
+    "name": "Maple Staff",
+    "description": "A staff carved from two maple logs.",
+    "value": 50,
+    "stackable": false,
+    "equippable": true,
+    "equipSlot": "weapon",
+    "attackSpeed": 5,
+    "weaponStyle": "crush",
+    "icon": "staff_100.png",
+    "model": "/assets/equipment/weapon/MapleStaff.glb",
+    "generalStoreSellPrice": 6
+  },
+  {
+    "id": 895,
+    "name": "Yew Staff",
+    "description": "A staff carved from two yew logs.",
+    "value": 50,
+    "stackable": false,
+    "equippable": true,
+    "equipSlot": "weapon",
+    "attackSpeed": 5,
+    "weaponStyle": "crush",
+    "icon": "staff_100.png",
+    "model": "/assets/equipment/weapon/YewStaff.glb",
+    "generalStoreSellPrice": 6
+  },
+  {
+    "id": 896,
+    "name": "Mystic Staff",
+    "description": "A staff carved from two mystic logs.",
+    "value": 50,
+    "stackable": false,
+    "equippable": true,
+    "equipSlot": "weapon",
+    "attackSpeed": 5,
+    "weaponStyle": "crush",
+    "icon": "staff_100.png",
+    "model": "/assets/equipment/weapon/MysticStaff.glb",
+    "generalStoreSellPrice": 6
+  },
+  {
+    "id": 897,
+    "name": "Emerald Dust",
+    "description": "Finely crushed emerald. Use it on an unpowered glass crystal to enchant an orb.",
+    "value": 300,
+    "stackable": true,
+    "equippable": false,
+    "model": "/assets/models/staff-orbs/EmeraldDust.glb",
+    "generalStoreSellPrice": 64
+  },
+  {
+    "id": 898,
+    "name": "Emerald Orb",
+    "description": "A glass crystal enchanted with emerald dust. Fit it into a willow staff.",
+    "value": 400,
+    "stackable": false,
+    "equippable": false,
+    "model": "/assets/models/staff-orbs/EmeraldOrb.glb",
+    "generalStoreSellPrice": 64
+  },
+  {
+    "id": 899,
+    "name": "Emerald Staff",
+    "description": "A willow staff cradling an enchanted emerald orb. Suits Light and Dark Magic.",
+    "value": 2000,
+    "stackable": false,
+    "equippable": true,
+    "equipSlot": "weapon",
+    "attackSpeed": 5,
+    "weaponStyle": "crush",
+    "icon": "staff_100.png",
+    "model": "/assets/equipment/weapon/EmeraldStaff.glb",
+    "generalStoreSellPrice": 64
+  },
+  {
+    "id": 900,
+    "name": "Diamond Dust",
+    "description": "Finely crushed diamond. Use it on an unpowered glass crystal to enchant an orb.",
+    "value": 625,
+    "stackable": true,
+    "equippable": false,
+    "model": "/assets/models/staff-orbs/DiamondDust.glb",
+    "generalStoreSellPrice": 256
+  },
+  {
+    "id": 901,
+    "name": "Diamond Orb",
+    "description": "A glass crystal enchanted with diamond dust. Fit it into a mystic staff.",
+    "value": 725,
+    "stackable": false,
+    "equippable": false,
+    "model": "/assets/models/staff-orbs/DiamondOrb.glb",
+    "generalStoreSellPrice": 256
+  },
+  {
+    "id": 902,
+    "name": "Diamond Staff",
+    "description": "A mystic staff cradling an enchanted diamond orb. Suits Light and Dark Magic.",
+    "value": 10000,
+    "stackable": false,
+    "equippable": true,
+    "equipSlot": "weapon",
+    "attackSpeed": 5,
+    "weaponStyle": "crush",
+    "icon": "staff_100.png",
+    "model": "/assets/equipment/weapon/DiamondStaff.glb",
+    "generalStoreSellPrice": 256
   }
 ]
