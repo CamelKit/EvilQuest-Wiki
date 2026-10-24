@@ -2,7 +2,7 @@
 | [[{{{Item}}}]]
 | {{{Price}}}
 | {{{Stock}}}<includeonly>{{#cargo_store:_table=ShopInventory
-|Shop={{PAGENAME}}
+|Shop={{{Shop|{{PAGENAME}}}}}
 |Item={{{Item}}}
 |Price={{{Price}}}
 |Stock={{{Stock}}}

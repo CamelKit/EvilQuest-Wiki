@@ -278,12 +278,16 @@ def safe_api_post(session, payload, api_url=None, max_retries=4, backoff=1.5):
 
     return {"error": {"code": "max_retries_exceeded", "info": "Request exceeded max retries"}}
 
-def get_existing_pages(session, titles):
+def get_existing_pages(session, titles, fetch_content=False):
     """
     Batch queries the wiki in chunks of 50 to find existing articles.
-    Returns a set of normalized and raw titles that already exist on the wiki.
+    If fetch_content is True, returns a dict of {title: content_text}.
+    Otherwise returns a set of normalized and raw titles that already exist on the wiki.
     """
-    existing = set()
+    if fetch_content:
+        existing = {}
+    else:
+        existing = set()
     title_list = [t.strip() for t in titles if t and t.strip()]
     chunk_size = 50
 
@@ -294,6 +298,10 @@ def get_existing_pages(session, titles):
             "titles": "|".join(chunk),
             "format": "json"
         }
+        if fetch_content:
+            params["prop"] = "revisions"
+            params["rvprop"] = "content"
+
         for attempt in range(3):
             try:
                 resp = session.get(WIKI_API_URL, params=params, timeout=20)
@@ -302,8 +310,15 @@ def get_existing_pages(session, titles):
                     pages = data.get("query", {}).get("pages", {})
                     for p in pages.values():
                         if "missing" not in p and "title" in p:
-                            existing.add(p["title"])
-                            existing.add(p["title"].lower())
+                            if fetch_content:
+                                content = ""
+                                if "revisions" in p and p["revisions"]:
+                                    content = p["revisions"][0].get("*", "")
+                                existing[p["title"]] = content
+                                existing[p["title"].lower()] = content
+                            else:
+                                existing.add(p["title"])
+                                existing.add(p["title"].lower())
                     break
             except Exception:
                 time.sleep(1)
@@ -608,9 +623,11 @@ def provision_npc_articles(session, csrf_token):
                     "{{Infobox NPC}}\n\n"
                     "== Known Merchants ==\n"
                     "{{#invoke:NPCData|renderSpawns}}\n\n"
-                    "== Shop Inventory ==\n"
-                    "{| class=\"wikitable sortable\"\n"
-                    "! Item !! Price !! Stock\n"
+                    "== Items Sold ==\n"
+                    "{| class=\"wikitable\"\n"
+                    "! Item\n"
+                    "! Price\n"
+                    "! Stock\n"
                     "|}"
                 )
             else:
@@ -620,7 +637,18 @@ def provision_npc_articles(session, csrf_token):
                     "{{#invoke:NPCData|renderSpawns}}"
                 )
         else:
-            text = "{{Infobox NPC}}"
+            if npc.get("hasShop"):
+                text = (
+                    "{{Infobox NPC}}\n\n"
+                    "== Items Sold ==\n"
+                    "{| class=\"wikitable\"\n"
+                    "! Item\n"
+                    "! Price\n"
+                    "! Stock\n"
+                    "|}"
+                )
+            else:
+                text = "{{Infobox NPC}}"
 
         candidates[title] = text
 
@@ -634,19 +662,43 @@ def provision_npc_articles(session, csrf_token):
                         if npc.get("hasShop"):
                             candidates[sname] = (
                                 "{{Infobox NPC}}\n\n"
-                                "== Shop Inventory ==\n"
+                                "== Items Sold ==\n"
                                 "{{ShopStock}}"
                             )
                         else:
                             candidates[sname] = "{{Infobox NPC}}"
 
     candidate_titles = list(candidates.keys())
-    existing_pages = get_existing_pages(session, candidate_titles)
+    existing_pages = get_existing_pages(session, candidate_titles, fetch_content=True)
 
-    created, skipped = 0, 0
+    created, updated, skipped = 0, 0, 0
     for title, text in candidates.items():
-        if title in existing_pages or title.lower() in existing_pages:
-            skipped += 1
+        curr_content = existing_pages.get(title) or existing_pages.get(title.lower())
+        if curr_content is not None:
+            # Check if existing page is an unpopulated placeholder stub that should be upgraded
+            cleaned_curr = curr_content.strip()
+            is_stub = cleaned_curr in ("{{Infobox NPC}}", "{{Infobox_NPC}}")
+            is_outdated_shop_stub = (
+                "{{NPCShop}}" in cleaned_curr or
+                ("== Shop Inventory ==\n{{ShopStock}}" in cleaned_curr)
+            )
+            if (is_stub or is_outdated_shop_stub) and text != cleaned_curr:
+                params = {
+                    "action": "edit",
+                    "title": title,
+                    "text": text,
+                    "summary": "Automated pipeline update: Upgraded stub to structured NPC profile with spawns/shop.",
+                    "token": csrf_token,
+                }
+                res = safe_api_post(session, params)
+                if "edit" in res and res["edit"].get("result") == "Success":
+                    print(f"[UPGRADED STUB NPC] {title}")
+                    updated += 1
+                else:
+                    print(f"[FAILED UPGRADE NPC] {title}: {res.get('error', res)}")
+                time.sleep(0.15)
+            else:
+                skipped += 1
             continue
 
         params = {
@@ -666,7 +718,7 @@ def provision_npc_articles(session, csrf_token):
         else:
             print(f"[FAILED NPC] {title}: {res.get('error', res)}")
         time.sleep(0.15)
-    print(f"NPCs Provisioning Complete. Created: {created} | Skipped: {skipped}")
+    print(f"NPCs Provisioning Complete. Created: {created} | Upgraded: {updated} | Skipped: {skipped}")
 
 if __name__ == "__main__":
     execute_wiki_sync()

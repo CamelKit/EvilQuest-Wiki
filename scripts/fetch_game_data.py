@@ -47,7 +47,7 @@ def get_file_hash(filepath):
 def check_and_update_definitions(force=False):
     os.makedirs(STAGING_DIR, exist_ok=True)
     session = requests.Session()
-    session.headers.update({"User-Agent": "Mozilla/5.0 (EvilQuestWiki MapExtractor/1.0)"})
+    session.headers.update({"User-Agent": "Mozilla/5.0 (Wiki MapExtractor/1.0)"})
 
     changes_detected = False
     updated_files = []

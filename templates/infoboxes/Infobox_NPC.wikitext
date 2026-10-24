@@ -37,15 +37,24 @@
   </tr>
   }}
 
+  {{#if: {{{attackable|{{#invoke:NPCData|fetchNpcData|field=attackable}}}}} |
+  <tr>
+    <th style="text-align: left; padding: 4px;">Attackable?</th>
+    <td style="padding: 4px;">{{{attackable|{{#invoke:NPCData|fetchNpcData|field=attackable}}}}}</td>
+  </tr>
+  }}
+
   {{#if: {{{combatLevel|{{#invoke:NPCData|fetchNpcData|field=combatLevel}}}}} |
   <tr>
     <th style="text-align: left; padding: 4px;">Combat Level</th>
     <td style="padding: 4px;">{{{combatLevel|{{#invoke:NPCData|fetchNpcData|field=combatLevel}}}}}</td>
   </tr>
+  {{#ifeq: {{{attackable|{{#invoke:NPCData|fetchNpcData|field=attackable}}}}} | Yes |
   <tr class="camelkit-npc-kill-row" style="display: none;">
     <th style="text-align: left; padding: 4px;">Tracked Kills</th>
     <td style="padding: 4px;" class="camelkit-npc-kill-val">0</td>
   </tr>
+  }}
   }}
 
   {{#if: {{{hasShop|{{#invoke:NPCData|fetchNpcData|field=hasShop}}}}} |
@@ -85,10 +94,14 @@
   }}
   }}
 </table>
-{{#if: {{{drops|}}} |
-<div style="clear: both;"></div>
-== Drops ==
-{{{drops}}}
-|
-{{#invoke:DropData|renderDrops}}
+{{#switch: {{lc:{{{drops|}}}}}
+| none | no | false | - =
+| #default =
+  {{#if: {{{drops|}}} |
+  <div style="clear: both;"></div>
+  == Drops ==
+  {{{drops}}}
+  |
+  {{#invoke:DropData|renderDrops}}
+  }}
 }}[[Category:NPCs]]</includeonly>

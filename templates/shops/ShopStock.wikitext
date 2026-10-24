@@ -11,6 +11,6 @@ tables=ShopInventory
 |where=Shop="{{{1|{{{shop|{{#invoke:NPCData|getBaseDef}}}}}}}}"
 |format=table
 |headers=Item,Price,Stock
-|default=This merchant's stock has not been cataloged yet.
+|default=''This merchant's stock has not been cataloged yet. If known, please add it to [[{{{1|{{{shop|{{#invoke:NPCData|getBaseDef}}}}}}}}]].''
 }}
 </includeonly>

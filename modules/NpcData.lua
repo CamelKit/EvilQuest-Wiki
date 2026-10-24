@@ -70,6 +70,80 @@ function p.getBaseDef(frame)
     return baseName
 end
 
+-- Table of non-combat friendly NPCs that are not attackable
+local friendlyNpcs = {
+    ["banker"] = true,
+    ["farmer"] = true,
+    ["bill the stylist"] = true,
+    ["brother aldous"] = true,
+    ["brother fenn"] = true,
+    ["monk"] = true,
+    ["giles"] = true,
+    ["camel"] = true,
+    ["sad camel"] = true,
+    ["cool camel"] = true,
+    ["supply camel"] = true,
+    ["ali the oasis-born"] = true,
+    ["new friendly npc"] = true,
+    ["castle prisoner"] = true,
+    ["farid"] = true,
+    ["chainmaster varrik"] = true,
+    ["mara"] = true,
+    ["samir"] = true,
+    ["hadi"] = true,
+    ["nadir"] = true,
+    ["nabil"] = true,
+    ["guard trainee"] = true,
+    ["city watch drill sergeant"] = true,
+}
+
+-- Internal logic to determine if an NPC is attackable
+function p.checkAttackable(rawTitle)
+    if not rawTitle or rawTitle == "" then return true end
+    local baseName = string.match(rawTitle, "^(.-)%s*%(Lvl (.-)%)$") or rawTitle
+    local lowerRaw = string.lower(rawTitle)
+    local lowerBase = string.lower(baseName)
+
+    if friendlyNpcs[lowerRaw] or friendlyNpcs[lowerBase] then
+        return false
+    end
+
+    local inst = instanceToDef[baseName] or instanceToDef[lowerBase]
+    local npc = inst and inst.base or (defByName[baseName] or defByName[lowerBase])
+
+    if npc then
+        if npc.attackable == false then
+            return false
+        end
+        if npc.hasShop == true then
+            return false
+        end
+        if friendlyNpcs[string.lower(npc.name or "")] then
+            return false
+        end
+        if npc.attackable == true then
+            return true
+        end
+    end
+
+    return true
+end
+
+-- Checks if a given NPC or instance is attackable (returns "Yes" or "No")
+function p.isAttackable(frame)
+    local rawTitle = (type(frame) == "table" and frame.args and frame.args[1]) or (type(frame) == "string" and frame)
+    if (not rawTitle or rawTitle == "") and type(frame) == "table" and frame.getParent then
+        local parent = frame:getParent()
+        if parent and parent.args then
+            rawTitle = parent.args['name']
+        end
+    end
+    if not rawTitle or rawTitle == "" then
+        rawTitle = mw.title.getCurrentTitle().text
+    end
+    return p.checkAttackable(rawTitle) and "Yes" or "No"
+end
+
 -- Checks if a given page represents a specific instance of a base definition
 function p.isInstance(frame)
     local rawTitle = (frame and frame.args and frame.args[1]) or mw.title.getCurrentTitle().text
@@ -94,6 +168,10 @@ function p.fetchNpcData(frame)
     local baseName, targetLevel = string.match(rawTitle, "^(.-)%s*%(Lvl (.-)%)$")
     if not baseName then
         baseName = rawTitle
+    end
+
+    if targetField == "attackable" or targetField == "isAttackable" then
+        return p.checkAttackable(baseName) and "Yes" or "No"
     end
 
     -- 1. Check if queried NPC is a known named instance (e.g. Nayla, Nim, Renn)
@@ -150,7 +228,7 @@ function p.fetchNpcData(frame)
                     elseif targetField == "isInstance" then
                         return "No"
                     elseif targetField == "coordinates" then
-                        if npc.spawns and #npc.spawns > 0 then
+                        if npc.spawns and npc.spawns[1] then
                             local coords = {}
                             for _, s in ipairs(npc.spawns) do
                                 if s.x and s.z then
@@ -169,7 +247,7 @@ function p.fetchNpcData(frame)
                 elseif targetField == "isInstance" then
                     return "No"
                 elseif targetField == "coordinates" then
-                    if npc.spawns and #npc.spawns > 0 then
+                    if npc.spawns and npc.spawns[1] then
                         local coords = {}
                         for _, s in ipairs(npc.spawns) do
                             if s.x and s.z then
@@ -204,7 +282,7 @@ function p.renderSpawns(frame)
     local baseName = string.match(rawTitle, "^(.-)%s*%(Lvl (.-)%)$") or rawTitle
     local npc = defByName[baseName] or defByName[string.lower(baseName)]
 
-    if not npc or not npc.spawns or #npc.spawns == 0 then
+    if not npc or not npc.spawns or not npc.spawns[1] then
         return "''No specific world spawn locations recorded.''"
     end
 

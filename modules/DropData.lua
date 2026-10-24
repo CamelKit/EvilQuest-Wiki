@@ -64,6 +64,35 @@ function p.renderDrops(frame)
         end
     end
 
+    -- Check if NPC is attackable
+    local isAttackable = true
+    local okNpcMod, npcMod = pcall(require, 'Module:NPCData')
+    if okNpcMod and npcMod and npcMod.isAttackable then
+        local attStr = npcMod.isAttackable(rawTitle)
+        if attStr == "No" or attStr == false then
+            isAttackable = false
+        end
+    else
+        -- Fallback check directly against Module:NPCData/json
+        local ok, npcJson = pcall(mw.loadJsonData, 'Module:NPCData/json')
+        if ok and npcJson then
+            local targetLower = rawTitle:lower()
+            for _, npc in ipairs(npcJson) do
+                if npc.name and npc.name:lower() == targetLower then
+                    if npc.attackable == false or npc.hasShop == true then
+                        isAttackable = false
+                    end
+                    break
+                end
+            end
+        end
+    end
+
+    -- If the NPC is not attackable and has no confirmed crowdsourced drops, suppress the drops section completely
+    if not isAttackable and dropCount == 0 then
+        return ""
+    end
+
     local combatLvl = monster and monster.combatLevel
     if not combatLvl then
         local ok, npcJson = pcall(mw.loadJsonData, 'Module:NPCData/json')
@@ -77,7 +106,7 @@ function p.renderDrops(frame)
         end
     end
 
-    if combatLvl and tonumber(combatLvl) ~= nil and tonumber(combatLvl) <= 0 then
+    if combatLvl and tonumber(combatLvl) ~= nil and tonumber(combatLvl) <= 0 and dropCount == 0 then
         return ""
     end
 
