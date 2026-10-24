@@ -526,14 +526,16 @@ def provision_npc_articles(session, csrf_token):
     with open(data_path, "r", encoding="utf-8") as f:
         npcs = json.load(f)
     
+    generic_names = {"man", "woman"}
+    candidates = {}  # title -> text
+
+    # 1. Base Definitions
     name_counts = {}
     for npc in npcs:
         name = npc.get("name")
         if name:
             name_counts[name] = name_counts.get(name, 0) + 1
 
-    unique_titles = []
-    seen = set()
     for npc in npcs:
         name = npc.get("name")
         if not name:
@@ -543,32 +545,78 @@ def provision_npc_articles(session, csrf_token):
             title = f"{name} (Lvl {npc.get('combatLevel', '??')})"
         else:
             title = name
-        
-        if title not in seen:
-            seen.add(title)
-            unique_titles.append(title)
 
-    existing_pages = get_existing_pages(session, unique_titles)
+        has_custom_spawns = False
+        if npc.get("spawns"):
+            for s in npc["spawns"]:
+                sname = s.get("name")
+                if sname and sname != name and sname.lower() not in generic_names:
+                    has_custom_spawns = True
+                    break
+
+        if has_custom_spawns:
+            if npc.get("hasShop"):
+                text = (
+                    "{{Infobox NPC}}\n\n"
+                    "== Known Merchants ==\n"
+                    "{{#invoke:NPCData|renderSpawns}}\n\n"
+                    "== Shop Inventory ==\n"
+                    "{| class=\"wikitable sortable\"\n"
+                    "! Item !! Price !! Stock\n"
+                    "|}"
+                )
+            else:
+                text = (
+                    "{{Infobox NPC}}\n\n"
+                    "== Known Instances ==\n"
+                    "{{#invoke:NPCData|renderSpawns}}"
+                )
+        else:
+            text = "{{Infobox NPC}}"
+
+        candidates[title] = text
+
+    # 2. Named Instances (e.g. Nayla, Nim, Renn)
+    for npc in npcs:
+        if npc.get("spawns"):
+            for s in npc["spawns"]:
+                sname = s.get("name")
+                if sname and sname != npc.get("name") and sname.lower() not in generic_names:
+                    if sname not in candidates:
+                        if npc.get("hasShop"):
+                            candidates[sname] = (
+                                "{{Infobox NPC}}\n\n"
+                                "== Shop Inventory ==\n"
+                                "{{ShopStock}}"
+                            )
+                        else:
+                            candidates[sname] = "{{Infobox NPC}}"
+
+    candidate_titles = list(candidates.keys())
+    existing_pages = get_existing_pages(session, candidate_titles)
 
     created, skipped = 0, 0
-    for title in unique_titles:
+    for title, text in candidates.items():
         if title in existing_pages or title.lower() in existing_pages:
             skipped += 1
             continue
-        
+
         params = {
-            "action": "edit", "title": title, "text": "{{Infobox NPC}}",
-            "summary": "Provisioned disambiguated NPC placeholder.",
-            "token": csrf_token, "createonly": 1,
+            "action": "edit",
+            "title": title,
+            "text": text,
+            "summary": "Automated pipeline provisioning: Initialized NPC article.",
+            "token": csrf_token,
+            "createonly": 1,
         }
         res = safe_api_post(session, params)
         if "edit" in res and res["edit"].get("result") == "Success":
-            print(f"[CREATED] {title}")
+            print(f"[CREATED NPC] {title}")
             created += 1
         elif "error" in res and res["error"].get("code") == "articleexists":
             skipped += 1
         else:
-            print(f"[FAILED] {title}: {res.get('error', res)}")
+            print(f"[FAILED NPC] {title}: {res.get('error', res)}")
         time.sleep(0.15)
     print(f"NPCs Provisioning Complete. Created: {created} | Skipped: {skipped}")
 

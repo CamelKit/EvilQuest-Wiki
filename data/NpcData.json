@@ -17,7 +17,93 @@
     "attackStyle": "stab",
     "attackSpeed": 4,
     "examineText": "A wary chicken pecking at whatever the ground is willing to give up.",
-    "wanderRange": 2
+    "wanderRange": 2,
+    "spawns": [
+      {
+        "name": "Chicken",
+        "x": 283.5,
+        "z": 475.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Chicken",
+        "x": 286.5,
+        "z": 476.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Chicken",
+        "x": 284.5,
+        "z": 477.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Chicken",
+        "x": 283.5,
+        "z": 478.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Chicken",
+        "x": 513.5,
+        "z": 542.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Chicken",
+        "x": 515.5,
+        "z": 543.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Chicken",
+        "x": 512.5,
+        "z": 544.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Chicken",
+        "x": 403.5,
+        "z": 616.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Chicken",
+        "x": 405.5,
+        "z": 616.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Chicken",
+        "x": 404.5,
+        "z": 617.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Chicken",
+        "x": 403.5,
+        "z": 618.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "John",
+        "x": 626.5,
+        "z": 334.5,
+        "floor": 1,
+        "wanderRange": 1
+      }
+    ]
   },
   {
     "id": 23,
@@ -29,7 +115,58 @@
     "attackSpeed": 4,
     "combatLevel": 3,
     "examineText": "A proud rooster, strutting like dawn itself reports to him.",
-    "wanderRange": 2
+    "wanderRange": 2,
+    "spawns": [
+      {
+        "name": "Rooster",
+        "x": 285.5,
+        "z": 475.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Rooster",
+        "x": 514.5,
+        "z": 544.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Rooster",
+        "x": 429.5,
+        "z": 551.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Rooster",
+        "x": 439.5,
+        "z": 559.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Rooster",
+        "x": 439.5,
+        "z": 565.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Rooster",
+        "x": 444.5,
+        "z": 566.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Rooster",
+        "x": 441.5,
+        "z": 572.5,
+        "floor": 0,
+        "wanderRange": 3
+      }
+    ]
   },
   {
     "id": 10,
@@ -50,7 +187,121 @@
     "attackSpeed": 4,
     "size": 2,
     "examineText": "A gentle cow with the calm confidence of something that has never paid rent.",
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Bloodless Cow",
+        "x": 377.5,
+        "z": 616.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Cow",
+        "x": 291.5,
+        "z": 511.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Cow",
+        "x": 298.5,
+        "z": 511.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Cow",
+        "x": 290.5,
+        "z": 513.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Cow",
+        "x": 294.5,
+        "z": 515.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Cow",
+        "x": 299.5,
+        "z": 516.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Cow",
+        "x": 296.5,
+        "z": 520.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Cow",
+        "x": 300.5,
+        "z": 520.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Cow",
+        "x": 373.5,
+        "z": 613.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Cow",
+        "x": 380.5,
+        "z": 617.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Cow",
+        "x": 373.5,
+        "z": 619.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Cow",
+        "x": 380.5,
+        "z": 620.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Cow",
+        "x": 372.5,
+        "z": 624.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Cow",
+        "x": 377.5,
+        "z": 625.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Cow",
+        "x": 385.5,
+        "z": 625.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Cow",
+        "x": 380.5,
+        "z": 627.5,
+        "floor": 0,
+        "wanderRange": 6
+      }
+    ]
   },
   {
     "id": 24,
@@ -63,7 +314,23 @@
     "combatLevel": 12,
     "size": 2,
     "examineText": "A heavy bull with a short temper and no interest in negotiation.",
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Bull",
+        "x": 294.5,
+        "z": 511.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Bull",
+        "x": 375.5,
+        "z": 622.5,
+        "floor": 0,
+        "wanderRange": 3
+      }
+    ]
   },
   {
     "id": 25,
@@ -77,7 +344,72 @@
     "attackSpeed": 4,
     "size": 2,
     "examineText": "A broad-shouldered bear. The sensible part of you suggests distance.",
-    "wanderRange": 5
+    "wanderRange": 5,
+    "spawns": [
+      {
+        "name": "Bear",
+        "x": 322.5,
+        "z": 441.5,
+        "floor": 0,
+        "wanderRange": 10
+      },
+      {
+        "name": "Bear",
+        "x": 337.5,
+        "z": 441.5,
+        "floor": 0,
+        "wanderRange": 10
+      },
+      {
+        "name": "Bear",
+        "x": 327.5,
+        "z": 449.5,
+        "floor": 0,
+        "wanderRange": 10
+      },
+      {
+        "name": "Bear",
+        "x": 337.5,
+        "z": 452.5,
+        "floor": 0,
+        "wanderRange": 10
+      },
+      {
+        "name": "Bear",
+        "x": 481.5,
+        "z": 519.5,
+        "floor": 0,
+        "wanderRange": 5
+      },
+      {
+        "name": "Bear",
+        "x": 463.5,
+        "z": 525.5,
+        "floor": 0,
+        "wanderRange": 5
+      },
+      {
+        "name": "Bear",
+        "x": 479.5,
+        "z": 527.5,
+        "floor": 0,
+        "wanderRange": 5
+      },
+      {
+        "name": "Bear",
+        "x": 473.5,
+        "z": 529.5,
+        "floor": 0,
+        "wanderRange": 5
+      },
+      {
+        "name": "Bear",
+        "x": 504.5,
+        "z": 610.5,
+        "floor": 0,
+        "wanderRange": 6
+      }
+    ]
   },
   {
     "id": 26,
@@ -90,7 +422,65 @@
     "size": 2,
     "combatLevel": 52,
     "examineText": "A black bear with watchful eyes and the patience to wait you out.",
-    "wanderRange": 5
+    "wanderRange": 5,
+    "spawns": [
+      {
+        "name": "Black Bear",
+        "x": 321.5,
+        "z": 392.5,
+        "floor": 0,
+        "wanderRange": 13
+      },
+      {
+        "name": "Black Bear",
+        "x": 332.5,
+        "z": 394.5,
+        "floor": 0,
+        "wanderRange": 13
+      },
+      {
+        "name": "Black Bear",
+        "x": 317.5,
+        "z": 397.5,
+        "floor": 0,
+        "wanderRange": 13
+      },
+      {
+        "name": "Black Bear",
+        "x": 345.5,
+        "z": 425.5,
+        "floor": 0,
+        "wanderRange": 13
+      },
+      {
+        "name": "Black Bear",
+        "x": 479.5,
+        "z": 432.5,
+        "floor": 0,
+        "wanderRange": 5
+      },
+      {
+        "name": "Black Bear",
+        "x": 427.5,
+        "z": 449.5,
+        "floor": 0,
+        "wanderRange": 12
+      },
+      {
+        "name": "Black Bear",
+        "x": 420.5,
+        "z": 456.5,
+        "floor": 0,
+        "wanderRange": 12
+      },
+      {
+        "name": "Black Bear",
+        "x": 493.5,
+        "z": 457.5,
+        "floor": 0,
+        "wanderRange": 5
+      }
+    ]
   },
   {
     "id": 27,
@@ -137,7 +527,135 @@
     "attackSpeed": 4,
     "examineText": "A goblin with more nerve than plan.",
     "defaultAttackAnim": "stab",
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Goblin",
+        "x": 403.5,
+        "z": 487.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 408.5,
+        "z": 488.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 418.5,
+        "z": 490.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 404.5,
+        "z": 491.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 399.5,
+        "z": 492.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 393.5,
+        "z": 493.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 410.5,
+        "z": 496.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 378.5,
+        "z": 502.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 382.5,
+        "z": 504.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 414.5,
+        "z": 504.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 373.5,
+        "z": 505.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 373.5,
+        "z": 509.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 379.5,
+        "z": 509.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 406.5,
+        "z": 510.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 435.5,
+        "z": 543.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 403.5,
+        "z": 551.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 407.5,
+        "z": 633.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Goblin",
+        "x": 411.5,
+        "z": 634.5,
+        "floor": 0,
+        "wanderRange": 3
+      }
+    ]
   },
   {
     "id": 4,
@@ -199,7 +717,72 @@
     "attackSpeed": 3,
     "combatLevel": 19,
     "examineText": "A black spider with a glossy shell and a very convincing glare.",
-    "wanderRange": 6
+    "wanderRange": 6,
+    "spawns": [
+      {
+        "name": "Black Spider",
+        "x": 552.5,
+        "z": 467.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Black Spider",
+        "x": 547.5,
+        "z": 468.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Black Spider",
+        "x": 554.5,
+        "z": 470.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Black Spider",
+        "x": 550.5,
+        "z": 471.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Black Spider",
+        "x": 555.5,
+        "z": 474.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Black Spider",
+        "x": 556.5,
+        "z": 476.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Black Spider",
+        "x": 549.5,
+        "z": 478.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Black Spider",
+        "x": 556.5,
+        "z": 480.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Black Spider",
+        "x": 555.5,
+        "z": 483.5,
+        "floor": 0,
+        "wanderRange": 4
+      }
+    ]
   },
   {
     "id": 22,
@@ -211,7 +794,16 @@
     "attackSpeed": 3,
     "combatLevel": 40,
     "examineText": "The matriarch of the nest. Everything about her says not today.",
-    "wanderRange": 6
+    "wanderRange": 6,
+    "spawns": [
+      {
+        "name": "Mother Spider",
+        "x": 551.5,
+        "z": 474.5,
+        "floor": 0,
+        "wanderRange": 4
+      }
+    ]
   },
   {
     "id": 7,
@@ -245,7 +837,72 @@
       0,
       0
     ],
-    "defaultGearProfile": "guard"
+    "defaultGearProfile": "guard",
+    "spawns": [
+      {
+        "name": "Guard",
+        "x": 276.5,
+        "z": 462.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Guard",
+        "x": 279.5,
+        "z": 462.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Guard",
+        "x": 279.5,
+        "z": 472.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Guard",
+        "x": 280.5,
+        "z": 475.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Guard",
+        "x": 246.5,
+        "z": 480.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Guard",
+        "x": 267.5,
+        "z": 483.5,
+        "floor": 0,
+        "wanderRange": 9
+      },
+      {
+        "name": "Guard",
+        "x": 274.5,
+        "z": 499.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Guard",
+        "x": 279.5,
+        "z": 500.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Guard",
+        "x": 309.5,
+        "z": 642.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 8,
@@ -258,7 +915,23 @@
     "combatLevel": 13,
     "hasShop": true,
     "examineText": "Smiling with the exact warmth of a refund policy.",
-    "wanderRange": 1
+    "wanderRange": 1,
+    "spawns": [
+      {
+        "name": "Robert",
+        "x": 402.5,
+        "z": 600.5,
+        "floor": 0,
+        "wanderRange": 1
+      },
+      {
+        "name": "Tilda Goosefeather",
+        "x": 260.5,
+        "z": 495.5,
+        "floor": 0,
+        "wanderRange": 1
+      }
+    ]
   },
   {
     "id": 9,
@@ -283,7 +956,23 @@
     "combatLevel": 13,
     "hasShop": true,
     "examineText": "A weapon smith with hands that know every edge in the room.",
-    "wanderRange": 1
+    "wanderRange": 1,
+    "spawns": [
+      {
+        "name": "Weapon Smith",
+        "x": 629.5,
+        "z": 356.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Weapon Smith",
+        "x": 543.5,
+        "z": 632.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 12,
@@ -296,7 +985,16 @@
     "combatLevel": 13,
     "hasShop": true,
     "examineText": "An armorer sizing up dents before they happen.",
-    "wanderRange": 1
+    "wanderRange": 1,
+    "spawns": [
+      {
+        "name": "Zahir",
+        "x": 412.5,
+        "z": 666.5,
+        "floor": 0,
+        "wanderRange": 1
+      }
+    ]
   },
   {
     "id": 13,
@@ -309,7 +1007,16 @@
     "combatLevel": 13,
     "hasShop": true,
     "examineText": "A specialist in leg armour, which suddenly feels more important.",
-    "wanderRange": 1
+    "wanderRange": 1,
+    "spawns": [
+      {
+        "name": "William the Smith",
+        "x": 273.5,
+        "z": 488.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 14,
@@ -325,7 +1032,16 @@
     "wanderRange": 0,
     "modelNpcId": 11,
     "attackable": false,
-    "stationary": true
+    "stationary": true,
+    "spawns": [
+      {
+        "name": "Wilfred the shieldsmith",
+        "x": 640.5,
+        "z": 333.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 15,
@@ -338,7 +1054,86 @@
     "size": 2,
     "combatLevel": 52,
     "examineText": "A camel chewing thoughtfully, as if judging the whole kingdom.",
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Angry camel",
+        "x": 415.5,
+        "z": 783.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Camel",
+        "x": 483.5,
+        "z": 719.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Camel",
+        "x": 471.5,
+        "z": 720.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Camel",
+        "x": 475.5,
+        "z": 725.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Camel",
+        "x": 481.5,
+        "z": 726.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Camel",
+        "x": 474.5,
+        "z": 730.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Camel",
+        "x": 326.5,
+        "z": 838.5,
+        "floor": 0,
+        "wanderRange": 7
+      },
+      {
+        "name": "Camel",
+        "x": 346.5,
+        "z": 842.5,
+        "floor": 0,
+        "wanderRange": 7
+      },
+      {
+        "name": "Camel",
+        "x": 340.5,
+        "z": 843.5,
+        "floor": 0,
+        "wanderRange": 7
+      },
+      {
+        "name": "Camel",
+        "x": 331.5,
+        "z": 857.5,
+        "floor": 0,
+        "wanderRange": 5
+      },
+      {
+        "name": "Camel",
+        "x": 323.5,
+        "z": 913.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 16,
@@ -351,7 +1146,86 @@
     "stationary": true,
     "combatLevel": 13,
     "examineText": "A banker protected by ledgers, locks, and professional patience.",
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Banker",
+        "x": 616.5,
+        "z": 335.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Banker",
+        "x": 263.5,
+        "z": 473.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Banker",
+        "x": 264.5,
+        "z": 473.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Banker",
+        "x": 545.5,
+        "z": 620.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Banker",
+        "x": 546.5,
+        "z": 620.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Banker",
+        "x": 431.5,
+        "z": 668.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Banker",
+        "x": 429.5,
+        "z": 692.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Banker",
+        "x": 430.5,
+        "z": 692.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Banker",
+        "x": 298.5,
+        "z": 906.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Banker",
+        "x": 298.5,
+        "z": 908.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Banker",
+        "x": 298.5,
+        "z": 910.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 17,
@@ -363,7 +1237,44 @@
     "attackSpeed": 3,
     "combatLevel": 46,
     "examineText": "A snow wolf with pale fur and colder instincts.",
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Snow Wolf",
+        "x": 476.5,
+        "z": 184.5,
+        "floor": 0,
+        "wanderRange": 11
+      },
+      {
+        "name": "Snow Wolf",
+        "x": 459.5,
+        "z": 192.5,
+        "floor": 0,
+        "wanderRange": 11
+      },
+      {
+        "name": "Snow Wolf",
+        "x": 475.5,
+        "z": 192.5,
+        "floor": 0,
+        "wanderRange": 11
+      },
+      {
+        "name": "Snow Wolf",
+        "x": 468.5,
+        "z": 200.5,
+        "floor": 0,
+        "wanderRange": 11
+      },
+      {
+        "name": "Snow Wolf",
+        "x": 474.5,
+        "z": 204.5,
+        "floor": 0,
+        "wanderRange": 11
+      }
+    ]
   },
   {
     "id": 18,
@@ -383,7 +1294,212 @@
     "attackStyle": "crush",
     "attackSpeed": 4,
     "examineText": "A small rat. It still looks too comfortable here.",
-    "wanderRange": 2
+    "wanderRange": 2,
+    "spawns": [
+      {
+        "name": "Rat",
+        "x": 674.5,
+        "z": 345.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Rat",
+        "x": 682.5,
+        "z": 345.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Rat",
+        "x": 683.5,
+        "z": 348.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Rat",
+        "x": 680.5,
+        "z": 349.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Rat",
+        "x": 679.5,
+        "z": 350.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Rat",
+        "x": 422.5,
+        "z": 467.5,
+        "floor": 0,
+        "wanderRange": 7
+      },
+      {
+        "name": "Rat",
+        "x": 426.5,
+        "z": 479.5,
+        "floor": 0,
+        "wanderRange": 7
+      },
+      {
+        "name": "Rat",
+        "x": 403.5,
+        "z": 604.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Rat",
+        "x": 405.5,
+        "z": 604.5,
+        "floor": 0,
+        "wanderRange": 8
+      },
+      {
+        "name": "Rat",
+        "x": 417.5,
+        "z": 609.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Rat",
+        "x": 413.5,
+        "z": 610.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Rat",
+        "x": 419.5,
+        "z": 611.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Rat",
+        "x": 456.5,
+        "z": 611.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Rat",
+        "x": 419.5,
+        "z": 612.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Rat",
+        "x": 402.5,
+        "z": 613.5,
+        "floor": 0,
+        "wanderRange": 9
+      },
+      {
+        "name": "Rat",
+        "x": 414.5,
+        "z": 614.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Rat",
+        "x": 298.5,
+        "z": 628.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Rat",
+        "x": 284.5,
+        "z": 629.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Rat",
+        "x": 296.5,
+        "z": 629.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Rat",
+        "x": 305.5,
+        "z": 630.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Rat",
+        "x": 295.5,
+        "z": 632.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Rat",
+        "x": 307.5,
+        "z": 632.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Rat",
+        "x": 287.5,
+        "z": 634.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Rat",
+        "x": 303.5,
+        "z": 653.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Rat",
+        "x": 303.5,
+        "z": 658.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Rat",
+        "x": 306.5,
+        "z": 658.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Rat",
+        "x": 330.5,
+        "z": 861.5,
+        "floor": 0,
+        "wanderRange": 8
+      },
+      {
+        "name": "Rat",
+        "x": 346.5,
+        "z": 866.5,
+        "floor": 0,
+        "wanderRange": 8
+      },
+      {
+        "name": "Rat",
+        "x": 330.5,
+        "z": 870.5,
+        "floor": 0,
+        "wanderRange": 8
+      }
+    ]
   },
   {
     "id": 19,
@@ -410,7 +1526,37 @@
     "attackStyle": "stab",
     "attackSpeed": 6,
     "examineText": "A farmer with soil on his boots and weather in his bones.",
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Farmer",
+        "x": 286.5,
+        "z": 478.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Farmer",
+        "x": 292.5,
+        "z": 485.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Farmer",
+        "x": 476.5,
+        "z": 581.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Farmer",
+        "x": 482.5,
+        "z": 583.5,
+        "floor": 0,
+        "wanderRange": 6
+      }
+    ]
   },
   {
     "id": 21,
@@ -423,7 +1569,16 @@
     "stationary": true,
     "combatLevel": 13,
     "examineText": "A man who can see your split ends from three tiles away.",
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Bill the Stylist",
+        "x": 426.5,
+        "z": 594.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 100,
@@ -435,7 +1590,65 @@
     "attackSpeed": 5,
     "combatLevel": 23,
     "examineText": "A vampire wearing charm like a second cloak.",
-    "wanderRange": 5
+    "wanderRange": 5,
+    "spawns": [
+      {
+        "name": "Sela",
+        "x": 500.5,
+        "z": 582.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Sela",
+        "x": 379.5,
+        "z": 614.5,
+        "floor": 0,
+        "wanderRange": 1
+      },
+      {
+        "name": "Vampire",
+        "x": 518.5,
+        "z": 582.5,
+        "floor": 0,
+        "wanderRange": 8
+      },
+      {
+        "name": "Vampire",
+        "x": 519.5,
+        "z": 582.5,
+        "floor": 0,
+        "wanderRange": 8
+      },
+      {
+        "name": "Vampire",
+        "x": 522.5,
+        "z": 582.5,
+        "floor": 0,
+        "wanderRange": 8
+      },
+      {
+        "name": "Vampire",
+        "x": 514.5,
+        "z": 583.5,
+        "floor": 0,
+        "wanderRange": 8
+      },
+      {
+        "name": "Vampire",
+        "x": 511.5,
+        "z": 585.5,
+        "floor": 0,
+        "wanderRange": 8
+      },
+      {
+        "name": "Vampire",
+        "x": 527.5,
+        "z": 585.5,
+        "floor": 0,
+        "wanderRange": 8
+      }
+    ]
   },
   {
     "id": 101,
@@ -447,7 +1660,30 @@
     "attackSpeed": 5,
     "combatLevel": 31,
     "examineText": "An elder vampire who has outlived both mercy and fashion.",
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Elder Vampire",
+        "x": 508.5,
+        "z": 577.5,
+        "floor": 0,
+        "wanderRange": 7
+      },
+      {
+        "name": "Elder Vampire",
+        "x": 503.5,
+        "z": 584.5,
+        "floor": 0,
+        "wanderRange": 8
+      },
+      {
+        "name": "Lord Mortrek",
+        "x": 502.5,
+        "z": 577.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 102,
@@ -459,7 +1695,184 @@
     "attackSpeed": 4,
     "combatLevel": 4,
     "examineText": "A custom-built stranger with a look that says someone is still editing.",
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Drillmaster Nessa",
+        "x": 307.5,
+        "z": 653.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Groundskeeper Moss",
+        "x": 314.5,
+        "z": 626.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "man",
+        "x": 263.5,
+        "z": 459.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "man",
+        "x": 278.5,
+        "z": 483.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "man",
+        "x": 269.5,
+        "z": 485.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "man",
+        "x": 261.5,
+        "z": 486.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "man",
+        "x": 351.5,
+        "z": 518.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "man",
+        "x": 426.5,
+        "z": 527.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "man",
+        "x": 398.5,
+        "z": 594.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "man",
+        "x": 390.5,
+        "z": 600.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "man",
+        "x": 434.5,
+        "z": 600.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "man",
+        "x": 544.5,
+        "z": 625.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "man",
+        "x": 439.5,
+        "z": 666.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "man",
+        "x": 439.5,
+        "z": 673.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "man",
+        "x": 436.5,
+        "z": 678.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "man",
+        "x": 431.5,
+        "z": 685.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "man",
+        "x": 296.5,
+        "z": 885.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Potter Tams",
+        "x": 287.5,
+        "z": 642.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Sister Lumen",
+        "x": 321.5,
+        "z": 622.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Smith Brond",
+        "x": 304.5,
+        "z": 628.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Steward Hobb",
+        "x": 321.5,
+        "z": 646.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Tea Mistress Mara",
+        "x": 325.5,
+        "z": 630.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Woman",
+        "x": 271.5,
+        "z": 706.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Woman",
+        "x": 289.5,
+        "z": 888.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Woman",
+        "x": 287.5,
+        "z": 899.5,
+        "floor": 0,
+        "wanderRange": 3
+      }
+    ]
   },
   {
     "id": 103,
@@ -471,7 +1884,16 @@
     "attackSpeed": 5,
     "combatLevel": 3,
     "examineText": "A prisoner counting stones, footsteps, and chances.",
-    "wanderRange": 1
+    "wanderRange": 1,
+    "spawns": [
+      {
+        "name": "Prisoner Alric",
+        "x": 513.5,
+        "z": 599.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 105,
@@ -508,7 +1930,16 @@
     "combatLevel": 31,
     "examineText": "A skeleton warrior gripping old steel with borrowed purpose.",
     "defaultGearProfile": "guard",
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Skeleton Warrior",
+        "x": 241.5,
+        "z": 673.5,
+        "floor": 0,
+        "wanderRange": 3
+      }
+    ]
   },
   {
     "id": 106,
@@ -545,7 +1976,16 @@
     "combatLevel": 18,
     "examineText": "A skeleton warrior standing guard long after the orders stopped making sense.",
     "defaultGearProfile": "guard",
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Skeleton Warrior",
+        "x": 246.5,
+        "z": 675.5,
+        "floor": 0,
+        "wanderRange": 3
+      }
+    ]
   },
   {
     "id": 107,
@@ -582,7 +2022,79 @@
     "combatLevel": 25,
     "examineText": "A skeleton warrior with a cracked helm and tireless patience.",
     "defaultGearProfile": "guard",
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Skeleton Warrior",
+        "x": 301.5,
+        "z": 544.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Skeleton Warrior",
+        "x": 249.5,
+        "z": 556.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Skeleton Warrior",
+        "x": 262.5,
+        "z": 557.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Skeleton Warrior",
+        "x": 253.5,
+        "z": 563.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Skeleton Warrior",
+        "x": 255.5,
+        "z": 563.5,
+        "floor": 1,
+        "wanderRange": 3
+      },
+      {
+        "name": "Skeleton Warrior",
+        "x": 256.5,
+        "z": 563.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Skeleton Warrior",
+        "x": 255.5,
+        "z": 564.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Skeleton Warrior",
+        "x": 253.5,
+        "z": 565.5,
+        "floor": 1,
+        "wanderRange": 3
+      },
+      {
+        "name": "Skeleton Warrior",
+        "x": 256.5,
+        "z": 565.5,
+        "floor": 1,
+        "wanderRange": 3
+      },
+      {
+        "name": "Skeleton Warrior",
+        "x": 245.5,
+        "z": 669.5,
+        "floor": 0,
+        "wanderRange": 3
+      }
+    ]
   },
   {
     "id": 108,
@@ -630,7 +2142,30 @@
     "modelNpcId": 15,
     "combatLevel": 13,
     "size": 2,
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Ali the Oasis-Born",
+        "x": 443.5,
+        "z": 688.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Ali the Oasis-Born",
+        "x": 332.5,
+        "z": 710.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Ali the Oasis-Born",
+        "x": 321.5,
+        "z": 886.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 110,
@@ -638,7 +2173,79 @@
     "examineText": "A custom-built stranger with a look that says someone is still editing.",
     "modelNpcId": 102,
     "combatLevel": 31,
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Palace Guard",
+        "x": 454.5,
+        "z": 660.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Palace Guard",
+        "x": 414.5,
+        "z": 676.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Palace Guard",
+        "x": 418.5,
+        "z": 676.5,
+        "floor": 1,
+        "wanderRange": 3
+      },
+      {
+        "name": "Palace Guard",
+        "x": 410.5,
+        "z": 677.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Palace Guard",
+        "x": 415.5,
+        "z": 677.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Palace Guard",
+        "x": 418.5,
+        "z": 677.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Palace Guard",
+        "x": 431.5,
+        "z": 678.5,
+        "floor": 0,
+        "wanderRange": 10
+      },
+      {
+        "name": "Palace Guard",
+        "x": 413.5,
+        "z": 688.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Palace Guard",
+        "x": 418.5,
+        "z": 688.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Palace Guard",
+        "x": 415.5,
+        "z": 689.5,
+        "floor": 0,
+        "wanderRange": 3
+      }
+    ]
   },
   {
     "id": 111,
@@ -647,7 +2254,16 @@
     "modelNpcId": 8,
     "combatLevel": 13,
     "hasShop": true,
-    "wanderRange": 1
+    "wanderRange": 1,
+    "spawns": [
+      {
+        "name": "Karim",
+        "x": 439.5,
+        "z": 680.5,
+        "floor": 0,
+        "wanderRange": 1
+      }
+    ]
   },
   {
     "id": 112,
@@ -679,7 +2295,65 @@
     ],
     "combatLevel": 47,
     "defaultGearProfile": "guard",
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Bandit",
+        "x": 284.5,
+        "z": 387.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Bandit",
+        "x": 282.5,
+        "z": 405.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Bandit",
+        "x": 271.5,
+        "z": 410.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Bandit",
+        "x": 502.5,
+        "z": 691.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Bandit",
+        "x": 504.5,
+        "z": 691.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Bandit",
+        "x": 507.5,
+        "z": 691.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Bandit",
+        "x": 500.5,
+        "z": 693.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Bandit",
+        "x": 500.5,
+        "z": 697.5,
+        "floor": 0,
+        "wanderRange": 4
+      }
+    ]
   },
   {
     "id": 113,
@@ -690,7 +2364,16 @@
     "hasShop": true,
     "wanderRange": 0,
     "attackable": false,
-    "stationary": true
+    "stationary": true,
+    "spawns": [
+      {
+        "name": "Helmet Smith",
+        "x": 337.5,
+        "z": 929.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 114,
@@ -700,7 +2383,23 @@
     "combatLevel": 13,
     "hasShop": true,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Food Stall Merchant",
+        "x": 426.5,
+        "z": 682.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Marda",
+        "x": 649.5,
+        "z": 348.5,
+        "floor": 0,
+        "wanderRange": 1
+      }
+    ]
   },
   {
     "id": 115,
@@ -710,7 +2409,30 @@
     "combatLevel": 13,
     "hasShop": true,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Crafting Stall Merchant",
+        "x": 433.8,
+        "z": 682.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Nim",
+        "x": 648.5,
+        "z": 344.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Renn",
+        "x": 643.5,
+        "z": 352.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 116,
@@ -720,7 +2442,30 @@
     "combatLevel": 13,
     "hasShop": true,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Hides Stall Merchant",
+        "x": 261.5,
+        "z": 484.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Hides Stall Merchant",
+        "x": 432.5,
+        "z": 679.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Hobb",
+        "x": 636.5,
+        "z": 353.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 117,
@@ -730,7 +2475,23 @@
     "combatLevel": 13,
     "hasShop": true,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Ferren",
+        "x": 632.5,
+        "z": 349.5,
+        "floor": 0,
+        "wanderRange": 1
+      },
+      {
+        "name": "Ranging Stall Merchant",
+        "x": 270.5,
+        "z": 481.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 118,
@@ -740,7 +2501,37 @@
     "combatLevel": 13,
     "hasShop": true,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Berrin",
+        "x": 639.5,
+        "z": 353.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Low Level Smithing Stall Merchant",
+        "x": 429.5,
+        "z": 678.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Low Level Smithing Stall Merchant",
+        "x": 334.5,
+        "z": 910.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Toma",
+        "x": 638.5,
+        "z": 338.5,
+        "floor": 0,
+        "wanderRange": 1
+      }
+    ]
   },
   {
     "id": 119,
@@ -750,7 +2541,16 @@
     "combatLevel": 13,
     "hasShop": true,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Master Iven",
+        "x": 632.5,
+        "z": 345.5,
+        "floor": 0,
+        "wanderRange": 1
+      }
+    ]
   },
   {
     "id": 120,
@@ -770,7 +2570,16 @@
     "combatLevel": 13,
     "hasShop": true,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Vessa",
+        "x": 642.5,
+        "z": 338.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 122,
@@ -778,7 +2587,30 @@
     "examineText": "A farmer with soil on his boots and weather in his bones.",
     "modelNpcId": 20,
     "combatLevel": 1,
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Brother Aldous",
+        "x": 345.5,
+        "z": 542.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Brother Fenn",
+        "x": 323.5,
+        "z": 516.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Farmer Borin",
+        "x": 362.5,
+        "z": 608.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 123,
@@ -810,7 +2642,16 @@
     "examineText": "A custom-built stranger with a look that says someone is still editing.",
     "modelNpcId": 102,
     "combatLevel": 4,
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Giles",
+        "x": 534.5,
+        "z": 624.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 127,
@@ -820,7 +2661,16 @@
     "attackable": false,
     "combatLevel": 52,
     "size": 2,
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Sad Camel",
+        "x": 519.5,
+        "z": 680.5,
+        "floor": 0,
+        "wanderRange": 4
+      }
+    ]
   },
   {
     "id": 128,
@@ -844,7 +2694,16 @@
     "attackable": false,
     "combatLevel": 52,
     "size": 2,
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Cool Camel",
+        "x": 517.5,
+        "z": 677.5,
+        "floor": 0,
+        "wanderRange": 4
+      }
+    ]
   },
   {
     "id": 129,
@@ -852,7 +2711,58 @@
     "examineText": "A black spider with a glossy shell and a very convincing glare.",
     "modelNpcId": 175,
     "combatLevel": 43,
-    "wanderRange": 6
+    "wanderRange": 6,
+    "spawns": [
+      {
+        "name": "Big Black Spider",
+        "x": 502.5,
+        "z": 426.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Big Black Spider",
+        "x": 508.5,
+        "z": 432.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Big Black Spider",
+        "x": 505.5,
+        "z": 434.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Big Black Spider",
+        "x": 512.5,
+        "z": 437.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Big Black Spider",
+        "x": 506.5,
+        "z": 438.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Big Black Spider",
+        "x": 517.5,
+        "z": 440.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Big Black Spider",
+        "x": 513.5,
+        "z": 443.5,
+        "floor": 0,
+        "wanderRange": 6
+      }
+    ]
   },
   {
     "id": 130,
@@ -881,7 +2791,16 @@
     "combatLevel": 13,
     "hasShop": true,
     "stationary": false,
-    "wanderRange": 2
+    "wanderRange": 2,
+    "spawns": [
+      {
+        "name": "Travelling Merchant",
+        "x": 422.5,
+        "z": 528.5,
+        "floor": 0,
+        "wanderRange": 3
+      }
+    ]
   },
   {
     "id": 133,
@@ -893,12 +2812,50 @@
   },
   {
     "id": 134,
-    "name": "General Store",
+    "name": "Gerald",
     "examineText": "Smiling with the exact warmth of a refund policy.",
     "modelNpcId": 8,
     "combatLevel": 13,
     "hasShop": true,
-    "wanderRange": 1
+    "wanderRange": 1,
+    "legacyName": "General Store",
+    "spawns": [
+      {
+        "name": "Gerald",
+        "x": 638.5,
+        "z": 359.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Gerald",
+        "x": 278.5,
+        "z": 477.5,
+        "floor": 0,
+        "wanderRange": 1
+      },
+      {
+        "name": "Gerald",
+        "x": 409.5,
+        "z": 591.5,
+        "floor": 0,
+        "wanderRange": 1
+      },
+      {
+        "name": "Gerald",
+        "x": 535.5,
+        "z": 615.5,
+        "floor": 0,
+        "wanderRange": 1
+      },
+      {
+        "name": "Gerald",
+        "x": 327.5,
+        "z": 638.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 135,
@@ -909,7 +2866,16 @@
     "combatLevel": 13,
     "hasShop": true,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Bram the Barkeep",
+        "x": 607.5,
+        "z": 343.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 136,
@@ -918,7 +2884,16 @@
     "modelNpcId": 102,
     "attackable": true,
     "combatLevel": 2,
-    "wanderRange": 2
+    "wanderRange": 2,
+    "spawns": [
+      {
+        "name": "Mara",
+        "x": 609.5,
+        "z": 348.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 137,
@@ -927,7 +2902,37 @@
     "modelNpcId": 102,
     "attackable": true,
     "combatLevel": 2,
-    "wanderRange": 1
+    "wanderRange": 1,
+    "spawns": [
+      {
+        "name": "Keld",
+        "x": 602.5,
+        "z": 350.5,
+        "floor": 0,
+        "wanderRange": 1
+      },
+      {
+        "name": "Old Jape",
+        "x": 605.5,
+        "z": 356.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Orrin",
+        "x": 610.5,
+        "z": 353.5,
+        "floor": 0,
+        "wanderRange": 1
+      },
+      {
+        "name": "Tessa",
+        "x": 607.5,
+        "z": 351.5,
+        "floor": 0,
+        "wanderRange": 1
+      }
+    ]
   },
   {
     "id": 138,
@@ -937,7 +2942,30 @@
     "modelNpcId": 102,
     "attackable": true,
     "combatLevel": 2,
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Ilsa",
+        "x": 648.5,
+        "z": 339.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Man",
+        "x": 623.5,
+        "z": 339.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Odo the Rat-catcher",
+        "x": 624.5,
+        "z": 327.5,
+        "floor": 0,
+        "wanderRange": 1
+      }
+    ]
   },
   {
     "id": 139,
@@ -947,7 +2975,30 @@
     "modelNpcId": 102,
     "attackable": true,
     "combatLevel": 2,
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Hessa the Tanner",
+        "x": 655.5,
+        "z": 345.5,
+        "floor": 0,
+        "wanderRange": 1
+      },
+      {
+        "name": "Old Fen",
+        "x": 617.5,
+        "z": 364.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Woman",
+        "x": 608.5,
+        "z": 361.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 140,
@@ -956,7 +3007,44 @@
     "modelNpcId": 102,
     "attackable": true,
     "combatLevel": 2,
-    "wanderRange": 1
+    "wanderRange": 1,
+    "spawns": [
+      {
+        "name": "Cobb",
+        "x": 611.5,
+        "z": 324.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Elin",
+        "x": 611.5,
+        "z": 316.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Jory",
+        "x": 618.5,
+        "z": 327.5,
+        "floor": 0,
+        "wanderRange": 1
+      },
+      {
+        "name": "Man",
+        "x": 629.5,
+        "z": 336.5,
+        "floor": 1,
+        "wanderRange": 0
+      },
+      {
+        "name": "Nessa",
+        "x": 618.5,
+        "z": 318.5,
+        "floor": 0,
+        "wanderRange": 1
+      }
+    ]
   },
   {
     "id": 141,
@@ -990,7 +3078,65 @@
     "defaultGearProfile": "guard",
     "attackable": true,
     "combatLevel": 30,
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "City Watch",
+        "x": 646.5,
+        "z": 337.5,
+        "floor": 0,
+        "wanderRange": 11
+      },
+      {
+        "name": "City Watch",
+        "x": 637.5,
+        "z": 345.5,
+        "floor": 0,
+        "wanderRange": 10
+      },
+      {
+        "name": "City Watch",
+        "x": 679.5,
+        "z": 346.5,
+        "floor": 2,
+        "wanderRange": 4
+      },
+      {
+        "name": "City Watch",
+        "x": 643.5,
+        "z": 347.5,
+        "floor": 0,
+        "wanderRange": 10
+      },
+      {
+        "name": "City Watch",
+        "x": 681.5,
+        "z": 349.5,
+        "floor": 2,
+        "wanderRange": 4
+      },
+      {
+        "name": "City Watch",
+        "x": 679.5,
+        "z": 350.5,
+        "floor": 1,
+        "wanderRange": 0
+      },
+      {
+        "name": "City Watch",
+        "x": 679.5,
+        "z": 351.5,
+        "floor": 2,
+        "wanderRange": 4
+      },
+      {
+        "name": "Watchman Halden",
+        "x": 633.5,
+        "z": 337.5,
+        "floor": 0,
+        "wanderRange": 7
+      }
+    ]
   },
   {
     "id": 142,
@@ -1000,7 +3146,30 @@
     "modelNpcId": 102,
     "attackable": true,
     "combatLevel": 2,
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Man",
+        "x": 604.5,
+        "z": 332.5,
+        "floor": 0,
+        "wanderRange": 6
+      },
+      {
+        "name": "Man",
+        "x": 603.5,
+        "z": 367.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Woman",
+        "x": 602.5,
+        "z": 361.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 143,
@@ -1063,7 +3232,72 @@
     "name": "Giant Rat",
     "examineText": "A rat grown far beyond anyone's comfort.",
     "combatLevel": 6,
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Giant Rat",
+        "x": 411.5,
+        "z": 571.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Giant Rat",
+        "x": 424.5,
+        "z": 572.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Giant Rat",
+        "x": 404.5,
+        "z": 574.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Giant Rat",
+        "x": 418.5,
+        "z": 576.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Giant Rat",
+        "x": 409.5,
+        "z": 577.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Giant Rat",
+        "x": 414.5,
+        "z": 612.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Giant Rat",
+        "x": 418.5,
+        "z": 612.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Giant Rat",
+        "x": 411.5,
+        "z": 613.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Giant Rat",
+        "x": 413.5,
+        "z": 613.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 150,
@@ -1098,7 +3332,37 @@
     "defaultGearProfile": "guard",
     "attackable": true,
     "combatLevel": 21,
-    "wanderRange": 2
+    "wanderRange": 2,
+    "spawns": [
+      {
+        "name": "Ghost Guard",
+        "x": 515.5,
+        "z": 135.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Ghost Guard",
+        "x": 488.5,
+        "z": 138.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Ghost Guard",
+        "x": 504.5,
+        "z": 144.5,
+        "floor": 0,
+        "wanderRange": 2
+      },
+      {
+        "name": "Ghost Guard",
+        "x": 495.5,
+        "z": 148.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 151,
@@ -1170,7 +3434,16 @@
     "idleActivity": "mining",
     "attackable": true,
     "combatLevel": 2,
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Slave",
+        "x": 482.5,
+        "z": 786.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 153,
@@ -1180,7 +3453,37 @@
     "attackable": true,
     "combatLevel": 55,
     "size": 3,
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Green Dragon",
+        "x": 543.5,
+        "z": 54.5,
+        "floor": 0,
+        "wanderRange": 11
+      },
+      {
+        "name": "Green Dragon",
+        "x": 560.5,
+        "z": 58.5,
+        "floor": 0,
+        "wanderRange": 11
+      },
+      {
+        "name": "Green Dragon",
+        "x": 545.5,
+        "z": 66.5,
+        "floor": 0,
+        "wanderRange": 11
+      },
+      {
+        "name": "Green Dragon",
+        "x": 553.5,
+        "z": 67.5,
+        "floor": 0,
+        "wanderRange": 11
+      }
+    ]
   },
   {
     "id": 154,
@@ -1190,7 +3493,51 @@
     "attackable": false,
     "combatLevel": 52,
     "size": 2,
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Hadi's pack camel",
+        "x": 323.5,
+        "z": 885.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Hadi's pack camel",
+        "x": 328.5,
+        "z": 921.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Supply Camel",
+        "x": 440.5,
+        "z": 691.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Supply Camel",
+        "x": 440.5,
+        "z": 693.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Supply Camel",
+        "x": 330.5,
+        "z": 708.5,
+        "floor": 0,
+        "wanderRange": 4
+      },
+      {
+        "name": "Supply Camel",
+        "x": 470.5,
+        "z": 790.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 155,
@@ -1235,7 +3582,44 @@
     "defaultGearProfile": "guard",
     "attackable": true,
     "combatLevel": 42,
-    "wanderRange": 2
+    "wanderRange": 2,
+    "spawns": [
+      {
+        "name": "Camp Gatekeeper",
+        "x": 457.5,
+        "z": 793.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Camp Guard",
+        "x": 474.5,
+        "z": 787.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Office Guard",
+        "x": 466.5,
+        "z": 787.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Office Guard",
+        "x": 474.5,
+        "z": 789.5,
+        "floor": 0,
+        "wanderRange": 3
+      },
+      {
+        "name": "Office Guard",
+        "x": 462.5,
+        "z": 797.5,
+        "floor": 0,
+        "wanderRange": 3
+      }
+    ]
   },
   {
     "id": 157,
@@ -1256,7 +3640,16 @@
     "attackable": false,
     "combatLevel": 3,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Farid",
+        "x": 428.5,
+        "z": 690.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 158,
@@ -1277,7 +3670,16 @@
     "attackable": false,
     "combatLevel": 3,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Chainmaster Varrik",
+        "x": 478.5,
+        "z": 802.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 159,
@@ -1298,7 +3700,16 @@
     "attackable": false,
     "combatLevel": 3,
     "stationary": false,
-    "wanderRange": 2
+    "wanderRange": 2,
+    "spawns": [
+      {
+        "name": "Mara",
+        "x": 483.5,
+        "z": 794.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 160,
@@ -1346,7 +3757,16 @@
     "attackable": false,
     "combatLevel": 3,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Samir",
+        "x": 422.5,
+        "z": 666.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 165,
@@ -1367,7 +3787,23 @@
     "attackable": false,
     "combatLevel": 3,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Hadi",
+        "x": 468.5,
+        "z": 791.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Hadi",
+        "x": 326.5,
+        "z": 919.5,
+        "floor": 0,
+        "wanderRange": 3
+      }
+    ]
   },
   {
     "id": 164,
@@ -1474,7 +3910,16 @@
     "defaultGearProfile": "guard",
     "combatLevel": 41,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Sultan's Royal Guard",
+        "x": 408.5,
+        "z": 688.5,
+        "floor": 0,
+        "wanderRange": 2
+      }
+    ]
   },
   {
     "id": 171,
@@ -1484,7 +3929,51 @@
     "attackable": true,
     "combatLevel": 55,
     "size": 3,
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Fire Dragon",
+        "x": 604.5,
+        "z": 23.5,
+        "floor": 0,
+        "wanderRange": 14
+      },
+      {
+        "name": "Fire Dragon",
+        "x": 609.5,
+        "z": 31.5,
+        "floor": 0,
+        "wanderRange": 13
+      },
+      {
+        "name": "Fire Dragon",
+        "x": 599.5,
+        "z": 40.5,
+        "floor": 0,
+        "wanderRange": 14
+      },
+      {
+        "name": "Fire Dragon",
+        "x": 657.5,
+        "z": 87.5,
+        "floor": 0,
+        "wanderRange": 8
+      },
+      {
+        "name": "Fire Dragon",
+        "x": 664.5,
+        "z": 87.5,
+        "floor": 0,
+        "wanderRange": 8
+      },
+      {
+        "name": "Fire Dragon",
+        "x": 665.5,
+        "z": 94.5,
+        "floor": 0,
+        "wanderRange": 8
+      }
+    ]
   },
   {
     "id": 172,
@@ -1567,7 +4056,16 @@
     "attackable": true,
     "combatLevel": 118,
     "size": 3,
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Revenant Dragon",
+        "x": 503.5,
+        "z": 113.5,
+        "floor": 0,
+        "wanderRange": 10
+      }
+    ]
   },
   {
     "id": 178,
@@ -1576,7 +4074,30 @@
     "examineText": "Death has done little to dull its hunger.",
     "attackable": true,
     "combatLevel": 68,
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Revenant Wolf",
+        "x": 489.5,
+        "z": 130.5,
+        "floor": 0,
+        "wanderRange": 10
+      },
+      {
+        "name": "Revenant Wolf",
+        "x": 520.5,
+        "z": 136.5,
+        "floor": 0,
+        "wanderRange": 10
+      },
+      {
+        "name": "Revenant Wolf",
+        "x": 486.5,
+        "z": 145.5,
+        "floor": 0,
+        "wanderRange": 10
+      }
+    ]
   },
   {
     "id": 179,
@@ -1586,7 +4107,16 @@
     "attackable": true,
     "combatLevel": 150,
     "size": 3,
-    "wanderRange": 4
+    "wanderRange": 4,
+    "spawns": [
+      {
+        "name": "Phoenix",
+        "x": 657.5,
+        "z": 50.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 181,
@@ -1604,7 +4134,65 @@
     "examineText": "An awkward mountain of muscle carrying a tree-sized club.",
     "combatLevel": 29,
     "size": 2,
-    "wanderRange": 5
+    "wanderRange": 5,
+    "spawns": [
+      {
+        "name": "Giant",
+        "x": 354.5,
+        "z": 428.5,
+        "floor": 0,
+        "wanderRange": 9
+      },
+      {
+        "name": "Giant",
+        "x": 360.5,
+        "z": 431.5,
+        "floor": 0,
+        "wanderRange": 9
+      },
+      {
+        "name": "Giant",
+        "x": 364.5,
+        "z": 438.5,
+        "floor": 0,
+        "wanderRange": 9
+      },
+      {
+        "name": "Giant",
+        "x": 354.5,
+        "z": 439.5,
+        "floor": 0,
+        "wanderRange": 9
+      },
+      {
+        "name": "Giant",
+        "x": 371.5,
+        "z": 443.5,
+        "floor": 0,
+        "wanderRange": 10
+      },
+      {
+        "name": "Giant",
+        "x": 362.5,
+        "z": 447.5,
+        "floor": 0,
+        "wanderRange": 7
+      },
+      {
+        "name": "Giant",
+        "x": 372.5,
+        "z": 451.5,
+        "floor": 0,
+        "wanderRange": 8
+      },
+      {
+        "name": "Giant",
+        "x": 411.5,
+        "z": 552.5,
+        "floor": 0,
+        "wanderRange": 5
+      }
+    ]
   },
   {
     "id": 182,
@@ -1623,7 +4211,16 @@
     "examineText": "A newly authored NPC.",
     "modelNpcId": 3,
     "combatLevel": 18,
-    "wanderRange": 3
+    "wanderRange": 3,
+    "spawns": [
+      {
+        "name": "Nunu",
+        "x": 398.5,
+        "z": 480.5,
+        "floor": 0,
+        "wanderRange": 3
+      }
+    ]
   },
   {
     "id": 184,
@@ -1818,7 +4415,16 @@
     "attackable": false,
     "combatLevel": 8,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Nabil",
+        "x": 271.5,
+        "z": 709.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 189,
@@ -1859,7 +4465,16 @@
     "combatLevel": 13,
     "hasShop": true,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Mira",
+        "x": 626.5,
+        "z": 347.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 190,
@@ -1900,7 +4515,16 @@
     "combatLevel": 13,
     "hasShop": true,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Alden",
+        "x": 650.5,
+        "z": 335.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 191,
@@ -1935,7 +4559,51 @@
     "attackable": false,
     "combatLevel": 21,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Guard Trainee",
+        "x": 682.5,
+        "z": 369.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Guard Trainee",
+        "x": 684.5,
+        "z": 369.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Guard Trainee",
+        "x": 686.5,
+        "z": 369.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Guard Trainee",
+        "x": 682.5,
+        "z": 371.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Guard Trainee",
+        "x": 684.5,
+        "z": 371.5,
+        "floor": 0,
+        "wanderRange": 0
+      },
+      {
+        "name": "Guard Trainee",
+        "x": 686.5,
+        "z": 371.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 192,
@@ -1970,7 +4638,16 @@
     "attackable": false,
     "combatLevel": 30,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "City Watch Drill Sergeant",
+        "x": 684.5,
+        "z": 366.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 193,
@@ -1996,7 +4673,16 @@
     "combatLevel": 13,
     "hasShop": true,
     "stationary": true,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Ali the mine supplier",
+        "x": 332.5,
+        "z": 883.5,
+        "floor": 0,
+        "wanderRange": 0
+      }
+    ]
   },
   {
     "id": 194,
@@ -2061,6 +4747,15 @@
     "combatLevel": 13,
     "hasShop": true,
     "stationary": false,
-    "wanderRange": 0
+    "wanderRange": 0,
+    "spawns": [
+      {
+        "name": "Nayla",
+        "x": 301.5,
+        "z": 888.5,
+        "floor": 0,
+        "wanderRange": 4
+      }
+    ]
   }
 ]

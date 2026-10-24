@@ -126,6 +126,61 @@ def enrich_objects(objects):
     return objects
 
 
+def enrich_npcs(npcs):
+    base_dir = os.path.dirname(os.path.dirname(__file__))
+    repo_root = os.path.dirname(base_dir)
+    staging_map = os.path.join(base_dir, "staging", "world-map.json")
+    nodes_map = os.path.join(repo_root, "Wiki-Map", "static", "data", "nodes.json")
+
+    raw_spawns = []
+    if os.path.exists(staging_map):
+        try:
+            with open(staging_map, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                raw_spawns = data.get("map", {}).get("npcSpawns", [])
+        except Exception as e:
+            print(f"⚠️ Could not load {staging_map}: {e}")
+
+    if not raw_spawns and os.path.exists(nodes_map):
+        try:
+            with open(nodes_map, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                raw_spawns = data.get("npcs", [])
+        except Exception as e:
+            print(f"⚠️ Could not load {nodes_map}: {e}")
+
+    if not raw_spawns:
+        print("ℹ️ No world map spawns found to enrich NPCs.")
+        return npcs
+
+    spawns_by_id = {}
+    for s in raw_spawns:
+        nid = s.get("npcId")
+        if nid is not None:
+            spawn_entry = {
+                "name": s.get("name"),
+                "x": round(s.get("x", 0), 1),
+                "z": round(s.get("z", 0), 1),
+                "floor": s.get("floor", 0),
+                "wanderRange": s.get("wanderRange", 0),
+            }
+            if s.get("map"):
+                spawn_entry["map"] = s.get("map")
+            spawns_by_id.setdefault(nid, []).append(spawn_entry)
+
+    enriched_count = 0
+    for npc in npcs:
+        nid = npc.get("id")
+        if nid in spawns_by_id:
+            npc["spawns"] = spawns_by_id[nid]
+            enriched_count += 1
+        else:
+            npc.pop("spawns", None)
+
+    print(f"Enriched {enriched_count} NPCs with world spawn coordinates and instance names.")
+    return npcs
+
+
 def merge_entities(entity_name, data_path, staging_path, post_processor=None):
     print(f"\n--- Merging {entity_name} ---")
     if not os.path.exists(staging_path):
@@ -194,6 +249,7 @@ def merge_game_data():
         "NPCs",
         os.path.join(base_dir, "data", "NpcData.json"),
         os.path.join(base_dir, "staging", "npcs.json"),
+        post_processor=enrich_npcs,
     )
 
     # Merge Rare Drop Tables

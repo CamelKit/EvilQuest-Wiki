@@ -11,10 +11,31 @@
   </tr>
   }}
 
+  {{#if: {{{baseDef|{{#invoke:NPCData|fetchNpcData|field=baseDef}}}}} |
+  <tr>
+    <th style="text-align: left; padding: 4px;">Base Archetype</th>
+    <td style="padding: 4px;">[[{{{baseDef|{{#invoke:NPCData|fetchNpcData|field=baseDef}}}}}]]</td>
+  </tr>
+  }}
+
   <tr>
     <th style="text-align: left; width: 45%; padding: 4px;">NPC ID</th>
     <td style="padding: 4px;">{{{id|{{#invoke:NPCData|fetchNpcData|field=id}}}}}</td>
   </tr>
+
+  {{#if: {{{coordinates|{{#invoke:NPCData|fetchNpcData|field=coordinates}}}}} |
+  <tr>
+    <th style="text-align: left; padding: 4px;">Coordinates</th>
+    <td style="padding: 4px;">{{{coordinates|{{#invoke:NPCData|fetchNpcData|field=coordinates}}}}}</td>
+  </tr>
+  }}
+
+  {{#if: {{{wanderRange|{{#invoke:NPCData|fetchNpcData|field=wanderRange}}}}} |
+  <tr>
+    <th style="text-align: left; padding: 4px;">Wander Range</th>
+    <td style="padding: 4px;">{{{wanderRange|{{#invoke:NPCData|fetchNpcData|field=wanderRange}}}}} tiles</td>
+  </tr>
+  }}
 
   {{#if: {{{combatLevel|{{#invoke:NPCData|fetchNpcData|field=combatLevel}}}}} |
   <tr>

@@ -33,6 +33,7 @@ DATA_ENDPOINTS = {
     "rare-drop-tables.json": "https://memoriesofmagic.com/data/rare-drop-tables.json",
     "enchantments.json": "https://memoriesofmagic.com/data/enchantments.json",
     "quests.json": "https://memoriesofmagic.com/data/quests.json",
+    "world-map.json": "https://memoriesofmagic.com/api/world-map",
 }
 
 
@@ -46,7 +47,7 @@ def get_file_hash(filepath):
 def check_and_update_definitions(force=False):
     os.makedirs(STAGING_DIR, exist_ok=True)
     session = requests.Session()
-    session.headers.update({"User-Agent": "CamelKitWikiWatcher/1.0"})
+    session.headers.update({"User-Agent": "Mozilla/5.0 (EvilQuestWiki MapExtractor/1.0)"})
 
     changes_detected = False
     updated_files = []

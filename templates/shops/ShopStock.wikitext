@@ -1,0 +1,16 @@
+<noinclude>
+Displays the shop inventory table for a merchant.
+If placed on a specific NPC instance (e.g. [[Nayla]]), it automatically resolves the base definition (e.g. [[Desert Crafting Merchant]]) and queries Cargo for the stock.
+Usage:
+  {{ShopStock}}
+  {{ShopStock|shop=Desert Crafting Merchant}}
+</noinclude><includeonly>
+{{#cargo_query:
+tables=ShopInventory
+|fields=Item,Price,Stock
+|where=Shop="{{{1|{{{shop|{{#invoke:NPCData|getBaseDef}}}}}}}}"
+|format=table
+|headers=Item,Price,Stock
+|default=This merchant's stock has not been cataloged yet.
+}}
+</includeonly>
