@@ -140,6 +140,47 @@ for asset in ASSET_SYNC_MATRIX:
         deduped_matrix.append(asset)
 ASSET_SYNC_MATRIX = deduped_matrix
 
+CURRENT_CSRF_TOKEN = None
+
+def get_csrf_token(session, force_refresh=False):
+    """
+    Acquires or refreshes the MediaWiki CSRF token.
+    Re-authenticates with bot credentials if force_refresh is True or if no token exists.
+    """
+    global CURRENT_CSRF_TOKEN
+    if CURRENT_CSRF_TOKEN and not force_refresh:
+        return CURRENT_CSRF_TOKEN
+
+    try:
+        # Sequence A: Retrieve unique login token payload
+        token_req = session.get(WIKI_API_URL, params={
+            "action": "query", "meta": "tokens", "type": "login", "format": "json"
+        }, timeout=15)
+        if token_req.status_code == 200:
+            tokens = token_req.json().get("query", {}).get("tokens", {})
+            login_token = tokens.get("logintoken")
+            if login_token:
+                # Sequence B: Log in using Bot Password credentials
+                session.post(WIKI_API_URL, data={
+                    "action": "login",
+                    "lgname": BOT_USERNAME,
+                    "lgpassword": BOT_PASSWORD,
+                    "lgtoken": login_token,
+                    "format": "json"
+                }, timeout=15)
+
+        # Sequence C: Acquire the runtime CSRF token
+        csrf_req = session.get(WIKI_API_URL, params={
+            "action": "query", "meta": "tokens", "type": "csrf", "format": "json"
+        }, timeout=15)
+        if csrf_req.status_code == 200:
+            CURRENT_CSRF_TOKEN = csrf_req.json().get("query", {}).get("tokens", {}).get("csrftoken")
+            return CURRENT_CSRF_TOKEN
+    except Exception as e:
+        print(f"⚠️ Error refreshing authentication/CSRF token: {e}")
+
+    return CURRENT_CSRF_TOKEN
+
 def safe_api_post(session, payload, api_url=None, max_retries=4, backoff=1.5):
     """
     Executes an edit/action POST request to WIKI_API_URL with automatic retries for:
@@ -147,6 +188,8 @@ def safe_api_post(session, payload, api_url=None, max_retries=4, backoff=1.5):
     - Network timeouts / connection resets
     - Empty (0-byte) or non-JSON responses from Cloudflare / reverse proxy
     - MediaWiki 'ratelimited' or 'maxlag' errors
+    - MediaWiki 'DBConnectionError' or internal database glitches
+    - Invalid or expired CSRF tokens ('badtoken') with auto re-auth
     Guarantees 'bot': True and 'format': 'json'.
     Returns the parsed JSON response dictionary, or a synthetic error dict.
     """
@@ -155,6 +198,8 @@ def safe_api_post(session, payload, api_url=None, max_retries=4, backoff=1.5):
         payload["format"] = "json"
     if "bot" not in payload:
         payload["bot"] = True
+    if "token" not in payload or not payload["token"]:
+        payload["token"] = get_csrf_token(session)
 
     for attempt in range(1, max_retries + 1):
         try:
@@ -190,9 +235,30 @@ def safe_api_post(session, payload, api_url=None, max_retries=4, backoff=1.5):
                     continue
                 return {"error": {"code": "invalid_json", "info": f"Failed to parse response: {e} (Body snippet: {body[:150]})"}}
 
-            # MediaWiki application rate limit / maxlag
+            # MediaWiki application-level errors
             if "error" in data:
-                err_code = data["error"].get("code")
+                err_code = data["error"].get("code", "")
+                err_info = str(data["error"].get("info", ""))
+
+                # Expired or invalid CSRF token
+                if err_code == "badtoken":
+                    if attempt < max_retries:
+                        print("⚠️ Invalid CSRF token detected. Re-authenticating session and refreshing token...")
+                        fresh_token = get_csrf_token(session, force_refresh=True)
+                        if fresh_token:
+                            payload["token"] = fresh_token
+                        time.sleep(1.0)
+                        continue
+
+                # Transient database connection or lock errors
+                if "DBConnectionError" in err_info or "database" in err_code.lower() or "readonly" in err_code or "internal_api_error" in err_code:
+                    if attempt < max_retries:
+                        sleep_time = backoff * (2 ** (attempt - 1))
+                        print(f"⚠️ MediaWiki DB/Server glitch ({err_code or err_info[:50]}). Retrying in {sleep_time:.1f}s (attempt {attempt}/{max_retries})...")
+                        time.sleep(sleep_time)
+                        continue
+
+                # Rate limiting or maxlag
                 if err_code in ("ratelimited", "maxlag"):
                     if attempt < max_retries:
                         sleep_time = backoff * (2 ** attempt)
@@ -249,28 +315,10 @@ def execute_wiki_sync():
     session.headers.update({"User-Agent": "EvilQuestWikiSyncBot/1.0 (CI/CD Deployment)"})
 
     print("🔑 Commencing secure authorization sequence...")
-    
-    # Sequence A: Retrieve unique login token payload
-    token_req = session.get(WIKI_API_URL, params={
-        "action": "query", "meta": "tokens", "type": "login", "format": "json"
-    })
-    token_req.raise_for_status()
-    login_token = token_req.json()["query"]["tokens"]["logintoken"]
-
-    # Sequence B: Log in using Bot Password credentials
-    login_auth = session.post(WIKI_API_URL, data={
-        "action": "login", "lgname": BOT_USERNAME, "lgpassword": BOT_PASSWORD, "lgtoken": login_token, "format": "json"
-    })
-    auth_data = login_auth.json()
-    if auth_data.get("login", {}).get("result") != "Success":
-        print(f"❌ Authentication denied: {auth_data.get('login', {}).get('reason', 'Unknown failure')}")
+    csrf_token = get_csrf_token(session, force_refresh=True)
+    if not csrf_token:
+        print("❌ Authentication denied: Could not acquire CSRF token.")
         sys.exit(1)
-
-    # Sequence C: Acquire the mandatory runtime CSRF token for page modification
-    csrf_req = session.get(WIKI_API_URL, params={
-        "action": "query", "meta": "tokens", "type": "csrf", "format": "json"
-    })
-    csrf_token = csrf_req.json()["query"]["tokens"]["csrftoken"]
     print("✅ Session established. Processing files...")
 
     # 3. Iterate through mapping matrix and push changes
