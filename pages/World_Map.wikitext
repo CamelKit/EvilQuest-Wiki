@@ -1,0 +1,32 @@
+The '''World Map''' of Memories of Magic spans multiple realms and continents, featuring towns, dangerous wilderness, resource gathering nodes, dungeon entrances, and subterranean networks like [[The Sultan's Mine]].
+
+{{MapEmbed|width=100%|height=680px}}
+
+== Major Regions ==
+{| class="wikitable" style="width: 100%;"
+|- style="background-color: #2e2e2e; color: white;"
+! Region !! Coordinates !! Description !! Direct Map Link
+|-
+| '''Castle Mud''' || (260, 156) || The fortified royal seat and starting haven in the central realm. || [https://map.memoriesofmagic.wiki/?x=260&z=156&zoom=3.5 View on Map]
+|-
+| '''Wibergis''' || (78, 27) || The western agricultural town and trade hub. || [https://map.memoriesofmagic.wiki/?x=78&z=27&zoom=3.5 View on Map]
+|-
+| '''Gloomweb Swamp''' || (338, 17) || Dangerous eastern wetlands filled with hostile creatures and rare herbs. || [https://map.memoriesofmagic.wiki/?x=338&z=17&zoom=3.5 View on Map]
+|-
+| '''Graveyard''' || (323, 127) || Ancient burial grounds north-east of Castle Mud with crypt entrances. || [https://map.memoriesofmagic.wiki/?x=323&z=127&zoom=3.5 View on Map]
+|-
+| '''The Sultan's Mine''' || (267, 211) (Surface) / (114, 163) (Underground) || Massive subterranean labyrinth rich in [[Mithril Rock|Mithril]] and [[Gold Rock|Gold]] veins. || [https://map.memoriesofmagic.wiki/?map=underground&x=114&z=163&zoom=3.5 View on Map]
+|-
+| '''Southern Desert Coast''' || (79, 450) || Arid coastal shores populated with coastal forageables like [[Glasswort Bush]]. || [https://map.memoriesofmagic.wiki/?x=79&z=450&zoom=3.5 View on Map]
+|}
+
+== Gathering & Interactive Categories ==
+The interactive map tracks over 2,200 gathering nodes across the realm:
+* '''[[Mining]]''': [[Copper Rock]], [[Tin Rock]], [[Iron Rock]], [[Coal Rock]], [[Silver Rock]], [[Gold Rock]], and [[Mithril Rock]].
+* '''[[Woodcutting]]''': [[Tree|Normal Trees]], [[Oak Tree|Oak Trees]], [[Willow Tree|Willow Trees]], [[Maple Tree|Maple Trees]], and [[Yew Tree|Yew Trees]].
+* '''[[Foraging]] / Tea''': [[Kalo Tea Bush]], [[Kawaki Tea Bush]], [[Mireleaf Tea Bush]], and coastal [[Glasswort Bush]].
+* '''[[Farming]]''': [[Flax]], [[Wheat Plant]], [[Potato Plant]], [[Rice Plant]], and [[Cauliflower Plant]].
+* '''[[Fishing]]''': River, coastal, and deep sea fishing spots.
+
+[[Category:Guides]]
+[[Category:World]]

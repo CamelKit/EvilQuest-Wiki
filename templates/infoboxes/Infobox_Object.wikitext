@@ -1,0 +1,75 @@
+<includeonly><table class="wikitable" style="float: right; width: 330px; margin: 0 0 1em 1em; font-size: 90%; border-collapse: collapse; border: 1px solid #aaa; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+  <tr>
+    <th colspan="2" style="background-color: #2e2e2e; color: white; text-align: center; font-size: 1.25em; padding: 6px;">{{#if: {{{name|}}} | {{{name}}} | {{#if: {{#invoke:ObjectData|fetchObjectData|field=name}} | {{#invoke:ObjectData|fetchObjectData|field=name}} | {{PAGENAME}} }} }}</th>
+  </tr>
+
+  {{#if: {{{examine|{{#invoke:ObjectData|fetchObjectData|field=examine}}}}} |
+  <tr>
+    <td colspan="2" style="text-align: center; background: #3a3a3a; font-style: italic; color: #ffffff; padding: 8px; border-bottom: 1px solid #ddd;">
+      {{{examine|{{#invoke:ObjectData|fetchObjectData|field=examine}}}}}
+    </td>
+  </tr>
+  }}
+
+  <tr>
+    <th style="text-align: left; width: 45%; padding: 4px;">Object ID</th>
+    <td style="padding: 4px;">{{{id|{{#invoke:ObjectData|fetchObjectData|field=id}}}}}</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: left; padding: 4px;">Category</th>
+    <td style="padding: 4px;">{{{category|{{#invoke:ObjectData|fetchObjectData|field=categoryName}}}}}</td>
+  </tr>
+
+  {{#if: {{{harvestable|{{#invoke:ObjectData|fetchObjectData|field=harvestable}}}}} |
+  <tr>
+    <th colspan="2" style="background: #2e2e2e; color: white; text-align: center; font-weight: bold; padding: 4px;">Gathering Details</th>
+  </tr>
+  {{#if: {{{skill|{{#invoke:ObjectData|fetchObjectData|field=skill}}}}} |
+  <tr>
+    <th style="text-align: left; padding: 4px;">Skill</th>
+    <td style="padding: 4px;">[[{{{skill|{{#invoke:ObjectData|fetchObjectData|field=skill}}}}}]]</td>
+  </tr>
+  }}
+  {{#if: {{{action|{{#invoke:ObjectData|fetchObjectData|field=action}}}}} |
+  <tr>
+    <th style="text-align: left; padding: 4px;">Action</th>
+    <td style="padding: 4px;">{{{action|{{#invoke:ObjectData|fetchObjectData|field=action}}}}}</td>
+  </tr>
+  }}
+  {{#if: {{{tool|{{#invoke:ObjectData|fetchObjectData|field=tool}}}}} |
+  <tr>
+    <th style="text-align: left; padding: 4px;">Required Tool</th>
+    <td style="padding: 4px;">{{{tool|{{#invoke:ObjectData|fetchObjectData|field=tool}}}}}</td>
+  </tr>
+  }}
+  {{#if: {{{requiredItems|{{#invoke:ObjectData|fetchObjectData|field=requiredItems}}}}} |
+  {{#ifeq: {{{requiredItems|{{#invoke:ObjectData|fetchObjectData|field=requiredItems}}}}} | None | |
+  <tr>
+    <th style="text-align: left; padding: 4px;">Required Items</th>
+    <td style="padding: 4px;">{{{requiredItems|{{#invoke:ObjectData|fetchObjectData|field=requiredItems}}}}}</td>
+  </tr>
+  }}
+  }}
+  {{#if: {{{outputItem|{{#invoke:ObjectData|fetchObjectData|field=outputItem}}}}} |
+  <tr>
+    <th style="text-align: left; padding: 4px;">Harvest Output</th>
+    <td style="padding: 4px; font-weight: bold;">[[{{{outputItem|{{#invoke:ObjectData|fetchObjectData|field=outputItem}}}}}]]</td>
+  </tr>
+  }}
+  }}
+
+  <tr>
+    <th colspan="2" style="background: #2e2e2e; color: white; text-align: center; font-weight: bold; padding: 4px;">Map & Distribution</th>
+  </tr>
+  <tr>
+    <th style="text-align: left; padding: 4px;">Recorded Nodes</th>
+    <td style="padding: 4px;">{{#invoke:ObjectData|fetchObjectData|field=nodeCount}} nodes</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align: center; padding: 6px; background: #f8fafc;">
+      <div class="plainlinks" style="display: block; padding: 6px 12px; background: #2563eb; border-radius: 4px; text-align: center;">[https://map.memoriesofmagic.wiki/?object={{urlencode:{{#if: {{{name|}}} | {{{name}}} | {{PAGENAME}} }}}} <span style="color: #ffffff; font-weight: bold; text-decoration: none;">🗺️ View on World Map ↗</span>]</div>
+    </td>
+  </tr>
+</table>
+</includeonly>
