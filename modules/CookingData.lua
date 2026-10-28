@@ -54,13 +54,28 @@ local function formatTeaEffect(tea)
 end
 
 -- Helper to find tea matching an item name or ID
-local function findTeaMatch(nameOrId)
+-- roleFilter: optional role or table of roles (defaults to {"output", "dose"} so secondary ingredients/leaves are not treated as brewed teas)
+local function findTeaMatch(nameOrId, roleFilter)
     local item = findItem(nameOrId)
     local targetId = item and item.id or tonumber(nameOrId)
     local rawName = tostring(nameOrId)
     local targetName = item and item.name or rawName
     local targetLower = targetName:lower()
     local rawLower = rawName:lower()
+
+    local allowedRoles = nil
+    if roleFilter == "all" then
+        allowedRoles = nil
+    elseif type(roleFilter) == "string" then
+        allowedRoles = { [roleFilter] = true }
+    elseif type(roleFilter) == "table" then
+        allowedRoles = {}
+        for _, r in ipairs(roleFilter) do
+            allowedRoles[r] = true
+        end
+    else
+        allowedRoles = { ["output"] = true, ["dose"] = true }
+    end
 
     local matched = {}
     for _, tea in ipairs(cookingData.herbalTeas or {}) do
@@ -98,7 +113,7 @@ local function findTeaMatch(nameOrId)
             role = "ingredient"
         end
 
-        if isMatch then
+        if isMatch and (not allowedRoles or allowedRoles[role]) then
             table.insert(matched, { tea = tea, role = role })
         end
     end
@@ -106,11 +121,26 @@ local function findTeaMatch(nameOrId)
 end
 
 -- Helper to find food matching an item name or ID
-local function findFoodMatch(nameOrId)
+-- roleFilter: optional role or table of roles (defaults to {"output"} so raw materials are not treated as cooked food)
+local function findFoodMatch(nameOrId, roleFilter)
     local item = findItem(nameOrId)
     local targetId = item and item.id or tonumber(nameOrId)
     local targetName = item and item.name or tostring(nameOrId)
     local targetLower = targetName:lower()
+
+    local allowedRoles = nil
+    if roleFilter == "all" then
+        allowedRoles = nil
+    elseif type(roleFilter) == "string" then
+        allowedRoles = { [roleFilter] = true }
+    elseif type(roleFilter) == "table" then
+        allowedRoles = {}
+        for _, r in ipairs(roleFilter) do
+            allowedRoles[r] = true
+        end
+    else
+        allowedRoles = { ["output"] = true }
+    end
 
     local matched = {}
     for _, f in ipairs(cookingData.foods or {}) do
@@ -137,7 +167,7 @@ local function findFoodMatch(nameOrId)
             role = "burnt"
         end
 
-        if isMatch then
+        if isMatch and (not allowedRoles or allowedRoles[role]) then
             table.insert(matched, { food = f, role = role })
         end
     end

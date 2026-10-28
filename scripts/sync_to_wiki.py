@@ -7,7 +7,10 @@ import requests
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
 
-env_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')
+repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.chdir(repo_root)
+
+env_file = os.path.join(repo_root, '.env')
 if os.path.exists(env_file):
     try:
         from dotenv import load_dotenv
@@ -46,6 +49,10 @@ elif "--filter" in sys.argv:
 skip_provision = "--no-provision" in sys.argv
 if skip_provision:
     sys.argv.remove("--no-provision")
+
+dry_run = "--dry-run" in sys.argv
+if dry_run:
+    sys.argv.remove("--dry-run")
 
 if not all([WIKI_API_URL, BOT_USERNAME, BOT_PASSWORD]):
     print("❌ Critical configuration error: Missing required execution secrets.")
@@ -198,12 +205,17 @@ def safe_api_post(session, payload, api_url=None, max_retries=4, backoff=1.5):
         payload["format"] = "json"
     if "bot" not in payload:
         payload["bot"] = True
+
+    if dry_run:
+        print(f"  [DRY RUN] Would post {payload.get('action')} to '{payload.get('title')}'")
+        return {"edit": {"result": "Success"}}
+
     if "token" not in payload or not payload["token"]:
         payload["token"] = get_csrf_token(session)
 
     for attempt in range(1, max_retries + 1):
         try:
-            resp = session.post(target_url, data=payload, timeout=30)
+            resp = session.post(target_url, data=payload, timeout=90)
             
             # Transient HTTP status codes
             if resp.status_code in (429, 500, 502, 503, 504, 520, 521, 522, 523, 524):
@@ -225,15 +237,24 @@ def safe_api_post(session, payload, api_url=None, max_retries=4, backoff=1.5):
                 return {"error": {"code": "empty_response", "info": f"Server returned 0 bytes (HTTP {resp.status_code})"}}
 
             # JSON decode
+            data = None
             try:
                 data = resp.json()
             except Exception as e:
-                if attempt < max_retries:
-                    sleep_time = backoff * (2 ** (attempt - 1))
-                    print(f"⚠️ Non-JSON response received. Retrying in {sleep_time:.1f}s (attempt {attempt}/{max_retries})...")
-                    time.sleep(sleep_time)
-                    continue
-                return {"error": {"code": "invalid_json", "info": f"Failed to parse response: {e} (Body snippet: {body[:150]})"}}
+                if body.startswith("{"):
+                    end_idx = body.rfind("}")
+                    if end_idx != -1:
+                        try:
+                            data = json.loads(body[:end_idx + 1])
+                        except Exception:
+                            data = None
+                if not data:
+                    if attempt < max_retries:
+                        sleep_time = backoff * (2 ** (attempt - 1))
+                        print(f"⚠️ Non-JSON response received. Retrying in {sleep_time:.1f}s (attempt {attempt}/{max_retries})...")
+                        time.sleep(sleep_time)
+                        continue
+                    return {"error": {"code": "invalid_json", "info": f"Failed to parse response: {e} (Body snippet: {body[:150]})"}}
 
             # MediaWiki application-level errors
             if "error" in data:
@@ -390,6 +411,8 @@ def execute_wiki_sync():
         provision_item_articles(session, csrf_token)
         print("\n📦 Provisioning Missing NPC Articles...")
         provision_npc_articles(session, csrf_token)
+        print("\n🗺️ Provisioning Missing Object & Gathering Articles...")
+        provision_object_articles(session, csrf_token)
 
 def generate_item_wikitext(item):
     """
@@ -719,6 +742,90 @@ def provision_npc_articles(session, csrf_token):
             print(f"[FAILED NPC] {title}: {res.get('error', res)}")
         time.sleep(0.15)
     print(f"NPCs Provisioning Complete. Created: {created} | Upgraded: {updated} | Skipped: {skipped}")
+
+def provision_object_articles(session, csrf_token, filter_name=None):
+    data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "ObjectData.json")
+    if not os.path.exists(data_path):
+        return
+    with open(data_path, "r", encoding="utf-8") as f:
+        objects = json.load(f)
+
+    candidate_objects = []
+    for obj in objects:
+        name = obj.get("name")
+        if not name:
+            continue
+        if filter_name and filter_name.lower() not in name.lower():
+            continue
+        cat = obj.get("category")
+        is_harvestable = obj.get("harvestable") or obj.get("harvest") is not None
+        if is_harvestable or cat in ["rock", "tree", "tea", "crop", "fishingspot"]:
+            candidate_objects.append(obj)
+
+    candidate_names = [obj["name"] for obj in candidate_objects]
+    existing_pages = get_existing_pages(session, candidate_names)
+
+    created, skipped = 0, 0
+    for obj in candidate_objects:
+        name = obj["name"]
+        if name in existing_pages or name.lower() in existing_pages:
+            skipped += 1
+            continue
+
+        h = obj.get("harvest") or {}
+        skill = (h.get("skill") or "").capitalize()
+        action = h.get("action") or "Gather"
+        output_item = h.get("outputItemName") or ""
+        tool = h.get("toolName") or "None"
+        req_item = h.get("requiredItemName")
+
+        lines = ["{{Infobox Object}}", ""]
+        if output_item:
+            lines.append(f"'''{{{{PAGENAME}}}}''' is a gathering node found throughout the world of [[Memories of Magic]]. Players can harvest it using the [[{skill}]] skill to obtain [[{output_item}]].")
+        else:
+            lines.append(f"'''{{{{PAGENAME}}}}''' is an interactive world object in [[Memories of Magic]].")
+        lines.append("")
+        lines.append("== Locations ==")
+        lines.append("{{#invoke:ObjectData|renderLocations}}")
+        lines.append("")
+
+        if h:
+            lines.append("== Gathering ==")
+            lines.append("{| class=\"wikitable\"")
+            lines.append("! Skill !! Action !! Required Tool !! Required Items !! Primary Output")
+            lines.append("|-")
+            tool_str = f"[[{tool}]]" if tool != "None" else "None"
+            req_str = f"[[{req_item}]]" if req_item else "None"
+            out_str = f"[[{output_item}]]" if output_item else "None"
+            lines.append(f"| [[{skill}]] || {action} || {tool_str} || {req_str} || {out_str}")
+            lines.append("|}")
+            lines.append("")
+
+        if skill:
+            lines.append(f"[[Category:{skill}]]")
+        lines.append("[[Category:Objects]]")
+
+        page_text = "\n".join(lines)
+
+        params = {
+            "action": "edit",
+            "title": name,
+            "text": page_text,
+            "summary": "Automated pipeline provisioning: Initialized structured gathering object article.",
+            "token": csrf_token,
+            "createonly": 1,
+        }
+        res = safe_api_post(session, params)
+        if "edit" in res and res["edit"].get("result") == "Success":
+            print(f"[CREATED OBJECT] {name}")
+            created += 1
+        elif "error" in res and res["error"].get("code") == "articleexists":
+            skipped += 1
+        else:
+            print(f"[FAILED OBJECT] {name}: {res.get('error', res)}")
+        time.sleep(0.15)
+
+    print(f"Objects Provisioning Complete. Created: {created} | Skipped: {skipped}")
 
 if __name__ == "__main__":
     execute_wiki_sync()

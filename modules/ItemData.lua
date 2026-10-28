@@ -273,6 +273,12 @@ function p.generateDescription(frame)
     -- =====================
     -- SPECIFIC NAMED ITEMS
     -- =====================
+    if name == "Glasswort" then
+        add("[[Glasswort]] is a coastal gathering material harvested from [[Glasswort Bush|Glasswort Bushes]] using a [[Knife]] with the [[Crafting]] skill.")
+        add("\n\nIt is the secondary ingredient required to brew [[Catastrophea]], an experimental herbal tea prepared alongside [[Lox Tea Leaves]] in a [[Steaming Cup of Water]] requiring level 55 [[Cooking]]. It can also be burned in a furnace to produce [[Rich Soda Ash]].")
+        return table.concat(parts, " ")
+    end
+
     if name == "Coins" then
         add("[[Coins]] are the primary currency of EvilQuest, used to buy and sell items at shops and between players.")
         add("Every adventurer will find themselves accumulating coins through combat, trade, and selling unwanted loot — and spending them just as fast.")

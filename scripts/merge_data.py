@@ -100,8 +100,29 @@ HARVEST_DEFINITIONS = {
 }
 
 
+def classify_object_region(map_name, world_x, world_z):
+    if map_name == "underground":
+        return "The Sultan's Mine"
+    if world_z > 350:
+        return "Southern Desert Coast"
+    if world_z > 170:
+        if world_x > 250 and world_z < 260:
+            return "Desert North (Sultan's Mine Entrance)"
+        return "Great Desert"
+    if world_x > 290 and world_z > 80:
+        return "Graveyard & Eastern Ridge"
+    if world_x > 220 and world_z > 100:
+        return "Castle Mud Outskirts"
+    if world_x > 200 and world_z <= 80:
+        return "Gloomweb Swamp"
+    if world_x <= 200 and world_z <= 100:
+        return "Wibergis & Farmlands"
+    return "Overworld Wilderness"
+
+
 def enrich_objects(objects):
     base_dir = os.path.dirname(os.path.dirname(__file__))
+    repo_root = os.path.dirname(base_dir)
     items_path = os.path.join(base_dir, "data", "ItemData.json")
     if not os.path.exists(items_path):
         items_path = os.path.join(base_dir, "staging", "items.json")
@@ -123,6 +144,90 @@ def enrich_objects(objects):
                 harvest["outputItemName"] = items_by_id.get(harvest["outputItemId"], f"Item {harvest['outputItemId']}")
             obj["harvest"] = harvest
 
+    # Location enrichment from nodes.json
+    nodes_map = os.path.join(repo_root, "Wiki-Map", "static", "data", "nodes.json")
+    raw_nodes = []
+    if os.path.exists(nodes_map):
+        try:
+            with open(nodes_map, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                raw_nodes = data.get("nodes", [])
+        except Exception as e:
+            print(f"⚠️ Could not load {nodes_map}: {e}")
+
+    if not raw_nodes:
+        print("ℹ️ No world map nodes found to enrich Objects.")
+        return objects
+
+    # Group nodes by defId or lowercase name
+    nodes_by_def = {}
+    nodes_by_name = {}
+    for n in raw_nodes:
+        def_id = n.get("defId")
+        if def_id is not None:
+            nodes_by_def.setdefault(def_id, []).append(n)
+        name = n.get("name")
+        if name:
+            nodes_by_name.setdefault(name.strip().lower(), []).append(n)
+
+    enriched_count = 0
+    for obj in objects:
+        oid = obj.get("id")
+        oname = (obj.get("name") or "").strip().lower()
+
+        matched = nodes_by_def.get(oid) or nodes_by_name.get(oname)
+        if not matched:
+            obj.pop("locations", None)
+            obj.pop("clusters", None)
+            continue
+
+        locations = []
+        clusters_map = {}
+
+        for node in matched:
+            nmap = node.get("map", "surface")
+            if nmap == "underground":
+                wx = round(node.get("x", 0), 1)
+                wz = round(node.get("z", 0), 1)
+            else:
+                wx = round(node.get("x", 0) - 192, 1)
+                wz = round(node.get("z", 0) - 448, 1)
+
+            reg = classify_object_region(nmap, wx, wz)
+            loc_entry = {
+                "id": node.get("id"),
+                "map": nmap,
+                "x": wx,
+                "z": wz,
+                "tileX": round(node.get("x", 0), 1),
+                "tileZ": round(node.get("z", 0), 1),
+                "region": reg
+            }
+            locations.append(loc_entry)
+
+            key = (nmap, reg)
+            clusters_map.setdefault(key, []).append(loc_entry)
+
+        clusters = []
+        for (m, reg), group in clusters_map.items():
+            avg_x = round(sum(g["x"] for g in group) / len(group), 1)
+            avg_z = round(sum(g["z"] for g in group) / len(group), 1)
+            clusters.append({
+                "map": m,
+                "region": reg,
+                "count": len(group),
+                "x": avg_x,
+                "z": avg_z,
+                "sampleNodeId": group[0]["id"]
+            })
+
+        clusters.sort(key=lambda c: -c["count"])
+
+        obj["locations"] = locations
+        obj["clusters"] = clusters
+        enriched_count += 1
+
+    print(f"Enriched {enriched_count} Objects with world map locations and clusters.")
     return objects
 
 
